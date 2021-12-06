@@ -92,7 +92,8 @@ protoc -I=. --java_out=../../../../sdk/java-sdk/sdk/src/main/java/  runtime.prot
 protoc -I=. --java_out=../../../../sdk/java-sdk/sdk/src/main/java/  appcallback.proto
 ```
 
-PS: We recommend that you use the maven plugin `protoc-gen-grpc-java` to generate these protobuf and grpc related java code.
-If you are using [IntelliJ IDEA](https://www.jetbrains.com/help/idea/discover-intellij-idea.html) ,just double click `compile` in the Maven tab and the IDE will generate proto files automatically:
+[comment]: <> (PS: We recommend that you use the maven plugin `protoc-gen-grpc-java` to generate these protobuf and grpc related java code.)
 
-![img.png](img.png)
+[comment]: <> (If you are using [IntelliJ IDEA]&#40;https://www.jetbrains.com/help/idea/discover-intellij-idea.html&#41; ,just double click `compile` in the Maven tab and the IDE will generate proto files automatically:)
+
+[comment]: <> (![img.png]&#40;img.png&#41;)
