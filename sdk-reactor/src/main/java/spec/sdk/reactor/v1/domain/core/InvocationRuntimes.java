@@ -15,9 +15,9 @@
 package spec.sdk.reactor.v1.domain.core;
 
 import reactor.core.publisher.Mono;
-import spec.sdk.reactor.v1.domain.core.invocation.HttpExtension;
-import spec.sdk.reactor.v1.domain.core.invocation.InvokeMethodRequest;
 import spec.sdk.reactor.v1.utils.TypeRef;
+import spec.sdk.runtime.v1.domain.invocation.HttpExtension;
+import spec.sdk.runtime.v1.domain.invocation.InvokeMethodRequest;
 
 import java.util.Map;
 

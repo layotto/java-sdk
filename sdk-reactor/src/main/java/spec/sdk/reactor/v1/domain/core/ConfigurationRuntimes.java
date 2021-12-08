@@ -16,10 +16,10 @@ package spec.sdk.reactor.v1.domain.core;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import spec.sdk.reactor.v1.domain.core.configuration.ConfigurationItem;
-import spec.sdk.reactor.v1.domain.core.configuration.ConfigurationRequestItem;
-import spec.sdk.reactor.v1.domain.core.configuration.SaveConfigurationRequest;
-import spec.sdk.reactor.v1.domain.core.configuration.SubConfigurationResp;
+import spec.sdk.runtime.v1.domain.configuration.ConfigurationItem;
+import spec.sdk.runtime.v1.domain.configuration.ConfigurationRequestItem;
+import spec.sdk.runtime.v1.domain.configuration.SaveConfigurationRequest;
+import spec.sdk.runtime.v1.domain.configuration.SubConfigurationResp;
 import spec.sdk.reactor.v1.utils.TypeRef;
 
 import java.util.List;
