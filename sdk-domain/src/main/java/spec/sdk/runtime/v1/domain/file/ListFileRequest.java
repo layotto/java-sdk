@@ -19,12 +19,12 @@ import java.util.Map;
 
 public class ListFileRequest {
 
-    private String storeName;
-    private String name;
+    private String              storeName;
+    private String              name;
     private Map<String, String> metaData;
 
-    private int pageSize;
-    private String marker;
+    private int                 pageSize;
+    private String              marker;
 
     public String getStoreName() {
         return storeName;
@@ -72,11 +72,11 @@ public class ListFileRequest {
     @Override
     public String toString() {
         return "ListFileRequest{" +
-                "storeName='" + storeName + '\'' +
-                ", name='" + name + '\'' +
-                ", metaData=" + metaData +
-                ", pageSize=" + pageSize +
-                ", marker='" + marker + '\'' +
-                '}';
+            "storeName='" + storeName + '\'' +
+            ", name='" + name + '\'' +
+            ", metaData=" + metaData +
+            ", pageSize=" + pageSize +
+            ", marker='" + marker + '\'' +
+            '}';
     }
 }

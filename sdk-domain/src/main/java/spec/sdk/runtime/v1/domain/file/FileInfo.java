@@ -19,9 +19,9 @@ import java.util.Map;
 
 public class FileInfo {
 
-    private String fileName;
-    private long size;
-    private String lastModified;
+    private String              fileName;
+    private long                size;
+    private String              lastModified;
     private Map<String, String> metaData;
 
     public FileInfo(String fileName, long size, String lastModified, Map<String, String> metaData) {
@@ -69,10 +69,10 @@ public class FileInfo {
     @Override
     public String toString() {
         return "FileInfo{" +
-                "fileName='" + fileName + '\'' +
-                ", size=" + size +
-                ", lastModified='" + lastModified + '\'' +
-                ", metaData=" + metaData +
-                '}';
+            "fileName='" + fileName + '\'' +
+            ", size=" + size +
+            ", lastModified='" + lastModified + '\'' +
+            ", metaData=" + metaData +
+            '}';
     }
 }

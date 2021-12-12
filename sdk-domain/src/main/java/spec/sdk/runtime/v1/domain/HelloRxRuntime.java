@@ -26,5 +26,9 @@ public interface HelloRxRuntime extends HelloRuntime {
     Mono<String> sayHelloAsync(String name);
 
     @Override
-    String sayHello(String name, int timeoutMillisecond);
+    default String sayHello(String name, int timeoutMillisecond) {
+        return sayHelloAsync(name, timeoutMillisecond).block();
+    }
+
+    Mono<String> sayHelloAsync(String name, int timeoutMillisecond);
 }

@@ -35,7 +35,7 @@ public class GetFileResponse {
     @Override
     public String toString() {
         return "GetFileResponse{" +
-                "in=" + in +
-                '}';
+            "in=" + in +
+            '}';
     }
 }

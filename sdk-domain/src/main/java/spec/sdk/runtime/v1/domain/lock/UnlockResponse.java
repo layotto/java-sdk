@@ -29,8 +29,8 @@ public class UnlockResponse {
     @Override
     public String toString() {
         return "UnlockResponse{" +
-                "status=" + status +
-                '}';
+            "status=" + status +
+            '}';
     }
 
     public enum UnlockResponseStatus {

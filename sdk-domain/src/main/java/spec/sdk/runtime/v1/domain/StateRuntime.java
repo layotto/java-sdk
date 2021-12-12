@@ -107,8 +107,7 @@ public interface StateRuntime {
      * @param storeName  The name of the state store.
      * @param operations The operations to be performed.
      */
-    void executeStateTransaction(String storeName,
-                                 List<TransactionalStateOperation<?>> operations);
+    void executeStateTransaction(String storeName, List<TransactionalStateOperation<?>> operations);
 
     /**
      * Execute a transaction.

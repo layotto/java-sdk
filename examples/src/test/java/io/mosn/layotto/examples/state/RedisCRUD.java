@@ -15,7 +15,7 @@
 package io.mosn.layotto.examples.state;
 
 import io.mosn.layotto.v1.RuntimeClientBuilder;
-import io.mosn.layotto.v1.config.RuntimeProperties;
+import io.mosn.layotto.v1.infrastructure.config.RuntimeProperties;
 import spec.sdk.runtime.v1.client.RuntimeClient;
 import spec.sdk.runtime.v1.domain.state.GetBulkStateRequest;
 import spec.sdk.runtime.v1.domain.state.State;
@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RedisCRUD {
+
     static String storeName = "redis";
     static String key1      = "key1";
     static String key2      = "key2";

@@ -47,9 +47,9 @@ public class UnlockRequest {
     @Override
     public String toString() {
         return "UnlockRequest{" +
-                "storeName='" + storeName + '\'' +
-                ", resourceId='" + resourceId + '\'' +
-                ", lockOwner='" + lockOwner + '\'' +
-                '}';
+            "storeName='" + storeName + '\'' +
+            ", resourceId='" + resourceId + '\'' +
+            ", lockOwner='" + lockOwner + '\'' +
+            '}';
     }
 }

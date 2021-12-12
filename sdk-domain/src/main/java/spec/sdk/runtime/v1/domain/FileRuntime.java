@@ -30,35 +30,35 @@ public interface FileRuntime {
     /**
      * save or update file
      *
-     * @param request
+     * @param request   the put request
      * @param timeoutMs If the time is less than or equal to zero, the method will not wait at all.
      * @throws Exception Instance of RuntimeClientException Or StatusRuntimeException
      */
     PutFileResponse putFile(PutFileRequest request, int timeoutMs) throws Exception;
 
     /**
-     * @param request
+     * @param request   the get request
      * @param timeoutMs If the time is less than or equal to zero, the method will not wait at all.
      * @throws Exception Instance of RuntimeClientException Or StatusRuntimeException
      */
     GetFileResponse getFile(GetFileRequest request, int timeoutMs) throws Exception;
 
     /**
-     * @param request
+     * @param request   the list requset
      * @param timeoutMs If the time is less than or equal to zero, the method will not wait at all.
      * @throws Exception Instance of RuntimeClientException Or StatusRuntimeException
      */
     ListFileResponse listFile(ListFileRequest request, int timeoutMs) throws Exception;
 
     /**
-     * @param request
+     * @param request   the del request
      * @param timeoutMs If the time is less than or equal to zero, the method will not wait at all.
      * @throws Exception Instance of RuntimeClientException Or StatusRuntimeException
      */
     DelFileResponse delFile(DelFileRequest request, int timeoutMs) throws Exception;
 
     /**
-     * @param request
+     * @param request   the get meta request
      * @param timeoutMs If the time is less than or equal to zero, the method will not wait at all.
      * @throws Exception Instance of RuntimeClientException Or StatusRuntimeException
      */

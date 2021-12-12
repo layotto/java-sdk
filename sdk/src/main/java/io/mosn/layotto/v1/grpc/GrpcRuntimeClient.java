@@ -22,7 +22,7 @@ public interface GrpcRuntimeClient extends RuntimeClient {
 
     /**
      * Getter method for property <tt>stubManager</tt>.
-     *
+     * <p>
      * Do not use it !
      * This method is deprecated and might be refactored in the future.
      * We want this client to expose grpc Channels instead of grpc stubs.

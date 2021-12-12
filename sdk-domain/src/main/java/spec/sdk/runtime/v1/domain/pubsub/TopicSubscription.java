@@ -19,10 +19,10 @@ import java.util.Map;
 public class TopicSubscription {
 
     // Required. The name of the pubsub containing the topic below to subscribe to.
-    private String pubsubName;
+    private String              pubsubName;
 
     // Required. The name of topic which will be subscribed
-    private String topic;
+    private String              topic;
 
     // The optional properties used for this topic's subscription e.g. session id
     private Map<String, String> metadata;
@@ -84,9 +84,9 @@ public class TopicSubscription {
     @Override
     public String toString() {
         return "TopicSubscription{" +
-                "pubsubName='" + pubsubName + '\'' +
-                ", topic='" + topic + '\'' +
-                ", metadata=" + metadata +
-                '}';
+            "pubsubName='" + pubsubName + '\'' +
+            ", topic='" + topic + '\'' +
+            ", metadata=" + metadata +
+            '}';
     }
 }

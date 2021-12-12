@@ -17,7 +17,7 @@ package spec.sdk.runtime.v1.domain.invocation;
 public class InvokeResponse<T> {
 
     private String contentType;
-    private T data;
+    private T      data;
 
     /**
      * Getter method for property <tt>contentType</tt>.
@@ -58,8 +58,8 @@ public class InvokeResponse<T> {
     @Override
     public String toString() {
         return "InvokeResponse{" +
-                "contentType='" + contentType + '\'' +
-                ", data=" + data +
-                '}';
+            "contentType='" + contentType + '\'' +
+            ", data=" + data +
+            '}';
     }
 }

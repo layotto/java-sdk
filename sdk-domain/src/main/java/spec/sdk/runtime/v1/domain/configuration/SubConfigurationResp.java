@@ -16,22 +16,22 @@ package spec.sdk.runtime.v1.domain.configuration;
 
 import java.util.List;
 
-public class SubConfigurationResp<T> {
+public class SubConfigurationResp {
 
     /**
      * The name of configuration store.
      */
-    private String storeName;
+    private String                  storeName;
     /**
      * The application id which
      * Only used for admin, Ignored and reset for normal client
      */
-    private String appId;
+    private String                  appId;
     /**
      * The list of configuration items to save.
      * To delete a exist item, set the key (also label) and let content to be empty
      */
-    private List<ConfigurationItem<T>> items;
+    private List<ConfigurationItem> items;
 
     public String getStoreName() {
         return storeName;
@@ -49,20 +49,20 @@ public class SubConfigurationResp<T> {
         this.appId = appId;
     }
 
-    public List<ConfigurationItem<T>> getItems() {
+    public List<ConfigurationItem> getItems() {
         return items;
     }
 
-    public void setItems(List<ConfigurationItem<T>> items) {
+    public void setItems(List<ConfigurationItem> items) {
         this.items = items;
     }
 
     @Override
     public String toString() {
         return "SubConfigurationResp{" +
-                "storeName='" + storeName + '\'' +
-                ", appId='" + appId + '\'' +
-                ", items=" + items +
-                '}';
+            "storeName='" + storeName + '\'' +
+            ", appId='" + appId + '\'' +
+            ", items=" + items +
+            '}';
     }
 }

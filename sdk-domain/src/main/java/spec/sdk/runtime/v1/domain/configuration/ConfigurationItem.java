@@ -16,25 +16,25 @@ package spec.sdk.runtime.v1.domain.configuration;
 
 import java.util.Map;
 
-public class ConfigurationItem<T> {
+public class ConfigurationItem {
 
     /**
      * Required. The key of configuration item
      */
-    private String key;
+    private String              key;
     /**
      * The content of configuration item
      * Empty if the configuration is not set, including the case that the configuration is changed from value-set to value-not-set.
      */
-    private T content;
+    private Object              content;
     /**
      * The group of configuration item.
      */
-    private String group;
+    private String              group;
     /**
      * The label of configuration item.
      */
-    private String label;
+    private String              label;
     /**
      * The tag list of configuration item.
      */
@@ -52,11 +52,11 @@ public class ConfigurationItem<T> {
         this.key = key;
     }
 
-    public T getContent() {
+    public Object getContent() {
         return content;
     }
 
-    public void setContent(T content) {
+    public void setContent(Object content) {
         this.content = content;
     }
 
@@ -95,12 +95,12 @@ public class ConfigurationItem<T> {
     @Override
     public String toString() {
         return "ConfigurationItem{" +
-                "key='" + key + '\'' +
-                ", content=" + content +
-                ", group='" + group + '\'' +
-                ", label='" + label + '\'' +
-                ", tags=" + tags +
-                ", metadata=" + metadata +
-                '}';
+            "key='" + key + '\'' +
+            ", content=" + content +
+            ", group='" + group + '\'' +
+            ", label='" + label + '\'' +
+            ", tags=" + tags +
+            ", metadata=" + metadata +
+            '}';
     }
 }

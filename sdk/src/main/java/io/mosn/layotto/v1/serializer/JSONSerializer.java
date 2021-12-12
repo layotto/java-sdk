@@ -15,6 +15,7 @@
 package io.mosn.layotto.v1.serializer;
 
 import com.alibaba.fastjson.JSONObject;
+import io.mosn.layotto.v1.infrastructure.serializer.AbstractSerializer;
 
 import java.io.IOException;
 

@@ -19,7 +19,7 @@ public class TryLockRequest {
     public String storeName;
     public String resourceId;
     public String lockOwner;
-    public int expire;
+    public int    expire;
 
     public String getStoreName() {
         return storeName;
@@ -56,10 +56,10 @@ public class TryLockRequest {
     @Override
     public String toString() {
         return "TryLockRequest{" +
-                "storeName='" + storeName + '\'' +
-                ", resourceId='" + resourceId + '\'' +
-                ", lockOwner='" + lockOwner + '\'' +
-                ", expire=" + expire +
-                '}';
+            "storeName='" + storeName + '\'' +
+            ", resourceId='" + resourceId + '\'' +
+            ", lockOwner='" + lockOwner + '\'' +
+            ", expire=" + expire +
+            '}';
     }
 }

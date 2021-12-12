@@ -24,11 +24,7 @@
     <dependencies>
         <dependency>
             <groupId>io.mosn.layotto</groupId>
-            <artifactId>runtime-spec-pb</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.mosn.layotto</groupId>
-            <artifactId>runtime-sdk-domain</artifactId>
+            <artifactId>runtime-sdk-grpc</artifactId>
         </dependency>
 
         <dependency>

@@ -22,14 +22,17 @@ import io.grpc.Metadata;
 import io.grpc.StatusRuntimeException;
 import io.grpc.stub.MetadataUtils;
 import io.grpc.stub.StreamObserver;
-import io.mosn.layotto.v1.config.RuntimeProperties;
-import io.mosn.layotto.v1.exceptions.RuntimeClientException;
 import io.mosn.layotto.v1.grpc.GrpcRuntimeClient;
 import io.mosn.layotto.v1.grpc.stub.StubManager;
-import io.mosn.layotto.v1.serializer.ObjectSerializer;
+import io.mosn.layotto.v1.infrastructure.config.RuntimeProperties;
+import io.mosn.layotto.v1.infrastructure.exceptions.RuntimeClientException;
+import io.mosn.layotto.v1.infrastructure.serializer.ObjectSerializer;
 import org.slf4j.Logger;
 import spec.proto.runtime.v1.RuntimeGrpc;
 import spec.proto.runtime.v1.RuntimeProto;
+import spec.sdk.runtime.v1.domain.configuration.ConfigurationItem;
+import spec.sdk.runtime.v1.domain.configuration.ConfigurationRequestItem;
+import spec.sdk.runtime.v1.domain.configuration.SaveConfigurationRequest;
 import spec.sdk.runtime.v1.domain.file.DelFileRequest;
 import spec.sdk.runtime.v1.domain.file.DelFileResponse;
 import spec.sdk.runtime.v1.domain.file.FileInfo;
@@ -42,6 +45,7 @@ import spec.sdk.runtime.v1.domain.file.ListFileResponse;
 import spec.sdk.runtime.v1.domain.file.PutFileRequest;
 import spec.sdk.runtime.v1.domain.file.PutFileResponse;
 import spec.sdk.runtime.v1.domain.invocation.InvokeResponse;
+import spec.sdk.runtime.v1.domain.pubsub.PublishEventRequest;
 import spec.sdk.runtime.v1.domain.state.DeleteStateRequest;
 import spec.sdk.runtime.v1.domain.state.ExecuteStateTransactionRequest;
 import spec.sdk.runtime.v1.domain.state.GetBulkStateRequest;
@@ -154,26 +158,32 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
     }
 
     @Override
-    public void publishEvent(String pubsubName, String topicName, byte[] data, String contentType,
-                             Map<String, String> metadata) {
+    public void publishEvent(PublishEventRequest request) {
         try {
+            byte[] data = request.getData();
             // 1. prepare data
             if (data == null) {
                 data = new byte[] {};
             }
             final ByteString byteString = ByteString.copyFrom(data);
+
+            String contentType = request.getContentType();
             // Content-type can be overwritten on a per-request basis.
             // It allows CloudEvents to be handled differently, for example.
             if (contentType == null || contentType.isEmpty()) {
                 contentType = RuntimeProperties.DEFAULT_PUBSUB_CONTENT_TYPE;
             }
 
+            String pubsubName = request.getPubsubName();
+            String topicName = request.getTopic();
             // 2. prepare request
             RuntimeProto.PublishEventRequest.Builder envelopeBuilder = RuntimeProto.PublishEventRequest.newBuilder()
                 .setTopic(topicName)
                 .setPubsubName(pubsubName)
                 .setData(byteString)
                 .setDataContentType(contentType);
+
+            Map<String, String> metadata = request.getMetadata();
             // metadata
             if (metadata != null) {
                 envelopeBuilder.putAllMetadata(metadata);
@@ -510,7 +520,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
     /**
      * Getter method for property <tt>stubManager</tt>.
-     *
+     * <p>
      * Do not use it !
      * This method is deprecated and might be refactored in the future.
      * We want this client to expose grpc Channels instead of grpc stubs.
@@ -521,6 +531,11 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
     @Override
     public StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> getStubManager() {
         return stubManager;
+    }
+
+    @Override
+    public void waitForSidecar(int timeoutInMilliseconds) {
+
     }
 
     @Override
@@ -705,6 +720,26 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
         if (request.getFileName() == null) {
             throw new IllegalArgumentException("miss file name");
         }
+    }
+
+    @Override
+    public List<ConfigurationItem> getConfiguration(ConfigurationRequestItem configurationRequestItem) {
+        return null;
+    }
+
+    @Override
+    public void saveConfiguration(SaveConfigurationRequest saveConfigurationRequest) {
+
+    }
+
+    @Override
+    public void deleteConfiguration(ConfigurationRequestItem configurationRequestItem) {
+
+    }
+
+    @Override
+    public void subscribeConfiguration(ConfigurationRequestItem configurationRequestItem, Subscriber subscriber) {
+
     }
 
     private class PutFileFuture implements StreamObserver<Empty> {

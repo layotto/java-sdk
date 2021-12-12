@@ -29,7 +29,7 @@ public class TryLockResponse {
     @Override
     public String toString() {
         return "TryLockResponse{" +
-                "success=" + success +
-                '}';
+            "success=" + success +
+            '}';
     }
 }

@@ -14,7 +14,6 @@
  */
 package spec.sdk.runtime.v1.domain.invocation;
 
-
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -29,27 +28,27 @@ public final class HttpExtension {
     /**
      * Convenience HttpExtension object for {@link HttpMethods#NONE} with empty queryString.
      */
-    public static final HttpExtension NONE = new HttpExtension(HttpMethods.NONE);
+    public static final HttpExtension NONE    = new HttpExtension(HttpMethods.NONE);
     /**
      * Convenience HttpExtension object for the {@link HttpMethods#GET} Verb with empty queryString.
      */
-    public static final HttpExtension GET = new HttpExtension(HttpMethods.GET);
+    public static final HttpExtension GET     = new HttpExtension(HttpMethods.GET);
     /**
      * Convenience HttpExtension object for the {@link HttpMethods#PUT} Verb with empty queryString.
      */
-    public static final HttpExtension PUT = new HttpExtension(HttpMethods.PUT);
+    public static final HttpExtension PUT     = new HttpExtension(HttpMethods.PUT);
     /**
      * Convenience HttpExtension object for the {@link HttpMethods#POST} Verb with empty queryString.
      */
-    public static final HttpExtension POST = new HttpExtension(HttpMethods.POST);
+    public static final HttpExtension POST    = new HttpExtension(HttpMethods.POST);
     /**
      * Convenience HttpExtension object for the {@link HttpMethods#DELETE} Verb with empty queryString.
      */
-    public static final HttpExtension DELETE = new HttpExtension(HttpMethods.DELETE);
+    public static final HttpExtension DELETE  = new HttpExtension(HttpMethods.DELETE);
     /**
      * Convenience HttpExtension object for the {@link HttpMethods#HEAD} Verb with empty queryString.
      */
-    public static final HttpExtension HEAD = new HttpExtension(HttpMethods.HEAD);
+    public static final HttpExtension HEAD    = new HttpExtension(HttpMethods.HEAD);
     /**
      * Convenience HttpExtension object for the {@link HttpMethods#CONNECT} Verb with empty queryString.
      */
@@ -61,12 +60,12 @@ public final class HttpExtension {
     /**
      * Convenience HttpExtension object for the {@link HttpMethods#TRACE} Verb with empty queryString.
      */
-    public static final HttpExtension TRACE = new HttpExtension(HttpMethods.TRACE);
+    public static final HttpExtension TRACE   = new HttpExtension(HttpMethods.TRACE);
 
     /**
      * HTTP verb.
      */
-    private HttpMethods method;
+    private HttpMethods               method;
 
     /**
      * HTTP query params.
@@ -76,7 +75,7 @@ public final class HttpExtension {
     /**
      * HTTP headers.
      */
-    private Map<String, String> headers;
+    private Map<String, String>       headers;
 
     /**
      * Construct a HttpExtension object.

@@ -14,6 +14,8 @@
  */
 package spec.sdk.runtime.v1.domain;
 
+import spec.sdk.runtime.v1.domain.pubsub.PublishEventRequest;
+
 import java.util.Map;
 
 public interface PubSubRuntime {
@@ -49,4 +51,11 @@ public interface PubSubRuntime {
     void publishEvent(String pubsubName, String topicName, byte[] data, Map<String, String> metadata);
 
     void publishEvent(String pubsubName, String topicName, byte[] data, String contentType, Map<String, String> metadata);
+
+    /**
+     * Publish an event.
+     *
+     * @param request the request for the publish event.
+     */
+    void publishEvent(PublishEventRequest request);
 }

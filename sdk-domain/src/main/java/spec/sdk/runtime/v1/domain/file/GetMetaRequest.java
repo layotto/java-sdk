@@ -19,8 +19,8 @@ import java.util.Map;
 
 public class GetMetaRequest {
 
-    private String storeName;
-    private String fileName;
+    private String              storeName;
+    private String              fileName;
 
     private Map<String, String> metaData;
 
@@ -54,9 +54,9 @@ public class GetMetaRequest {
     @Override
     public String toString() {
         return "GetMetaRequest{" +
-                "storeName='" + storeName + '\'' +
-                ", fileName='" + fileName + '\'' +
-                ", metaData=" + metaData +
-                '}';
+            "storeName='" + storeName + '\'' +
+            ", fileName='" + fileName + '\'' +
+            ", metaData=" + metaData +
+            '}';
     }
 }

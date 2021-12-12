@@ -19,8 +19,8 @@ import java.util.Map;
 
 public class GetMeteResponse {
 
-    private long size;
-    private String lastModified;
+    private long                  size;
+    private String                lastModified;
     private Map<String, String[]> meta;
 
     public long getSize() {

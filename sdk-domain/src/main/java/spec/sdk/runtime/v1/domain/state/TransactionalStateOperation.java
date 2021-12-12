@@ -24,7 +24,7 @@ public class TransactionalStateOperation<T> {
     /**
      * State values to be operated on.
      */
-    private final State<T> request;
+    private final State<T>      request;
 
     /**
      * Construct an immutable transactional state operation object.
@@ -48,9 +48,9 @@ public class TransactionalStateOperation<T> {
     @Override
     public String toString() {
         return "TransactionalStateOperation{" +
-                "operation=" + operation +
-                ", request=" + request +
-                '}';
+            "operation=" + operation +
+            ", request=" + request +
+            '}';
     }
 
     public enum OperationType {

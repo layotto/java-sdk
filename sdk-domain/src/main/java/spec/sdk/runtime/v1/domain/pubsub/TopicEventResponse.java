@@ -39,7 +39,7 @@ public class TopicEventResponse {
     @Override
     public String toString() {
         return "TopicEventResponse{" +
-                "status=" + status +
-                '}';
+            "status=" + status +
+            '}';
     }
 }

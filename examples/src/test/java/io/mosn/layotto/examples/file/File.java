@@ -15,7 +15,7 @@
 package io.mosn.layotto.examples.file;
 
 import io.mosn.layotto.v1.RuntimeClientBuilder;
-import io.mosn.layotto.v1.config.RuntimeProperties;
+import io.mosn.layotto.v1.infrastructure.config.RuntimeProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import spec.sdk.runtime.v1.client.RuntimeClient;

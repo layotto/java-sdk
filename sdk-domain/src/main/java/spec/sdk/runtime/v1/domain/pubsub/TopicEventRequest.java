@@ -22,32 +22,32 @@ public class TopicEventRequest {
     // id identifies the event. Producers MUST ensure that source + id
     // is unique for each distinct event. If a duplicate event is re-sent
     // (e.g. due to a network error) it MAY have the same id.
-    private String id;
+    private String              id;
 
     // source identifies the context in which an event happened.
     // Often this will include information such as the type of the
     // event source, the organization publishing the event or the process
     // that produced the event. The exact syntax and semantics behind
     // the data encoded in the URI is defined by the event producer.
-    private String source;
+    private String              source;
 
     // The type of event related to the originating occurrence.
-    private String type;
+    private String              type;
 
     // The version of the CloudEvents specification.
-    private String specVersion;
+    private String              specVersion;
 
     // The content type of data value.
-    private String contentType;
+    private String              contentType;
 
     // The content of the event.
-    private byte[] data;
+    private byte[]              data;
 
     // The pubsub topic which publisher sent to.
-    private String topic;
+    private String              topic;
 
     // The name of the pubsub the publisher sent to.
-    private String pubsubName;
+    private String              pubsubName;
 
     // add a map to pass some extra properties.
     private Map<String, String> metadata;
@@ -217,15 +217,15 @@ public class TopicEventRequest {
     @Override
     public String toString() {
         return "TopicEventRequest{" +
-                "id='" + id + '\'' +
-                ", source='" + source + '\'' +
-                ", type='" + type + '\'' +
-                ", specVersion='" + specVersion + '\'' +
-                ", contentType='" + contentType + '\'' +
-                ", data=" + Arrays.toString(data) +
-                ", topic='" + topic + '\'' +
-                ", pubsubName='" + pubsubName + '\'' +
-                ", metadata=" + metadata +
-                '}';
+            "id='" + id + '\'' +
+            ", source='" + source + '\'' +
+            ", type='" + type + '\'' +
+            ", specVersion='" + specVersion + '\'' +
+            ", contentType='" + contentType + '\'' +
+            ", data=" + Arrays.toString(data) +
+            ", topic='" + topic + '\'' +
+            ", pubsubName='" + pubsubName + '\'' +
+            ", metadata=" + metadata +
+            '}';
     }
 }

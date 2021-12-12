@@ -28,7 +28,7 @@ public class TransactionalStateRequest<T> {
     /**
      * Metadata used for transactional operations.
      */
-    private final Map<String, String> metadata;
+    private final Map<String, String>                  metadata;
 
     /**
      * Constructor to create immutable transactional state request object.
@@ -62,8 +62,8 @@ public class TransactionalStateRequest<T> {
     @Override
     public String toString() {
         return "TransactionalStateRequest{" +
-                "operations=" + operations +
-                ", metadata=" + metadata +
-                '}';
+            "operations=" + operations +
+            ", metadata=" + metadata +
+            '}';
     }
 }

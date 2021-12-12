@@ -26,17 +26,17 @@ public class State<T> {
     /**
      * The key of the state.
      */
-    private final String key;
+    private final String              key;
 
     /**
      * The value of the state.
      */
-    private final T value;
+    private final T                   value;
 
     /**
      * The ETag to be used Keep in mind that for some state stores (like redis) only numbers are supported.
      */
-    private final String etag;
+    private final String              etag;
 
     /**
      * The metadata which will be passed to state store component.
@@ -46,12 +46,12 @@ public class State<T> {
     /**
      * The error in case the key could not be retrieved.
      */
-    private final String error;
+    private final String              error;
 
     /**
      * The options used for saving the state.
      */
-    private final StateOptions options;
+    private final StateOptions        options;
 
     /**
      * Create an immutable state reference to be retrieved or deleted. This Constructor CAN be used anytime you need to retrieve or delete a
@@ -208,12 +208,12 @@ public class State<T> {
     @Override
     public String toString() {
         return "State{" +
-                "key='" + key + '\'' +
-                ", value=" + value +
-                ", etag='" + etag + '\'' +
-                ", metadata=" + metadata +
-                ", error='" + error + '\'' +
-                ", options=" + options +
-                '}';
+            "key='" + key + '\'' +
+            ", value=" + value +
+            ", etag='" + etag + '\'' +
+            ", metadata=" + metadata +
+            ", error='" + error + '\'' +
+            ", options=" + options +
+            '}';
     }
 }

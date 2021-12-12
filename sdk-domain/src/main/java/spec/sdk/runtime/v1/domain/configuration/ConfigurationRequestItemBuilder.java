@@ -22,15 +22,15 @@ import java.util.Map;
  */
 public class ConfigurationRequestItemBuilder {
 
-    private final String storeName;
+    private final String        storeName;
 
-    private final String appId;
+    private final String        appId;
 
-    private String group;
+    private String              group;
 
-    private String label;
+    private String              label;
 
-    private List<String> keys;
+    private List<String>        keys;
 
     private Map<String, String> metadata;
 
@@ -78,12 +78,12 @@ public class ConfigurationRequestItemBuilder {
     @Override
     public String toString() {
         return "ConfigurationRequestItemBuilder{" +
-                "storeName='" + storeName + '\'' +
-                ", appId='" + appId + '\'' +
-                ", group='" + group + '\'' +
-                ", label='" + label + '\'' +
-                ", keys=" + keys +
-                ", metadata=" + metadata +
-                '}';
+            "storeName='" + storeName + '\'' +
+            ", appId='" + appId + '\'' +
+            ", group='" + group + '\'' +
+            ", label='" + label + '\'' +
+            ", keys=" + keys +
+            ", metadata=" + metadata +
+            '}';
     }
 }

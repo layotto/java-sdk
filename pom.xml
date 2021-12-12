@@ -17,7 +17,9 @@
         <module>sdk</module>
         <module>sdk-reactor</module>
         <module>spec</module>
+        <module>sdk-grpc</module>
         <module>sdk-domain</module>
+        <module>sdk-infrastructure</module>
     </modules>
 
     <properties>
@@ -50,7 +52,17 @@
             </dependency>
             <dependency>
                 <groupId>io.mosn.layotto</groupId>
+                <artifactId>runtime-sdk-grpc</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.mosn.layotto</groupId>
                 <artifactId>runtime-sdk-domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.mosn.layotto</groupId>
+                <artifactId>runtime-sdk-infrastructure</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

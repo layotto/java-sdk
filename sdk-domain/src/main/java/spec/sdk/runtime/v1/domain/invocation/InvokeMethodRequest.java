@@ -21,15 +21,15 @@ import java.util.Map;
  */
 public class InvokeMethodRequest {
 
-    private final String appId;
+    private final String        appId;
 
-    private final String method;
+    private final String        method;
 
-    private Object body;
+    private Object              body;
 
-    private HttpExtension httpExtension;
+    private HttpExtension       httpExtension;
 
-    private String contentType;
+    private String              contentType;
 
     private Map<String, String> metadata;
 
@@ -84,12 +84,12 @@ public class InvokeMethodRequest {
     @Override
     public String toString() {
         return "InvokeMethodRequest{" +
-                "appId='" + appId + '\'' +
-                ", method='" + method + '\'' +
-                ", body=" + body +
-                ", httpExtension=" + httpExtension +
-                ", contentType='" + contentType + '\'' +
-                ", metadata=" + metadata +
-                '}';
+            "appId='" + appId + '\'' +
+            ", method='" + method + '\'' +
+            ", body=" + body +
+            ", httpExtension=" + httpExtension +
+            ", contentType='" + contentType + '\'' +
+            ", metadata=" + metadata +
+            '}';
     }
 }

@@ -21,7 +21,7 @@ import java.util.List;
  */
 public class SaveStateRequest {
 
-    private final String storeName;
+    private final String   storeName;
 
     private List<State<?>> states;
 
@@ -54,8 +54,8 @@ public class SaveStateRequest {
     @Override
     public String toString() {
         return "SaveStateRequest{" +
-                "storeName='" + storeName + '\'' +
-                ", states=" + states +
-                '}';
+            "storeName='" + storeName + '\'' +
+            ", states=" + states +
+            '}';
     }
 }

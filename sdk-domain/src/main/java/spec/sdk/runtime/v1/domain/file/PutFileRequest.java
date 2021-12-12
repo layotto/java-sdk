@@ -20,12 +20,12 @@ import java.util.Map;
 
 public class PutFileRequest {
 
-    private String storeName;
-    private String fileName;
+    private String              storeName;
+    private String              fileName;
 
     private Map<String, String> metaData;
 
-    private InputStream in;
+    private InputStream         in;
 
     public String getStoreName() {
         return storeName;
@@ -65,10 +65,10 @@ public class PutFileRequest {
     @Override
     public String toString() {
         return "PutFileRequest{" +
-                "storeName='" + storeName + '\'' +
-                ", fileName='" + fileName + '\'' +
-                ", metaData=" + metaData +
-                ", in=" + in +
-                '}';
+            "storeName='" + storeName + '\'' +
+            ", fileName='" + fileName + '\'' +
+            ", metaData=" + metaData +
+            ", in=" + in +
+            '}';
     }
 }

@@ -41,9 +41,9 @@ public class StateOptions {
     @Override
     public String toString() {
         return "StateOptions{" +
-                "consistency=" + consistency +
-                ", concurrency=" + concurrency +
-                '}';
+            "consistency=" + consistency +
+            ", concurrency=" + concurrency +
+            '}';
     }
 
     public enum Consistency {

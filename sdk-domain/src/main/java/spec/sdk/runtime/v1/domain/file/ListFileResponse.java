@@ -18,8 +18,8 @@ import java.util.Arrays;
 
 public class ListFileResponse {
 
-    private boolean isTruncated;
-    private String marker;
+    private boolean    isTruncated;
+    private String     marker;
 
     private FileInfo[] files;
 
@@ -53,9 +53,9 @@ public class ListFileResponse {
     @Override
     public String toString() {
         return "ListFileResponse{" +
-                "isTruncated=" + isTruncated +
-                ", marker='" + marker + '\'' +
-                ", files=" + Arrays.toString(files) +
-                '}';
+            "isTruncated=" + isTruncated +
+            ", marker='" + marker + '\'' +
+            ", files=" + Arrays.toString(files) +
+            '}';
     }
 }

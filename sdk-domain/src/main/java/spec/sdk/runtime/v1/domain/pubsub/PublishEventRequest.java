@@ -20,14 +20,14 @@ import java.util.Map;
 public class PublishEventRequest {
 
     // The name of the pubsub component
-    private String pubsubName;
+    private String              pubsubName;
     // The pubsub topic
-    private String topic;
+    private String              topic;
     // The data which will be published to topic.
-    private byte[] data;
+    private byte[]              data;
 
     // The content type for the data (optional).
-    private String contentType;
+    private String              contentType;
 
     // The metadata passing to pub components
     //
@@ -128,11 +128,11 @@ public class PublishEventRequest {
     @Override
     public String toString() {
         return "PublishEventRequest{" +
-                "pubsubName='" + pubsubName + '\'' +
-                ", topic='" + topic + '\'' +
-                ", data=" + Arrays.toString(data) +
-                ", contentType='" + contentType + '\'' +
-                ", metadata=" + metadata +
-                '}';
+            "pubsubName='" + pubsubName + '\'' +
+            ", topic='" + topic + '\'' +
+            ", data=" + Arrays.toString(data) +
+            ", contentType='" + contentType + '\'' +
+            ", metadata=" + metadata +
+            '}';
     }
 }

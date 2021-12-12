@@ -25,24 +25,24 @@ public class ConfigurationRequestItem {
     /**
      * The name of configuration store.
      */
-    private String storeName;
+    private String              storeName;
     /**
      * The application id which
      * Only used for admin, Ignored and reset for normal client
      */
-    private String appId;
+    private String              appId;
     /**
      * The group of keys.
      */
-    private String group;
+    private String              group;
     /**
      * The label for keys.
      */
-    private String label;
+    private String              label;
     /**
      * The keys to get.
      */
-    private List<String> keys;
+    private List<String>        keys;
     /**
      * The metadata which will be sent to configuration store components.
      */
@@ -99,12 +99,12 @@ public class ConfigurationRequestItem {
     @Override
     public String toString() {
         return "ConfigurationRequestItem{" +
-                "storeName='" + storeName + '\'' +
-                ", appId='" + appId + '\'' +
-                ", group='" + group + '\'' +
-                ", label='" + label + '\'' +
-                ", keys=" + keys +
-                ", metadata=" + metadata +
-                '}';
+            "storeName='" + storeName + '\'' +
+            ", appId='" + appId + '\'' +
+            ", group='" + group + '\'' +
+            ", label='" + label + '\'' +
+            ", keys=" + keys +
+            ", metadata=" + metadata +
+            '}';
     }
 }
