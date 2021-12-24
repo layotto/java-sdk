@@ -15,8 +15,8 @@
 package io.mosn.layotto.examples.pubsub.subscriber;
 
 import com.alibaba.fastjson.JSON;
-import io.mosn.layotto.examples.pubsub.subscriber.impl.RawSubscriber;
 import io.mosn.layotto.v1.RuntimeServerGrpc;
+import io.mosn.layotto.v1.callback.component.pubsub.DefaultSubscriber;
 
 import java.util.concurrent.Semaphore;
 
@@ -29,7 +29,7 @@ public class Subscriber {
      */
     public static void main(String[] args) throws Exception {
         RuntimeServerGrpc srv = new RuntimeServerGrpc(9999);
-        RawSubscriber pubsub = new RawSubscriber("redis");
+        DefaultSubscriber pubsub = new DefaultSubscriber("redis");
         pubsub.subscribe("hello", request -> {
             String value = new String(request.getData());
             assertEquals(value, "world");
