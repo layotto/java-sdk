@@ -26,16 +26,14 @@
             <groupId>io.mosn.layotto</groupId>
             <artifactId>runtime-sdk-grpc</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.mosn.layotto</groupId>
+            <artifactId>runtime-sdk-domain-rx</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>io.projectreactor</groupId>
-            <artifactId>reactor-core</artifactId>
-            <version>${reactor-core.version}</version>
         </dependency>
 
         <!-- serializer -->

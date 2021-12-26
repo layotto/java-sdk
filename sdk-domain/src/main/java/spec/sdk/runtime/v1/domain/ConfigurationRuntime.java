@@ -14,8 +14,6 @@
  */
 package spec.sdk.runtime.v1.domain;
 
-import org.reactivestreams.Publisher;
-import org.reactivestreams.Subscription;
 import spec.sdk.runtime.v1.domain.configuration.ConfigurationItem;
 import spec.sdk.runtime.v1.domain.configuration.ConfigurationRequestItem;
 import spec.sdk.runtime.v1.domain.configuration.SaveConfigurationRequest;
@@ -56,7 +54,7 @@ public interface ConfigurationRuntime {
     interface Subscriber {
 
         /**
-         * Data notification sent by the {@link Publisher} in response to requests to {@link Subscription#request(long)}.
+         * Data notification sent by the {@code Publisher} in response to requests to {@link Subscription#request(long)}.
          *
          * @param t the element signaled
          */

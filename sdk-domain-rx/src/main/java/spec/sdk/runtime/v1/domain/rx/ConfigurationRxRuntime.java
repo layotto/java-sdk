@@ -12,10 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package spec.sdk.runtime.v1.domain;
+package spec.sdk.runtime.v1.domain.rx;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import spec.sdk.runtime.v1.domain.ConfigurationRuntime;
 import spec.sdk.runtime.v1.domain.configuration.ConfigurationItem;
 import spec.sdk.runtime.v1.domain.configuration.ConfigurationRequestItem;
 import spec.sdk.runtime.v1.domain.configuration.SaveConfigurationRequest;

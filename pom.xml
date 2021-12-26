@@ -18,6 +18,7 @@
         <module>sdk-reactor</module>
         <module>spec</module>
         <module>sdk-grpc</module>
+        <module>sdk-domain-rx</module>
         <module>sdk-domain</module>
         <module>sdk-infrastructure</module>
     </modules>
@@ -27,7 +28,6 @@
         <grpc.version>1.34.1</grpc.version>
         <slf4j.version>1.7.30</slf4j.version>
         <fastjson.version>1.2.69</fastjson.version>
-        <reactor-core.version>3.4.12</reactor-core.version>
         <junit.version>4.13.1</junit.version>
         <mockito.version>3.11.2</mockito.version>
     </properties>
@@ -53,6 +53,11 @@
             <dependency>
                 <groupId>io.mosn.layotto</groupId>
                 <artifactId>runtime-sdk-grpc</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.mosn.layotto</groupId>
+                <artifactId>runtime-sdk-domain-rx</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

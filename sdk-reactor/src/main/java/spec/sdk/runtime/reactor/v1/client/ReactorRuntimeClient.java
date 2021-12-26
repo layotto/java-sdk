@@ -15,27 +15,27 @@
 package spec.sdk.runtime.reactor.v1.client;
 
 import reactor.core.publisher.Mono;
-import spec.sdk.runtime.v1.domain.ConfigurationRxRuntime;
-import spec.sdk.runtime.v1.domain.FileRxRuntime;
-import spec.sdk.runtime.v1.domain.HelloRxRuntime;
-import spec.sdk.runtime.v1.domain.InvocationRxRuntime;
-import spec.sdk.runtime.v1.domain.LockRxRuntime;
-import spec.sdk.runtime.v1.domain.PubSubRxRuntime;
-import spec.sdk.runtime.v1.domain.SequencerRxRuntime;
-import spec.sdk.runtime.v1.domain.StateRxRuntime;
+import spec.sdk.runtime.v1.domain.rx.ConfigurationRxRuntime;
+import spec.sdk.runtime.v1.domain.rx.FileRxRuntime;
+import spec.sdk.runtime.v1.domain.rx.HelloRxRuntime;
+import spec.sdk.runtime.v1.domain.rx.InvocationRxRuntime;
+import spec.sdk.runtime.v1.domain.rx.LockRxRuntime;
+import spec.sdk.runtime.v1.domain.rx.PubSubRxRuntime;
+import spec.sdk.runtime.v1.domain.rx.SequencerRxRuntime;
+import spec.sdk.runtime.v1.domain.rx.StateRxRuntime;
 
 /**
  * Cloud Runtimes JVM Client.
  */
 public interface ReactorRuntimeClient extends
-                                     ConfigurationRxRuntime,
-                                     FileRxRuntime,
-                                     HelloRxRuntime,
-                                     InvocationRxRuntime,
-                                     LockRxRuntime,
-                                     PubSubRxRuntime,
-                                     SequencerRxRuntime,
-                                     StateRxRuntime {
+        ConfigurationRxRuntime,
+        FileRxRuntime,
+        HelloRxRuntime,
+        InvocationRxRuntime,
+        LockRxRuntime,
+        PubSubRxRuntime,
+        SequencerRxRuntime,
+        StateRxRuntime {
 
     /**
      * Waits for the sidecar, giving up after timeout.

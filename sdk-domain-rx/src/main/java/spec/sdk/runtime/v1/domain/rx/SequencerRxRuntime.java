@@ -12,23 +12,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package spec.sdk.runtime.v1.domain;
+package spec.sdk.runtime.v1.domain.rx;
 
-import reactor.core.publisher.Mono;
+import spec.sdk.runtime.v1.domain.SequencerRuntime;
 
-public interface HelloRxRuntime extends HelloRuntime {
-
-    @Override
-    default String sayHello(String name) {
-        return sayHelloAsync(name).block();
-    }
-
-    Mono<String> sayHelloAsync(String name);
-
-    @Override
-    default String sayHello(String name, int timeoutMillisecond) {
-        return sayHelloAsync(name, timeoutMillisecond).block();
-    }
-
-    Mono<String> sayHelloAsync(String name, int timeoutMillisecond);
+public interface SequencerRxRuntime extends SequencerRuntime {
 }

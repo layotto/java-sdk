@@ -15,23 +15,8 @@
 package io.mosn.layotto.v1.reactor.client;
 
 import io.mosn.layotto.v1.infrastructure.serializer.ObjectSerializer;
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import spec.sdk.runtime.reactor.v1.client.ReactorRuntimeClient;
-import spec.sdk.runtime.v1.domain.configuration.ConfigurationItem;
-import spec.sdk.runtime.v1.domain.configuration.ConfigurationRequestItem;
-import spec.sdk.runtime.v1.domain.configuration.SaveConfigurationRequest;
-import spec.sdk.runtime.v1.domain.configuration.SubConfigurationResp;
-import spec.sdk.runtime.v1.domain.file.DelFileRequest;
-import spec.sdk.runtime.v1.domain.file.DelFileResponse;
-import spec.sdk.runtime.v1.domain.file.GetFileRequest;
-import spec.sdk.runtime.v1.domain.file.GetFileResponse;
-import spec.sdk.runtime.v1.domain.file.GetMetaRequest;
-import spec.sdk.runtime.v1.domain.file.GetMeteResponse;
-import spec.sdk.runtime.v1.domain.file.ListFileRequest;
-import spec.sdk.runtime.v1.domain.file.ListFileResponse;
-import spec.sdk.runtime.v1.domain.file.PutFileRequest;
-import spec.sdk.runtime.v1.domain.file.PutFileResponse;
 import spec.sdk.runtime.v1.domain.invocation.InvokeResponse;
 import spec.sdk.runtime.v1.domain.pubsub.PublishEventRequest;
 import spec.sdk.runtime.v1.domain.state.DeleteStateRequest;
@@ -71,156 +56,98 @@ abstract class AbstractLayottoReactorClient implements ReactorRuntimeClient {
     }
 
     @Override
-    public Mono<List<ConfigurationItem>> getConfigurationAsync(ConfigurationRequestItem configurationRequestItem) {
-        return null;
-    }
-
-    @Override
-    public Mono<Void> saveConfigurationAsync(SaveConfigurationRequest saveConfigurationRequest) {
-        return null;
-    }
-
-    @Override
-    public Mono<Void> deleteConfigurationAsync(ConfigurationRequestItem configurationRequestItem) {
-        return null;
-    }
-
-    @Override
-    public Flux<SubConfigurationResp> subscribeConfigurationAsync(ConfigurationRequestItem configurationRequestItem) {
-        return null;
-    }
-
-    @Override
-    public Mono<PutFileResponse> putFileAsync(PutFileRequest request, int timeoutMs) throws Exception {
-        return null;
-    }
-
-    @Override
-    public Mono<GetFileResponse> getFileAsync(GetFileRequest request, int timeoutMs) throws Exception {
-        return null;
-    }
-
-    @Override
-    public Mono<ListFileResponse> listFileAsync(ListFileRequest request, int timeoutMs) throws Exception {
-        return null;
-    }
-
-    @Override
-    public Mono<DelFileResponse> delFileAsync(DelFileRequest request, int timeoutMs) throws Exception {
-        return null;
-    }
-
-    @Override
-    public Mono<GetMeteResponse> getFileMetaAsync(GetMetaRequest request, int timeoutMs) throws Exception {
-        return null;
-    }
-
-    @Override
     public Mono<String> sayHelloAsync(String name) {
-        return null;
-    }
-
-    @Override
-    public Mono<String> sayHelloAsync(String name, int timeoutMillisecond) {
-        return null;
+        return sayHelloAsync(name, getTimeoutMs());
     }
 
     @Override
     public Mono<InvokeResponse<byte[]>> invokeMethodAsync(String appId, String methodName, byte[] data,
                                                           Map<String, String> header) {
-        return null;
-    }
-
-    @Override
-    public Mono<InvokeResponse<byte[]>> invokeMethodAsync(String appId, String methodName, byte[] data,
-                                                          Map<String, String> header, int timeoutMs) {
-        return null;
+        return invokeMethodAsync(appId, methodName, data, header, getTimeoutMs());
     }
 
     @Override
     public Mono<Void> publishEventAsync(String pubsubName, String topicName, byte[] data) {
-        return null;
+        PublishEventRequest publishEventRequest = new PublishEventRequest();
+        publishEventRequest.setPubsubName(pubsubName);
+        publishEventRequest.setTopic(topicName);
+        publishEventRequest.setData(data);
+        return publishEventAsync(publishEventRequest);
     }
 
     @Override
     public Mono<Void> publishEventAsync(String pubsubName, String topicName, byte[] data, Map<String, String> metadata) {
-        return null;
+        PublishEventRequest publishEventRequest = new PublishEventRequest();
+        publishEventRequest.setPubsubName(pubsubName);
+        publishEventRequest.setTopic(topicName);
+        publishEventRequest.setData(data);
+        publishEventRequest.setMetadata(metadata);
+        return publishEventAsync(publishEventRequest);
     }
 
     @Override
     public Mono<Void> publishEventAsync(String pubsubName, String topicName, byte[] data, String contentType,
                                         Map<String, String> metadata) {
-        return null;
-    }
-
-    @Override
-    public Mono<Void> publishEventAsync(PublishEventRequest request) {
-        return null;
+        PublishEventRequest publishEventRequest = new PublishEventRequest();
+        publishEventRequest.setPubsubName(pubsubName);
+        publishEventRequest.setTopic(topicName);
+        publishEventRequest.setData(data);
+        publishEventRequest.setContentType(contentType);
+        publishEventRequest.setMetadata(metadata);
+        return publishEventAsync(publishEventRequest);
     }
 
     @Override
     public <T> Mono<State<T>> getStateAsync(String storeName, String key, Class<T> clazz) {
-        return null;
+        GetStateRequest getStateRequest = new GetStateRequest(storeName, key);
+        return getStateAsync(getStateRequest, clazz, getTimeoutMs());
     }
 
     @Override
     public <T> Mono<State<T>> getStateAsync(String storeName, String key, StateOptions options, Class<T> clazz) {
-        return null;
+        GetStateRequest getStateRequest = new GetStateRequest(storeName, key);
+        getStateRequest.setStateOptions(options);
+        return getStateAsync(getStateRequest, clazz, getTimeoutMs());
     }
 
     @Override
     public <T> Mono<State<T>> getStateAsync(GetStateRequest request, Class<T> clazz) {
-        return null;
-    }
-
-    @Override
-    public <T> Mono<State<T>> getStateAsync(GetStateRequest request, Class<T> clazz, int timeoutMs) {
-        return null;
+        return getStateAsync(request, clazz, getTimeoutMs());
     }
 
     @Override
     public <T> Mono<List<State<T>>> getBulkStateAsync(String storeName, List<String> keys, Class<T> clazz) {
-        return null;
+        GetBulkStateRequest getBulkStateRequest = new GetBulkStateRequest(storeName, keys);
+        return getBulkStateAsync(getBulkStateRequest, clazz, getTimeoutMs());
     }
 
     @Override
     public <T> Mono<List<State<T>>> getBulkStateAsync(GetBulkStateRequest request, Class<T> clazz) {
-        return null;
-    }
-
-    @Override
-    public <T> Mono<List<State<T>>> getBulkStateAsync(GetBulkStateRequest request, Class<T> clazz, int timeoutMs) {
-        return null;
+        return getBulkStateAsync(request, clazz, getTimeoutMs());
     }
 
     @Override
     public Mono<Void> executeStateTransactionAsync(String storeName, List<TransactionalStateOperation<?>> operations) {
-        return null;
-    }
-
-    @Override
-    public Mono<Void> executeStateTransactionAsync(ExecuteStateTransactionRequest request) {
-        return null;
+        ExecuteStateTransactionRequest executeStateTransactionRequest = new ExecuteStateTransactionRequest(storeName);
+        executeStateTransactionRequest.setOperations(operations);
+        return executeStateTransactionAsync(executeStateTransactionRequest);
     }
 
     @Override
     public Mono<Void> saveBulkStateAsync(String storeName, List<State<?>> states) {
-        return null;
+        SaveStateRequest saveStateRequest = new SaveStateRequest(storeName);
+        saveStateRequest.setStates(states);
+        return saveBulkStateAsync(saveStateRequest);
     }
 
     @Override
     public Mono<Void> saveBulkStateAsync(SaveStateRequest request) {
-        return null;
-    }
-
-    @Override
-    public Mono<Void> saveBulkStateAsync(SaveStateRequest request, int timeoutMs) {
-        return null;
+        return saveBulkStateAsync(request, getTimeoutMs());
     }
 
     @Override
     public Mono<Void> saveStateAsync(String storeName, String key, Object value) {
-        return null;
+        return saveStateAsync(storeName, key, null, value, null, null);
     }
 
     @Override
@@ -257,5 +184,14 @@ abstract class AbstractLayottoReactorClient implements ReactorRuntimeClient {
     @Override
     public Mono<Void> shutdown() {
         return null;
+    }
+
+    /**
+     * Getter method for property <tt>timeoutMs</tt>.
+     *
+     * @return property value of timeoutMs
+     */
+    public int getTimeoutMs() {
+        return 0;
     }
 }
