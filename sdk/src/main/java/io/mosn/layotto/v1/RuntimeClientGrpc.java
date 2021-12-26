@@ -65,6 +65,7 @@ import java.util.concurrent.TimeUnit;
 public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRuntimeClient {
 
     private static final String                                                         TIMEOUT_KEY = "timeout";
+
     private final StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> stubManager;
 
     RuntimeClientGrpc(Logger logger,
@@ -86,8 +87,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
             // 2. invoke
             RuntimeProto.SayHelloResponse response = stubManager.getBlockingStub()
-                .withDeadlineAfter(timeoutMillisecond,
-                    TimeUnit.MILLISECONDS)
+                .withDeadlineAfter(timeoutMillisecond, TimeUnit.MILLISECONDS)
                 .sayHello(req);
 
             // 3. parse result
@@ -510,7 +510,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
     /**
      * Getter method for property <tt>stubManager</tt>.
-     *
+     * <p>
      * Do not use it !
      * This method is deprecated and might be refactored in the future.
      * We want this client to expose grpc Channels instead of grpc stubs.
@@ -530,22 +530,24 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
     @Override
     public PutFileResponse putFile(PutFileRequest request, int timeoutMs) throws Exception {
-
         checkParamOfPutFile(request);
 
         PutFileFuture putFuture = new PutFileFuture(request.getFileName());
         StreamObserver<RuntimeProto.PutFileRequest> observer = createPutFileObserver(putFuture, timeoutMs);
 
-        observer.onNext(buildPutFileMetaDataRequest(request.getStoreName(), request.getFileName(),
-            request.getMetaData()));
+        RuntimeProto.PutFileRequest putFileRequest = buildPutFileMetaDataRequest(
+            request.getStoreName(),
+            request.getFileName(),
+            request.getMetaData());
+        observer.onNext(putFileRequest);
 
         byte[] buf = new byte[4096];
         for (int size = request.getIn().read(buf); size > 0; size = request.getIn().read(buf)) {
-            observer.onNext(buildPutFileDataRequest(buf, size));
+            RuntimeProto.PutFileRequest fileRequest = buildPutFileDataRequest(buf, size);
+            observer.onNext(fileRequest);
         }
 
         observer.onCompleted();
-
         putFuture.awaitDone(timeoutMs);
 
         return new PutFileResponse();
@@ -553,72 +555,64 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
     @Override
     public GetFileResponse getFile(GetFileRequest request, int timeoutMs) throws Exception {
-
         checkParamOfGetFile(request);
 
         GetFilePipe pipe = new GetFilePipe(request.getFileName());
 
-        stubManager.
-            getAsyncStub().
-            getFile(
-                buildGetFileRequest(
-                    request.getStoreName(),
-                    request.getFileName(),
-                    request.getMetaData()),
-                pipe);
+        RuntimeProto.GetFileRequest getFileRequest = buildGetFileRequest(
+            request.getStoreName(),
+            request.getFileName(),
+            request.getMetaData());
+        stubManager.getAsyncStub()
+            .getFile(getFileRequest, pipe);
 
         return new GetFileResponse(pipe.getReader());
     }
 
     @Override
     public ListFileResponse listFile(ListFileRequest request, int timeoutMs) throws Exception {
-
         checkParamOfListFile(request);
 
-        RuntimeProto.ListFileResp response = stubManager.
-            getBlockingStub().
-            withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS).
-            listFile(
-                buildListFileRequest(
-                    request.getStoreName(),
-                    request.getName(),
-                    request.getMarker(),
-                    request.getPageSize(),
-                    request.getMetaData()));
+        RuntimeProto.ListFileRequest listFileRequest = buildListFileRequest(
+            request.getStoreName(),
+            request.getName(),
+            request.getMarker(),
+            request.getPageSize(),
+            request.getMetaData());
+        RuntimeProto.ListFileResp response = stubManager.getBlockingStub()
+            .withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS)
+            .listFile(listFileRequest);
 
         return buildListFileResponse(response);
     }
 
     @Override
     public DelFileResponse delFile(DelFileRequest request, int timeoutMs) throws Exception {
-
         checkParamOfDeleteFile(request);
 
-        stubManager.
-            getBlockingStub().
-            withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS).
-            delFile(
-                buildDelFileRequest(request.getStoreName(), request.getFileName(), request.getMetaData()));
+        RuntimeProto.DelFileRequest delFileRequest = buildDelFileRequest(request.getStoreName(), request.getFileName(),
+            request.getMetaData());
+        stubManager.getBlockingStub()
+            .withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS)
+            .delFile(delFileRequest);
 
         return new DelFileResponse();
     }
 
     @Override
     public GetMeteResponse getFileMeta(GetMetaRequest request, int timeoutMs) throws Exception {
-
         checkParamOfGetFileMeta(request);
 
-        RuntimeProto.GetFileMetaResponse resp = stubManager.
-            getBlockingStub().
-            withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS).
-            getFileMeta(
-                buildGetFileMetaRequest(request.getStoreName(), request.getFileName(), request.getMetaData()));
+        RuntimeProto.GetFileMetaRequest getFileMetaRequest = buildGetFileMetaRequest(request.getStoreName(),
+            request.getFileName(), request.getMetaData());
+        RuntimeProto.GetFileMetaResponse resp = stubManager.getBlockingStub()
+            .withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS)
+            .getFileMeta(getFileMetaRequest);
 
         return buildGetFileMetaResponse(resp);
     }
 
     private void checkParamOfGetFile(GetFileRequest request) {
-
         // check request
         if (request == null) {
             throw new IllegalArgumentException("miss request");
@@ -636,7 +630,6 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
     }
 
     private void checkParamOfPutFile(PutFileRequest request) {
-
         // check request
         if (request == null) {
             throw new IllegalArgumentException("miss request");
@@ -659,7 +652,6 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
     }
 
     private void checkParamOfListFile(ListFileRequest request) {
-
         // check request
         if (request == null) {
             throw new IllegalArgumentException("miss request");
@@ -672,7 +664,6 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
     }
 
     private void checkParamOfDeleteFile(DelFileRequest request) {
-
         // check request
         if (request == null) {
             throw new IllegalArgumentException("miss request");
@@ -690,7 +681,6 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
     }
 
     private void checkParamOfGetFileMeta(GetMetaRequest request) {
-
         // check request
         if (request == null) {
             throw new IllegalArgumentException("miss request");
@@ -738,7 +728,6 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
         }
 
         public void awaitDone(int timeoutMs) throws Exception {
-
             boolean finished = latch.await(timeoutMs, TimeUnit.MILLISECONDS);
             if (!finished) {
                 String tip = String.format("put file timeout, file=%s", fileName);
@@ -767,7 +756,6 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
         @Override
         public synchronized int read() throws IOException {
-
             checkCause();
 
             return super.read();
@@ -775,7 +763,6 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
         @Override
         public int read(byte[] b) throws IOException {
-
             checkCause();
 
             return super.read(b);
@@ -783,7 +770,6 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
         @Override
         public synchronized int read(byte[] b, int off, int len) throws IOException {
-
             checkCause();
 
             return super.read(b, off, len);
@@ -815,7 +801,6 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
         @Override
         public void onNext(RuntimeProto.GetFileResponse value) {
-
             logger.info(String.format("get File %s successfully", this.fileName));
 
             pipe(value.getData().toByteArray());
@@ -823,7 +808,6 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
         @Override
         public void onError(Throwable t) {
-
             logger.error(String.format("get File error, file=%s", this.fileName), t);
 
             reader.setCause(t);
@@ -833,7 +817,6 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
         @Override
         public void onCompleted() {
-
             logger.info(String.format("get File %s complete", this.fileName));
 
             close();
@@ -864,103 +847,95 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
                                                                               StreamObserver<Empty> callBackObserver,
                                                                               int timeoutMs) {
 
-        return stubManager.
-            getAsyncStub().
-            withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS).
-            putFile(callBackObserver);
+        return stubManager.getAsyncStub()
+            .withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS)
+            .putFile(callBackObserver);
     }
 
     private RuntimeProto.PutFileRequest buildPutFileMetaDataRequest(String storeName,
                                                                     String fileName,
                                                                     Map<String, String> meta) {
-        return RuntimeProto.PutFileRequest.
-            newBuilder().
-            setStoreName(storeName).
-            setName(fileName).
-            putAllMetadata(meta).
-            build();
+        return RuntimeProto.PutFileRequest
+            .newBuilder()
+            .setStoreName(storeName)
+            .setName(fileName)
+            .putAllMetadata(meta)
+            .build();
     }
 
     private RuntimeProto.PutFileRequest buildPutFileDataRequest(byte[] bytes, int size) {
-
-        return RuntimeProto.PutFileRequest.
-            newBuilder().
-            setData(ByteString.copyFrom(bytes, 0, size)).
-            build();
+        return RuntimeProto.PutFileRequest
+            .newBuilder()
+            .setData(ByteString.copyFrom(bytes, 0, size))
+            .build();
     }
 
     private RuntimeProto.GetFileRequest buildGetFileRequest(String storeName,
                                                             String fileName,
                                                             Map<String, String> meta) {
-
-        return RuntimeProto.GetFileRequest.
-            newBuilder().
-            setStoreName(storeName).
-            setName(fileName).
-            putAllMetadata(meta).
-            build();
+        return RuntimeProto.GetFileRequest
+            .newBuilder()
+            .setStoreName(storeName)
+            .setName(fileName)
+            .putAllMetadata(meta)
+            .build();
     }
 
     private RuntimeProto.ListFileRequest buildListFileRequest(String storeName, String name, String marker,
                                                               int pageSize, Map<String, String> meta) {
+        RuntimeProto.FileRequest fileRequest = RuntimeProto.FileRequest
+            .newBuilder()
+            .setStoreName(storeName)
+            .setName(name)
+            .putAllMetadata(meta)
+            .build();
 
-        RuntimeProto.FileRequest fileRequest = RuntimeProto.FileRequest.
-            newBuilder().
-            setStoreName(storeName).
-            setName(name).
-            putAllMetadata(meta).
-            build();
-
-        return RuntimeProto.ListFileRequest.
-            newBuilder().
-            setRequest(fileRequest).
-            setMarker(marker).
-            setPageSize(pageSize).
-            build();
+        return RuntimeProto.ListFileRequest
+            .newBuilder()
+            .setRequest(fileRequest)
+            .setMarker(marker)
+            .setPageSize(pageSize)
+            .build();
     }
 
     private RuntimeProto.DelFileRequest buildDelFileRequest(String storeName,
                                                             String fileName,
                                                             Map<String, String> meta) {
+        RuntimeProto.FileRequest fileRequest = RuntimeProto.FileRequest
+            .newBuilder()
+            .setStoreName(storeName)
+            .setName(fileName)
+            .putAllMetadata(meta)
+            .build();
 
-        RuntimeProto.FileRequest fileRequest = RuntimeProto.FileRequest.
-            newBuilder().
-            setStoreName(storeName).
-            setName(fileName).
-            putAllMetadata(meta).
-            build();
-
-        return RuntimeProto.DelFileRequest.
-            newBuilder().
-            setRequest(fileRequest).
-            build();
+        return RuntimeProto.DelFileRequest
+            .newBuilder()
+            .setRequest(fileRequest)
+            .build();
     }
 
     private RuntimeProto.GetFileMetaRequest buildGetFileMetaRequest(String storeName,
                                                                     String fileName,
                                                                     Map<String, String> meta) {
+        RuntimeProto.FileRequest fileRequest = RuntimeProto.FileRequest
+            .newBuilder()
+            .setStoreName(storeName)
+            .setName(fileName)
+            .putAllMetadata(meta)
+            .build();
 
-        RuntimeProto.FileRequest fileRequest = RuntimeProto.FileRequest.
-            newBuilder().
-            setStoreName(storeName).
-            setName(fileName).
-            putAllMetadata(meta).
-            build();
-
-        return RuntimeProto.GetFileMetaRequest.
-            newBuilder().
-            setRequest(fileRequest).
-            build();
+        return RuntimeProto.GetFileMetaRequest
+            .newBuilder()
+            .setRequest(fileRequest)
+            .build();
     }
 
     private GetMeteResponse buildGetFileMetaResponse(RuntimeProto.GetFileMetaResponse resp) {
-
         Map<String, String[]> metas = new HashMap<>();
-        resp.getResponse().
-                getMetadataMap().
-                forEach(
-                        (s, fileMetaValue) ->
-                                metas.put(s, fileMetaValue.getValueList().toArray(new String[0])));
+        resp.getResponse()
+                .getMetadataMap()
+                .forEach((s, fileMetaValue) ->
+                        metas.put(s, fileMetaValue.getValueList().toArray(new String[0])));
 
         GetMeteResponse result = new GetMeteResponse();
         result.setSize(resp.getSize());
@@ -971,16 +946,13 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
     }
 
     private ListFileResponse buildListFileResponse(RuntimeProto.ListFileResp resp) {
-
-        FileInfo[] files = resp.getFilesList().
-                stream().
-                map(
-                        fileInfo ->
-                                new FileInfo(
-                                        fileInfo.getFileName(),
-                                        fileInfo.getSize(),
-                                        fileInfo.getLastModified(),
-                                        fileInfo.getMetadataMap())).
+        FileInfo[] files = resp.getFilesList()
+                .stream()
+                .map(fileInfo -> new FileInfo(
+                        fileInfo.getFileName(),
+                        fileInfo.getSize(),
+                        fileInfo.getLastModified(),
+                        fileInfo.getMetadataMap())).
                 toArray(FileInfo[]::new);
 
         ListFileResponse result = new ListFileResponse();

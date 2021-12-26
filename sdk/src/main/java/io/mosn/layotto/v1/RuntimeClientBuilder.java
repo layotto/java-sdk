@@ -18,7 +18,7 @@ import com.google.errorprone.annotations.DoNotCall;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.mosn.layotto.v1.config.RuntimeProperties;
-import io.mosn.layotto.v1.domain.ApiProtocol;
+import io.mosn.layotto.v1.value.ApiProtocol;
 import io.mosn.layotto.v1.grpc.GrpcRuntimeClient;
 import io.mosn.layotto.v1.grpc.stub.PooledStubManager;
 import io.mosn.layotto.v1.grpc.stub.SingleStubManager;
@@ -172,8 +172,8 @@ public class RuntimeClientBuilder {
             throw new IllegalArgumentException("Invalid port.");
         }
         // 2. construct stubManager
-        StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> stubManager = new SingleStubManager(
-            channel, new StubCreatorImpl());
+        StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> stubManager =
+                new SingleStubManager(channel, new StubCreatorImpl());
         // 3. construct client
         return new RuntimeClientGrpc(
             logger,

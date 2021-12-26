@@ -20,20 +20,14 @@
             <groupId>io.mosn.layotto</groupId>
             <artifactId>runtime-spec-pb</artifactId>
         </dependency>
-        <!-- json -->
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
+            <groupId>io.mosn.layotto</groupId>
+            <artifactId>runtime-sdk-domain</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>io.grpc</groupId>
-            <artifactId>grpc-all</artifactId>
         </dependency>
 
         <dependency>
