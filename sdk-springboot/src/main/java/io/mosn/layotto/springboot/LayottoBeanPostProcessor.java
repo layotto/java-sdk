@@ -27,6 +27,7 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 
 /**
@@ -39,7 +40,7 @@ public class LayottoBeanPostProcessor implements BeanPostProcessor {
 
     private final EmbeddedValueResolver embeddedValueResolver;
 
-    static Map<String, DefaultSubscriber> SubscriberMap = new HashMap<>();
+    static Map<String, DefaultSubscriber> subscriberMap = new ConcurrentHashMap<>();
 
     LayottoBeanPostProcessor(ConfigurableBeanFactory beanFactory) {
         embeddedValueResolver = new EmbeddedValueResolver(beanFactory);
@@ -83,10 +84,10 @@ public class LayottoBeanPostProcessor implements BeanPostProcessor {
             String pubSubName = embeddedValueResolver.resolveStringValue(topic.pubsubName());
             if ((topicName != null) && (topicName.length() > 0) && pubSubName != null && pubSubName.length() > 0) {
 
-                if (!SubscriberMap.containsKey(pubSubName)) {
-                    SubscriberMap.put(pubSubName, new DefaultSubscriber(pubSubName));
+                if (!subscriberMap.containsKey(pubSubName)) {
+                    subscriberMap.put(pubSubName, new DefaultSubscriber(pubSubName));
                 }
-                SubscriberMap.get(pubSubName).subscribe(topicName, new LayottoEventListener(bean, method));
+                subscriberMap.get(pubSubName).subscribe(topicName, new LayottoEventListener(bean, method));
 
             }
         }

@@ -119,7 +119,7 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-           <!-- <plugin>
+           <plugin>
                 <groupId>com.googlecode.maven-java-formatter-plugin</groupId>
                 <artifactId>maven-java-formatter-plugin</artifactId>
                 <version>0.4</version>
@@ -137,9 +137,9 @@
                         <exclude>spec/proto/runtime/v1/**</exclude>
                     </excludes>
                 </configuration>
-            </plugin>-->
+            </plugin>
 
-         <!--   <plugin>
+            <plugin>
                 <groupId>com.mycila</groupId>
                 <artifactId>license-maven-plugin</artifactId>
                 <version>3.0</version>
@@ -164,7 +164,7 @@
                         <java>SLASHSTAR_STYLE</java>
                     </mapping>
                 </configuration>
-            </plugin>-->
+            </plugin>
         </plugins>
     </build>
 

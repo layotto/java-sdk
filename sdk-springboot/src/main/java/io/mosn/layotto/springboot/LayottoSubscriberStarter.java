@@ -39,14 +39,14 @@ public class LayottoSubscriberStarter implements ApplicationContextAware {
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
 
         layottoRuntime = new RuntimeServerGrpc(LayottoConfig.getPort());
-        for (Map.Entry<String, DefaultSubscriber> kv : LayottoBeanPostProcessor.SubscriberMap.entrySet()) {
+        for (Map.Entry<String, DefaultSubscriber> kv : LayottoBeanPostProcessor.subscriberMap.entrySet()) {
             logger.debug("register pubsub:{}", kv.getKey());
             layottoRuntime.registerPubSubCallback(kv.getKey(), kv.getValue());
         }
         try {
             layottoRuntime.start();
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
         }
     }
 }

@@ -41,8 +41,7 @@ public class LayottoEventListener implements EventListener {
         try {
             toInvokeMethod.invoke(bean, request);
         } catch (Exception e) {
-            logger.error("layotto subscriber callback method [{}] err", toInvokeMethod.getName());
-            e.printStackTrace();
+            logger.error("layotto subscriber callback method [{}] err:{ }", toInvokeMethod.getName(),e.getMessage());
             throw e;
         }
     }
