@@ -5,20 +5,11 @@
 对于 Maven 项目，将以下配置添加进 `pom.xml` 文件:
 
 ```xml
-
-<project>
-    ...
-    <dependencies>
-        ...
         <dependency>
             <groupId>io.mosn.layotto</groupId>
             <artifactId>runtime-sdk-parent</artifactId>
             <version>1.0.0</version>
         </dependency>
-        ...
-    </dependencies>
-    ...
-</project>
 ```
 
 ### 2. 运行 examples 示例
@@ -27,13 +18,17 @@
 
 #### 第一步：部署redis
 
-1. 取最新版的 Redis 镜像。 这里我们拉取官方的最新版本的镜像：
+1. 取最新版的 Redis 镜像。 
+
+这里我们拉取官方的最新版本的镜像：
 
 ```shell
 docker pull redis:latest
 ```
 
-2. 查看本地镜像 使用以下命令来查看是否已安装了 redis：
+2. 查看本地镜像
+
+使用以下命令来查看是否已安装了 redis：
 
 ```shell
 docker images
@@ -93,8 +88,8 @@ mvn clean install
 
 1. sdk负责对Layotto的grpc API进行封装。sdk内不应该有任何中间件的定制逻辑，比如不应该出现redis、rocketmq等产品相关的逻辑。
 
-2. sdk需要把所有跟通信协议相关的东西（比如proto编译出来的stub类）屏蔽掉，请勿让public方法暴露出任何跟协议相关的东西，最好protected方法也不暴露proto相关的东西。 这么做是因为将来可能改grpc
-   API的package路径，甚至哪天不用grpc了（比如换成http协议）。总之请让用户不用关心协议。
+2. sdk需要把所有跟通信协议相关的东西（比如proto编译出来的stub类）屏蔽掉，请勿让public方法暴露出任何跟协议相关的东西，最好protected方法也不暴露proto相关的东西。 
+这么做是因为将来可能改grpc API的package路径，甚至哪天不用grpc了（比如换成http协议）。总之请让用户不用关心协议。
 
 举个例子, state API对应有个`deleteState`方法，需要传`DeleteStateRequest`对象。
 
