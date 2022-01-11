@@ -3,19 +3,11 @@
 ### 1. import sdk
 For a Maven project, add the following to your `pom.xml` file:
 ```xml
-<project>
-  ...
-  <dependencies>
-    ...
     <dependency>
         <groupId>io.mosn.layotto</groupId>
         <artifactId>runtime-sdk-parent</artifactId>
         <version>1.0.0</version>
     </dependency>
-    ...
-  </dependencies>
-  ...
-</project>
 ```
 
 ### 2. Run the examples
@@ -42,9 +34,6 @@ cd ${projectpath}/sdk/java-sdk
 mvn clean install
 ```
 
-
-
-
 Try the following examples to learn more about this SDK:
 * [Hello world](./examples/src/test/java/io/mosn/layotto/examples/helloworld)
 * [State management](./examples/src/test/java/io/mosn/layotto/examples/state)
@@ -52,6 +41,9 @@ Try the following examples to learn more about this SDK:
 * [File API](./examples/src/test/java/io/mosn/layotto/examples/file)
 
 ## java sdk developer guide 
+
+![](https://user-images.githubusercontent.com/26001097/148891505-57b734fa-ac8c-4349-9703-16d3f3d7aa9a.png)
+
 ### How to format java sdk code
 Compile before submit your pull request:
 
