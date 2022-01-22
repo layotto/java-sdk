@@ -13,10 +13,12 @@
     <url>https://github.com/mosn/layotto</url>
 
     <modules>
-        <module>sdk</module>
         <module>examples</module>
         <module>sdk-reactor</module>
+        <module>sdk</module>
         <module>spec</module>
+        <module>sdk-domain</module>
+        <module>sdk-infrastructure</module>
     </modules>
 
     <properties>
@@ -41,6 +43,17 @@
                 <artifactId>runtime-spec-pb</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>io.mosn.layotto</groupId>
+                <artifactId>runtime-sdk-domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.mosn.layotto</groupId>
+                <artifactId>runtime-sdk-infrastructure</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <!-- json -->
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -76,6 +89,7 @@
                 <artifactId>grpc-stub</artifactId>
                 <version>${grpc.version}</version>
             </dependency>
+
             <!-- unit test -->
             <dependency>
                 <groupId>org.mockito</groupId>
@@ -260,4 +274,5 @@
             </distributionManagement>
         </profile>
     </profiles>
+
 </project>

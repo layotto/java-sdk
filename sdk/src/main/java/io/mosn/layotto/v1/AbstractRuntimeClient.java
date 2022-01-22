@@ -121,7 +121,7 @@ public abstract class AbstractRuntimeClient implements RuntimeClient {
      */
     @Override
     public <T> State<T> getState(GetStateRequest request, Class<T> clazz) {
-        return getState(request, clazz, getTimeoutMs());
+        return this.getState(request, clazz, getTimeoutMs());
     }
 
     @Override
@@ -182,7 +182,7 @@ public abstract class AbstractRuntimeClient implements RuntimeClient {
      */
     @Override
     public void deleteState(DeleteStateRequest request) {
-        deleteState(request, getTimeoutMs());
+        this.deleteState(request, this.getTimeoutMs());
     }
 
     /**
@@ -219,7 +219,7 @@ public abstract class AbstractRuntimeClient implements RuntimeClient {
      */
     @Override
     public void saveBulkState(SaveStateRequest request) {
-        saveBulkState(request, getTimeoutMs());
+        this.saveBulkState(request, getTimeoutMs());
     }
 
     /**
@@ -243,7 +243,7 @@ public abstract class AbstractRuntimeClient implements RuntimeClient {
 
     @Override
     public <T> List<State<T>> getBulkState(GetBulkStateRequest request, Class<T> clazz) {
-        return getBulkState(request, clazz, getTimeoutMs());
+        return this.getBulkState(request, clazz, getTimeoutMs());
     }
 
     @Override
@@ -268,7 +268,7 @@ public abstract class AbstractRuntimeClient implements RuntimeClient {
 
         try {
             // 2. invoke
-            List<State<byte[]>> bulkState = doGetBulkState(request, timeoutMs);
+            List<State<byte[]>> bulkState = this.doGetBulkState(request, timeoutMs);
             // 3. deserialize
             List<State<T>> result = new ArrayList<>(bulkState.size());
             for (State<byte[]> state : bulkState) {

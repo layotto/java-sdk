@@ -33,5 +33,12 @@ public interface RuntimeClient extends
                               SequencerRuntime,
                               FileRuntime {
 
+    /**
+     * Waits for the sidecar, giving up after timeout.
+     *
+     * @param timeoutInMilliseconds Timeout in milliseconds to wait for sidecar.
+     */
+    // void waitForSidecar(int timeoutInMilliseconds);
+
     void shutdown();
 }
