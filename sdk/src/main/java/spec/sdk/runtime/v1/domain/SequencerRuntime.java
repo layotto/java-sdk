@@ -14,5 +14,11 @@
  */
 package spec.sdk.runtime.v1.domain;
 
+import spec.sdk.runtime.v1.domain.sequencer.GetNextIdRequest;
+import spec.sdk.runtime.v1.domain.sequencer.GetNextIdResponse;
+
 public interface SequencerRuntime {
+
+    GetNextIdResponse getNextId(GetNextIdRequest req);
+
 }

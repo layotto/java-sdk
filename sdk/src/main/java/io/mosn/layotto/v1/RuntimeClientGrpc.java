@@ -42,6 +42,8 @@ import spec.sdk.runtime.v1.domain.file.ListFileResponse;
 import spec.sdk.runtime.v1.domain.file.PutFileRequest;
 import spec.sdk.runtime.v1.domain.file.PutFileResponse;
 import spec.sdk.runtime.v1.domain.invocation.InvokeResponse;
+import spec.sdk.runtime.v1.domain.sequencer.GetNextIdRequest;
+import spec.sdk.runtime.v1.domain.sequencer.GetNextIdResponse;
 import spec.sdk.runtime.v1.domain.state.DeleteStateRequest;
 import spec.sdk.runtime.v1.domain.state.ExecuteStateTransactionRequest;
 import spec.sdk.runtime.v1.domain.state.GetBulkStateRequest;
@@ -989,5 +991,32 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
         result.setMarker(resp.getMarker());
 
         return result;
+    }
+
+    @Override
+    public GetNextIdResponse getNextId(GetNextIdRequest req) {
+        try {
+            RuntimeProto.SequencerOptions.AutoIncrement autoIncrement = RuntimeProto.SequencerOptions.AutoIncrement.forNumber(req.getOptionsValue());
+
+            RuntimeProto.SequencerOptions options = RuntimeProto.SequencerOptions.newBuilder()
+                    .setIncrement(autoIncrement)
+                    .build();
+
+            RuntimeProto.GetNextIdRequest request = RuntimeProto.GetNextIdRequest.newBuilder()
+                    .setKey(req.getKey())
+                    .setOptions(options)
+                    .setStoreName(req.getStoreName())
+                    .build();
+
+            RuntimeProto.GetNextIdResponse response = stubManager.getBlockingStub()
+                    .getNextId(request);
+
+            GetNextIdResponse getNextIdResponse = new GetNextIdResponse();
+            getNextIdResponse.setNextId(response.getNextId());
+
+            return getNextIdResponse;
+        } catch (Exception e) {
+            throw new RuntimeClientException(e);
+        }
     }
 }
