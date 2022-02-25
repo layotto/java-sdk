@@ -16,6 +16,7 @@ package io.mosn.layotto.springboot;
 
 import io.mosn.layotto.v1.Topic;
 import io.mosn.layotto.v1.callback.component.pubsub.DefaultSubscriber;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
@@ -25,7 +26,6 @@ import org.springframework.beans.factory.config.EmbeddedValueResolver;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -36,7 +36,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @Component
 public class LayottoBeanPostProcessor implements BeanPostProcessor {
 
-    private static final Logger logger = LoggerFactory.getLogger(LayottoBeanPostProcessor.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(LayottoBeanPostProcessor.class.getName());
 
     private final EmbeddedValueResolver embeddedValueResolver;
 
@@ -51,9 +51,7 @@ public class LayottoBeanPostProcessor implements BeanPostProcessor {
      */
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        if (bean == null) {
-            return null;
-        }
+
         subscribeToTopics(bean.getClass(), bean, embeddedValueResolver);
 
         return bean;
@@ -82,13 +80,13 @@ public class LayottoBeanPostProcessor implements BeanPostProcessor {
             }
             String topicName = embeddedValueResolver.resolveStringValue(topic.name());
             String pubSubName = embeddedValueResolver.resolveStringValue(topic.pubsubName());
-            if ((topicName != null) && (topicName.length() > 0) && pubSubName != null && pubSubName.length() > 0) {
+            if (StringUtils.isNotEmpty(topicName) && StringUtils.isNotEmpty(pubSubName)) {
 
                 if (!subscriberMap.containsKey(pubSubName)) {
                     subscriberMap.put(pubSubName, new DefaultSubscriber(pubSubName));
                 }
                 subscriberMap.get(pubSubName).subscribe(topicName, new LayottoEventListener(bean, method));
-
+                LOGGER.info("Layotto pubsub subscribe succeeded,PubSubName:{},TopicName:{}", pubSubName, topicName);
             }
         }
     }

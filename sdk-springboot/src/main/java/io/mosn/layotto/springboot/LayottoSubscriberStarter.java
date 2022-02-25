@@ -19,10 +19,9 @@ import io.mosn.layotto.v1.callback.component.pubsub.DefaultSubscriber;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.util.Map;
 
@@ -31,12 +30,12 @@ import java.util.Map;
  * start RuntimeServerGrpc after spring's initialization completed
  */
 @Component
-public class LayottoSubscriberStarter implements ApplicationContextAware {
+public class LayottoSubscriberStarter {
     private static final Logger logger = LoggerFactory.getLogger(LayottoSubscriberStarter.class.getName());
     RuntimeServerGrpc layottoRuntime;
 
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+    @PostConstruct
+    public void startLayottoRuntime() throws BeansException {
 
         layottoRuntime = new RuntimeServerGrpc(LayottoConfig.getPort());
         for (Map.Entry<String, DefaultSubscriber> kv : LayottoBeanPostProcessor.subscriberMap.entrySet()) {
