@@ -14,12 +14,13 @@
  */
 package io.mosn.layotto.v1;
 
-import io.mosn.layotto.v1.config.RuntimeProperties;
-import io.mosn.layotto.v1.exceptions.RuntimeClientException;
-import io.mosn.layotto.v1.serializer.ObjectSerializer;
+import io.mosn.layotto.v1.infrastructure.config.RuntimeProperties;
+import io.mosn.layotto.v1.infrastructure.exceptions.RuntimeClientException;
+import io.mosn.layotto.v1.infrastructure.serializer.ObjectSerializer;
 import org.slf4j.Logger;
 import spec.sdk.runtime.v1.client.RuntimeClient;
 import spec.sdk.runtime.v1.domain.invocation.InvokeResponse;
+import spec.sdk.runtime.v1.domain.pubsub.PublishEventRequest;
 import spec.sdk.runtime.v1.domain.state.DeleteStateRequest;
 import spec.sdk.runtime.v1.domain.state.ExecuteStateTransactionRequest;
 import spec.sdk.runtime.v1.domain.state.GetBulkStateRequest;
@@ -83,6 +84,18 @@ public abstract class AbstractRuntimeClient implements RuntimeClient {
     @Override
     public void publishEvent(String pubsubName, String topicName, byte[] data, Map<String, String> metadata) {
         this.publishEvent(pubsubName, topicName, data, RuntimeProperties.DEFAULT_PUBSUB_CONTENT_TYPE, metadata);
+    }
+
+    @Override
+    public void publishEvent(String pubsubName, String topicName, byte[] data, String contentType,
+                             Map<String, String> metadata) {
+        PublishEventRequest publishEventRequest = new PublishEventRequest();
+        publishEventRequest.setPubsubName(pubsubName);
+        publishEventRequest.setTopic(topicName);
+        publishEventRequest.setData(data);
+        publishEventRequest.setContentType(contentType);
+        publishEventRequest.setMetadata(metadata);
+        this.publishEvent(publishEventRequest);
     }
 
     /**
@@ -182,7 +195,7 @@ public abstract class AbstractRuntimeClient implements RuntimeClient {
      */
     @Override
     public void deleteState(DeleteStateRequest request) {
-        deleteState(request, getTimeoutMs());
+        deleteState(request, this.getTimeoutMs());
     }
 
     /**

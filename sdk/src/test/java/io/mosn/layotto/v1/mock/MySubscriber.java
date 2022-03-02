@@ -14,7 +14,7 @@
  */
 package io.mosn.layotto.v1.mock;
 
-import io.mosn.layotto.v1.callback.component.pubsub.Subscriber;
+import io.mosn.layotto.v1.grpc.callback.component.pubsub.Subscriber;
 import spec.sdk.runtime.v1.domain.pubsub.TopicEventRequest;
 import spec.sdk.runtime.v1.domain.pubsub.TopicEventResponse;
 import spec.sdk.runtime.v1.domain.pubsub.TopicEventResponseStatus;

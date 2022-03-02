@@ -14,7 +14,7 @@
  */
 package io.mosn.layotto.examples.pubsub.subscriber.impl;
 
-import io.mosn.layotto.v1.callback.component.pubsub.Subscriber;
+import io.mosn.layotto.v1.grpc.callback.component.pubsub.Subscriber;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import spec.sdk.runtime.v1.domain.pubsub.TopicEventRequest;

@@ -16,7 +16,7 @@
 // Modified some test cases to test layotto's code
 package io.mosn.layotto.v1;
 
-import io.mosn.layotto.v1.serializer.ObjectSerializer;
+import io.mosn.layotto.v1.infrastructure.serializer.ObjectSerializer;
 import org.junit.Assert;
 import org.junit.Test;
 import spec.sdk.runtime.v1.client.RuntimeClient;

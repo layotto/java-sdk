@@ -1,3 +1,10 @@
+
+                sdk-runtime/sdk-reactor
+               ↑                       ↑ 
+        sdk-domain         ->       sdk-grpc
+              ↑                        ↑
+    sdk-infrastructure              spec-pb
+
 ## 如何使用java sdk
 
 ### 1. import sdk

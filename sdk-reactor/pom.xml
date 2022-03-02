@@ -11,43 +11,52 @@
     </parent>
 
     <artifactId>runtime-sdk-reactor</artifactId>
-
     <name>runtime-sdk-reactor</name>
     <description>reactor-style SDK for Runtime</description>
     <packaging>jar</packaging>
 
+    <properties>
+        <annotations-api.version>6.0.53</annotations-api.version>
+        <okhttp.version>4.9.3</okhttp.version>
+        <jackson-databind.version>2.13.0</jackson-databind.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>io.mosn.layotto</groupId>
-            <artifactId>runtime-spec-pb</artifactId>
+            <artifactId>runtime-sdk-grpc</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.mosn.layotto</groupId>
+            <artifactId>runtime-sdk-domain-rx</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
         </dependency>
-        <dependency>
-            <groupId>io.projectreactor</groupId>
-            <artifactId>reactor-core</artifactId>
-            <version>3.3.11.RELEASE</version>
-        </dependency>
+
         <!-- serializer -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.11.3</version>
+            <version>${jackson-databind.version}</version>
         </dependency>
+
         <!-- okhttp -->
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
-            <version>4.9.0</version>
+            <version>${okhttp.version}</version>
         </dependency>
+
         <!-- necessary for Java 9+ -->
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>annotations-api</artifactId>
-            <version>6.0.53</version>
+            <version>${annotations-api.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
 </project>

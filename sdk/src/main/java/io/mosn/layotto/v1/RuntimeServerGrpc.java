@@ -16,11 +16,11 @@ package io.mosn.layotto.v1;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
-import io.mosn.layotto.v1.callback.GrpcAppCallbackImpl;
-import io.mosn.layotto.v1.callback.component.pubsub.Subscriber;
-import io.mosn.layotto.v1.callback.component.pubsub.SubscriberRegistry;
-import io.mosn.layotto.v1.callback.component.pubsub.SubscriberRegistryImpl;
 import io.mosn.layotto.v1.grpc.ExceptionHandler;
+import io.mosn.layotto.v1.grpc.callback.GrpcAppCallbackImpl;
+import io.mosn.layotto.v1.grpc.callback.component.pubsub.Subscriber;
+import io.mosn.layotto.v1.grpc.callback.component.pubsub.SubscriberRegistry;
+import io.mosn.layotto.v1.grpc.callback.component.pubsub.SubscriberRegistryImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -13,10 +13,14 @@
     <url>https://github.com/mosn/layotto</url>
 
     <modules>
-        <module>sdk</module>
         <module>examples</module>
+        <module>sdk</module>
         <module>sdk-reactor</module>
         <module>spec</module>
+        <module>sdk-grpc</module>
+        <module>sdk-domain-rx</module>
+        <module>sdk-domain</module>
+        <module>sdk-infrastructure</module>
     </modules>
 
     <properties>
@@ -38,9 +42,35 @@
             </dependency>
             <dependency>
                 <groupId>io.mosn.layotto</groupId>
+                <artifactId>runtime-sdk-reactor</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.mosn.layotto</groupId>
                 <artifactId>runtime-spec-pb</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>io.mosn.layotto</groupId>
+                <artifactId>runtime-sdk-grpc</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.mosn.layotto</groupId>
+                <artifactId>runtime-sdk-domain-rx</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.mosn.layotto</groupId>
+                <artifactId>runtime-sdk-domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.mosn.layotto</groupId>
+                <artifactId>runtime-sdk-infrastructure</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <!-- json -->
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -76,6 +106,7 @@
                 <artifactId>grpc-stub</artifactId>
                 <version>${grpc.version}</version>
             </dependency>
+
             <!-- unit test -->
             <dependency>
                 <groupId>org.mockito</groupId>
@@ -203,6 +234,7 @@
         <url>http://github.com/mosn/layotto</url>
         <connection>scm:git:https://github.com/mosn/layotto.git</connection>
     </scm>
+
     <profiles>
         <profile>
             <id>release</id>
@@ -260,4 +292,5 @@
             </distributionManagement>
         </profile>
     </profiles>
+
 </project>
