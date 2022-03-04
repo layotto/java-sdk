@@ -1,5 +1,8 @@
 package spec.sdk.runtime.v1.domain.sequencer;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class GetNextIdRequest {
 
     private String storeName;
@@ -7,6 +10,8 @@ public class GetNextIdRequest {
     private String key;
 
     private SequencerOptions options;
+
+    private Map<String, String> metaData;
 
     public String getKey() {
         return key;
@@ -30,6 +35,18 @@ public class GetNextIdRequest {
 
     public void setStoreName(String storeName) {
         this.storeName = storeName;
+    }
+
+    public Map<String, String> getMetaData() {
+        if (metaData == null) {
+            metaData = new HashMap<>();
+        }
+
+        return metaData;
+    }
+
+    public void setMetadata(Map<String, String> metaData) {
+        this.metaData = metaData;
     }
 
     public Integer getOptionsValue() {

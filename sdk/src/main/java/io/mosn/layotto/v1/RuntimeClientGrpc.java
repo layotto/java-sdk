@@ -42,6 +42,10 @@ import spec.sdk.runtime.v1.domain.file.ListFileResponse;
 import spec.sdk.runtime.v1.domain.file.PutFileRequest;
 import spec.sdk.runtime.v1.domain.file.PutFileResponse;
 import spec.sdk.runtime.v1.domain.invocation.InvokeResponse;
+import spec.sdk.runtime.v1.domain.lock.TryLockRequest;
+import spec.sdk.runtime.v1.domain.lock.TryLockResponse;
+import spec.sdk.runtime.v1.domain.lock.UnlockRequest;
+import spec.sdk.runtime.v1.domain.lock.UnlockResponse;
 import spec.sdk.runtime.v1.domain.sequencer.GetNextIdRequest;
 import spec.sdk.runtime.v1.domain.sequencer.GetNextIdResponse;
 import spec.sdk.runtime.v1.domain.state.DeleteStateRequest;
@@ -1006,6 +1010,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
                     .setKey(req.getKey())
                     .setOptions(options)
                     .setStoreName(req.getStoreName())
+                    .putAllMetadata(req.getMetaData())
                     .build();
 
             RuntimeProto.GetNextIdResponse response = stubManager.getBlockingStub()
@@ -1016,7 +1021,18 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
             return getNextIdResponse;
         } catch (Exception e) {
+            logger.error("getNextId error ", e);
             throw new RuntimeClientException(e);
         }
+    }
+
+    @Override
+    public TryLockResponse tryLock(TryLockRequest request) {
+        return null;
+    }
+
+    @Override
+    public UnlockResponse unlock(UnlockRequest request) {
+        return null;
     }
 }
