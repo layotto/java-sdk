@@ -14,8 +14,11 @@
  */
 package io.mosn.layotto.springboot;
 
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -23,7 +26,18 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ConditionalOnWebApplication
-@ComponentScan("io.mosn.layotto.springboot")
+@EnableConfigurationProperties(LayottoProperties.class)
 public class LayottoAutoConfiguration {
 
+    @Bean
+    @ConditionalOnMissingBean
+    public LayottoBeanPostProcessor layottoBeanPostProcessor(ConfigurableBeanFactory beanFactory) {
+        return new LayottoBeanPostProcessor(beanFactory);
+    }
+
+    @Bean
+    @ConditionalOnMissingBean
+    public LayottoSubscriberStarter LayottoSubscriberStarter() {
+        return new LayottoSubscriberStarter();
+    }
 }

@@ -23,7 +23,6 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.beans.factory.config.EmbeddedValueResolver;
-import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
 import java.util.Map;
@@ -33,7 +32,6 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * LayottoBeanPostProcessor to record @Topic method
  */
-@Component
 public class LayottoBeanPostProcessor implements BeanPostProcessor {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(LayottoBeanPostProcessor.class.getName());

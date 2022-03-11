@@ -14,22 +14,24 @@
  */
 package io.mosn.layotto.springboot;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  * to save spring properties
  */
-@Component
-public class LayottoConfig {
-
+@ConfigurationProperties(prefix = "layotto")
+public class LayottoProperties {
 
     public static final int DEFAULT_SUBSCRIBER_PORT = 9999;
 
-    @Value("${layotto.subscriber.port}")
-    static public Integer port;
+    public Integer subscriberPort;
 
-    static public int getPort() {
-        return port == null ? DEFAULT_SUBSCRIBER_PORT : port;
+    public void setSubscriberPort(Integer subscriberPort) {
+        this.subscriberPort = subscriberPort;
+    }
+
+
+    public int getSubscriberPort() {
+        return subscriberPort == null ? DEFAULT_SUBSCRIBER_PORT : this.subscriberPort;
     }
 }

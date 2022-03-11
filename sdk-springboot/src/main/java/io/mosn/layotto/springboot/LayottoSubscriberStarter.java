@@ -19,7 +19,7 @@ import io.mosn.layotto.v1.callback.component.pubsub.DefaultSubscriber;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.PostConstruct;
 import java.io.IOException;
@@ -29,15 +29,17 @@ import java.util.Map;
 /**
  * start RuntimeServerGrpc after spring's initialization completed
  */
-@Component
 public class LayottoSubscriberStarter {
     private static final Logger logger = LoggerFactory.getLogger(LayottoSubscriberStarter.class.getName());
     RuntimeServerGrpc layottoRuntime;
 
+    @Autowired
+    LayottoProperties layottoConfig;
+
     @PostConstruct
     public void startLayottoRuntime() throws BeansException {
 
-        layottoRuntime = new RuntimeServerGrpc(LayottoConfig.getPort());
+        layottoRuntime = new RuntimeServerGrpc(layottoConfig.getSubscriberPort());
         for (Map.Entry<String, DefaultSubscriber> kv : LayottoBeanPostProcessor.subscriberMap.entrySet()) {
             logger.debug("register pubsub:{}", kv.getKey());
             layottoRuntime.registerPubSubCallback(kv.getKey(), kv.getValue());
