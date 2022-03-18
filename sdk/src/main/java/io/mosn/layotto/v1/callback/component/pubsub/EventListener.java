@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.mosn.layotto.examples.pubsub.subscriber.impl;
+package io.mosn.layotto.v1.callback.component.pubsub;
 
 import spec.sdk.runtime.v1.domain.pubsub.TopicEventRequest;
 

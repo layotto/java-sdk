@@ -17,6 +17,7 @@
         <module>examples</module>
         <module>sdk-reactor</module>
         <module>spec</module>
+        <module>sdk-springboot</module>
     </modules>
 
     <properties>
@@ -118,7 +119,7 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-            <plugin>
+           <plugin>
                 <groupId>com.googlecode.maven-java-formatter-plugin</groupId>
                 <artifactId>maven-java-formatter-plugin</artifactId>
                 <version>0.4</version>
