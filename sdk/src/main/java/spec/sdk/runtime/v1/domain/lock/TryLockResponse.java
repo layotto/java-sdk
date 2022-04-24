@@ -16,4 +16,14 @@ package spec.sdk.runtime.v1.domain.lock;
 
 public class TryLockResponse {
     public boolean success;
+
+    public boolean isSuccess() {
+        return success;
+    }
+
+    public TryLockResponse(boolean success) {
+        this.success = success;
+    }
+
+
 }

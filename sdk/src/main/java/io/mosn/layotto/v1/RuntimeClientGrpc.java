@@ -42,6 +42,10 @@ import spec.sdk.runtime.v1.domain.file.ListFileResponse;
 import spec.sdk.runtime.v1.domain.file.PutFileRequest;
 import spec.sdk.runtime.v1.domain.file.PutFileResponse;
 import spec.sdk.runtime.v1.domain.invocation.InvokeResponse;
+import spec.sdk.runtime.v1.domain.lock.TryLockRequest;
+import spec.sdk.runtime.v1.domain.lock.TryLockResponse;
+import spec.sdk.runtime.v1.domain.lock.UnlockRequest;
+import spec.sdk.runtime.v1.domain.lock.UnlockResponse;
 import spec.sdk.runtime.v1.domain.sequencer.GetNextIdRequest;
 import spec.sdk.runtime.v1.domain.sequencer.GetNextIdResponse;
 import spec.sdk.runtime.v1.domain.state.DeleteStateRequest;
@@ -1020,5 +1024,54 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             logger.error("getNextId error ", e);
             throw new RuntimeClientException(e);
         }
+    }
+
+
+    @Override
+    public TryLockResponse tryLock(TryLockRequest request) {
+        try {
+            RuntimeProto.TryLockRequest req = RuntimeProto.TryLockRequest
+                    .newBuilder()
+                    .setLockOwner(request.getLockOwner())
+                    .setExpire(request.getExpire())
+                    .setStoreName(request.getStoreName())
+                    .setResourceId(request.getResourceId())
+                    .build();
+
+            logger.debug("try lock request params {}", req);
+
+            RuntimeProto.TryLockResponse tryLockResponse = stubManager
+                    .getBlockingStub()
+                    .tryLock(req);
+
+            return new TryLockResponse(tryLockResponse.getSuccess());
+        } catch (Exception e) {
+            throw new RuntimeClientException(e);
+        }
+
+    }
+
+    @Override
+    public UnlockResponse unlock(UnlockRequest request) {
+
+        try {
+            RuntimeProto.UnlockRequest req = RuntimeProto.UnlockRequest
+                    .newBuilder()
+                    .setLockOwner(request.getLockOwner())
+                    .setStoreName(request.getStoreName())
+                    .setResourceId(request.getResourceId())
+                    .build();
+
+            logger.debug("unlock request params {}", req);
+
+            RuntimeProto.UnlockResponse.Status status = stubManager
+                    .getBlockingStub()
+                    .unlock(req)
+                    .getStatus();
+            return new UnlockResponse(status.getNumber());
+        } catch (Exception e) {
+            throw new RuntimeClientException(e);
+        }
+
     }
 }

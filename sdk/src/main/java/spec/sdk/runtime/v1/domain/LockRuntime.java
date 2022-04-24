@@ -14,5 +14,20 @@
  */
 package spec.sdk.runtime.v1.domain;
 
+import spec.proto.runtime.v1.RuntimeProto;
+import spec.sdk.runtime.v1.domain.lock.TryLockRequest;
+import spec.sdk.runtime.v1.domain.lock.TryLockResponse;
+import spec.sdk.runtime.v1.domain.lock.UnlockRequest;
+import spec.sdk.runtime.v1.domain.lock.UnlockResponse;
+
 public interface LockRuntime {
+
+    /**
+     * try to obtain a lock. {@link TryLockRequest#setStoreName(String)} setting the storage type
+     * @param request Get the lock
+     * @return Get the result of lock, If success is true, otherwise false.
+     */
+    TryLockResponse tryLock(TryLockRequest request);
+
+    UnlockResponse unlock(UnlockRequest request);
 }
