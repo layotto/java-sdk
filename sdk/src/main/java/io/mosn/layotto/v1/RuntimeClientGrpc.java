@@ -27,6 +27,7 @@ import io.mosn.layotto.v1.exceptions.RuntimeClientException;
 import io.mosn.layotto.v1.grpc.GrpcRuntimeClient;
 import io.mosn.layotto.v1.grpc.stub.StubManager;
 import io.mosn.layotto.v1.serializer.ObjectSerializer;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import spec.proto.runtime.v1.RuntimeGrpc;
 import spec.proto.runtime.v1.RuntimeProto;
@@ -42,6 +43,10 @@ import spec.sdk.runtime.v1.domain.file.ListFileResponse;
 import spec.sdk.runtime.v1.domain.file.PutFileRequest;
 import spec.sdk.runtime.v1.domain.file.PutFileResponse;
 import spec.sdk.runtime.v1.domain.invocation.InvokeResponse;
+import spec.sdk.runtime.v1.domain.lock.TryLockRequest;
+import spec.sdk.runtime.v1.domain.lock.TryLockResponse;
+import spec.sdk.runtime.v1.domain.lock.UnlockRequest;
+import spec.sdk.runtime.v1.domain.lock.UnlockResponse;
 import spec.sdk.runtime.v1.domain.sequencer.GetNextIdRequest;
 import spec.sdk.runtime.v1.domain.sequencer.GetNextIdResponse;
 import spec.sdk.runtime.v1.domain.state.DeleteStateRequest;
@@ -1019,6 +1024,87 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
         } catch (Exception e) {
             logger.error("getNextId error ", e);
             throw new RuntimeClientException(e);
+        }
+    }
+
+
+    @Override
+    public TryLockResponse tryLock(TryLockRequest request) {
+        checkTryLockRequest(request);
+        try {
+            RuntimeProto.TryLockRequest req = RuntimeProto.TryLockRequest
+                    .newBuilder()
+                    .setLockOwner(request.getLockOwner())
+                    .setExpire(request.getExpire())
+                    .setStoreName(request.getStoreName())
+                    .setResourceId(request.getResourceId())
+                    .build();
+
+            logger.debug("try lock request params {}", req);
+
+            RuntimeProto.TryLockResponse tryLockResponse = stubManager
+                    .getBlockingStub()
+                    .tryLock(req);
+
+            return new TryLockResponse(tryLockResponse.getSuccess());
+        } catch (Exception e) {
+            logger.error("try lock failed, {}", request, e);
+            throw new RuntimeClientException(e);
+        }
+
+    }
+
+    private void checkTryLockRequest(TryLockRequest request) {
+       if (request == null) {
+           throw new NullPointerException("try lock request is null");
+       }
+       checkLockArguments(request.getStoreName(), request.getResourceId(), request.getLockOwner());
+
+    }
+
+    @Override
+    public UnlockResponse unlock(UnlockRequest request) {
+       checkUnlockRequest(request);
+        try {
+            RuntimeProto.UnlockRequest req = RuntimeProto.UnlockRequest
+                    .newBuilder()
+                    .setLockOwner(request.getLockOwner())
+                    .setStoreName(request.getStoreName())
+                    .setResourceId(request.getResourceId())
+                    .build();
+
+            logger.debug("unlock request params {}", req);
+
+            RuntimeProto.UnlockResponse.Status status = stubManager
+                    .getBlockingStub()
+                    .unlock(req)
+                    .getStatus();
+            return new UnlockResponse(status.getNumber());
+        } catch (Exception e) {
+            logger.error("unlock failed, {}", request, e);
+            throw new RuntimeClientException(e);
+        }
+
+    }
+
+    private void checkUnlockRequest(UnlockRequest request) {
+        if (request == null) {
+            throw new NullPointerException("unlock request is null");
+        }
+        checkLockArguments(request.getStoreName(), request.getResourceId(), request.getLockOwner());
+    }
+
+    private void checkLockArguments(String storeName, String resourceId, String lockOwner) {
+        if (StringUtils.isBlank(storeName)) {
+            throw new IllegalArgumentException("store name is blank");
+        }
+
+        if (StringUtils.isBlank(resourceId)) {
+            throw new IllegalArgumentException("resourceId is blank");
+        }
+
+        if (StringUtils.isBlank(lockOwner)) {
+            throw new IllegalArgumentException("lockOwner name is blank");
         }
     }
 }
