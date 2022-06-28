@@ -3,20 +3,25 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>io.mosn.layotto</groupId>
-        <artifactId>examples</artifactId>
-        <version>1.1.0</version>
-    </parent>
-
+    <groupId>io.mosn.layotto</groupId>
     <artifactId>examples-helloworld</artifactId>
+    <version>1.1.0</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>io.mosn.layotto</groupId>
+            <artifactId>runtime-sdk</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+    </dependencies>
+
     <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
