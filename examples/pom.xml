@@ -4,18 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <artifactId>runtime-sdk-parent</artifactId>
-        <groupId>io.mosn.layotto</groupId>
-        <version>1.1.0</version>
-    </parent>
-
+    <groupId>io.mosn.layotto</groupId>
+    <version>1.1.0</version>
     <artifactId>examples</artifactId>
+    <packaging>pom</packaging>
 
     <dependencies>
         <dependency>
             <groupId>io.mosn.layotto</groupId>
             <artifactId>runtime-sdk</artifactId>
+            <version>1.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

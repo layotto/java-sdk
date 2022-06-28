@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RedisCRUD {
-    static String storeName = "redis";
+    static String storeName = "state_demo";
     static String key1      = "key1";
     static String key2      = "key2";
     static String key3      = "key3";
