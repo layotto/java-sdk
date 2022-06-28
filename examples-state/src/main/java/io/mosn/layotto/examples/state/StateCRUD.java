@@ -24,7 +24,7 @@ import spec.sdk.runtime.v1.domain.state.TransactionalStateOperation;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RedisCRUD {
+public class StateCRUD {
     static String storeName = "state_demo";
     static String key1      = "key1";
     static String key2      = "key2";
@@ -77,6 +77,7 @@ public class RedisCRUD {
         keys.add(key3);
         keys.add(key1);
         GetBulkStateRequest req = new GetBulkStateRequest(storeName, keys);
+        // send request
         List<State<String>> bulkState = client.getBulkState(req, String.class);
         assertTrue(bulkState.size() == 2);
         for (State<String> st : bulkState) {

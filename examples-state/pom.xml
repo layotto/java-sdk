@@ -9,7 +9,7 @@
         <version>1.1.0</version>
     </parent>
 
-    <artifactId>examples-sequencer</artifactId>
+    <artifactId>examples-state</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -24,7 +24,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>io.mosn.layotto.examples.sequencer.Sequencer</mainClass>
+                            <mainClass>io.mosn.layotto.examples.state.StateCRUD</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
