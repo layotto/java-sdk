@@ -29,24 +29,25 @@ public class Sequencer {
         getNextIdRequest.setOptions(options);
 
         // send request
+        System.out.println("Try to get next id.Key: " + key);
         GetNextIdResponse nextId = client.getNextId(getNextIdRequest);
 
         // assert
-        System.out.println("id :" + nextId.getNextId());
+        System.out.println("Next id: " + nextId.getNextId());
         Assert.assertTrue(nextId.getNextId() > 0L);
 
         // send request again
         GetNextIdResponse nextId2 = client.getNextId(getNextIdRequest);
 
         // assert
-        System.out.println("got id :" + nextId2.getNextId());
+        System.out.println("Next id: " + nextId2.getNextId());
         Assert.assertTrue(nextId2.getNextId() > nextId.getNextId());
 
         // send request again
         GetNextIdResponse nextId3 = client.getNextId(getNextIdRequest);
 
         // assert
-        System.out.println("got id :" + nextId3.getNextId());
+        System.out.println("Next id: " + nextId3.getNextId());
         Assert.assertTrue(nextId3.getNextId() > nextId2.getNextId());
     }
 
