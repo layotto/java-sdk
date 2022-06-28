@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.mosn.layotto.examples.helloworld;
+package io.mosn.layotto.examples.hello;
 
 import io.mosn.layotto.v1.RuntimeClientBuilder;
 import io.mosn.layotto.v1.config.RuntimeProperties;

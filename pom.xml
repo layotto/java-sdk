@@ -18,6 +18,7 @@
         <module>sdk-reactor</module>
         <module>spec</module>
         <module>sdk-springboot</module>
+        <module>examples-helloworld</module>
         <module>examples-sequencer</module>
         <module>examples-state</module>
         <module>examples-file</module>
