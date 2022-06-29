@@ -36,23 +36,26 @@ public class StateCRUD {
                 .withPort(RuntimeProperties.DEFAULT_PORT)
                 .build();
         // saveState
-        client.saveState(storeName, key1, "v11");
+        String value = "v11";
+        client.saveState(storeName, key1, value);
+        System.out.println("SaveState succeeded.key:" + key1 + " , value: " + value);
         // getState
         State<String> state = client.getState(storeName, key1, String.class);
         assertEquals(state.getKey(), key1);
-        assertEquals(state.getValue(), "v11");
-        System.out.println("get state key:" + state.getKey() + "  value:" + state.getValue());
+        assertEquals(state.getValue(), value);
+        System.out.println("GetState succeeded. key:" + state.getKey() + "  value:" + state.getValue());
 
         // deleteState
-        client.deleteState(storeName, key1);
+        client.deleteState(storeName, key1, state.getEtag(), null);
+        System.out.println("DeleteState succeeded. key:" + key1);
 
-        // getState
+        // getState after delete
         state = client.getState(storeName, key1, String.class);
         assertEquals(state.getKey(), key1);
         // TODO: currently Redis component can't tell the difference between null and 'non exist'
         //assertEquals(state.getValue(), null);
         assertEquals(state.getValue(), "");
-        System.out.println("get state after delete. key:" + state.getKey() + "  value:" + state.getValue());
+        System.out.println("GetState after delete. key:" + state.getKey() + "  value:" + state.getValue());
 
         // saveBulkState
         List<State<?>> list = new ArrayList<>();
@@ -61,6 +64,7 @@ public class StateCRUD {
         list.add(state2);
         list.add(state1);
         client.saveBulkState(storeName, list);
+        System.out.println("SaveBulkState succeeded. key:" + key1 + " , " + key2);
 
         // execute transaction
         List<TransactionalStateOperation<?>> operationList = new ArrayList<>();
@@ -97,7 +101,7 @@ public class StateCRUD {
         List<State<TestClass>> resp = client.getBulkState(req, TestClass.class);
         assertTrue(resp.size() == 1);
         assertEquals(resp.get(0).getValue().name, key2);
-
+        System.out.println("GetBulkState succeeded. key:" + key2);
     }
 
     private static void assertTrue(boolean b) {

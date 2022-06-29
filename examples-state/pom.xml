@@ -45,7 +45,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>io.mosn.layotto.examples.sequencer.Sequencer</mainClass>
+                            <mainClass>io.mosn.layotto.examples.state.StateCRUD</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
