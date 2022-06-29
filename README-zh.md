@@ -75,10 +75,11 @@ mvn clean install
 
 通过以下Examples示例来了解如何使用SDK:
 
-* [Hello world](./examples/src/main/java/io/mosn/layotto/examples/helloworld)
-* [State management](./examples/src/main/java/io/mosn/layotto/examples/state)
+* [Hello world](./examples-hello/src/main/java/io/mosn/layotto/examples/hello)
+* [State management](./examples-state/src/main/java/io/mosn/layotto/examples/state)
 * [Pubsub API](./examples/src/main/java/io/mosn/layotto/examples/pubsub)
-* [File API](./examples/src/main/java/io/mosn/layotto/examples/file)
+* [Sequencer API](./examples-sequencer/src/main/java/io/mosn/layotto/examples/sequencer)
+* [File API](./examples-file/src/main/java/io/mosn/layotto/examples/file)
 
 ## sdk开发指南
 
