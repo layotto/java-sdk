@@ -19,13 +19,14 @@ import io.mosn.layotto.v1.config.RuntimeProperties;
 import spec.sdk.runtime.v1.client.RuntimeClient;
 
 public class Publisher {
+    static String storeName = "pub_subs_demo";
 
     public static void main(String[] args) {
         RuntimeClient client = new RuntimeClientBuilder()
-            .withPort(RuntimeProperties.DEFAULT_PORT)
-            .build();
+                .withPort(RuntimeProperties.DEFAULT_PORT)
+                .build();
 
-        client.publishEvent("redis", "hello", "world".getBytes());
-        client.publishEvent("redis", "topic1", "message1".getBytes());
+        client.publishEvent(storeName, "hello", "world".getBytes());
+        client.publishEvent(storeName, "topic1", "message1".getBytes());
     }
 }

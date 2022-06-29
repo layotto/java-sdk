@@ -21,6 +21,7 @@ import io.mosn.layotto.v1.callback.component.pubsub.DefaultSubscriber;
 import java.util.concurrent.Semaphore;
 
 public class Subscriber {
+    static String storeName = "pub_subs_demo";
 
     /**
      * This is the entry point for this example app, which subscribes to a topic.
@@ -29,7 +30,8 @@ public class Subscriber {
      */
     public static void main(String[] args) throws Exception {
         RuntimeServerGrpc srv = new RuntimeServerGrpc(9999);
-        DefaultSubscriber pubsub = new DefaultSubscriber("redis");
+        DefaultSubscriber pubsub = new DefaultSubscriber(storeName);
+        // subscribe
         pubsub.subscribe("hello", request -> {
             String value = new String(request.getData());
             assertEquals(value, "world");
@@ -41,8 +43,12 @@ public class Subscriber {
             System.out.println(JSON.toJSONString(request));
         });
         srv.registerPubSubCallback(pubsub.getComponentName(), pubsub);
-        Semaphore sm = new Semaphore(0);
+
+        // start server
         srv.start();
+
+        // hang
+        Semaphore sm = new Semaphore(0);
         sm.acquire();
     }
 
