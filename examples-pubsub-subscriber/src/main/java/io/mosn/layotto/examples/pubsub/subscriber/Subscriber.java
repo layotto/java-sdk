@@ -17,6 +17,7 @@ package io.mosn.layotto.examples.pubsub.subscriber;
 import com.alibaba.fastjson.JSON;
 import io.mosn.layotto.v1.RuntimeServerGrpc;
 import io.mosn.layotto.v1.callback.component.pubsub.DefaultSubscriber;
+import spec.sdk.runtime.v1.domain.pubsub.TopicEventRequest;
 
 import java.util.concurrent.Semaphore;
 
@@ -35,21 +36,26 @@ public class Subscriber {
         pubsub.subscribe("hello", request -> {
             String value = new String(request.getData());
             assertEquals(value, "world");
-            System.out.println("Received a new event.Topic: " + request.getTopic() + " , Data:" + value);
+            print(request.getTopic(), value);
         });
         pubsub.subscribe("topic1", request -> {
             String value = new String(request.getData());
             assertEquals(value, "value1");
-            System.out.println("Received a new event.Topic: " + request.getTopic() + " , Data:" + value);
+            print(request.getTopic(), value);
         });
         srv.registerPubSubCallback(pubsub.getComponentName(), pubsub);
 
         // start server
+        System.out.println("Start listening on port 9999 ......");
         srv.start();
 
         // hang
         Semaphore sm = new Semaphore(0);
         sm.acquire();
+    }
+
+    private static void print(String topic, String value) {
+        System.out.println("Received a new event.Topic: " + topic + " , Data: " + value);
     }
 
     private static void assertEquals(Object actualResult, Object expected) {
