@@ -27,6 +27,6 @@ public class Publisher {
                 .build();
 
         client.publishEvent(storeName, "hello", "world".getBytes());
-        client.publishEvent(storeName, "topic1", "message1".getBytes());
+        client.publishEvent(storeName, "topic1", "value1".getBytes());
     }
 }

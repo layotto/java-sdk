@@ -35,12 +35,12 @@ public class Subscriber {
         pubsub.subscribe("hello", request -> {
             String value = new String(request.getData());
             assertEquals(value, "world");
-            System.out.println(JSON.toJSONString(request));
+            System.out.println("Received a new event.Topic: " + request.getTopic() + " , Data:" + value);
         });
         pubsub.subscribe("topic1", request -> {
             String value = new String(request.getData());
-            assertEquals(value, "message1");
-            System.out.println(JSON.toJSONString(request));
+            assertEquals(value, "value1");
+            System.out.println("Received a new event.Topic: " + request.getTopic() + " , Data:" + value);
         });
         srv.registerPubSubCallback(pubsub.getComponentName(), pubsub);
 
@@ -56,7 +56,8 @@ public class Subscriber {
         if (actualResult == expected || actualResult.equals(expected)) {
             return;
         }
-        String msg = "Unexpected result:" + actualResult;
+        String msg = "[Error] Unexpected result:" + actualResult;
+        System.out.println(msg);
         throw new RuntimeException(msg);
     }
 }
