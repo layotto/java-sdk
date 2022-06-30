@@ -27,6 +27,9 @@ public class Publisher {
                 .build();
 
         client.publishEvent(storeName, "hello", "world".getBytes());
+        System.out.println("Published a new event.Topic: hello ,Data: world");
+
         client.publishEvent(storeName, "topic1", "value1".getBytes());
+        System.out.println("Published a new event.Topic: topic1 ,Data: value1");
     }
 }
