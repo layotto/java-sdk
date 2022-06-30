@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.mosn.layotto</groupId>
-    <artifactId>examples-file</artifactId>
+    <artifactId>examples-pubsub-publisher</artifactId>
     <version>1.1.0</version>
 
     <properties>
@@ -45,7 +45,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>io.mosn.layotto.examples.file.File</mainClass>
+                            <mainClass>io.mosn.layotto.examples.pubsub.publisher.Publisher</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

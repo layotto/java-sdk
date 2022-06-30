@@ -44,8 +44,8 @@ public class File {
 
     private static final Logger logger    = LoggerFactory.getLogger(File.class.getName());
 
-    static String               storeName = "local";
-    static String               fileName  = "/tmp/test.log";
+    static String               storeName = "file_demo";
+    static String               fileName  = "test/hello/layotto.txt";
 
     public static void main(String[] args) throws Exception {
 
