@@ -18,7 +18,12 @@
         <module>sdk-reactor</module>
         <module>spec</module>
         <module>sdk-springboot</module>
-        <module>preview-service</module>
+        <module>examples-sequencer</module>
+        <module>examples-state</module>
+        <module>examples-file</module>
+        <module>examples-hello</module>
+        <module>examples-pubsub-subscriber</module>
+        <module>examples-pubsub-publisher</module>
     </modules>
 
     <properties>

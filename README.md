@@ -35,10 +35,11 @@ mvn clean install
 ```
 
 Try the following examples to learn more about this SDK:
-* [Hello world](./examples/src/test/java/io/mosn/layotto/examples/helloworld)
-* [State management](./examples/src/test/java/io/mosn/layotto/examples/state)
-* [Pubsub API](./examples/src/test/java/io/mosn/layotto/examples/pubsub)
-* [File API](./examples/src/test/java/io/mosn/layotto/examples/file)
+* [Hello world](./examples-hello/src/main/java/io/mosn/layotto/examples/hello)
+* [State management](./examples-state/src/main/java/io/mosn/layotto/examples/state)
+* [Pubsub API](./examples/src/main/java/io/mosn/layotto/examples/pubsub)
+* [Sequencer API](./examples-sequencer/src/main/java/io/mosn/layotto/examples/sequencer)
+* [File API](./examples-file/src/main/java/io/mosn/layotto/examples/file)
 
 ## java sdk developer guide 
 
