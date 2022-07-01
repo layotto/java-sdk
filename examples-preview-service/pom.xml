@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>io.mosn.layotto</groupId>
-    <artifactId>example-preview-service</artifactId>
+    <artifactId>examples</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>example-preview-service</name>
-    <description>example-preview-service</description>
+    <name>examples-preview-service</name>
+
     <properties>
         <java.version>1.8</java.version>
     </properties>

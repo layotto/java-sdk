@@ -24,6 +24,7 @@
         <module>examples-hello</module>
         <module>examples-pubsub-subscriber</module>
         <module>examples-pubsub-publisher</module>
+        <module>examples-preview-service</module>
     </modules>
 
     <properties>
