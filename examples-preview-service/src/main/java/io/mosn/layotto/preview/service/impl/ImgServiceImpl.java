@@ -28,7 +28,7 @@ public class ImgServiceImpl implements ImgService {
     private GetFileRequest request = new GetFileRequest();
 
     public InputStream getImgWithOss(String id) throws Exception {
-        request.setFileName(fileConfiguration.getFileName());
+        request.setFileName(id);
         request.setStoreName(fileConfiguration.getStoreName());
 
         GetFileResponse resp = client.getFile(request, 3000);

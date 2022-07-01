@@ -6,5 +6,4 @@ state:
   store_name: "state_demo"
 
 file:
-  store_name:
-  file_name:
+  store_name: "file_demo"
