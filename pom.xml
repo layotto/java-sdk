@@ -18,6 +18,7 @@
         <module>sdk-reactor</module>
         <module>spec</module>
         <module>sdk-springboot</module>
+        <module>preview-service</module>
     </modules>
 
     <properties>
