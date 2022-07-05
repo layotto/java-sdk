@@ -19,8 +19,11 @@ public class StateServiceImpl implements StateService {
     @Autowired
     private StateConfiguration stateConfiguration;
 
+    private static final String KEY_PATH = "bookimg%s";
+
     public String getStateWithRedis(String id) {
-        State<String> state = client.getState(stateConfiguration.getStoreName(), id, String.class);
+        String key = String.format(KEY_PATH, id);
+        State<String> state = client.getState(stateConfiguration.getStoreName(), key, String.class);
         return state.getValue();
     }
 }

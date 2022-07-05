@@ -23,7 +23,7 @@ public class LayottoController {
     @Autowired
     private ImgService imgService;
 
-    @GetMapping("/img/{id}")
+    @GetMapping("/example/img/{id}")
     public ResultData getImg(@PathVariable("id") String id, HttpServletResponse response) {
         try {
             InputStream inputStream = imgService.getImgWithOss(id);
@@ -36,7 +36,7 @@ public class LayottoController {
         return ResultData.getSuccessResult();
     }
 
-    @GetMapping("/state/{id}")
+    @GetMapping("/example/state/{id}")
     public ResultData getState(@PathVariable("id") String id) {
         String state = stateService.getStateWithRedis(id);
         return ResultData.getSuccessData(state);
