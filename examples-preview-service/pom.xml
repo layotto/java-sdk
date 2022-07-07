@@ -15,6 +15,8 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <layotto.version>1.1.0</layotto.version>
+        <commons.io.version>2.11.0</commons.io.version>
     </properties>
 
     <dependencies>
@@ -30,7 +32,12 @@
         <dependency>
             <groupId>io.mosn.layotto</groupId>
             <artifactId>layotto-sdk-springboot</artifactId>
-            <version>1.1.0</version>
+            <version>${layotto.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons.io.version}</version>
         </dependency>
     </dependencies>
 

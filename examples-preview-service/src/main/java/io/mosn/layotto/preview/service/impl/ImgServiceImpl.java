@@ -2,6 +2,7 @@ package io.mosn.layotto.preview.service.impl;
 
 import io.mosn.layotto.preview.config.FileConfiguration;
 import io.mosn.layotto.preview.service.ImgService;
+import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +11,9 @@ import spec.sdk.runtime.v1.client.RuntimeClient;
 import spec.sdk.runtime.v1.domain.file.GetFileRequest;
 import spec.sdk.runtime.v1.domain.file.GetFileResponse;
 
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
+import java.util.Base64;
 
 @Service
 public class ImgServiceImpl implements ImgService {
@@ -29,7 +29,7 @@ public class ImgServiceImpl implements ImgService {
 
     private GetFileRequest request = new GetFileRequest();
 
-    public InputStream getImgWithOss(String id) throws Exception {
+    public String getImgWithOss(String id) throws Exception {
         String path = String.format(FILE_PATH, id);
         request.setFileName(path);
         request.setStoreName(fileConfiguration.getStoreName());
@@ -37,18 +37,11 @@ public class ImgServiceImpl implements ImgService {
         GetFileResponse resp = client.getFile(request, 3000);
         InputStream reader = resp.getIn();
 
-        return reader;
+        return imgToBase64(reader);
     }
 
-    public void parseResponse(HttpServletResponse response, InputStream inputStream) throws IOException {
-        OutputStream out = response.getOutputStream();
-        byte[] bytes = new byte[1024];
-        int len = 0;
-
-        while ((len = inputStream.read(bytes)) != -1) {
-            out.write(bytes, 0, len);
-        }
-
-        out.flush();
+    protected String imgToBase64(InputStream in) throws IOException {
+        byte[] bytes = IOUtils.toByteArray(in);
+        return Base64.getEncoder().encodeToString(bytes);
     }
 }

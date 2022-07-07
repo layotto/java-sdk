@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletResponse;
-import java.io.InputStream;
-
 @RestController
 public class LayottoController {
     private static final Logger log = LoggerFactory.getLogger(LayottoController.class);
@@ -24,16 +21,16 @@ public class LayottoController {
     private ImgService imgService;
 
     @GetMapping("/example/img/{id}")
-    public ResultData getImg(@PathVariable("id") String id, HttpServletResponse response) {
+    public ResultData getImg(@PathVariable("id") String id) {
+        String base64;
         try {
-            InputStream inputStream = imgService.getImgWithOss(id);
-            imgService.parseResponse(response, inputStream);
+            base64 = imgService.getImgWithOss(id);
         } catch (Exception e) {
             log.error("Picture acquisition failed");
             return ResultData.getFailResult();
         }
 
-        return ResultData.getSuccessResult();
+        return ResultData.getSuccessData(base64);
     }
 
     @GetMapping("/example/state/{id}")
