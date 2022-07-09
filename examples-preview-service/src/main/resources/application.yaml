@@ -1,9 +1,9 @@
 layotto:
   ip: 127.0.0.1
   post: 34904
-
-state:
-  store_name: "state_demo"
-
-file:
-  store_name: "file_demo"
+  state:
+    store_name: "state_demo"
+  file:
+    store_name: "file_demo"
+  sub:
+    store_name: "pub_subs_demo"

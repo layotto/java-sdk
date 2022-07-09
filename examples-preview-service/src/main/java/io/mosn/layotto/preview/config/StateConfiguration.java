@@ -2,7 +2,7 @@ package io.mosn.layotto.preview.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties("state")
+@ConfigurationProperties("layotto.state")
 public class StateConfiguration {
     private String storeName;
 

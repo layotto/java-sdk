@@ -2,7 +2,7 @@ package io.mosn.layotto.preview.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties("file")
+@ConfigurationProperties("layotto.file")
 public class FileConfiguration {
     private String storeName;
 
