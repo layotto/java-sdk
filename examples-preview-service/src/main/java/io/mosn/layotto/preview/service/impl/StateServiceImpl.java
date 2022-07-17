@@ -21,7 +21,7 @@ public class StateServiceImpl implements StateService {
 
     private static final String KEY_PATH = "bookimg%s";
 
-    public String getStateWithRedis(String id) {
+    public String getState(String id) {
         String key = String.format(KEY_PATH, id);
         State<String> state = client.getState(stateConfiguration.getStoreName(), key, String.class);
         return state.getValue();

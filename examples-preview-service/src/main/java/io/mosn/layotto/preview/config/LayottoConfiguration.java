@@ -4,15 +4,15 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties("layotto")
 public class LayottoConfiguration {
-    private Integer post;
+    private Integer port;
     private String ip;
 
-    public Integer getPost() {
-        return post;
+    public Integer getPort() {
+        return port;
     }
 
-    public void setPost(Integer post) {
-        this.post = post;
+    public void setPort(Integer post) {
+        this.port = post;
     }
 
     public String getIp() {

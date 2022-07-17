@@ -35,7 +35,7 @@ public class LayottoController {
 
     @GetMapping("/example/state/{id}")
     public ResultData getState(@PathVariable("id") String id) {
-        String state = stateService.getStateWithRedis(id);
+        String state = stateService.getState(id);
         return ResultData.getSuccessData(state);
     }
 }

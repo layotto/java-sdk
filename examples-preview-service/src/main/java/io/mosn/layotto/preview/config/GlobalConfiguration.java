@@ -16,7 +16,7 @@ public class GlobalConfiguration {
     @Bean
     public RuntimeClient runtimeClient() {
         RuntimeClient client = new RuntimeClientBuilder()
-                .withPort(layottoConfiguration.getPost())
+                .withPort(layottoConfiguration.getPort())
                 .withIp(layottoConfiguration.getIp())
                 .build();
 

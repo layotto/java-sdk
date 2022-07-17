@@ -25,7 +25,7 @@ public class ImgServiceImpl implements ImgService {
     @Autowired
     private FileConfiguration fileConfiguration;
 
-    private static final String FILE_PATH = "bucket/layotto/bookinfo/bookimg%s.jpg";
+    private static final String FILE_PATH = "example/img/bookimg%s.jpg";
 
     private GetFileRequest request = new GetFileRequest();
 
