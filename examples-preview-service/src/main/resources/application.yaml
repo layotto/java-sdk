@@ -1,0 +1,7 @@
+layotto:
+  ip: 127.0.0.1
+  port: 34904
+  state:
+    store_name: "state_demo"
+  file:
+    store_name: "file_demo"
