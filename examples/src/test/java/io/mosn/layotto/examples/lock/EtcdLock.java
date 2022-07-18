@@ -2,12 +2,10 @@ package io.mosn.layotto.examples.lock;
 
 import io.mosn.layotto.v1.RuntimeClientBuilder;
 import io.mosn.layotto.v1.config.RuntimeProperties;
-import spec.proto.runtime.v1.RuntimeProto;
 import spec.sdk.runtime.v1.client.RuntimeClient;
 import spec.sdk.runtime.v1.domain.lock.*;
 
 import java.util.UUID;
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
@@ -53,7 +51,7 @@ public class EtcdLock {
         TimeUnit.SECONDS.sleep(10);
         UnlockRequest unlockRequest3 = new UnlockRequest(storeName,key3, owner3);
         UnlockResponse unlockResponse3 = client.unlock(unlockRequest3);
-        assertEquals(unlockResponse3.getStatus(), UnlockResponseStatus.LOCK_UNEXIST);
+        assertEquals(unlockResponse3.getStatus(), UnlockResponseStatus.LOCK_NOT_EXISTS);
 
 
     }

@@ -14,7 +14,6 @@
  */
 package spec.sdk.runtime.v1.domain;
 
-import spec.proto.runtime.v1.RuntimeProto;
 import spec.sdk.runtime.v1.domain.lock.TryLockRequest;
 import spec.sdk.runtime.v1.domain.lock.TryLockResponse;
 import spec.sdk.runtime.v1.domain.lock.UnlockRequest;

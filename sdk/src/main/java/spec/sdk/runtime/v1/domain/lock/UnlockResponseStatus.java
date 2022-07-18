@@ -2,7 +2,7 @@ package spec.sdk.runtime.v1.domain.lock;
 
 public enum UnlockResponseStatus {
     SUCCESS(0),
-    LOCK_UNEXIST(1),
+    LOCK_NOT_EXISTS(1),
     LOCK_BELONG_TO_OTHERS(2),
     INTERNAL_ERROR(3);
     private final int value;
@@ -20,7 +20,7 @@ public enum UnlockResponseStatus {
             case 0:
                 return UnlockResponseStatus.SUCCESS;
             case 1:
-                return UnlockResponseStatus.LOCK_UNEXIST;
+                return UnlockResponseStatus.LOCK_NOT_EXISTS;
             case 2:
                 return UnlockResponseStatus.LOCK_BELONG_TO_OTHERS;
             case 3:

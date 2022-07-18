@@ -1038,7 +1038,9 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
                     .setResourceId(request.getResourceId())
                     .build();
 
-            logger.debug("try lock request params {}", req);
+            if (logger.isDebugEnabled()) {
+                logger.debug("try lock request params {}", req);
+            }
 
             RuntimeProto.TryLockResponse tryLockResponse = stubManager
                     .getBlockingStub()
@@ -1062,7 +1064,9 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
                     .setResourceId(request.getResourceId())
                     .build();
 
-            logger.debug("unlock request params {}", req);
+            if (logger.isDebugEnabled()) {
+                logger.debug("unlock request params {}", req);
+            }
 
             RuntimeProto.UnlockResponse.Status status = stubManager
                     .getBlockingStub()
