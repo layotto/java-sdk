@@ -12,7 +12,7 @@ public class LayottoConfiguration {
     }
 
     public void setPort(Integer post) {
-        this.port = post;
+        this.port = port;
     }
 
     public String getIp() {
