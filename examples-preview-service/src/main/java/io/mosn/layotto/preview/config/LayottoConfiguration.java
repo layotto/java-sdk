@@ -11,7 +11,7 @@ public class LayottoConfiguration {
         return port;
     }
 
-    public void setPort(Integer post) {
+    public void setPort(Integer port) {
         this.port = port;
     }
 
