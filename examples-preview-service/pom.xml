@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>io.mosn.layotto</groupId>
-    <artifactId>examples</artifactId>
+    <artifactId>examples-preview-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>examples-preview-service</name>
     <packaging>jar</packaging>

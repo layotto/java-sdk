@@ -11,8 +11,8 @@ public class LayottoConfiguration {
         return port;
     }
 
-    public void setPort(Integer post) {
-        this.port = post;
+    public void setPort(Integer port) {
+        this.port = port;
     }
 
     public String getIp() {

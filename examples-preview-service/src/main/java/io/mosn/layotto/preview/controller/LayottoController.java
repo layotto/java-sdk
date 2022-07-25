@@ -26,7 +26,7 @@ public class LayottoController {
         try {
             base64 = imgService.getImgWithOss(id);
         } catch (Exception e) {
-            log.error("Picture acquisition failed");
+            log.error("Picture acquisition failed.", e);
             return ResultData.getFailResult();
         }
 
@@ -35,7 +35,13 @@ public class LayottoController {
 
     @GetMapping("/example/state/{id}")
     public ResultData getState(@PathVariable("id") String id) {
-        String state = stateService.getState(id);
+        String state;
+        try {
+            state = stateService.getState(id);
+        } catch (Exception e) {
+            log.error("State acquisition failed. ", e);
+            return ResultData.getFailResult();
+        }
         return ResultData.getSuccessData(state);
     }
 }
