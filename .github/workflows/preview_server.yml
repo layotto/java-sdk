@@ -14,23 +14,20 @@ on:
 
 jobs:
   build:
-    #	配置权限
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
-      # 下载代码
       - uses: actions/checkout@v3
       - name: Set up JDK 8
-        # 安装 JDK
         uses: actions/setup-java@v3
         with:
           java-version: '8'
           distribution: 'temurin'
           cache: maven
-      # Maven 打包
+
       - name: Build with Maven
         run: mvn -B package --file pom.xml
-      # 将打包好的 Jar 包 放到 staging 文件夹
+
       - name: cp Jar
       - run: cp examples-preview-service/target/*.jar docker/preview_server && ls docker/preview_server
 
@@ -43,8 +40,8 @@ jobs:
 #          username: "2429727684@qq.com"
 #          password: "lixingpeng123+++"
 
-      - name: Push Image
-        run: |
-          docker push layotto/preview_server:latest
+#      - name: Push Image
+#        run: |
+#          docker push layotto/preview_server:latest
 
 
