@@ -31,8 +31,8 @@ jobs:
       - name: cp Jar
       - run: cp examples-preview-service/target/*.jar docker/preview_server && ls docker/preview_server
 
-      - name: Build preview_server Image
-        run: docker build -t layotto/preview_server:latest -f docker/preview_server/Dockerfile .
+#      - name: Build preview_server Image
+#        run: docker build -t layotto/preview_server:latest -f docker/preview_server/Dockerfile .
 
 #      - name: Login to DockerHub
 #        uses: docker/login-action@v1
