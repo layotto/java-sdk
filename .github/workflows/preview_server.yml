@@ -30,7 +30,7 @@ jobs:
       - name: Build preview_server Image
         run: |
           cp examples-preview-service/target/*.jar docker/preview_server && ls docker/preview_server
-          docker build -t lxwing/preview_server:latest -f docker/preview_server/Dockerfile .
+          docker build -t layotto/preview_server:latest -f docker/preview_server/Dockerfile .
 
       - name: Login to DockerHub
         uses: docker/login-action@v1
@@ -40,6 +40,6 @@ jobs:
 
       - name: Push Image
         run: |
-          docker push lxwing/preview_server:latest
+          docker push layotto/preview_server:latest
 
 
