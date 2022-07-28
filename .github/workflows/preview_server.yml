@@ -31,6 +31,20 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       # 将打包好的 Jar 包 放到 staging 文件夹
+      - name: cp Jar
       - run: cp examples-preview-service/target/*.jar docker/preview_server && ls docker/preview_server
+
+      - name: Build preview_server Image
+        run: docker build -t layotto/preview_server:latest -f docker/preview_server/Dockerfile .
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: 2429727684@qq.com
+          password: lixingpeng123+++
+
+      - name: Push Image
+        run: |
+          docker push layotto/preview_server:latest
 
 
