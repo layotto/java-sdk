@@ -29,7 +29,7 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: cp Jar
-      - run: cp examples-preview-service/target/*.jar docker/preview_server && ls docker/preview_server
+        run: cp examples-preview-service/target/*.jar docker/preview_server && ls docker/preview_server
 
 #      - name: Build preview_server Image
 #        run: docker build -t layotto/preview_server:latest -f docker/preview_server/Dockerfile .
