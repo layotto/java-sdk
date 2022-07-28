@@ -27,7 +27,8 @@ jobs:
           java-version: '8'
           distribution: 'temurin'
           cache: maven
-
+      - name: check ls
+        run: ls
       # Maven 打包
       - name: Build with Maven
         run: cd examples-preview-service && mvn -B package --file pom.xml
