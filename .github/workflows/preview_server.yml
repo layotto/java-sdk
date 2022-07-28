@@ -30,8 +30,8 @@ jobs:
 
       # Maven 打包
       - name: Build with Maven
-        run: mvn -B package --file pom.xml
+        run: cd examples-preview-service && mvn -B package --file pom.xml
       # 将打包好的 Jar 包 放到 staging 文件夹
-      - run: ls && cd examples-preview-service && cp target/*.jar ./docker/preview_server
+      - run: ls && cd examples-preview-service && ls && cp target/*.jar ${PATH}/docker/preview_server
 
 
