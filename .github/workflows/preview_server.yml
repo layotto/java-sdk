@@ -5,17 +5,10 @@ on:
     branches: [main]
     paths:
       - 'examples-preview-service/**'
-    paths-ignore:
-      - 'docs/**'
-      - '**/*.md'
   pull_request:
     branches: "*"
     paths:
       - 'examples-preview-service/**'
-    paths-ignore:
-      - 'docs/**'
-      - '**/*.md'
-
 jobs:
   build-image:
     runs-on: ubuntu-latest
