@@ -13,8 +13,7 @@ on:
       - '**/*.md'
 
 jobs:
-  build:
-    permissions: write-all
+  build-image:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -27,9 +26,6 @@ jobs:
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml
-
-#      - name: cp Jar
-#        run:
 
       - name: Build preview_server Image
         run: |
