@@ -8,6 +8,7 @@
         <version>2.6.7</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+         
     <groupId>io.mosn.layotto</groupId>
     <artifactId>examples-preview-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
