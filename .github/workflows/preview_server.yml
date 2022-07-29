@@ -5,10 +5,11 @@ on:
     branches: [main]
     paths:
       - 'examples-preview-service/**'
-  pull_request:
-    branches: "*"
-    paths:
-      - 'examples-preview-service/**'
+ # pull_request:
+ #   branches: "*"
+ #   paths:
+ #     - 'examples-preview-service/**'
+ 
 jobs:
   build-image:
     runs-on: ubuntu-latest
