@@ -3,8 +3,8 @@ name: Layotto Java SDK Dev Pipeline 🌊
 on:
   push:
     branches: [main]
-    paths:
-      - 'examples-preview-service/**'
+#     paths:
+#       - 'examples-preview-service/**'
  # pull_request:
  #   branches: "*"
  #   paths:
