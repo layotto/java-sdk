@@ -14,13 +14,15 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class RedisLock {
-    static String storeName = "etcd";
+    static String storeName = "lock_demo";
     static String key1      = "key1";
     static String key2      = "key2";
     static String key3      = "key3";
     static String owner1   = UUID.randomUUID().toString();
     static String owner2   = UUID.randomUUID().toString();
     static String owner3   = UUID.randomUUID().toString();
+
+
     public static void main(String[] args) throws InterruptedException {
         // build RuntimeClient
         RuntimeClient client = new RuntimeClientBuilder()
@@ -52,7 +54,7 @@ public class RedisLock {
         TimeUnit.SECONDS.sleep(10);
         UnlockRequest unlockRequest3 = new UnlockRequest(storeName,key3, owner3);
         UnlockResponse unlockResponse3 = client.unlock(unlockRequest3);
-        assertEquals(unlockResponse3.getStatus(), UnlockResponseStatus.LOCK_UNEXIST);
+        assertEquals(unlockResponse3.getStatus(), UnlockResponseStatus.LOCK_NOT_EXISTS);
 
 
     }

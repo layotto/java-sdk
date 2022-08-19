@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class EtcdLock {
-    static String storeName = "etcd";
+    static String storeName = "lock_demo";
     static String key1      = "key1";
     static String key2      = "key2";
     static String key3      = "key3";

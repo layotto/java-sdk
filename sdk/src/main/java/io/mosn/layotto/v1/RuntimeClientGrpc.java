@@ -1030,6 +1030,11 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
     @Override
     public TryLockResponse tryLock(TryLockRequest request) {
+
+        if (request == null) {
+            throw new NullPointerException("request is null");
+        }
+
         try {
             RuntimeProto.TryLockRequest req = RuntimeProto.TryLockRequest
                     .newBuilder()
@@ -1056,6 +1061,10 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
     @Override
     public UnlockResponse unlock(UnlockRequest request) {
+
+        if (request == null) {
+            throw new NullPointerException("request is null");
+        }
 
         try {
             RuntimeProto.UnlockRequest req = RuntimeProto.UnlockRequest
