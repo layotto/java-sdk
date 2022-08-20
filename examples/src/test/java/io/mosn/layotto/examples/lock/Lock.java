@@ -52,7 +52,7 @@ public class Lock {
         TimeUnit.SECONDS.sleep(10);
         UnlockRequest unlockRequest3 = new UnlockRequest(storeName,key3, owner3);
         UnlockResponse unlockResponse3 = client.unlock(unlockRequest3);
-        assertEquals(unlockResponse3.getStatus(), UnlockResponseStatus.LOCK_NOT_EXISTS);
+        assertEquals(unlockResponse3.getStatus(), UnlockResponseStatus.LOCK_UNEXIST);
 
 
     }
