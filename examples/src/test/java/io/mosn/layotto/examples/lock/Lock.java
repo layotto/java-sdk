@@ -2,18 +2,16 @@ package io.mosn.layotto.examples.lock;
 
 import io.mosn.layotto.v1.RuntimeClientBuilder;
 import io.mosn.layotto.v1.config.RuntimeProperties;
-import spec.proto.runtime.v1.RuntimeProto;
 import spec.sdk.runtime.v1.client.RuntimeClient;
 import spec.sdk.runtime.v1.domain.lock.*;
 
 import java.util.UUID;
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class RedisLock {
+public class Lock {
     static String storeName = "lock_demo";
     static String key1      = "key1";
     static String key2      = "key2";
