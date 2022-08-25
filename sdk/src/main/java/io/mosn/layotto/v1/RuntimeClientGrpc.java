@@ -27,6 +27,7 @@ import io.mosn.layotto.v1.exceptions.RuntimeClientException;
 import io.mosn.layotto.v1.grpc.GrpcRuntimeClient;
 import io.mosn.layotto.v1.grpc.stub.StubManager;
 import io.mosn.layotto.v1.serializer.ObjectSerializer;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import spec.proto.runtime.v1.RuntimeGrpc;
 import spec.proto.runtime.v1.RuntimeProto;
@@ -42,6 +43,10 @@ import spec.sdk.runtime.v1.domain.file.ListFileResponse;
 import spec.sdk.runtime.v1.domain.file.PutFileRequest;
 import spec.sdk.runtime.v1.domain.file.PutFileResponse;
 import spec.sdk.runtime.v1.domain.invocation.InvokeResponse;
+import spec.sdk.runtime.v1.domain.lock.TryLockRequest;
+import spec.sdk.runtime.v1.domain.lock.TryLockResponse;
+import spec.sdk.runtime.v1.domain.lock.UnlockRequest;
+import spec.sdk.runtime.v1.domain.lock.UnlockResponse;
 import spec.sdk.runtime.v1.domain.sequencer.GetNextIdRequest;
 import spec.sdk.runtime.v1.domain.sequencer.GetNextIdResponse;
 import spec.sdk.runtime.v1.domain.state.DeleteStateRequest;
@@ -1020,5 +1025,67 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             logger.error("getNextId error ", e);
             throw new RuntimeClientException(e);
         }
+    }
+
+
+    @Override
+    public TryLockResponse tryLock(TryLockRequest request) {
+
+        if (request == null) {
+            throw new NullPointerException("request is null");
+        }
+
+        try {
+            RuntimeProto.TryLockRequest req = RuntimeProto.TryLockRequest
+                    .newBuilder()
+                    .setLockOwner(request.getLockOwner())
+                    .setExpire(request.getExpire())
+                    .setStoreName(request.getStoreName())
+                    .setResourceId(request.getResourceId())
+                    .build();
+
+            if (logger.isDebugEnabled()) {
+                logger.debug("try lock request params {}", req);
+            }
+
+            RuntimeProto.TryLockResponse tryLockResponse = stubManager
+                    .getBlockingStub()
+                    .tryLock(req);
+
+            return new TryLockResponse(tryLockResponse.getSuccess());
+        } catch (Exception e) {
+            throw new RuntimeClientException(e);
+        }
+
+    }
+
+    @Override
+    public UnlockResponse unlock(UnlockRequest request) {
+
+        if (request == null) {
+            throw new NullPointerException("request is null");
+        }
+
+        try {
+            RuntimeProto.UnlockRequest req = RuntimeProto.UnlockRequest
+                    .newBuilder()
+                    .setLockOwner(request.getLockOwner())
+                    .setStoreName(request.getStoreName())
+                    .setResourceId(request.getResourceId())
+                    .build();
+
+            if (logger.isDebugEnabled()) {
+                logger.debug("unlock request params {}", req);
+            }
+
+            RuntimeProto.UnlockResponse.Status status = stubManager
+                    .getBlockingStub()
+                    .unlock(req)
+                    .getStatus();
+            return new UnlockResponse(status.getNumber());
+        } catch (Exception e) {
+            throw new RuntimeClientException(e);
+        }
+
     }
 }
