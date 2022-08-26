@@ -48,6 +48,8 @@ public class Demo {
         //send request
         ObjectStorageProto.PutObjectInput input = ObjectStorageProto.PutObjectInput.newBuilder().setStoreName(storeName).setKey("key1").build();
         putObjectInputStreamObserver.onNext(input);
+        // Mark the end of requests
+        putObjectInputStreamObserver.onCompleted();
     }
 
     private static void TestGetObjectInput(RuntimeClient client) {
