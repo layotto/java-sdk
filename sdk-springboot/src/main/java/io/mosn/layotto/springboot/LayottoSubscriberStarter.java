@@ -25,16 +25,15 @@ import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.util.Map;
 
-
 /**
  * start RuntimeServerGrpc after spring's initialization completed
  */
 public class LayottoSubscriberStarter {
     private static final Logger logger = LoggerFactory.getLogger(LayottoSubscriberStarter.class.getName());
-    RuntimeServerGrpc layottoRuntime;
+    RuntimeServerGrpc           layottoRuntime;
 
     @Autowired
-    LayottoProperties layottoConfig;
+    LayottoProperties           layottoConfig;
 
     @PostConstruct
     public void startLayottoRuntime() throws BeansException {

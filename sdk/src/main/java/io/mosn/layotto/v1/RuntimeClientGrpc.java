@@ -27,10 +27,10 @@ import io.mosn.layotto.v1.exceptions.RuntimeClientException;
 import io.mosn.layotto.v1.grpc.GrpcRuntimeClient;
 import io.mosn.layotto.v1.grpc.stub.StubManager;
 import io.mosn.layotto.v1.serializer.ObjectSerializer;
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import spec.proto.runtime.v1.RuntimeGrpc;
 import spec.proto.runtime.v1.RuntimeProto;
+import spec.proto.runtime.v1.s3.ObjectStorageServiceGrpc;
 import spec.sdk.runtime.v1.domain.file.DelFileRequest;
 import spec.sdk.runtime.v1.domain.file.DelFileResponse;
 import spec.sdk.runtime.v1.domain.file.FileInfo;
@@ -71,15 +71,18 @@ import java.util.concurrent.TimeUnit;
 
 public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRuntimeClient {
 
-    private static final String                                                                TIMEOUT_KEY = "timeout";
-    private final        StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> stubManager;
+    private static final String                                                         TIMEOUT_KEY = "timeout";
+    private final StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> runtimeStubManager;
+    private final StubManager<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> ossStubManager;
 
     RuntimeClientGrpc(Logger logger,
                       int timeoutMs,
                       ObjectSerializer stateSerializer,
-                      StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> stubManager) {
+                      StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> runtimeStubManager,
+                      StubManager<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> ossStubManager) {
         super(logger, timeoutMs, stateSerializer);
-        this.stubManager = stubManager;
+        this.runtimeStubManager = runtimeStubManager;
+        this.ossStubManager = ossStubManager;
     }
 
     @Override
@@ -87,15 +90,15 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
         try {
             // 1. prepare request
             RuntimeProto.SayHelloRequest req = RuntimeProto.SayHelloRequest.newBuilder()
-                    .setServiceName(name)
-                    .setName(name)
-                    .build();
+                .setServiceName(name)
+                .setName(name)
+                .build();
 
             // 2. invoke
-            RuntimeProto.SayHelloResponse response = stubManager.getBlockingStub()
-                    .withDeadlineAfter(timeoutMillisecond,
-                            TimeUnit.MILLISECONDS)
-                    .sayHello(req);
+            RuntimeProto.SayHelloResponse response = runtimeStubManager.getBlockingStub()
+                .withDeadlineAfter(timeoutMillisecond,
+                    TimeUnit.MILLISECONDS)
+                .sayHello(req);
 
             // 3. parse result
             return response.getHello();
@@ -133,7 +136,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             metadata.put(key, Integer.toString(timeoutMs));
 
             // 2. invoke
-            RuntimeProto.InvokeResponse resp = this.stubManager.getBlockingStub()
+            RuntimeProto.InvokeResponse resp = this.runtimeStubManager.getBlockingStub()
                     .withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS)
                     .withInterceptors(MetadataUtils.newAttachHeadersInterceptor(metadata))
                     .invokeService(invokeReq);
@@ -177,10 +180,10 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
             // 2. prepare request
             RuntimeProto.PublishEventRequest.Builder envelopeBuilder = RuntimeProto.PublishEventRequest.newBuilder()
-                    .setTopic(topicName)
-                    .setPubsubName(pubsubName)
-                    .setData(byteString)
-                    .setDataContentType(contentType);
+                .setTopic(topicName)
+                .setPubsubName(pubsubName)
+                .setData(byteString)
+                .setDataContentType(contentType);
             // metadata
             if (metadata != null) {
                 envelopeBuilder.putAllMetadata(metadata);
@@ -188,7 +191,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             RuntimeProto.PublishEventRequest req = envelopeBuilder.build();
 
             // 3. invoke
-            this.stubManager.getBlockingStub().publishEvent(req);
+            this.runtimeStubManager.getBlockingStub().publishEvent(req);
         } catch (Exception e) {
             logger.error("publishEvent error ", e);
             throw new RuntimeClientException(e);
@@ -210,14 +213,14 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             for (State<?> state : states) {
                 // convert request and do serialization
                 RuntimeProto.StateItem stateItem = buildStateRequest(state)
-                        .build();
+                    .build();
                 builder.addStates(stateItem);
             }
             RuntimeProto.SaveStateRequest req = builder.build();
             // 3. invoke
-            this.stubManager.getBlockingStub()
-                    .withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS)
-                    .saveState(req);
+            this.runtimeStubManager.getBlockingStub()
+                .withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS)
+                .saveState(req);
         } catch (Exception e) {
             logger.error("saveBulkState error ", e);
             throw new RuntimeClientException(e);
@@ -239,8 +242,8 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
         // 2. etag
         if (state.getEtag() != null) {
             RuntimeProto.Etag etag = RuntimeProto.Etag.newBuilder()
-                    .setValue(state.getEtag())
-                    .build();
+                .setValue(state.getEtag())
+                .build();
             stateBuilder.setEtag(etag);
         }
         // 3. metadata
@@ -301,15 +304,15 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
                 }
             }
             RuntimeProto.DeleteStateRequest.Builder builder = RuntimeProto.DeleteStateRequest.newBuilder()
-                    .setStoreName(stateStoreName)
-                    .setKey(key);
+                .setStoreName(stateStoreName)
+                .setKey(key);
             if (metadata != null) {
                 builder.putAllMetadata(metadata);
             }
             if (etag != null) {
                 RuntimeProto.Etag value = RuntimeProto.Etag.newBuilder()
-                        .setValue(etag)
-                        .build();
+                    .setValue(etag)
+                    .build();
                 builder.setEtag(value);
             }
             if (optionBuilder != null) {
@@ -319,9 +322,9 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             RuntimeProto.DeleteStateRequest req = builder.build();
 
             // 3. invoke
-            this.stubManager.getBlockingStub()
-                    .withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS)
-                    .deleteState(req);
+            this.runtimeStubManager.getBlockingStub()
+                .withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS)
+                .deleteState(req);
         } catch (Exception e) {
             logger.error("deleteState error ", e);
             throw new RuntimeClientException(e);
@@ -363,12 +366,12 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
         // 1. validate
         assertTrue(stateStoreName != null && !stateStoreName.trim().isEmpty(),
-                "stateStoreName cannot be null or empty.");
+            "stateStoreName cannot be null or empty.");
         assertTrue(operations != null && !operations.isEmpty(), "operations cannot be null or empty.");
         try {
             // 2. construct request object
             RuntimeProto.ExecuteStateTransactionRequest.Builder builder = RuntimeProto.ExecuteStateTransactionRequest
-                    .newBuilder();
+                .newBuilder();
             builder.setStoreName(stateStoreName);
             if (metadata != null) {
                 builder.putAllMetadata(metadata);
@@ -383,13 +386,13 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
                 // build grpc request
                 RuntimeProto.TransactionalStateOperation.Builder operationBuilder = RuntimeProto.TransactionalStateOperation
-                        .newBuilder();
+                    .newBuilder();
                 String operationType = op.getOperation().toString().toLowerCase();
                 operationBuilder.setOperationType(operationType);
 
                 // convert request and do serialization
                 RuntimeProto.StateItem stateItem = buildStateRequest(req)
-                        .build();
+                    .build();
                 operationBuilder.setRequest(stateItem);
 
                 builder.addOperations(operationBuilder.build());
@@ -397,7 +400,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             RuntimeProto.ExecuteStateTransactionRequest req = builder.build();
 
             // 3. invoke grpc api
-            this.stubManager.getBlockingStub().executeStateTransaction(req);
+            this.runtimeStubManager.getBlockingStub().executeStateTransaction(req);
         } catch (IllegalArgumentException e) {
             logger.error("executeStateTransaction error ", e);
             throw e;
@@ -435,7 +438,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             RuntimeProto.GetStateRequest envelope = builder.build();
 
             // 3. invoke grpc api
-            RuntimeGrpc.RuntimeBlockingStub stub = this.stubManager.getBlockingStub();
+            RuntimeGrpc.RuntimeBlockingStub stub = this.runtimeStubManager.getBlockingStub();
             if (timeoutMs > 0) {
                 stub = stub.withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS);
             }
@@ -477,7 +480,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             RuntimeProto.GetBulkStateRequest envelope = builder.build();
 
             // 3. invoke grpc API
-            RuntimeGrpc.RuntimeBlockingStub stub = this.stubManager.getBlockingStub();
+            RuntimeGrpc.RuntimeBlockingStub stub = this.runtimeStubManager.getBlockingStub();
             if (timeoutMs > 0) {
                 stub = stub.withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS);
             }
@@ -525,13 +528,19 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
      */
     @Deprecated
     @Override
-    public StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> getStubManager() {
-        return stubManager;
+    public StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> getRuntimeStubManager() {
+        return runtimeStubManager;
+    }
+
+    @Override
+    public StubManager<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> getOssManager() {
+        return ossStubManager;
     }
 
     @Override
     public void shutdown() {
-        stubManager.destroy();
+        runtimeStubManager.destroy();
+        ossStubManager.destroy();
     }
 
     @Override
@@ -543,7 +552,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
         StreamObserver<RuntimeProto.PutFileRequest> observer = createPutFileObserver(putFuture, timeoutMs);
 
         observer.onNext(buildPutFileMetaDataRequest(request.getStoreName(), request.getFileName(),
-                request.getMetaData()));
+            request.getMetaData()));
 
         byte[] buf = new byte[4096];
         for (int size = request.getIn().read(buf); size > 0; size = request.getIn().read(buf)) {
@@ -564,14 +573,14 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
         GetFilePipe pipe = new GetFilePipe(request.getFileName());
 
-        stubManager.
-                getAsyncStub().
-                getFile(
-                        buildGetFileRequest(
-                                request.getStoreName(),
-                                request.getFileName(),
-                                request.getMetaData()),
-                        pipe);
+        runtimeStubManager.
+            getAsyncStub().
+            getFile(
+                buildGetFileRequest(
+                    request.getStoreName(),
+                    request.getFileName(),
+                    request.getMetaData()),
+                pipe);
 
         return new GetFileResponse(pipe.getReader());
     }
@@ -581,16 +590,16 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
         checkParamOfListFile(request);
 
-        RuntimeProto.ListFileResp response = stubManager.
-                getBlockingStub().
-                withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS).
-                listFile(
-                        buildListFileRequest(
-                                request.getStoreName(),
-                                request.getName(),
-                                request.getMarker(),
-                                request.getPageSize(),
-                                request.getMetaData()));
+        RuntimeProto.ListFileResp response = runtimeStubManager.
+            getBlockingStub().
+            withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS).
+            listFile(
+                buildListFileRequest(
+                    request.getStoreName(),
+                    request.getName(),
+                    request.getMarker(),
+                    request.getPageSize(),
+                    request.getMetaData()));
 
         return buildListFileResponse(response);
     }
@@ -600,11 +609,11 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
         checkParamOfDeleteFile(request);
 
-        stubManager.
-                getBlockingStub().
-                withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS).
-                delFile(
-                        buildDelFileRequest(request.getStoreName(), request.getFileName(), request.getMetaData()));
+        runtimeStubManager.
+            getBlockingStub().
+            withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS).
+            delFile(
+                buildDelFileRequest(request.getStoreName(), request.getFileName(), request.getMetaData()));
 
         return new DelFileResponse();
     }
@@ -614,11 +623,11 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
         checkParamOfGetFileMeta(request);
 
-        RuntimeProto.GetFileMetaResponse resp = stubManager.
-                getBlockingStub().
-                withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS).
-                getFileMeta(
-                        buildGetFileMetaRequest(request.getStoreName(), request.getFileName(), request.getMetaData()));
+        RuntimeProto.GetFileMetaResponse resp = runtimeStubManager.
+            getBlockingStub().
+            withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS).
+            getFileMeta(
+                buildGetFileMetaRequest(request.getStoreName(), request.getFileName(), request.getMetaData()));
 
         return buildGetFileMetaResponse(resp);
     }
@@ -718,7 +727,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
         private final String         fileName;
         private final CountDownLatch latch;
 
-        private volatile Throwable t;
+        private volatile Throwable   t;
 
         PutFileFuture(String fileName) {
             this.fileName = fileName;
@@ -867,32 +876,32 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
     }
 
     private StreamObserver<RuntimeProto.PutFileRequest> createPutFileObserver(
-            StreamObserver<Empty> callBackObserver,
-            int timeoutMs) {
+                                                                              StreamObserver<Empty> callBackObserver,
+                                                                              int timeoutMs) {
 
-        return stubManager.
-                getAsyncStub().
-                withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS).
-                putFile(callBackObserver);
+        return runtimeStubManager.
+            getAsyncStub().
+            withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS).
+            putFile(callBackObserver);
     }
 
     private RuntimeProto.PutFileRequest buildPutFileMetaDataRequest(String storeName,
                                                                     String fileName,
                                                                     Map<String, String> meta) {
         return RuntimeProto.PutFileRequest.
-                newBuilder().
-                setStoreName(storeName).
-                setName(fileName).
-                putAllMetadata(meta).
-                build();
+            newBuilder().
+            setStoreName(storeName).
+            setName(fileName).
+            putAllMetadata(meta).
+            build();
     }
 
     private RuntimeProto.PutFileRequest buildPutFileDataRequest(byte[] bytes, int size) {
 
         return RuntimeProto.PutFileRequest.
-                newBuilder().
-                setData(ByteString.copyFrom(bytes, 0, size)).
-                build();
+            newBuilder().
+            setData(ByteString.copyFrom(bytes, 0, size)).
+            build();
     }
 
     private RuntimeProto.GetFileRequest buildGetFileRequest(String storeName,
@@ -900,29 +909,29 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
                                                             Map<String, String> meta) {
 
         return RuntimeProto.GetFileRequest.
-                newBuilder().
-                setStoreName(storeName).
-                setName(fileName).
-                putAllMetadata(meta).
-                build();
+            newBuilder().
+            setStoreName(storeName).
+            setName(fileName).
+            putAllMetadata(meta).
+            build();
     }
 
     private RuntimeProto.ListFileRequest buildListFileRequest(String storeName, String name, String marker,
                                                               int pageSize, Map<String, String> meta) {
 
         RuntimeProto.FileRequest fileRequest = RuntimeProto.FileRequest.
-                newBuilder().
-                setStoreName(storeName).
-                setName(name).
-                putAllMetadata(meta).
-                build();
+            newBuilder().
+            setStoreName(storeName).
+            setName(name).
+            putAllMetadata(meta).
+            build();
 
         return RuntimeProto.ListFileRequest.
-                newBuilder().
-                setRequest(fileRequest).
-                setMarker(marker).
-                setPageSize(pageSize).
-                build();
+            newBuilder().
+            setRequest(fileRequest).
+            setMarker(marker).
+            setPageSize(pageSize).
+            build();
     }
 
     private RuntimeProto.DelFileRequest buildDelFileRequest(String storeName,
@@ -930,16 +939,16 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
                                                             Map<String, String> meta) {
 
         RuntimeProto.FileRequest fileRequest = RuntimeProto.FileRequest.
-                newBuilder().
-                setStoreName(storeName).
-                setName(fileName).
-                putAllMetadata(meta).
-                build();
+            newBuilder().
+            setStoreName(storeName).
+            setName(fileName).
+            putAllMetadata(meta).
+            build();
 
         return RuntimeProto.DelFileRequest.
-                newBuilder().
-                setRequest(fileRequest).
-                build();
+            newBuilder().
+            setRequest(fileRequest).
+            build();
     }
 
     private RuntimeProto.GetFileMetaRequest buildGetFileMetaRequest(String storeName,
@@ -947,16 +956,16 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
                                                                     Map<String, String> meta) {
 
         RuntimeProto.FileRequest fileRequest = RuntimeProto.FileRequest.
-                newBuilder().
-                setStoreName(storeName).
-                setName(fileName).
-                putAllMetadata(meta).
-                build();
+            newBuilder().
+            setStoreName(storeName).
+            setName(fileName).
+            putAllMetadata(meta).
+            build();
 
         return RuntimeProto.GetFileMetaRequest.
-                newBuilder().
-                setRequest(fileRequest).
-                build();
+            newBuilder().
+            setRequest(fileRequest).
+            build();
     }
 
     private GetMeteResponse buildGetFileMetaResponse(RuntimeProto.GetFileMetaResponse resp) {
@@ -1000,22 +1009,23 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
     @Override
     public GetNextIdResponse getNextId(GetNextIdRequest req) {
         try {
-            RuntimeProto.SequencerOptions.AutoIncrement autoIncrement = RuntimeProto.SequencerOptions.AutoIncrement.forNumber(
-                    req.getOptionsValue());
+            RuntimeProto.SequencerOptions.AutoIncrement autoIncrement = RuntimeProto.SequencerOptions.AutoIncrement
+                .forNumber(
+                req.getOptionsValue());
 
             RuntimeProto.SequencerOptions options = RuntimeProto.SequencerOptions.newBuilder()
-                    .setIncrement(autoIncrement)
-                    .build();
+                .setIncrement(autoIncrement)
+                .build();
 
             RuntimeProto.GetNextIdRequest request = RuntimeProto.GetNextIdRequest.newBuilder()
-                    .setKey(req.getKey())
-                    .setOptions(options)
-                    .setStoreName(req.getStoreName())
-                    .putAllMetadata(req.getMetaData())
-                    .build();
+                .setKey(req.getKey())
+                .setOptions(options)
+                .setStoreName(req.getStoreName())
+                .putAllMetadata(req.getMetaData())
+                .build();
 
-            RuntimeProto.GetNextIdResponse response = stubManager.getBlockingStub()
-                    .getNextId(request);
+            RuntimeProto.GetNextIdResponse response = runtimeStubManager.getBlockingStub()
+                .getNextId(request);
 
             GetNextIdResponse getNextIdResponse = new GetNextIdResponse();
             getNextIdResponse.setNextId(response.getNextId());
@@ -1036,20 +1046,20 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
         try {
             RuntimeProto.TryLockRequest req = RuntimeProto.TryLockRequest
-                    .newBuilder()
-                    .setLockOwner(request.getLockOwner())
-                    .setExpire(request.getExpire())
-                    .setStoreName(request.getStoreName())
-                    .setResourceId(request.getResourceId())
-                    .build();
+                .newBuilder()
+                .setLockOwner(request.getLockOwner())
+                .setExpire(request.getExpire())
+                .setStoreName(request.getStoreName())
+                .setResourceId(request.getResourceId())
+                .build();
 
             if (logger.isDebugEnabled()) {
                 logger.debug("try lock request params {}", req);
             }
 
-            RuntimeProto.TryLockResponse tryLockResponse = stubManager
-                    .getBlockingStub()
-                    .tryLock(req);
+            RuntimeProto.TryLockResponse tryLockResponse = runtimeStubManager
+                .getBlockingStub()
+                .tryLock(req);
 
             return new TryLockResponse(tryLockResponse.getSuccess());
         } catch (Exception e) {
@@ -1066,20 +1076,20 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
         try {
             RuntimeProto.UnlockRequest req = RuntimeProto.UnlockRequest
-                    .newBuilder()
-                    .setLockOwner(request.getLockOwner())
-                    .setStoreName(request.getStoreName())
-                    .setResourceId(request.getResourceId())
-                    .build();
+                .newBuilder()
+                .setLockOwner(request.getLockOwner())
+                .setStoreName(request.getStoreName())
+                .setResourceId(request.getResourceId())
+                .build();
 
             if (logger.isDebugEnabled()) {
                 logger.debug("unlock request params {}", req);
             }
 
-            RuntimeProto.UnlockResponse.Status status = stubManager
-                    .getBlockingStub()
-                    .unlock(req)
-                    .getStatus();
+            RuntimeProto.UnlockResponse.Status status = runtimeStubManager
+                .getBlockingStub()
+                .unlock(req)
+                .getStatus();
             return new UnlockResponse(status.getNumber());
         } catch (Exception e) {
             throw new RuntimeClientException(e);

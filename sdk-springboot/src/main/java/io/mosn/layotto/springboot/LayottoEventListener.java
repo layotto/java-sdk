@@ -21,15 +21,14 @@ import spec.sdk.runtime.v1.domain.pubsub.TopicEventRequest;
 
 import java.lang.reflect.Method;
 
-
 /**
  * listener for a topic, then invoke toInvokeMethod of this bean
  */
 public class LayottoEventListener implements EventListener {
     private static final Logger logger = LoggerFactory.getLogger(LayottoEventListener.class.getName());
 
-    private final Object bean;
-    private final Method toInvokeMethod;
+    private final Object        bean;
+    private final Method        toInvokeMethod;
 
     public LayottoEventListener(Object bean, Method toInvokeMethod) {
         this.bean = bean;
@@ -41,7 +40,7 @@ public class LayottoEventListener implements EventListener {
         try {
             toInvokeMethod.invoke(bean, request);
         } catch (Exception e) {
-            logger.error("layotto subscriber callback method [{}] err:{ }", toInvokeMethod.getName(),e.getMessage());
+            logger.error("layotto subscriber callback method [{}] err:{ }", toInvokeMethod.getName(), e.getMessage());
             throw e;
         }
     }

@@ -14,6 +14,8 @@
  */
 package spec.sdk.runtime.v1.client;
 
+import io.mosn.layotto.v1.grpc.stub.StubManager;
+import spec.proto.runtime.v1.s3.ObjectStorageServiceGrpc;
 import spec.sdk.runtime.v1.domain.ConfigurationRuntime;
 import spec.sdk.runtime.v1.domain.FileRuntime;
 import spec.sdk.runtime.v1.domain.HelloRuntime;
@@ -32,6 +34,8 @@ public interface RuntimeClient extends
                               LockRuntime,
                               SequencerRuntime,
                               FileRuntime {
+
+    StubManager<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> getOssManager();
 
     void shutdown();
 }

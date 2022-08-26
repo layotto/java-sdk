@@ -24,12 +24,11 @@ public class LayottoProperties {
 
     public static final int DEFAULT_SUBSCRIBER_PORT = 9999;
 
-    public Integer subscriberPort;
+    public Integer          subscriberPort;
 
     public void setSubscriberPort(Integer subscriberPort) {
         this.subscriberPort = subscriberPort;
     }
-
 
     public int getSubscriberPort() {
         return subscriberPort == null ? DEFAULT_SUBSCRIBER_PORT : this.subscriberPort;

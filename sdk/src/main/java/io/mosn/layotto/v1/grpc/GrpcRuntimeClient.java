@@ -16,6 +16,7 @@ package io.mosn.layotto.v1.grpc;
 
 import io.mosn.layotto.v1.grpc.stub.StubManager;
 import spec.proto.runtime.v1.RuntimeGrpc;
+import spec.proto.runtime.v1.s3.ObjectStorageServiceGrpc;
 import spec.sdk.runtime.v1.client.RuntimeClient;
 
 public interface GrpcRuntimeClient extends RuntimeClient {
@@ -30,5 +31,5 @@ public interface GrpcRuntimeClient extends RuntimeClient {
      * @return property value of stubManager
      */
     @Deprecated
-    StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> getStubManager();
+    StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> getRuntimeStubManager();
 }
