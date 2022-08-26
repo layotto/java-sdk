@@ -80,6 +80,7 @@ mvn clean install
 * [Pubsub API](./examples/src/main/java/io/mosn/layotto/examples/pubsub)
 * [Sequencer API](./examples-sequencer/src/main/java/io/mosn/layotto/examples/sequencer)
 * [File API](./examples-file/src/main/java/io/mosn/layotto/examples/file)
+* [Oss API](./examples-oss/src/main/java/io/mosn/layotto/examples/oss)
 
 ## sdk开发指南
 
@@ -131,38 +132,13 @@ mvn clean compile
 
 ### 如何将proto文件编译成java代码
 
-#### 1. 下载编译工具 [protoc](https://github.com/protocolbuffers/protobuf/releases)
+#### 1. 把目标 proto 文件拷贝到 spec/src/main/proto 下面
 
-my protoc version:
-
-```shell
-$ protoc --version
-libprotoc 3.11.2
-```
-
-#### 2. 修改对应`proto`文件生成类名包名等信息
-
-(需先修改文件内部service名)
-`spec/proto/runtime/v1/appcallback.proto` :
-
-```protobuf
-option java_outer_classname = "AppCallbackProto";
-option java_package = "spec.proto.runtime.v1";
-```
-
-`spec/proto/runtime/v1/runtime.proto` :
-
-```protobuf
-option java_outer_classname = "RuntimeProto";
-option java_package = "spec.proto.runtime.v1";
-```
-
-#### 3. 编译其对应`JAVA`文件
+#### 2. 编译其对应`JAVA`文件
 
 ```shell
-cd ${your PROJECT path}/spec/proto/runtime/v1
-protoc -I=. --java_out=../../../../sdk/java-sdk/sdk/src/main/java/  runtime.proto
-protoc -I=. --java_out=../../../../sdk/java-sdk/sdk/src/main/java/  appcallback.proto
+cd ${your PROJECT path}
+mvn compile
 ```
 
 [comment]: <> (PS: 建议用maven插件`protoc-gen-grpc-java`生成protobuf和grpc的java代码)
