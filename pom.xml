@@ -25,6 +25,7 @@
         <module>examples-pubsub-subscriber</module>
         <module>examples-pubsub-publisher</module>
         <module>examples-preview-service</module>
+        <module>examples-oss</module>
     </modules>
 
     <properties>
