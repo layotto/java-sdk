@@ -528,13 +528,18 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
      */
     @Deprecated
     @Override
-    public StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> getRuntimeStubManager() {
+    public StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> getStubManager() {
         return runtimeStubManager;
     }
 
     @Override
-    public StubManager<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> getOssManager() {
-        return ossStubManager;
+    public ObjectStorageServiceGrpc.ObjectStorageServiceStub getAsyncStub() {
+        return ossStubManager.getAsyncStub();
+    }
+
+    @Override
+    public ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub getBlockingStub() {
+        return ossStubManager.getBlockingStub();
     }
 
     @Override

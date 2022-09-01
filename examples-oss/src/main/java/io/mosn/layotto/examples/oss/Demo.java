@@ -27,7 +27,7 @@ public class Demo {
     }
 
     private static void TestPutObject(RuntimeClient client) {
-        StreamObserver<ObjectStorageProto.PutObjectInput> putObjectInputStreamObserver = client.getOssManager().getAsyncStub().putObject(new StreamObserver<ObjectStorageProto.PutObjectOutput>() {
+        StreamObserver<ObjectStorageProto.PutObjectInput> putObjectInputStreamObserver = client.getOssAsyncStub().putObject(new StreamObserver<ObjectStorageProto.PutObjectOutput>() {
             @Override
             public void onNext(ObjectStorageProto.PutObjectOutput putObjectOutput) {
                 //receive response
@@ -54,7 +54,7 @@ public class Demo {
 
     private static void TestGetObjectInput(RuntimeClient client) {
         ObjectStorageProto.GetObjectInput input = ObjectStorageProto.GetObjectInput.newBuilder().setStoreName(storeName).setKey("key1").build();
-        Iterator<ObjectStorageProto.GetObjectOutput> object = client.getOssManager().getBlockingStub().getObject(input);
+        Iterator<ObjectStorageProto.GetObjectOutput> object = client.getOssBlockingStub().getObject(input);
         while (object.hasNext()) {
             ObjectStorageProto.GetObjectOutput next = object.next();
             System.out.println(next.getBody());
@@ -63,7 +63,7 @@ public class Demo {
 
     private static void TestDeleteObject(RuntimeClient client) {
         ObjectStorageProto.DeleteObjectInput input = ObjectStorageProto.DeleteObjectInput.newBuilder().setStoreName(storeName).setKey("key1").build();
-        client.getOssManager().getBlockingStub().deleteObject(input);
+        client.getOssBlockingStub().deleteObject(input);
     }
 
     private static void TestDeleteObjects(RuntimeClient client) {
@@ -77,6 +77,6 @@ public class Demo {
 
         ObjectStorageProto.DeleteObjectsInput input = ObjectStorageProto.DeleteObjectsInput.newBuilder().setStoreName(storeName).setDelete(delete).build();
 
-        client.getOssManager().getBlockingStub().deleteObjects(input);
+        client.getOssBlockingStub().deleteObjects(input);
     }
 }

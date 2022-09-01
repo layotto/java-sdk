@@ -58,7 +58,22 @@ It will format your code automatically.
 
 #### 1. Copy the proto files to spec/src/main/proto
 
-#### 2. Compile them into corresponding `JAVA` files
+#### 2. Check `option` fields in these proto files
+Make sure these `option` fields have been configurated.
+
+spec/proto/runtime/v1/appcallback.proto : 
+```protobuf
+option java_outer_classname = "AppCallbackProto";
+option java_package = "spec.proto.runtime.v1";
+```
+
+spec/proto/runtime/v1/runtime.proto :
+```protobuf
+option java_outer_classname = "RuntimeProto";
+option java_package = "spec.proto.runtime.v1";
+```
+
+#### 3. Compile them into corresponding `JAVA` files
 ```shell
 # make sure you replace this `${your PROJECT path}` with your own project path.
 cd ${your PROJECT path}

@@ -31,5 +31,5 @@ public interface GrpcRuntimeClient extends RuntimeClient {
      * @return property value of stubManager
      */
     @Deprecated
-    StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> getRuntimeStubManager();
+    StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> getStubManager();
 }

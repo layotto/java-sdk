@@ -154,7 +154,7 @@ public class RuntimeClientBuilder {
         StubManager<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> ossStubManager;
         if (poolSize > 1) {
             runtimeStubManager = new PooledStubManager<>(ip, port, poolSize, new RuntimeStubCreatorImpl());
-            ossStubManager = new PooledStubManager<>(ip, port, poolSize, new OssStubCreatorImpl());
+            ossStubManager = new PooledStubManager<>(runtimeStubManager.getChannels(), new OssStubCreatorImpl());
         } else {
             ManagedChannel channel = ManagedChannelBuilder.forAddress(ip, port)
                     .usePlaintext()

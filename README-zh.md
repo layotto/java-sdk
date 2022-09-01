@@ -134,7 +134,24 @@ mvn clean compile
 
 #### 1. 把目标 proto 文件拷贝到 spec/src/main/proto 下面
 
-#### 2. 编译其对应`JAVA`文件
+#### 2. 修改对应`proto`文件生成类名包名等信息
+
+(需先修改文件内部service名)
+`spec/proto/runtime/v1/appcallback.proto` :
+
+```protobuf
+option java_outer_classname = "AppCallbackProto";
+option java_package = "spec.proto.runtime.v1";
+```
+
+`spec/proto/runtime/v1/runtime.proto` :
+
+```protobuf
+option java_outer_classname = "RuntimeProto";
+option java_package = "spec.proto.runtime.v1";
+```
+
+#### 3. 编译其对应`JAVA`文件
 
 ```shell
 cd ${your PROJECT path}
