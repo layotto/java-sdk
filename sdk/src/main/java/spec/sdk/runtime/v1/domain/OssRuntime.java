@@ -4,7 +4,7 @@ import spec.proto.runtime.v1.s3.ObjectStorageServiceGrpc;
 
 /**
  * @author Marco
- * Created on 2022/9/1 4:41 下午
+ * Created on 2022/9/1 16:41
  */
 public interface OssRuntime {
 
