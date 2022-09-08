@@ -10,4 +10,4 @@ cp layotto/spec/proto/extension/v1/*/*.proto spec/src/main/proto
 cp layotto/spec/proto/runtime/v1/*.proto spec/src/main/proto
 
 echo "Compile the proto files......"
-mvn compile
+mvn clean compile
