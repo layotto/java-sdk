@@ -6,7 +6,7 @@
   <parent>
     <groupId>io.mosn.layotto</groupId>
     <artifactId>runtime-sdk-parent</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>runtime-spec-pb</artifactId>
@@ -70,7 +70,7 @@
           <pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}
           </pluginArtifact>
           <clearOutputDirectory>false</clearOutputDirectory>
-          <protoSourceRoot>src/main/proto</protoSourceRoot>
+          <protoSourceRoot>src/main/spec</protoSourceRoot>
           <outputDirectory>src/main/java</outputDirectory>
         </configuration>
         <executions>

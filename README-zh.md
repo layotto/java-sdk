@@ -131,10 +131,16 @@ mvn clean compile
 会自动格式化您的代码
 
 ### 如何将proto文件编译成java代码
+#### 方法 A
+```shell
+make proto
+```
+The script will download the layotto proto files and compile them automatically.
 
-#### 1. 把目标 proto 文件拷贝到 spec/src/main/proto 下面
+#### 方法 B
+##### 1. 把目标 proto 文件拷贝到 spec/src/main/spec 下面
 
-#### 2. 修改对应`proto`文件生成类名包名等信息
+##### 2. 修改对应`proto`文件生成类名包名等信息
 
 (需先修改文件内部service名)
 `spec/proto/runtime/v1/appcallback.proto` :
@@ -151,7 +157,7 @@ option java_outer_classname = "RuntimeProto";
 option java_package = "spec.proto.runtime.v1";
 ```
 
-#### 3. 编译其对应`JAVA`文件
+##### 3. 编译其对应`JAVA`文件
 
 ```shell
 cd ${your PROJECT path}

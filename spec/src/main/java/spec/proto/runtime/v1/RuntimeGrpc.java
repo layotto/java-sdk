@@ -1,17 +1,3 @@
-/*
- * Copyright 2021 Layotto Authors
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package spec.proto.runtime.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
@@ -30,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * Runtime encapsulates variours Runtime APIs(such as Configuration API, Pub/Sub API, etc)
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.34.1)",
@@ -723,6 +712,68 @@ public final class RuntimeGrpc {
     return getInvokeBindingMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<spec.proto.runtime.v1.RuntimeProto.GetSecretRequest,
+      spec.proto.runtime.v1.RuntimeProto.GetSecretResponse> getGetSecretMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetSecret",
+      requestType = spec.proto.runtime.v1.RuntimeProto.GetSecretRequest.class,
+      responseType = spec.proto.runtime.v1.RuntimeProto.GetSecretResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<spec.proto.runtime.v1.RuntimeProto.GetSecretRequest,
+      spec.proto.runtime.v1.RuntimeProto.GetSecretResponse> getGetSecretMethod() {
+    io.grpc.MethodDescriptor<spec.proto.runtime.v1.RuntimeProto.GetSecretRequest, spec.proto.runtime.v1.RuntimeProto.GetSecretResponse> getGetSecretMethod;
+    if ((getGetSecretMethod = RuntimeGrpc.getGetSecretMethod) == null) {
+      synchronized (RuntimeGrpc.class) {
+        if ((getGetSecretMethod = RuntimeGrpc.getGetSecretMethod) == null) {
+          RuntimeGrpc.getGetSecretMethod = getGetSecretMethod =
+              io.grpc.MethodDescriptor.<spec.proto.runtime.v1.RuntimeProto.GetSecretRequest, spec.proto.runtime.v1.RuntimeProto.GetSecretResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSecret"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  spec.proto.runtime.v1.RuntimeProto.GetSecretRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  spec.proto.runtime.v1.RuntimeProto.GetSecretResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new RuntimeMethodDescriptorSupplier("GetSecret"))
+              .build();
+        }
+      }
+    }
+    return getGetSecretMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest,
+      spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse> getGetBulkSecretMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetBulkSecret",
+      requestType = spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest.class,
+      responseType = spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest,
+      spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse> getGetBulkSecretMethod() {
+    io.grpc.MethodDescriptor<spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest, spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse> getGetBulkSecretMethod;
+    if ((getGetBulkSecretMethod = RuntimeGrpc.getGetBulkSecretMethod) == null) {
+      synchronized (RuntimeGrpc.class) {
+        if ((getGetBulkSecretMethod = RuntimeGrpc.getGetBulkSecretMethod) == null) {
+          RuntimeGrpc.getGetBulkSecretMethod = getGetBulkSecretMethod =
+              io.grpc.MethodDescriptor.<spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest, spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetBulkSecret"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new RuntimeMethodDescriptorSupplier("GetBulkSecret"))
+              .build();
+        }
+      }
+    }
+    return getGetBulkSecretMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -768,6 +819,9 @@ public final class RuntimeGrpc {
   }
 
   /**
+   * <pre>
+   * Runtime encapsulates variours Runtime APIs(such as Configuration API, Pub/Sub API, etc)
+   * </pre>
    */
   public static abstract class RuntimeImplBase implements io.grpc.BindableService {
 
@@ -843,6 +897,9 @@ public final class RuntimeGrpc {
     }
 
     /**
+     * <pre>
+     * A method trying to unlock.
+     * </pre>
      */
     public void unlock(spec.proto.runtime.v1.RuntimeProto.UnlockRequest request,
         io.grpc.stub.StreamObserver<spec.proto.runtime.v1.RuntimeProto.UnlockResponse> responseObserver) {
@@ -988,6 +1045,26 @@ public final class RuntimeGrpc {
     public void invokeBinding(spec.proto.runtime.v1.RuntimeProto.InvokeBindingRequest request,
         io.grpc.stub.StreamObserver<spec.proto.runtime.v1.RuntimeProto.InvokeBindingResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getInvokeBindingMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets secrets from secret stores.
+     * </pre>
+     */
+    public void getSecret(spec.proto.runtime.v1.RuntimeProto.GetSecretRequest request,
+        io.grpc.stub.StreamObserver<spec.proto.runtime.v1.RuntimeProto.GetSecretResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetSecretMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets a bulk of secrets
+     * </pre>
+     */
+    public void getBulkSecret(spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest request,
+        io.grpc.stub.StreamObserver<spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetBulkSecretMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -1146,11 +1223,28 @@ public final class RuntimeGrpc {
                 spec.proto.runtime.v1.RuntimeProto.InvokeBindingRequest,
                 spec.proto.runtime.v1.RuntimeProto.InvokeBindingResponse>(
                   this, METHODID_INVOKE_BINDING)))
+          .addMethod(
+            getGetSecretMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                spec.proto.runtime.v1.RuntimeProto.GetSecretRequest,
+                spec.proto.runtime.v1.RuntimeProto.GetSecretResponse>(
+                  this, METHODID_GET_SECRET)))
+          .addMethod(
+            getGetBulkSecretMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest,
+                spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse>(
+                  this, METHODID_GET_BULK_SECRET)))
           .build();
     }
   }
 
   /**
+   * <pre>
+   * Runtime encapsulates variours Runtime APIs(such as Configuration API, Pub/Sub API, etc)
+   * </pre>
    */
   public static final class RuntimeStub extends io.grpc.stub.AbstractAsyncStub<RuntimeStub> {
     private RuntimeStub(
@@ -1243,6 +1337,9 @@ public final class RuntimeGrpc {
     }
 
     /**
+     * <pre>
+     * A method trying to unlock.
+     * </pre>
      */
     public void unlock(spec.proto.runtime.v1.RuntimeProto.UnlockRequest request,
         io.grpc.stub.StreamObserver<spec.proto.runtime.v1.RuntimeProto.UnlockResponse> responseObserver) {
@@ -1404,9 +1501,34 @@ public final class RuntimeGrpc {
       asyncUnaryCall(
           getChannel().newCall(getInvokeBindingMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Gets secrets from secret stores.
+     * </pre>
+     */
+    public void getSecret(spec.proto.runtime.v1.RuntimeProto.GetSecretRequest request,
+        io.grpc.stub.StreamObserver<spec.proto.runtime.v1.RuntimeProto.GetSecretResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetSecretMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets a bulk of secrets
+     * </pre>
+     */
+    public void getBulkSecret(spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest request,
+        io.grpc.stub.StreamObserver<spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetBulkSecretMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
+   * <pre>
+   * Runtime encapsulates variours Runtime APIs(such as Configuration API, Pub/Sub API, etc)
+   * </pre>
    */
   public static final class RuntimeBlockingStub extends io.grpc.stub.AbstractBlockingStub<RuntimeBlockingStub> {
     private RuntimeBlockingStub(
@@ -1482,6 +1604,9 @@ public final class RuntimeGrpc {
     }
 
     /**
+     * <pre>
+     * A method trying to unlock.
+     * </pre>
      */
     public spec.proto.runtime.v1.RuntimeProto.UnlockResponse unlock(spec.proto.runtime.v1.RuntimeProto.UnlockRequest request) {
       return blockingUnaryCall(
@@ -1619,9 +1744,32 @@ public final class RuntimeGrpc {
       return blockingUnaryCall(
           getChannel(), getInvokeBindingMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Gets secrets from secret stores.
+     * </pre>
+     */
+    public spec.proto.runtime.v1.RuntimeProto.GetSecretResponse getSecret(spec.proto.runtime.v1.RuntimeProto.GetSecretRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetSecretMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets a bulk of secrets
+     * </pre>
+     */
+    public spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse getBulkSecret(spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetBulkSecretMethod(), getCallOptions(), request);
+    }
   }
 
   /**
+   * <pre>
+   * Runtime encapsulates variours Runtime APIs(such as Configuration API, Pub/Sub API, etc)
+   * </pre>
    */
   public static final class RuntimeFutureStub extends io.grpc.stub.AbstractFutureStub<RuntimeFutureStub> {
     private RuntimeFutureStub(
@@ -1703,6 +1851,9 @@ public final class RuntimeGrpc {
     }
 
     /**
+     * <pre>
+     * A method trying to unlock.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<spec.proto.runtime.v1.RuntimeProto.UnlockResponse> unlock(
         spec.proto.runtime.v1.RuntimeProto.UnlockRequest request) {
@@ -1842,6 +1993,28 @@ public final class RuntimeGrpc {
       return futureUnaryCall(
           getChannel().newCall(getInvokeBindingMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Gets secrets from secret stores.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<spec.proto.runtime.v1.RuntimeProto.GetSecretResponse> getSecret(
+        spec.proto.runtime.v1.RuntimeProto.GetSecretRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetSecretMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Gets a bulk of secrets
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse> getBulkSecret(
+        spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetBulkSecretMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SAY_HELLO = 0;
@@ -1864,8 +2037,10 @@ public final class RuntimeGrpc {
   private static final int METHODID_DEL_FILE = 17;
   private static final int METHODID_GET_FILE_META = 18;
   private static final int METHODID_INVOKE_BINDING = 19;
-  private static final int METHODID_SUBSCRIBE_CONFIGURATION = 20;
-  private static final int METHODID_PUT_FILE = 21;
+  private static final int METHODID_GET_SECRET = 20;
+  private static final int METHODID_GET_BULK_SECRET = 21;
+  private static final int METHODID_SUBSCRIBE_CONFIGURATION = 22;
+  private static final int METHODID_PUT_FILE = 23;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1964,6 +2139,14 @@ public final class RuntimeGrpc {
           serviceImpl.invokeBinding((spec.proto.runtime.v1.RuntimeProto.InvokeBindingRequest) request,
               (io.grpc.stub.StreamObserver<spec.proto.runtime.v1.RuntimeProto.InvokeBindingResponse>) responseObserver);
           break;
+        case METHODID_GET_SECRET:
+          serviceImpl.getSecret((spec.proto.runtime.v1.RuntimeProto.GetSecretRequest) request,
+              (io.grpc.stub.StreamObserver<spec.proto.runtime.v1.RuntimeProto.GetSecretResponse>) responseObserver);
+          break;
+        case METHODID_GET_BULK_SECRET:
+          serviceImpl.getBulkSecret((spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest) request,
+              (io.grpc.stub.StreamObserver<spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -2053,6 +2236,8 @@ public final class RuntimeGrpc {
               .addMethod(getDelFileMethod())
               .addMethod(getGetFileMetaMethod())
               .addMethod(getInvokeBindingMethod())
+              .addMethod(getGetSecretMethod())
+              .addMethod(getGetBulkSecretMethod())
               .build();
         }
       }

@@ -17,7 +17,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <layotto.version>1.1.0</layotto.version>
+        <layotto.version>1.2.0-SNAPSHOT</layotto.version>
         <commons.io.version>2.11.0</commons.io.version>
     </properties>
 

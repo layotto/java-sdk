@@ -29,7 +29,7 @@ import io.mosn.layotto.v1.serializer.ObjectSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import spec.proto.runtime.v1.RuntimeGrpc;
-import spec.proto.runtime.v1.s3.ObjectStorageServiceGrpc;
+import spec.proto.extension.v1.s3.ObjectStorageServiceGrpc;
 import spec.sdk.runtime.v1.client.RuntimeClient;
 
 /**
@@ -180,7 +180,7 @@ public class RuntimeClientBuilder {
         StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> stubManager = new SingleStubManager(
             channel, new RuntimeStubCreatorImpl());
         StubManager<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> ossStubManager = new SingleStubManager(
-                channel, new OssStubCreatorImpl());
+            channel, new OssStubCreatorImpl());
         // 3. construct client
         return new RuntimeClientGrpc(
             logger,
@@ -190,7 +190,7 @@ public class RuntimeClientBuilder {
     }
 
     public static class RuntimeStubCreatorImpl implements
-                                       StubCreator<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> {
+                                              StubCreator<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> {
 
         @Override
         public RuntimeGrpc.RuntimeStub createAsyncStub(ManagedChannel channel) {
@@ -204,8 +204,9 @@ public class RuntimeClientBuilder {
 
     }
 
-    public static class OssStubCreatorImpl implements
-            StubCreator<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> {
+    public static class OssStubCreatorImpl
+                                          implements
+                                          StubCreator<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> {
 
         @Override
         public ObjectStorageServiceGrpc.ObjectStorageServiceStub createAsyncStub(ManagedChannel channel) {
