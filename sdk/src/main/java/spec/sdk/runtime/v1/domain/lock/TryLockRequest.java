@@ -20,7 +20,6 @@ public class TryLockRequest {
     private String lockOwner;
     private int    expire;
 
-
     public TryLockRequest(String storeName, String resourceId, String lockOwner, int expire) {
         this.storeName = storeName;
         this.resourceId = resourceId;
@@ -63,10 +62,10 @@ public class TryLockRequest {
     @Override
     public String toString() {
         return "TryLockRequest{" +
-                "storeName='" + storeName + '\'' +
-                ", resourceId='" + resourceId + '\'' +
-                ", lockOwner='" + lockOwner + '\'' +
-                ", expire=" + expire +
-                '}';
+            "storeName='" + storeName + '\'' +
+            ", resourceId='" + resourceId + '\'' +
+            ", lockOwner='" + lockOwner + '\'' +
+            ", expire=" + expire +
+            '}';
     }
 }

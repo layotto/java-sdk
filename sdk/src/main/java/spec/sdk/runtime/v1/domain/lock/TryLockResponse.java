@@ -25,5 +25,4 @@ public class TryLockResponse {
         this.success = success;
     }
 
-
 }
