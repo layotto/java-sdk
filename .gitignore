@@ -22,3 +22,12 @@ logs/
 #protobuf
 example/build/*
 test/test-integration/build/*
+
+# layotto
+layotto/**/*
+layotto/**
+layotto
+
+*.proto
+spec/src/main/proto/*.proto
+spec/**/*.proto
