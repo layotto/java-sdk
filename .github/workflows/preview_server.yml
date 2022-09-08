@@ -3,12 +3,13 @@ name: Layotto Java SDK Dev Pipeline 🌊
 on:
   push:
     branches: [main]
-    paths:
-      - 'examples-preview-service/**'
-  pull_request:
-    branches: "*"
-    paths:
-      - 'examples-preview-service/**'
+#     paths:
+#       - 'examples-preview-service/**'
+ # pull_request:
+ #   branches: "*"
+ #   paths:
+ #     - 'examples-preview-service/**'
+ 
 jobs:
   build-image:
     runs-on: ubuntu-latest
@@ -26,7 +27,7 @@ jobs:
 
       - name: Build preview_server Image
         run: |
-          ls && cp examples-preview-service/target/*.jar docker/preview_server 
+          ls && pwd && cp examples-preview-service/target/*.jar docker/preview_server
           docker build -t lxwing/preview_server:latest -f docker/preview_server/Dockerfile .
 
       - name: Login to DockerHub
