@@ -55,10 +55,18 @@ mvn clean compile
 It will format your code automatically.
 
 ### How to generate a Java PROTO file
+#### Solution A
 
-#### 1. Copy the proto files to spec/src/main/spec
+```shell
+make proto
+```
 
-#### 2. Check `option` fields in these proto files
+The script will download the layotto proto files and compile them automatically.
+
+#### Solution B
+##### 1. Copy the proto files to spec/src/main/spec
+
+##### 2. Check `option` fields in these proto files
 Make sure these `option` fields have been configurated.
 
 spec/proto/runtime/v1/appcallback.proto : 
@@ -73,7 +81,7 @@ option java_outer_classname = "RuntimeProto";
 option java_package = "spec.proto.runtime.v1";
 ```
 
-#### 3. Compile them into corresponding `JAVA` files
+##### 3. Compile them into corresponding `JAVA` files
 ```shell
 # make sure you replace this `${your PROJECT path}` with your own project path.
 cd ${your PROJECT path}
