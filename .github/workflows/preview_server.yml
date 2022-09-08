@@ -23,7 +23,7 @@ jobs:
 
       - name: Build preview_server Image
         run: |
-          ls && pwd && cp examples-preview-service/target/*.jar docker/preview_server
+          cp examples-preview-service/target/*.jar docker/preview_server
           docker build -t layotto/preview_server:latest -f docker/preview_server/Dockerfile .
 
       - name: Login to DockerHub
