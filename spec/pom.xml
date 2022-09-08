@@ -70,7 +70,7 @@
           <pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}
           </pluginArtifact>
           <clearOutputDirectory>false</clearOutputDirectory>
-          <protoSourceRoot>src/main/proto</protoSourceRoot>
+          <protoSourceRoot>src/main/spec</protoSourceRoot>
           <outputDirectory>src/main/java</outputDirectory>
         </configuration>
         <executions>

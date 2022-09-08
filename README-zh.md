@@ -132,7 +132,7 @@ mvn clean compile
 
 ### 如何将proto文件编译成java代码
 
-#### 1. 把目标 proto 文件拷贝到 spec/src/main/proto 下面
+#### 1. 把目标 proto 文件拷贝到 spec/src/main/spec 下面
 
 #### 2. 修改对应`proto`文件生成类名包名等信息
 

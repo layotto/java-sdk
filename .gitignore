@@ -29,5 +29,5 @@ layotto/**
 layotto
 
 *.proto
-spec/src/main/proto/*.proto
+spec/src/main/spec/*.proto
 spec/**/*.proto

@@ -56,7 +56,7 @@ It will format your code automatically.
 
 ### How to generate a Java PROTO file
 
-#### 1. Copy the proto files to spec/src/main/proto
+#### 1. Copy the proto files to spec/src/main/spec
 
 #### 2. Check `option` fields in these proto files
 Make sure these `option` fields have been configurated.
