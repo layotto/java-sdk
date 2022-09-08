@@ -3,7 +3,7 @@ package io.mosn.layotto.examples.oss;
 import io.grpc.stub.StreamObserver;
 import io.mosn.layotto.v1.RuntimeClientBuilder;
 import io.mosn.layotto.v1.config.RuntimeProperties;
-import spec.proto.runtime.v1.s3.ObjectStorageProto;
+import spec.proto.extension.v1.s3.ObjectStorageProto;
 import spec.sdk.runtime.v1.client.RuntimeClient;
 
 import java.util.ArrayList;

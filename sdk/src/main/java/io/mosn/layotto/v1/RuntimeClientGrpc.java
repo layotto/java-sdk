@@ -30,7 +30,7 @@ import io.mosn.layotto.v1.serializer.ObjectSerializer;
 import org.slf4j.Logger;
 import spec.proto.runtime.v1.RuntimeGrpc;
 import spec.proto.runtime.v1.RuntimeProto;
-import spec.proto.runtime.v1.s3.ObjectStorageServiceGrpc;
+import spec.proto.extension.v1.s3.ObjectStorageServiceGrpc;
 import spec.sdk.runtime.v1.domain.file.DelFileRequest;
 import spec.sdk.runtime.v1.domain.file.DelFileResponse;
 import spec.sdk.runtime.v1.domain.file.FileInfo;

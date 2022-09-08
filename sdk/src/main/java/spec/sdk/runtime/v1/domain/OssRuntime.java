@@ -14,7 +14,7 @@
  */
 package spec.sdk.runtime.v1.domain;
 
-import spec.proto.runtime.v1.s3.ObjectStorageServiceGrpc;
+import spec.proto.extension.v1.s3.ObjectStorageServiceGrpc;
 
 /**
  * @author Marco
