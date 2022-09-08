@@ -180,7 +180,7 @@ public class RuntimeClientBuilder {
         StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> stubManager = new SingleStubManager(
             channel, new RuntimeStubCreatorImpl());
         StubManager<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> ossStubManager = new SingleStubManager(
-                channel, new OssStubCreatorImpl());
+            channel, new OssStubCreatorImpl());
         // 3. construct client
         return new RuntimeClientGrpc(
             logger,
@@ -190,7 +190,7 @@ public class RuntimeClientBuilder {
     }
 
     public static class RuntimeStubCreatorImpl implements
-                                       StubCreator<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> {
+                                              StubCreator<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> {
 
         @Override
         public RuntimeGrpc.RuntimeStub createAsyncStub(ManagedChannel channel) {
@@ -204,8 +204,9 @@ public class RuntimeClientBuilder {
 
     }
 
-    public static class OssStubCreatorImpl implements
-            StubCreator<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> {
+    public static class OssStubCreatorImpl
+                                          implements
+                                          StubCreator<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> {
 
         @Override
         public ObjectStorageServiceGrpc.ObjectStorageServiceStub createAsyncStub(ManagedChannel channel) {

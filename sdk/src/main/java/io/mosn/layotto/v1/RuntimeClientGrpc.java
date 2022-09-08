@@ -71,8 +71,8 @@ import java.util.concurrent.TimeUnit;
 
 public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRuntimeClient {
 
-    private static final String                                                         TIMEOUT_KEY = "timeout";
-    private final StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> runtimeStubManager;
+    private static final String                                                                                                             TIMEOUT_KEY = "timeout";
+    private final StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub>                                                     runtimeStubManager;
     private final StubManager<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> ossStubManager;
 
     RuntimeClientGrpc(Logger logger,
@@ -533,16 +533,6 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
     }
 
     @Override
-    public ObjectStorageServiceGrpc.ObjectStorageServiceStub getAsyncStub() {
-        return ossStubManager.getAsyncStub();
-    }
-
-    @Override
-    public ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub getBlockingStub() {
-        return ossStubManager.getBlockingStub();
-    }
-
-    @Override
     public void shutdown() {
         runtimeStubManager.destroy();
         ossStubManager.destroy();
@@ -725,6 +715,16 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
         if (request.getFileName() == null) {
             throw new IllegalArgumentException("miss file name");
         }
+    }
+
+    @Override
+    public ObjectStorageServiceGrpc.ObjectStorageServiceStub getOssAsyncStub() {
+        return ossStubManager.getAsyncStub();
+    }
+
+    @Override
+    public ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub getOssBlockingStub() {
+        return ossStubManager.getBlockingStub();
     }
 
     private class PutFileFuture implements StreamObserver<Empty> {
