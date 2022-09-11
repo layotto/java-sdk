@@ -25,4 +25,10 @@ public class TryLockResponse {
         this.success = success;
     }
 
+    @Override
+    public String toString() {
+        return "TryLockResponse{" +
+            "success=" + success +
+            '}';
+    }
 }
