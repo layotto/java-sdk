@@ -18,6 +18,8 @@ bin
 # log
 logs/
 *.log
+examples-preview-service/*.out
+examples-preview-service/*.pid
 
 #protobuf
 example/build/*
