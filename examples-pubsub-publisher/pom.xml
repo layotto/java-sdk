@@ -43,6 +43,7 @@
 
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
+        <finalName>examples-pubsub-publisher</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
