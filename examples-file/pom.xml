@@ -42,6 +42,7 @@
 
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
+        <finalName>examples-file</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
