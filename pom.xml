@@ -212,6 +212,19 @@
         <url>http://github.com/mosn/layotto</url>
         <connection>scm:git:https://github.com/mosn/layotto.git</connection>
     </scm>
+    <repositories>
+        <repository>
+            <id>ossrh-snapshot</id>
+            <name>your custom repo</name>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+        <repository>
+            <id>ossrh</id>
+            <name>your custom repo</name>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </repositories>
+
     <profiles>
         <profile>
             <id>release</id>
