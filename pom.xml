@@ -5,7 +5,7 @@
 
     <groupId>io.mosn.layotto</groupId>
     <artifactId>runtime-sdk-parent</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>runtime-sdk-parent</name>
@@ -25,10 +25,11 @@
         <module>examples-pubsub-subscriber</module>
         <module>examples-pubsub-publisher</module>
         <module>examples-preview-service</module>
+        <module>examples-oss</module>
     </modules>
 
     <properties>
-        <protobuf.version>3.17.2</protobuf.version>
+        <protobuf.version>3.11.2</protobuf.version>
         <grpc.version>1.34.1</grpc.version>
         <slf4j.version>1.7.30</slf4j.version>
         <fastjson.version>1.2.69</fastjson.version>
@@ -211,6 +212,19 @@
         <url>http://github.com/mosn/layotto</url>
         <connection>scm:git:https://github.com/mosn/layotto.git</connection>
     </scm>
+    <repositories>
+        <repository>
+            <id>ossrh-snapshot</id>
+            <name>your custom repo</name>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+        <repository>
+            <id>ossrh</id>
+            <name>your custom repo</name>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </repositories>
+
     <profiles>
         <profile>
             <id>release</id>

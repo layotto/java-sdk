@@ -19,24 +19,40 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * File meta request
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
      * @return Whether the request field is set.
      */
     boolean hasRequest();
     /**
+     * <pre>
+     * File meta request
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
      * @return The request.
      */
     spec.proto.runtime.v1.RuntimeProto.FileRequest getRequest();
     /**
+     * <pre>
+     * File meta request
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
      */
     spec.proto.runtime.v1.RuntimeProto.FileRequestOrBuilder getRequestOrBuilder();
   }
   /**
+   * <pre>
+   * Get fileMeta request message
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.GetFileMetaRequest}
    */
-  public static final class GetFileMetaRequest extends
+  public  static final class GetFileMetaRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.GetFileMetaRequest)
       GetFileMetaRequestOrBuilder {
@@ -126,25 +142,34 @@ public final class RuntimeProto {
     public static final int REQUEST_FIELD_NUMBER = 1;
     private spec.proto.runtime.v1.RuntimeProto.FileRequest request_;
     /**
+     * <pre>
+     * File meta request
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
      * @return Whether the request field is set.
      */
-    @java.lang.Override
     public boolean hasRequest() {
       return request_ != null;
     }
     /**
+     * <pre>
+     * File meta request
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
      * @return The request.
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.FileRequest getRequest() {
       return request_ == null ? spec.proto.runtime.v1.RuntimeProto.FileRequest.getDefaultInstance() : request_;
     }
     /**
+     * <pre>
+     * File meta request
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.FileRequestOrBuilder getRequestOrBuilder() {
       return getRequest();
     }
@@ -310,6 +335,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * Get fileMeta request message
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.GetFileMetaRequest}
      */
     public static final class Builder extends
@@ -468,6 +497,10 @@ public final class RuntimeProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           spec.proto.runtime.v1.RuntimeProto.FileRequest, spec.proto.runtime.v1.RuntimeProto.FileRequest.Builder, spec.proto.runtime.v1.RuntimeProto.FileRequestOrBuilder> requestBuilder_;
       /**
+       * <pre>
+       * File meta request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        * @return Whether the request field is set.
        */
@@ -475,6 +508,10 @@ public final class RuntimeProto {
         return requestBuilder_ != null || request_ != null;
       }
       /**
+       * <pre>
+       * File meta request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        * @return The request.
        */
@@ -486,6 +523,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * File meta request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       public Builder setRequest(spec.proto.runtime.v1.RuntimeProto.FileRequest value) {
@@ -502,6 +543,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File meta request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       public Builder setRequest(
@@ -516,6 +561,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File meta request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       public Builder mergeRequest(spec.proto.runtime.v1.RuntimeProto.FileRequest value) {
@@ -534,6 +583,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File meta request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       public Builder clearRequest() {
@@ -548,6 +601,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File meta request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       public spec.proto.runtime.v1.RuntimeProto.FileRequest.Builder getRequestBuilder() {
@@ -556,6 +613,10 @@ public final class RuntimeProto {
         return getRequestFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * File meta request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       public spec.proto.runtime.v1.RuntimeProto.FileRequestOrBuilder getRequestOrBuilder() {
@@ -567,6 +628,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * File meta request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -670,24 +735,40 @@ public final class RuntimeProto {
         getLastModifiedBytes();
 
     /**
+     * <pre>
+     * File meta response
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileMeta response = 3;</code>
      * @return Whether the response field is set.
      */
     boolean hasResponse();
     /**
+     * <pre>
+     * File meta response
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileMeta response = 3;</code>
      * @return The response.
      */
     spec.proto.runtime.v1.RuntimeProto.FileMeta getResponse();
     /**
+     * <pre>
+     * File meta response
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileMeta response = 3;</code>
      */
     spec.proto.runtime.v1.RuntimeProto.FileMetaOrBuilder getResponseOrBuilder();
   }
   /**
+   * <pre>
+   * Get fileMeta response message
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.GetFileMetaResponse}
    */
-  public static final class GetFileMetaResponse extends
+  public  static final class GetFileMetaResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.GetFileMetaResponse)
       GetFileMetaResponseOrBuilder {
@@ -796,7 +877,6 @@ public final class RuntimeProto {
      * <code>int64 size = 1;</code>
      * @return The size.
      */
-    @java.lang.Override
     public long getSize() {
       return size_;
     }
@@ -811,7 +891,6 @@ public final class RuntimeProto {
      * <code>string last_modified = 2;</code>
      * @return The lastModified.
      */
-    @java.lang.Override
     public java.lang.String getLastModified() {
       java.lang.Object ref = lastModified_;
       if (ref instanceof java.lang.String) {
@@ -832,7 +911,6 @@ public final class RuntimeProto {
      * <code>string last_modified = 2;</code>
      * @return The bytes for lastModified.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getLastModifiedBytes() {
       java.lang.Object ref = lastModified_;
@@ -850,25 +928,34 @@ public final class RuntimeProto {
     public static final int RESPONSE_FIELD_NUMBER = 3;
     private spec.proto.runtime.v1.RuntimeProto.FileMeta response_;
     /**
+     * <pre>
+     * File meta response
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileMeta response = 3;</code>
      * @return Whether the response field is set.
      */
-    @java.lang.Override
     public boolean hasResponse() {
       return response_ != null;
     }
     /**
+     * <pre>
+     * File meta response
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileMeta response = 3;</code>
      * @return The response.
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.FileMeta getResponse() {
       return response_ == null ? spec.proto.runtime.v1.RuntimeProto.FileMeta.getDefaultInstance() : response_;
     }
     /**
+     * <pre>
+     * File meta response
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileMeta response = 3;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.FileMetaOrBuilder getResponseOrBuilder() {
       return getResponse();
     }
@@ -1056,6 +1143,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * Get fileMeta response message
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.GetFileMetaResponse}
      */
     public static final class Builder extends
@@ -1232,7 +1323,6 @@ public final class RuntimeProto {
        * <code>int64 size = 1;</code>
        * @return The size.
        */
-      @java.lang.Override
       public long getSize() {
         return size_;
       }
@@ -1366,6 +1456,10 @@ public final class RuntimeProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           spec.proto.runtime.v1.RuntimeProto.FileMeta, spec.proto.runtime.v1.RuntimeProto.FileMeta.Builder, spec.proto.runtime.v1.RuntimeProto.FileMetaOrBuilder> responseBuilder_;
       /**
+       * <pre>
+       * File meta response
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileMeta response = 3;</code>
        * @return Whether the response field is set.
        */
@@ -1373,6 +1467,10 @@ public final class RuntimeProto {
         return responseBuilder_ != null || response_ != null;
       }
       /**
+       * <pre>
+       * File meta response
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileMeta response = 3;</code>
        * @return The response.
        */
@@ -1384,6 +1482,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * File meta response
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileMeta response = 3;</code>
        */
       public Builder setResponse(spec.proto.runtime.v1.RuntimeProto.FileMeta value) {
@@ -1400,6 +1502,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File meta response
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileMeta response = 3;</code>
        */
       public Builder setResponse(
@@ -1414,6 +1520,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File meta response
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileMeta response = 3;</code>
        */
       public Builder mergeResponse(spec.proto.runtime.v1.RuntimeProto.FileMeta value) {
@@ -1432,6 +1542,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File meta response
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileMeta response = 3;</code>
        */
       public Builder clearResponse() {
@@ -1446,6 +1560,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File meta response
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileMeta response = 3;</code>
        */
       public spec.proto.runtime.v1.RuntimeProto.FileMeta.Builder getResponseBuilder() {
@@ -1454,6 +1572,10 @@ public final class RuntimeProto {
         return getResponseFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * File meta response
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileMeta response = 3;</code>
        */
       public spec.proto.runtime.v1.RuntimeProto.FileMetaOrBuilder getResponseOrBuilder() {
@@ -1465,6 +1587,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * File meta response
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileMeta response = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1538,23 +1664,39 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * File meta value
+     * </pre>
+     *
      * <code>repeated string value = 1;</code>
      * @return A list containing the value.
      */
     java.util.List<java.lang.String>
         getValueList();
     /**
+     * <pre>
+     * File meta value
+     * </pre>
+     *
      * <code>repeated string value = 1;</code>
      * @return The count of value.
      */
     int getValueCount();
     /**
+     * <pre>
+     * File meta value
+     * </pre>
+     *
      * <code>repeated string value = 1;</code>
      * @param index The index of the element to return.
      * @return The value at the given index.
      */
     java.lang.String getValue(int index);
     /**
+     * <pre>
+     * File meta value
+     * </pre>
+     *
      * <code>repeated string value = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the value at the given index.
@@ -1563,9 +1705,13 @@ public final class RuntimeProto {
         getValueBytes(int index);
   }
   /**
+   * <pre>
+   * FileMeta value
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.FileMetaValue}
    */
-  public static final class FileMetaValue extends
+  public  static final class FileMetaValue extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.FileMetaValue)
       FileMetaValueOrBuilder {
@@ -1656,6 +1802,10 @@ public final class RuntimeProto {
     public static final int VALUE_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList value_;
     /**
+     * <pre>
+     * File meta value
+     * </pre>
+     *
      * <code>repeated string value = 1;</code>
      * @return A list containing the value.
      */
@@ -1664,6 +1814,10 @@ public final class RuntimeProto {
       return value_;
     }
     /**
+     * <pre>
+     * File meta value
+     * </pre>
+     *
      * <code>repeated string value = 1;</code>
      * @return The count of value.
      */
@@ -1671,6 +1825,10 @@ public final class RuntimeProto {
       return value_.size();
     }
     /**
+     * <pre>
+     * File meta value
+     * </pre>
+     *
      * <code>repeated string value = 1;</code>
      * @param index The index of the element to return.
      * @return The value at the given index.
@@ -1679,6 +1837,10 @@ public final class RuntimeProto {
       return value_.get(index);
     }
     /**
+     * <pre>
+     * File meta value
+     * </pre>
+     *
      * <code>repeated string value = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the value at the given index.
@@ -1850,6 +2012,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * FileMeta value
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.FileMetaValue}
      */
     public static final class Builder extends
@@ -2017,6 +2183,10 @@ public final class RuntimeProto {
          }
       }
       /**
+       * <pre>
+       * File meta value
+       * </pre>
+       *
        * <code>repeated string value = 1;</code>
        * @return A list containing the value.
        */
@@ -2025,6 +2195,10 @@ public final class RuntimeProto {
         return value_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * File meta value
+       * </pre>
+       *
        * <code>repeated string value = 1;</code>
        * @return The count of value.
        */
@@ -2032,6 +2206,10 @@ public final class RuntimeProto {
         return value_.size();
       }
       /**
+       * <pre>
+       * File meta value
+       * </pre>
+       *
        * <code>repeated string value = 1;</code>
        * @param index The index of the element to return.
        * @return The value at the given index.
@@ -2040,6 +2218,10 @@ public final class RuntimeProto {
         return value_.get(index);
       }
       /**
+       * <pre>
+       * File meta value
+       * </pre>
+       *
        * <code>repeated string value = 1;</code>
        * @param index The index of the value to return.
        * @return The bytes of the value at the given index.
@@ -2049,6 +2231,10 @@ public final class RuntimeProto {
         return value_.getByteString(index);
       }
       /**
+       * <pre>
+       * File meta value
+       * </pre>
+       *
        * <code>repeated string value = 1;</code>
        * @param index The index to set the value at.
        * @param value The value to set.
@@ -2065,6 +2251,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File meta value
+       * </pre>
+       *
        * <code>repeated string value = 1;</code>
        * @param value The value to add.
        * @return This builder for chaining.
@@ -2080,6 +2270,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File meta value
+       * </pre>
+       *
        * <code>repeated string value = 1;</code>
        * @param values The value to add.
        * @return This builder for chaining.
@@ -2093,6 +2287,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File meta value
+       * </pre>
+       *
        * <code>repeated string value = 1;</code>
        * @return This builder for chaining.
        */
@@ -2103,6 +2301,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File meta value
+       * </pre>
+       *
        * <code>repeated string value = 1;</code>
        * @param value The bytes of the value to add.
        * @return This builder for chaining.
@@ -2176,10 +2378,18 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * A data structure to store metadata 
+     * </pre>
+     *
      * <code>map&lt;string, .spec.proto.runtime.v1.FileMetaValue&gt; metadata = 1;</code>
      */
     int getMetadataCount();
     /**
+     * <pre>
+     * A data structure to store metadata 
+     * </pre>
+     *
      * <code>map&lt;string, .spec.proto.runtime.v1.FileMetaValue&gt; metadata = 1;</code>
      */
     boolean containsMetadata(
@@ -2191,11 +2401,19 @@ public final class RuntimeProto {
     java.util.Map<java.lang.String, spec.proto.runtime.v1.RuntimeProto.FileMetaValue>
     getMetadata();
     /**
+     * <pre>
+     * A data structure to store metadata 
+     * </pre>
+     *
      * <code>map&lt;string, .spec.proto.runtime.v1.FileMetaValue&gt; metadata = 1;</code>
      */
     java.util.Map<java.lang.String, spec.proto.runtime.v1.RuntimeProto.FileMetaValue>
     getMetadataMap();
     /**
+     * <pre>
+     * A data structure to store metadata 
+     * </pre>
+     *
      * <code>map&lt;string, .spec.proto.runtime.v1.FileMetaValue&gt; metadata = 1;</code>
      */
 
@@ -2203,6 +2421,10 @@ public final class RuntimeProto {
         java.lang.String key,
         spec.proto.runtime.v1.RuntimeProto.FileMetaValue defaultValue);
     /**
+     * <pre>
+     * A data structure to store metadata 
+     * </pre>
+     *
      * <code>map&lt;string, .spec.proto.runtime.v1.FileMetaValue&gt; metadata = 1;</code>
      */
 
@@ -2210,9 +2432,13 @@ public final class RuntimeProto {
         java.lang.String key);
   }
   /**
+   * <pre>
+   * A map that store FileMetaValue 
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.FileMeta}
    */
-  public static final class FileMeta extends
+  public  static final class FileMeta extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.FileMeta)
       FileMetaOrBuilder {
@@ -2339,10 +2565,13 @@ public final class RuntimeProto {
       return internalGetMetadata().getMap().size();
     }
     /**
+     * <pre>
+     * A data structure to store metadata 
+     * </pre>
+     *
      * <code>map&lt;string, .spec.proto.runtime.v1.FileMetaValue&gt; metadata = 1;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -2351,23 +2580,28 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, spec.proto.runtime.v1.RuntimeProto.FileMetaValue> getMetadata() {
       return getMetadataMap();
     }
     /**
+     * <pre>
+     * A data structure to store metadata 
+     * </pre>
+     *
      * <code>map&lt;string, .spec.proto.runtime.v1.FileMetaValue&gt; metadata = 1;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, spec.proto.runtime.v1.RuntimeProto.FileMetaValue> getMetadataMap() {
       return internalGetMetadata().getMap();
     }
     /**
+     * <pre>
+     * A data structure to store metadata 
+     * </pre>
+     *
      * <code>map&lt;string, .spec.proto.runtime.v1.FileMetaValue&gt; metadata = 1;</code>
      */
-    @java.lang.Override
 
     public spec.proto.runtime.v1.RuntimeProto.FileMetaValue getMetadataOrDefault(
         java.lang.String key,
@@ -2378,9 +2612,12 @@ public final class RuntimeProto {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * A data structure to store metadata 
+     * </pre>
+     *
      * <code>map&lt;string, .spec.proto.runtime.v1.FileMetaValue&gt; metadata = 1;</code>
      */
-    @java.lang.Override
 
     public spec.proto.runtime.v1.RuntimeProto.FileMetaValue getMetadataOrThrow(
         java.lang.String key) {
@@ -2560,6 +2797,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * A map that store FileMetaValue 
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.FileMeta}
      */
     public static final class Builder extends
@@ -2756,10 +2997,13 @@ public final class RuntimeProto {
         return internalGetMetadata().getMap().size();
       }
       /**
+       * <pre>
+       * A data structure to store metadata 
+       * </pre>
+       *
        * <code>map&lt;string, .spec.proto.runtime.v1.FileMetaValue&gt; metadata = 1;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -2768,23 +3012,28 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, spec.proto.runtime.v1.RuntimeProto.FileMetaValue> getMetadata() {
         return getMetadataMap();
       }
       /**
+       * <pre>
+       * A data structure to store metadata 
+       * </pre>
+       *
        * <code>map&lt;string, .spec.proto.runtime.v1.FileMetaValue&gt; metadata = 1;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, spec.proto.runtime.v1.RuntimeProto.FileMetaValue> getMetadataMap() {
         return internalGetMetadata().getMap();
       }
       /**
+       * <pre>
+       * A data structure to store metadata 
+       * </pre>
+       *
        * <code>map&lt;string, .spec.proto.runtime.v1.FileMetaValue&gt; metadata = 1;</code>
        */
-      @java.lang.Override
 
       public spec.proto.runtime.v1.RuntimeProto.FileMetaValue getMetadataOrDefault(
           java.lang.String key,
@@ -2795,9 +3044,12 @@ public final class RuntimeProto {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * A data structure to store metadata 
+       * </pre>
+       *
        * <code>map&lt;string, .spec.proto.runtime.v1.FileMetaValue&gt; metadata = 1;</code>
        */
-      @java.lang.Override
 
       public spec.proto.runtime.v1.RuntimeProto.FileMetaValue getMetadataOrThrow(
           java.lang.String key) {
@@ -2816,6 +3068,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * A data structure to store metadata 
+       * </pre>
+       *
        * <code>map&lt;string, .spec.proto.runtime.v1.FileMetaValue&gt; metadata = 1;</code>
        */
 
@@ -2835,6 +3091,10 @@ public final class RuntimeProto {
         return internalGetMutableMetadata().getMutableMap();
       }
       /**
+       * <pre>
+       * A data structure to store metadata 
+       * </pre>
+       *
        * <code>map&lt;string, .spec.proto.runtime.v1.FileMetaValue&gt; metadata = 1;</code>
        */
       public Builder putMetadata(
@@ -2847,6 +3107,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * A data structure to store metadata 
+       * </pre>
+       *
        * <code>map&lt;string, .spec.proto.runtime.v1.FileMetaValue&gt; metadata = 1;</code>
        */
 
@@ -2915,6 +3179,7 @@ public final class RuntimeProto {
 
     /**
      * <pre>
+     * The name of store
      * </pre>
      *
      * <code>string store_name = 1;</code>
@@ -2923,6 +3188,7 @@ public final class RuntimeProto {
     java.lang.String getStoreName();
     /**
      * <pre>
+     * The name of store
      * </pre>
      *
      * <code>string store_name = 1;</code>
@@ -3006,9 +3272,13 @@ public final class RuntimeProto {
         java.lang.String key);
   }
   /**
+   * <pre>
+   * Get file request message
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.GetFileRequest}
    */
-  public static final class GetFileRequest extends
+  public  static final class GetFileRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.GetFileRequest)
       GetFileRequestOrBuilder {
@@ -3126,12 +3396,12 @@ public final class RuntimeProto {
     private volatile java.lang.Object storeName_;
     /**
      * <pre>
+     * The name of store
      * </pre>
      *
      * <code>string store_name = 1;</code>
      * @return The storeName.
      */
-    @java.lang.Override
     public java.lang.String getStoreName() {
       java.lang.Object ref = storeName_;
       if (ref instanceof java.lang.String) {
@@ -3146,12 +3416,12 @@ public final class RuntimeProto {
     }
     /**
      * <pre>
+     * The name of store
      * </pre>
      *
      * <code>string store_name = 1;</code>
      * @return The bytes for storeName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStoreNameBytes() {
       java.lang.Object ref = storeName_;
@@ -3176,7 +3446,6 @@ public final class RuntimeProto {
      * <code>string name = 2;</code>
      * @return The name.
      */
-    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -3197,7 +3466,6 @@ public final class RuntimeProto {
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -3246,7 +3514,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -3255,7 +3522,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -3267,7 +3533,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -3279,7 +3544,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -3296,7 +3560,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -3496,6 +3759,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * Get file request message
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.GetFileRequest}
      */
     public static final class Builder extends
@@ -3682,6 +3949,7 @@ public final class RuntimeProto {
       private java.lang.Object storeName_ = "";
       /**
        * <pre>
+       * The name of store
        * </pre>
        *
        * <code>string store_name = 1;</code>
@@ -3701,6 +3969,7 @@ public final class RuntimeProto {
       }
       /**
        * <pre>
+       * The name of store
        * </pre>
        *
        * <code>string store_name = 1;</code>
@@ -3721,6 +3990,7 @@ public final class RuntimeProto {
       }
       /**
        * <pre>
+       * The name of store
        * </pre>
        *
        * <code>string store_name = 1;</code>
@@ -3739,6 +4009,7 @@ public final class RuntimeProto {
       }
       /**
        * <pre>
+       * The name of store
        * </pre>
        *
        * <code>string store_name = 1;</code>
@@ -3752,6 +4023,7 @@ public final class RuntimeProto {
       }
       /**
        * <pre>
+       * The name of store
        * </pre>
        *
        * <code>string store_name = 1;</code>
@@ -3900,7 +4172,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -3909,7 +4180,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -3921,7 +4191,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -3933,7 +4202,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -3950,7 +4218,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -4079,15 +4346,23 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The data of file
+     * </pre>
+     *
      * <code>bytes data = 1;</code>
      * @return The data.
      */
     com.google.protobuf.ByteString getData();
   }
   /**
+   * <pre>
+   * Get file response message
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.GetFileResponse}
    */
-  public static final class GetFileResponse extends
+  public  static final class GetFileResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.GetFileResponse)
       GetFileResponseOrBuilder {
@@ -4170,10 +4445,13 @@ public final class RuntimeProto {
     public static final int DATA_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString data_;
     /**
+     * <pre>
+     * The data of file
+     * </pre>
+     *
      * <code>bytes data = 1;</code>
      * @return The data.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
@@ -4334,6 +4612,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * Get file response message
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.GetFileResponse}
      */
     public static final class Builder extends
@@ -4482,14 +4764,21 @@ public final class RuntimeProto {
 
       private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
+       * <pre>
+       * The data of file
+       * </pre>
+       *
        * <code>bytes data = 1;</code>
        * @return The data.
        */
-      @java.lang.Override
       public com.google.protobuf.ByteString getData() {
         return data_;
       }
       /**
+       * <pre>
+       * The data of file
+       * </pre>
+       *
        * <code>bytes data = 1;</code>
        * @param value The data to set.
        * @return This builder for chaining.
@@ -4504,6 +4793,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The data of file
+       * </pre>
+       *
        * <code>bytes data = 1;</code>
        * @return This builder for chaining.
        */
@@ -4571,11 +4864,19 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The name of store
+     * </pre>
+     *
      * <code>string store_name = 1;</code>
      * @return The storeName.
      */
     java.lang.String getStoreName();
     /**
+     * <pre>
+     * The name of store
+     * </pre>
+     *
      * <code>string store_name = 1;</code>
      * @return The bytes for storeName.
      */
@@ -4667,9 +4968,13 @@ public final class RuntimeProto {
         java.lang.String key);
   }
   /**
+   * <pre>
+   * Put file request message
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.PutFileRequest}
    */
-  public static final class PutFileRequest extends
+  public  static final class PutFileRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.PutFileRequest)
       PutFileRequestOrBuilder {
@@ -4792,10 +5097,13 @@ public final class RuntimeProto {
     public static final int STORE_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object storeName_;
     /**
+     * <pre>
+     * The name of store
+     * </pre>
+     *
      * <code>string store_name = 1;</code>
      * @return The storeName.
      */
-    @java.lang.Override
     public java.lang.String getStoreName() {
       java.lang.Object ref = storeName_;
       if (ref instanceof java.lang.String) {
@@ -4809,10 +5117,13 @@ public final class RuntimeProto {
       }
     }
     /**
+     * <pre>
+     * The name of store
+     * </pre>
+     *
      * <code>string store_name = 1;</code>
      * @return The bytes for storeName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStoreNameBytes() {
       java.lang.Object ref = storeName_;
@@ -4837,7 +5148,6 @@ public final class RuntimeProto {
      * <code>string name = 2;</code>
      * @return The name.
      */
-    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -4858,7 +5168,6 @@ public final class RuntimeProto {
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -4883,7 +5192,6 @@ public final class RuntimeProto {
      * <code>bytes data = 3;</code>
      * @return The data.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
@@ -4922,7 +5230,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -4931,7 +5238,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -4943,7 +5249,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -4955,7 +5260,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -4972,7 +5276,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -5183,6 +5486,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * Put file request message
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.PutFileRequest}
      */
     public static final class Builder extends
@@ -5374,6 +5681,10 @@ public final class RuntimeProto {
 
       private java.lang.Object storeName_ = "";
       /**
+       * <pre>
+       * The name of store
+       * </pre>
+       *
        * <code>string store_name = 1;</code>
        * @return The storeName.
        */
@@ -5390,6 +5701,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The name of store
+       * </pre>
+       *
        * <code>string store_name = 1;</code>
        * @return The bytes for storeName.
        */
@@ -5407,6 +5722,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The name of store
+       * </pre>
+       *
        * <code>string store_name = 1;</code>
        * @param value The storeName to set.
        * @return This builder for chaining.
@@ -5422,6 +5741,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The name of store
+       * </pre>
+       *
        * <code>string store_name = 1;</code>
        * @return This builder for chaining.
        */
@@ -5432,6 +5755,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The name of store
+       * </pre>
+       *
        * <code>string store_name = 1;</code>
        * @param value The bytes for storeName to set.
        * @return This builder for chaining.
@@ -5553,7 +5880,6 @@ public final class RuntimeProto {
        * <code>bytes data = 3;</code>
        * @return The data.
        */
-      @java.lang.Override
       public com.google.protobuf.ByteString getData() {
         return data_;
       }
@@ -5624,7 +5950,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -5633,7 +5958,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -5645,7 +5969,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -5657,7 +5980,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -5674,7 +5996,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -5803,11 +6124,19 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The name of store
+     * </pre>
+     *
      * <code>string store_name = 1;</code>
      * @return The storeName.
      */
     java.lang.String getStoreName();
     /**
+     * <pre>
+     * The name of store
+     * </pre>
+     *
      * <code>string store_name = 1;</code>
      * @return The bytes for storeName.
      */
@@ -5889,9 +6218,13 @@ public final class RuntimeProto {
         java.lang.String key);
   }
   /**
+   * <pre>
+   * File request message
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.FileRequest}
    */
-  public static final class FileRequest extends
+  public  static final class FileRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.FileRequest)
       FileRequestOrBuilder {
@@ -6008,10 +6341,13 @@ public final class RuntimeProto {
     public static final int STORE_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object storeName_;
     /**
+     * <pre>
+     * The name of store
+     * </pre>
+     *
      * <code>string store_name = 1;</code>
      * @return The storeName.
      */
-    @java.lang.Override
     public java.lang.String getStoreName() {
       java.lang.Object ref = storeName_;
       if (ref instanceof java.lang.String) {
@@ -6025,10 +6361,13 @@ public final class RuntimeProto {
       }
     }
     /**
+     * <pre>
+     * The name of store
+     * </pre>
+     *
      * <code>string store_name = 1;</code>
      * @return The bytes for storeName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStoreNameBytes() {
       java.lang.Object ref = storeName_;
@@ -6053,7 +6392,6 @@ public final class RuntimeProto {
      * <code>string name = 2;</code>
      * @return The name.
      */
-    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -6074,7 +6412,6 @@ public final class RuntimeProto {
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -6123,7 +6460,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -6132,7 +6468,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -6144,7 +6479,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -6156,7 +6490,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -6173,7 +6506,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -6373,6 +6705,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * File request message
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.FileRequest}
      */
     public static final class Builder extends
@@ -6558,6 +6894,10 @@ public final class RuntimeProto {
 
       private java.lang.Object storeName_ = "";
       /**
+       * <pre>
+       * The name of store
+       * </pre>
+       *
        * <code>string store_name = 1;</code>
        * @return The storeName.
        */
@@ -6574,6 +6914,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The name of store
+       * </pre>
+       *
        * <code>string store_name = 1;</code>
        * @return The bytes for storeName.
        */
@@ -6591,6 +6935,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The name of store
+       * </pre>
+       *
        * <code>string store_name = 1;</code>
        * @param value The storeName to set.
        * @return This builder for chaining.
@@ -6606,6 +6954,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The name of store
+       * </pre>
+       *
        * <code>string store_name = 1;</code>
        * @return This builder for chaining.
        */
@@ -6616,6 +6968,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The name of store
+       * </pre>
+       *
        * <code>string store_name = 1;</code>
        * @param value The bytes for storeName to set.
        * @return This builder for chaining.
@@ -6762,7 +7118,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -6771,7 +7126,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -6783,7 +7137,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -6795,7 +7148,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -6812,7 +7164,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -6941,32 +7292,56 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * File request
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
      * @return Whether the request field is set.
      */
     boolean hasRequest();
     /**
+     * <pre>
+     * File request
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
      * @return The request.
      */
     spec.proto.runtime.v1.RuntimeProto.FileRequest getRequest();
     /**
+     * <pre>
+     * File request
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
      */
     spec.proto.runtime.v1.RuntimeProto.FileRequestOrBuilder getRequestOrBuilder();
 
     /**
+     * <pre>
+     * Page size
+     * </pre>
+     *
      * <code>int32 page_size = 2;</code>
      * @return The pageSize.
      */
     int getPageSize();
 
     /**
+     * <pre>
+     * Marker
+     * </pre>
+     *
      * <code>string marker = 3;</code>
      * @return The marker.
      */
     java.lang.String getMarker();
     /**
+     * <pre>
+     * Marker
+     * </pre>
+     *
      * <code>string marker = 3;</code>
      * @return The bytes for marker.
      */
@@ -6974,9 +7349,13 @@ public final class RuntimeProto {
         getMarkerBytes();
   }
   /**
+   * <pre>
+   * List file request message
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.ListFileRequest}
    */
-  public static final class ListFileRequest extends
+  public  static final class ListFileRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.ListFileRequest)
       ListFileRequestOrBuilder {
@@ -7078,25 +7457,34 @@ public final class RuntimeProto {
     public static final int REQUEST_FIELD_NUMBER = 1;
     private spec.proto.runtime.v1.RuntimeProto.FileRequest request_;
     /**
+     * <pre>
+     * File request
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
      * @return Whether the request field is set.
      */
-    @java.lang.Override
     public boolean hasRequest() {
       return request_ != null;
     }
     /**
+     * <pre>
+     * File request
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
      * @return The request.
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.FileRequest getRequest() {
       return request_ == null ? spec.proto.runtime.v1.RuntimeProto.FileRequest.getDefaultInstance() : request_;
     }
     /**
+     * <pre>
+     * File request
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.FileRequestOrBuilder getRequestOrBuilder() {
       return getRequest();
     }
@@ -7104,10 +7492,13 @@ public final class RuntimeProto {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private int pageSize_;
     /**
+     * <pre>
+     * Page size
+     * </pre>
+     *
      * <code>int32 page_size = 2;</code>
      * @return The pageSize.
      */
-    @java.lang.Override
     public int getPageSize() {
       return pageSize_;
     }
@@ -7115,10 +7506,13 @@ public final class RuntimeProto {
     public static final int MARKER_FIELD_NUMBER = 3;
     private volatile java.lang.Object marker_;
     /**
+     * <pre>
+     * Marker
+     * </pre>
+     *
      * <code>string marker = 3;</code>
      * @return The marker.
      */
-    @java.lang.Override
     public java.lang.String getMarker() {
       java.lang.Object ref = marker_;
       if (ref instanceof java.lang.String) {
@@ -7132,10 +7526,13 @@ public final class RuntimeProto {
       }
     }
     /**
+     * <pre>
+     * Marker
+     * </pre>
+     *
      * <code>string marker = 3;</code>
      * @return The bytes for marker.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getMarkerBytes() {
       java.lang.Object ref = marker_;
@@ -7332,6 +7729,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * List file request message
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.ListFileRequest}
      */
     public static final class Builder extends
@@ -7503,6 +7904,10 @@ public final class RuntimeProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           spec.proto.runtime.v1.RuntimeProto.FileRequest, spec.proto.runtime.v1.RuntimeProto.FileRequest.Builder, spec.proto.runtime.v1.RuntimeProto.FileRequestOrBuilder> requestBuilder_;
       /**
+       * <pre>
+       * File request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        * @return Whether the request field is set.
        */
@@ -7510,6 +7915,10 @@ public final class RuntimeProto {
         return requestBuilder_ != null || request_ != null;
       }
       /**
+       * <pre>
+       * File request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        * @return The request.
        */
@@ -7521,6 +7930,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * File request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       public Builder setRequest(spec.proto.runtime.v1.RuntimeProto.FileRequest value) {
@@ -7537,6 +7950,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       public Builder setRequest(
@@ -7551,6 +7968,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       public Builder mergeRequest(spec.proto.runtime.v1.RuntimeProto.FileRequest value) {
@@ -7569,6 +7990,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       public Builder clearRequest() {
@@ -7583,6 +8008,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       public spec.proto.runtime.v1.RuntimeProto.FileRequest.Builder getRequestBuilder() {
@@ -7591,6 +8020,10 @@ public final class RuntimeProto {
         return getRequestFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * File request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       public spec.proto.runtime.v1.RuntimeProto.FileRequestOrBuilder getRequestOrBuilder() {
@@ -7602,6 +8035,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * File request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7620,14 +8057,21 @@ public final class RuntimeProto {
 
       private int pageSize_ ;
       /**
+       * <pre>
+       * Page size
+       * </pre>
+       *
        * <code>int32 page_size = 2;</code>
        * @return The pageSize.
        */
-      @java.lang.Override
       public int getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * Page size
+       * </pre>
+       *
        * <code>int32 page_size = 2;</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -7639,6 +8083,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * Page size
+       * </pre>
+       *
        * <code>int32 page_size = 2;</code>
        * @return This builder for chaining.
        */
@@ -7651,6 +8099,10 @@ public final class RuntimeProto {
 
       private java.lang.Object marker_ = "";
       /**
+       * <pre>
+       * Marker
+       * </pre>
+       *
        * <code>string marker = 3;</code>
        * @return The marker.
        */
@@ -7667,6 +8119,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * Marker
+       * </pre>
+       *
        * <code>string marker = 3;</code>
        * @return The bytes for marker.
        */
@@ -7684,6 +8140,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * Marker
+       * </pre>
+       *
        * <code>string marker = 3;</code>
        * @param value The marker to set.
        * @return This builder for chaining.
@@ -7699,6 +8159,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * Marker
+       * </pre>
+       *
        * <code>string marker = 3;</code>
        * @return This builder for chaining.
        */
@@ -7709,6 +8173,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * Marker
+       * </pre>
+       *
        * <code>string marker = 3;</code>
        * @param value The bytes for marker to set.
        * @return This builder for chaining.
@@ -7886,9 +8354,13 @@ public final class RuntimeProto {
         java.lang.String key);
   }
   /**
+   * <pre>
+   * File info message
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.FileInfo}
    */
-  public static final class FileInfo extends
+  public  static final class FileInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.FileInfo)
       FileInfoOrBuilder {
@@ -8017,7 +8489,6 @@ public final class RuntimeProto {
      * <code>string file_name = 1;</code>
      * @return The fileName.
      */
-    @java.lang.Override
     public java.lang.String getFileName() {
       java.lang.Object ref = fileName_;
       if (ref instanceof java.lang.String) {
@@ -8038,7 +8509,6 @@ public final class RuntimeProto {
      * <code>string file_name = 1;</code>
      * @return The bytes for fileName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getFileNameBytes() {
       java.lang.Object ref = fileName_;
@@ -8063,7 +8533,6 @@ public final class RuntimeProto {
      * <code>int64 size = 2;</code>
      * @return The size.
      */
-    @java.lang.Override
     public long getSize() {
       return size_;
     }
@@ -8078,7 +8547,6 @@ public final class RuntimeProto {
      * <code>string last_modified = 3;</code>
      * @return The lastModified.
      */
-    @java.lang.Override
     public java.lang.String getLastModified() {
       java.lang.Object ref = lastModified_;
       if (ref instanceof java.lang.String) {
@@ -8099,7 +8567,6 @@ public final class RuntimeProto {
      * <code>string last_modified = 3;</code>
      * @return The bytes for lastModified.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getLastModifiedBytes() {
       java.lang.Object ref = lastModified_;
@@ -8148,7 +8615,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -8157,7 +8623,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -8169,7 +8634,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -8181,7 +8645,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -8198,7 +8661,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -8410,6 +8872,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * File info message
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.FileInfo}
      */
     public static final class Builder extends
@@ -8704,7 +9170,6 @@ public final class RuntimeProto {
        * <code>int64 size = 2;</code>
        * @return The size.
        */
-      @java.lang.Override
       public long getSize() {
         return size_;
       }
@@ -8868,7 +9333,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -8877,7 +9341,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -8889,7 +9352,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -8901,7 +9363,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -8918,7 +9379,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -9047,35 +9507,63 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * File info
+     * </pre>
+     *
      * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
      */
     java.util.List<spec.proto.runtime.v1.RuntimeProto.FileInfo> 
         getFilesList();
     /**
+     * <pre>
+     * File info
+     * </pre>
+     *
      * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
      */
     spec.proto.runtime.v1.RuntimeProto.FileInfo getFiles(int index);
     /**
+     * <pre>
+     * File info
+     * </pre>
+     *
      * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
      */
     int getFilesCount();
     /**
+     * <pre>
+     * File info
+     * </pre>
+     *
      * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
      */
     java.util.List<? extends spec.proto.runtime.v1.RuntimeProto.FileInfoOrBuilder> 
         getFilesOrBuilderList();
     /**
+     * <pre>
+     * File info
+     * </pre>
+     *
      * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
      */
     spec.proto.runtime.v1.RuntimeProto.FileInfoOrBuilder getFilesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Marker
+     * </pre>
+     *
      * <code>string marker = 2;</code>
      * @return The marker.
      */
     java.lang.String getMarker();
     /**
+     * <pre>
+     * Marker
+     * </pre>
+     *
      * <code>string marker = 2;</code>
      * @return The bytes for marker.
      */
@@ -9083,15 +9571,23 @@ public final class RuntimeProto {
         getMarkerBytes();
 
     /**
+     * <pre>
+     * Is truncated
+     * </pre>
+     *
      * <code>bool is_truncated = 3;</code>
      * @return The isTruncated.
      */
     boolean getIsTruncated();
   }
   /**
+   * <pre>
+   * List file response message
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.ListFileResp}
    */
-  public static final class ListFileResp extends
+  public  static final class ListFileResp extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.ListFileResp)
       ListFileRespOrBuilder {
@@ -9194,38 +9690,53 @@ public final class RuntimeProto {
     public static final int FILES_FIELD_NUMBER = 1;
     private java.util.List<spec.proto.runtime.v1.RuntimeProto.FileInfo> files_;
     /**
+     * <pre>
+     * File info
+     * </pre>
+     *
      * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
      */
-    @java.lang.Override
     public java.util.List<spec.proto.runtime.v1.RuntimeProto.FileInfo> getFilesList() {
       return files_;
     }
     /**
+     * <pre>
+     * File info
+     * </pre>
+     *
      * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends spec.proto.runtime.v1.RuntimeProto.FileInfoOrBuilder> 
         getFilesOrBuilderList() {
       return files_;
     }
     /**
+     * <pre>
+     * File info
+     * </pre>
+     *
      * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
      */
-    @java.lang.Override
     public int getFilesCount() {
       return files_.size();
     }
     /**
+     * <pre>
+     * File info
+     * </pre>
+     *
      * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.FileInfo getFiles(int index) {
       return files_.get(index);
     }
     /**
+     * <pre>
+     * File info
+     * </pre>
+     *
      * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.FileInfoOrBuilder getFilesOrBuilder(
         int index) {
       return files_.get(index);
@@ -9234,10 +9745,13 @@ public final class RuntimeProto {
     public static final int MARKER_FIELD_NUMBER = 2;
     private volatile java.lang.Object marker_;
     /**
+     * <pre>
+     * Marker
+     * </pre>
+     *
      * <code>string marker = 2;</code>
      * @return The marker.
      */
-    @java.lang.Override
     public java.lang.String getMarker() {
       java.lang.Object ref = marker_;
       if (ref instanceof java.lang.String) {
@@ -9251,10 +9765,13 @@ public final class RuntimeProto {
       }
     }
     /**
+     * <pre>
+     * Marker
+     * </pre>
+     *
      * <code>string marker = 2;</code>
      * @return The bytes for marker.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getMarkerBytes() {
       java.lang.Object ref = marker_;
@@ -9272,10 +9789,13 @@ public final class RuntimeProto {
     public static final int IS_TRUNCATED_FIELD_NUMBER = 3;
     private boolean isTruncated_;
     /**
+     * <pre>
+     * Is truncated
+     * </pre>
+     *
      * <code>bool is_truncated = 3;</code>
      * @return The isTruncated.
      */
-    @java.lang.Override
     public boolean getIsTruncated() {
       return isTruncated_;
     }
@@ -9460,6 +9980,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * List file response message
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.ListFileResp}
      */
     public static final class Builder extends
@@ -9670,6 +10194,10 @@ public final class RuntimeProto {
           spec.proto.runtime.v1.RuntimeProto.FileInfo, spec.proto.runtime.v1.RuntimeProto.FileInfo.Builder, spec.proto.runtime.v1.RuntimeProto.FileInfoOrBuilder> filesBuilder_;
 
       /**
+       * <pre>
+       * File info
+       * </pre>
+       *
        * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
        */
       public java.util.List<spec.proto.runtime.v1.RuntimeProto.FileInfo> getFilesList() {
@@ -9680,6 +10208,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * File info
+       * </pre>
+       *
        * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
        */
       public int getFilesCount() {
@@ -9690,6 +10222,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * File info
+       * </pre>
+       *
        * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
        */
       public spec.proto.runtime.v1.RuntimeProto.FileInfo getFiles(int index) {
@@ -9700,6 +10236,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * File info
+       * </pre>
+       *
        * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
        */
       public Builder setFiles(
@@ -9717,6 +10257,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File info
+       * </pre>
+       *
        * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
        */
       public Builder setFiles(
@@ -9731,6 +10275,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File info
+       * </pre>
+       *
        * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
        */
       public Builder addFiles(spec.proto.runtime.v1.RuntimeProto.FileInfo value) {
@@ -9747,6 +10295,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File info
+       * </pre>
+       *
        * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
        */
       public Builder addFiles(
@@ -9764,6 +10316,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File info
+       * </pre>
+       *
        * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
        */
       public Builder addFiles(
@@ -9778,6 +10334,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File info
+       * </pre>
+       *
        * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
        */
       public Builder addFiles(
@@ -9792,6 +10352,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File info
+       * </pre>
+       *
        * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
        */
       public Builder addAllFiles(
@@ -9807,6 +10371,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File info
+       * </pre>
+       *
        * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
        */
       public Builder clearFiles() {
@@ -9820,6 +10388,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File info
+       * </pre>
+       *
        * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
        */
       public Builder removeFiles(int index) {
@@ -9833,6 +10405,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File info
+       * </pre>
+       *
        * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
        */
       public spec.proto.runtime.v1.RuntimeProto.FileInfo.Builder getFilesBuilder(
@@ -9840,6 +10416,10 @@ public final class RuntimeProto {
         return getFilesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * File info
+       * </pre>
+       *
        * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
        */
       public spec.proto.runtime.v1.RuntimeProto.FileInfoOrBuilder getFilesOrBuilder(
@@ -9850,6 +10430,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * File info
+       * </pre>
+       *
        * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
        */
       public java.util.List<? extends spec.proto.runtime.v1.RuntimeProto.FileInfoOrBuilder> 
@@ -9861,6 +10445,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * File info
+       * </pre>
+       *
        * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
        */
       public spec.proto.runtime.v1.RuntimeProto.FileInfo.Builder addFilesBuilder() {
@@ -9868,6 +10456,10 @@ public final class RuntimeProto {
             spec.proto.runtime.v1.RuntimeProto.FileInfo.getDefaultInstance());
       }
       /**
+       * <pre>
+       * File info
+       * </pre>
+       *
        * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
        */
       public spec.proto.runtime.v1.RuntimeProto.FileInfo.Builder addFilesBuilder(
@@ -9876,6 +10468,10 @@ public final class RuntimeProto {
             index, spec.proto.runtime.v1.RuntimeProto.FileInfo.getDefaultInstance());
       }
       /**
+       * <pre>
+       * File info
+       * </pre>
+       *
        * <code>repeated .spec.proto.runtime.v1.FileInfo files = 1;</code>
        */
       public java.util.List<spec.proto.runtime.v1.RuntimeProto.FileInfo.Builder> 
@@ -9899,6 +10495,10 @@ public final class RuntimeProto {
 
       private java.lang.Object marker_ = "";
       /**
+       * <pre>
+       * Marker
+       * </pre>
+       *
        * <code>string marker = 2;</code>
        * @return The marker.
        */
@@ -9915,6 +10515,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * Marker
+       * </pre>
+       *
        * <code>string marker = 2;</code>
        * @return The bytes for marker.
        */
@@ -9932,6 +10536,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * Marker
+       * </pre>
+       *
        * <code>string marker = 2;</code>
        * @param value The marker to set.
        * @return This builder for chaining.
@@ -9947,6 +10555,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * Marker
+       * </pre>
+       *
        * <code>string marker = 2;</code>
        * @return This builder for chaining.
        */
@@ -9957,6 +10569,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * Marker
+       * </pre>
+       *
        * <code>string marker = 2;</code>
        * @param value The bytes for marker to set.
        * @return This builder for chaining.
@@ -9975,14 +10591,21 @@ public final class RuntimeProto {
 
       private boolean isTruncated_ ;
       /**
+       * <pre>
+       * Is truncated
+       * </pre>
+       *
        * <code>bool is_truncated = 3;</code>
        * @return The isTruncated.
        */
-      @java.lang.Override
       public boolean getIsTruncated() {
         return isTruncated_;
       }
       /**
+       * <pre>
+       * Is truncated
+       * </pre>
+       *
        * <code>bool is_truncated = 3;</code>
        * @param value The isTruncated to set.
        * @return This builder for chaining.
@@ -9994,6 +10617,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * Is truncated
+       * </pre>
+       *
        * <code>bool is_truncated = 3;</code>
        * @return This builder for chaining.
        */
@@ -10061,24 +10688,40 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * File request
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
      * @return Whether the request field is set.
      */
     boolean hasRequest();
     /**
+     * <pre>
+     * File request
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
      * @return The request.
      */
     spec.proto.runtime.v1.RuntimeProto.FileRequest getRequest();
     /**
+     * <pre>
+     * File request
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
      */
     spec.proto.runtime.v1.RuntimeProto.FileRequestOrBuilder getRequestOrBuilder();
   }
   /**
+   * <pre>
+   * Delete file request message
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.DelFileRequest}
    */
-  public static final class DelFileRequest extends
+  public  static final class DelFileRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.DelFileRequest)
       DelFileRequestOrBuilder {
@@ -10168,25 +10811,34 @@ public final class RuntimeProto {
     public static final int REQUEST_FIELD_NUMBER = 1;
     private spec.proto.runtime.v1.RuntimeProto.FileRequest request_;
     /**
+     * <pre>
+     * File request
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
      * @return Whether the request field is set.
      */
-    @java.lang.Override
     public boolean hasRequest() {
       return request_ != null;
     }
     /**
+     * <pre>
+     * File request
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
      * @return The request.
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.FileRequest getRequest() {
       return request_ == null ? spec.proto.runtime.v1.RuntimeProto.FileRequest.getDefaultInstance() : request_;
     }
     /**
+     * <pre>
+     * File request
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.FileRequestOrBuilder getRequestOrBuilder() {
       return getRequest();
     }
@@ -10352,6 +11004,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * Delete file request message
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.DelFileRequest}
      */
     public static final class Builder extends
@@ -10510,6 +11166,10 @@ public final class RuntimeProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           spec.proto.runtime.v1.RuntimeProto.FileRequest, spec.proto.runtime.v1.RuntimeProto.FileRequest.Builder, spec.proto.runtime.v1.RuntimeProto.FileRequestOrBuilder> requestBuilder_;
       /**
+       * <pre>
+       * File request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        * @return Whether the request field is set.
        */
@@ -10517,6 +11177,10 @@ public final class RuntimeProto {
         return requestBuilder_ != null || request_ != null;
       }
       /**
+       * <pre>
+       * File request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        * @return The request.
        */
@@ -10528,6 +11192,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * File request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       public Builder setRequest(spec.proto.runtime.v1.RuntimeProto.FileRequest value) {
@@ -10544,6 +11212,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       public Builder setRequest(
@@ -10558,6 +11230,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       public Builder mergeRequest(spec.proto.runtime.v1.RuntimeProto.FileRequest value) {
@@ -10576,6 +11252,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       public Builder clearRequest() {
@@ -10590,6 +11270,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * File request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       public spec.proto.runtime.v1.RuntimeProto.FileRequest.Builder getRequestBuilder() {
@@ -10598,6 +11282,10 @@ public final class RuntimeProto {
         return getRequestFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * File request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       public spec.proto.runtime.v1.RuntimeProto.FileRequestOrBuilder getRequestOrBuilder() {
@@ -10609,6 +11297,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * File request
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.FileRequest request = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -10803,9 +11495,13 @@ public final class RuntimeProto {
         java.lang.String key);
   }
   /**
+   * <pre>
+   * Get next id request message
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.GetNextIdRequest}
    */
-  public static final class GetNextIdRequest extends
+  public  static final class GetNextIdRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.GetNextIdRequest)
       GetNextIdRequestOrBuilder {
@@ -10942,7 +11638,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The storeName.
      */
-    @java.lang.Override
     public java.lang.String getStoreName() {
       java.lang.Object ref = storeName_;
       if (ref instanceof java.lang.String) {
@@ -10963,7 +11658,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The bytes for storeName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStoreNameBytes() {
       java.lang.Object ref = storeName_;
@@ -10988,7 +11682,6 @@ public final class RuntimeProto {
      * <code>string key = 2;</code>
      * @return The key.
      */
-    @java.lang.Override
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
@@ -11009,7 +11702,6 @@ public final class RuntimeProto {
      * <code>string key = 2;</code>
      * @return The bytes for key.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
@@ -11034,7 +11726,6 @@ public final class RuntimeProto {
      * <code>.spec.proto.runtime.v1.SequencerOptions options = 3;</code>
      * @return Whether the options field is set.
      */
-    @java.lang.Override
     public boolean hasOptions() {
       return options_ != null;
     }
@@ -11046,7 +11737,6 @@ public final class RuntimeProto {
      * <code>.spec.proto.runtime.v1.SequencerOptions options = 3;</code>
      * @return The options.
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.SequencerOptions getOptions() {
       return options_ == null ? spec.proto.runtime.v1.RuntimeProto.SequencerOptions.getDefaultInstance() : options_;
     }
@@ -11057,7 +11747,6 @@ public final class RuntimeProto {
      *
      * <code>.spec.proto.runtime.v1.SequencerOptions options = 3;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.SequencerOptionsOrBuilder getOptionsOrBuilder() {
       return getOptions();
     }
@@ -11096,7 +11785,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -11105,7 +11793,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -11117,7 +11804,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -11129,7 +11815,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -11146,7 +11831,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -11362,6 +12046,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * Get next id request message
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.GetNextIdRequest}
      */
     public static final class Builder extends
@@ -11940,7 +12628,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -11949,7 +12636,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -11961,7 +12647,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -11973,7 +12658,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -11990,7 +12674,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -12119,11 +12802,19 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Default STRONG auto-increment
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.SequencerOptions.AutoIncrement increment = 1;</code>
      * @return The enum numeric value on the wire for increment.
      */
     int getIncrementValue();
     /**
+     * <pre>
+     * Default STRONG auto-increment
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.SequencerOptions.AutoIncrement increment = 1;</code>
      * @return The increment.
      */
@@ -12136,7 +12827,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.SequencerOptions}
    */
-  public static final class SequencerOptions extends
+  public  static final class SequencerOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.SequencerOptions)
       SequencerOptionsOrBuilder {
@@ -12311,10 +13002,6 @@ public final class RuntimeProto {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -12352,17 +13039,25 @@ public final class RuntimeProto {
     public static final int INCREMENT_FIELD_NUMBER = 1;
     private int increment_;
     /**
+     * <pre>
+     * Default STRONG auto-increment
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.SequencerOptions.AutoIncrement increment = 1;</code>
      * @return The enum numeric value on the wire for increment.
      */
-    @java.lang.Override public int getIncrementValue() {
+    public int getIncrementValue() {
       return increment_;
     }
     /**
+     * <pre>
+     * Default STRONG auto-increment
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.SequencerOptions.AutoIncrement increment = 1;</code>
      * @return The increment.
      */
-    @java.lang.Override public spec.proto.runtime.v1.RuntimeProto.SequencerOptions.AutoIncrement getIncrement() {
+    public spec.proto.runtime.v1.RuntimeProto.SequencerOptions.AutoIncrement getIncrement() {
       @SuppressWarnings("deprecation")
       spec.proto.runtime.v1.RuntimeProto.SequencerOptions.AutoIncrement result = spec.proto.runtime.v1.RuntimeProto.SequencerOptions.AutoIncrement.valueOf(increment_);
       return result == null ? spec.proto.runtime.v1.RuntimeProto.SequencerOptions.AutoIncrement.UNRECOGNIZED : result;
@@ -12675,34 +13370,48 @@ public final class RuntimeProto {
 
       private int increment_ = 0;
       /**
+       * <pre>
+       * Default STRONG auto-increment
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.SequencerOptions.AutoIncrement increment = 1;</code>
        * @return The enum numeric value on the wire for increment.
        */
-      @java.lang.Override public int getIncrementValue() {
+      public int getIncrementValue() {
         return increment_;
       }
       /**
+       * <pre>
+       * Default STRONG auto-increment
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.SequencerOptions.AutoIncrement increment = 1;</code>
        * @param value The enum numeric value on the wire for increment to set.
        * @return This builder for chaining.
        */
       public Builder setIncrementValue(int value) {
-        
         increment_ = value;
         onChanged();
         return this;
       }
       /**
+       * <pre>
+       * Default STRONG auto-increment
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.SequencerOptions.AutoIncrement increment = 1;</code>
        * @return The increment.
        */
-      @java.lang.Override
       public spec.proto.runtime.v1.RuntimeProto.SequencerOptions.AutoIncrement getIncrement() {
         @SuppressWarnings("deprecation")
         spec.proto.runtime.v1.RuntimeProto.SequencerOptions.AutoIncrement result = spec.proto.runtime.v1.RuntimeProto.SequencerOptions.AutoIncrement.valueOf(increment_);
         return result == null ? spec.proto.runtime.v1.RuntimeProto.SequencerOptions.AutoIncrement.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Default STRONG auto-increment
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.SequencerOptions.AutoIncrement increment = 1;</code>
        * @param value The increment to set.
        * @return This builder for chaining.
@@ -12717,6 +13426,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * Default STRONG auto-increment
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.SequencerOptions.AutoIncrement increment = 1;</code>
        * @return This builder for chaining.
        */
@@ -12795,9 +13508,13 @@ public final class RuntimeProto {
     long getNextId();
   }
   /**
+   * <pre>
+   * Get next id response message
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.GetNextIdResponse}
    */
-  public static final class GetNextIdResponse extends
+  public  static final class GetNextIdResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.GetNextIdResponse)
       GetNextIdResponseOrBuilder {
@@ -12887,7 +13604,6 @@ public final class RuntimeProto {
      * <code>int64 next_id = 1 [jstype = JS_STRING];</code>
      * @return The nextId.
      */
-    @java.lang.Override
     public long getNextId() {
       return nextId_;
     }
@@ -13049,6 +13765,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * Get next id response message
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.GetNextIdResponse}
      */
     public static final class Builder extends
@@ -13205,7 +13925,6 @@ public final class RuntimeProto {
        * <code>int64 next_id = 1 [jstype = JS_STRING];</code>
        * @return The nextId.
        */
-      @java.lang.Override
       public long getNextId() {
         return nextId_;
       }
@@ -13392,9 +14111,13 @@ public final class RuntimeProto {
     int getExpire();
   }
   /**
+   * <pre>
+   * Lock request message is distributed lock API which is not blocking method tring to get a lock with ttl
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.TryLockRequest}
    */
-  public static final class TryLockRequest extends
+  public  static final class TryLockRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.TryLockRequest)
       TryLockRequestOrBuilder {
@@ -13504,7 +14227,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The storeName.
      */
-    @java.lang.Override
     public java.lang.String getStoreName() {
       java.lang.Object ref = storeName_;
       if (ref instanceof java.lang.String) {
@@ -13525,7 +14247,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The bytes for storeName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStoreNameBytes() {
       java.lang.Object ref = storeName_;
@@ -13551,7 +14272,6 @@ public final class RuntimeProto {
      * <code>string resource_id = 2;</code>
      * @return The resourceId.
      */
-    @java.lang.Override
     public java.lang.String getResourceId() {
       java.lang.Object ref = resourceId_;
       if (ref instanceof java.lang.String) {
@@ -13573,7 +14293,6 @@ public final class RuntimeProto {
      * <code>string resource_id = 2;</code>
      * @return The bytes for resourceId.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourceIdBytes() {
       java.lang.Object ref = resourceId_;
@@ -13609,7 +14328,6 @@ public final class RuntimeProto {
      * <code>string lock_owner = 3;</code>
      * @return The lockOwner.
      */
-    @java.lang.Override
     public java.lang.String getLockOwner() {
       java.lang.Object ref = lockOwner_;
       if (ref instanceof java.lang.String) {
@@ -13641,7 +14359,6 @@ public final class RuntimeProto {
      * <code>string lock_owner = 3;</code>
      * @return The bytes for lockOwner.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getLockOwnerBytes() {
       java.lang.Object ref = lockOwner_;
@@ -13666,7 +14383,6 @@ public final class RuntimeProto {
      * <code>int32 expire = 4;</code>
      * @return The expire.
      */
-    @java.lang.Override
     public int getExpire() {
       return expire_;
     }
@@ -13857,6 +14573,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * Lock request message is distributed lock API which is not blocking method tring to get a lock with ttl
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.TryLockRequest}
      */
     public static final class Builder extends
@@ -14381,7 +15101,6 @@ public final class RuntimeProto {
        * <code>int32 expire = 4;</code>
        * @return The expire.
        */
-      @java.lang.Override
       public int getExpire() {
         return expire_;
       }
@@ -14472,15 +15191,23 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Is lock success
+     * </pre>
+     *
      * <code>bool success = 1;</code>
      * @return The success.
      */
     boolean getSuccess();
   }
   /**
+   * <pre>
+   * Lock response message returns is the lock obtained. 
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.TryLockResponse}
    */
-  public static final class TryLockResponse extends
+  public  static final class TryLockResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.TryLockResponse)
       TryLockResponseOrBuilder {
@@ -14562,10 +15289,13 @@ public final class RuntimeProto {
     public static final int SUCCESS_FIELD_NUMBER = 1;
     private boolean success_;
     /**
+     * <pre>
+     * Is lock success
+     * </pre>
+     *
      * <code>bool success = 1;</code>
      * @return The success.
      */
-    @java.lang.Override
     public boolean getSuccess() {
       return success_;
     }
@@ -14727,6 +15457,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * Lock response message returns is the lock obtained. 
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.TryLockResponse}
      */
     public static final class Builder extends
@@ -14875,14 +15609,21 @@ public final class RuntimeProto {
 
       private boolean success_ ;
       /**
+       * <pre>
+       * Is lock success
+       * </pre>
+       *
        * <code>bool success = 1;</code>
        * @return The success.
        */
-      @java.lang.Override
       public boolean getSuccess() {
         return success_;
       }
       /**
+       * <pre>
+       * Is lock success
+       * </pre>
+       *
        * <code>bool success = 1;</code>
        * @param value The success to set.
        * @return This builder for chaining.
@@ -14894,6 +15635,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * Is lock success
+       * </pre>
+       *
        * <code>bool success = 1;</code>
        * @return This builder for chaining.
        */
@@ -14961,11 +15706,19 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The name of store
+     * </pre>
+     *
      * <code>string store_name = 1;</code>
      * @return The storeName.
      */
     java.lang.String getStoreName();
     /**
+     * <pre>
+     * The name of store
+     * </pre>
+     *
      * <code>string store_name = 1;</code>
      * @return The bytes for storeName.
      */
@@ -14993,11 +15746,19 @@ public final class RuntimeProto {
         getResourceIdBytes();
 
     /**
+     * <pre>
+     * The owner of the lock
+     * </pre>
+     *
      * <code>string lock_owner = 3;</code>
      * @return The lockOwner.
      */
     java.lang.String getLockOwner();
     /**
+     * <pre>
+     * The owner of the lock
+     * </pre>
+     *
      * <code>string lock_owner = 3;</code>
      * @return The bytes for lockOwner.
      */
@@ -15005,9 +15766,13 @@ public final class RuntimeProto {
         getLockOwnerBytes();
   }
   /**
+   * <pre>
+   * UnLock request message
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.UnlockRequest}
    */
-  public static final class UnlockRequest extends
+  public  static final class UnlockRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.UnlockRequest)
       UnlockRequestOrBuilder {
@@ -15105,10 +15870,13 @@ public final class RuntimeProto {
     public static final int STORE_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object storeName_;
     /**
+     * <pre>
+     * The name of store
+     * </pre>
+     *
      * <code>string store_name = 1;</code>
      * @return The storeName.
      */
-    @java.lang.Override
     public java.lang.String getStoreName() {
       java.lang.Object ref = storeName_;
       if (ref instanceof java.lang.String) {
@@ -15122,10 +15890,13 @@ public final class RuntimeProto {
       }
     }
     /**
+     * <pre>
+     * The name of store
+     * </pre>
+     *
      * <code>string store_name = 1;</code>
      * @return The bytes for storeName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStoreNameBytes() {
       java.lang.Object ref = storeName_;
@@ -15150,7 +15921,6 @@ public final class RuntimeProto {
      * <code>string resource_id = 2;</code>
      * @return The resourceId.
      */
-    @java.lang.Override
     public java.lang.String getResourceId() {
       java.lang.Object ref = resourceId_;
       if (ref instanceof java.lang.String) {
@@ -15171,7 +15941,6 @@ public final class RuntimeProto {
      * <code>string resource_id = 2;</code>
      * @return The bytes for resourceId.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourceIdBytes() {
       java.lang.Object ref = resourceId_;
@@ -15189,10 +15958,13 @@ public final class RuntimeProto {
     public static final int LOCK_OWNER_FIELD_NUMBER = 3;
     private volatile java.lang.Object lockOwner_;
     /**
+     * <pre>
+     * The owner of the lock
+     * </pre>
+     *
      * <code>string lock_owner = 3;</code>
      * @return The lockOwner.
      */
-    @java.lang.Override
     public java.lang.String getLockOwner() {
       java.lang.Object ref = lockOwner_;
       if (ref instanceof java.lang.String) {
@@ -15206,10 +15978,13 @@ public final class RuntimeProto {
       }
     }
     /**
+     * <pre>
+     * The owner of the lock
+     * </pre>
+     *
      * <code>string lock_owner = 3;</code>
      * @return The bytes for lockOwner.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getLockOwnerBytes() {
       java.lang.Object ref = lockOwner_;
@@ -15399,6 +16174,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * UnLock request message
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.UnlockRequest}
      */
     public static final class Builder extends
@@ -15562,6 +16341,10 @@ public final class RuntimeProto {
 
       private java.lang.Object storeName_ = "";
       /**
+       * <pre>
+       * The name of store
+       * </pre>
+       *
        * <code>string store_name = 1;</code>
        * @return The storeName.
        */
@@ -15578,6 +16361,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The name of store
+       * </pre>
+       *
        * <code>string store_name = 1;</code>
        * @return The bytes for storeName.
        */
@@ -15595,6 +16382,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The name of store
+       * </pre>
+       *
        * <code>string store_name = 1;</code>
        * @param value The storeName to set.
        * @return This builder for chaining.
@@ -15610,6 +16401,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The name of store
+       * </pre>
+       *
        * <code>string store_name = 1;</code>
        * @return This builder for chaining.
        */
@@ -15620,6 +16415,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The name of store
+       * </pre>
+       *
        * <code>string store_name = 1;</code>
        * @param value The bytes for storeName to set.
        * @return This builder for chaining.
@@ -15734,6 +16533,10 @@ public final class RuntimeProto {
 
       private java.lang.Object lockOwner_ = "";
       /**
+       * <pre>
+       * The owner of the lock
+       * </pre>
+       *
        * <code>string lock_owner = 3;</code>
        * @return The lockOwner.
        */
@@ -15750,6 +16553,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The owner of the lock
+       * </pre>
+       *
        * <code>string lock_owner = 3;</code>
        * @return The bytes for lockOwner.
        */
@@ -15767,6 +16574,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The owner of the lock
+       * </pre>
+       *
        * <code>string lock_owner = 3;</code>
        * @param value The lockOwner to set.
        * @return This builder for chaining.
@@ -15782,6 +16593,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The owner of the lock
+       * </pre>
+       *
        * <code>string lock_owner = 3;</code>
        * @return This builder for chaining.
        */
@@ -15792,6 +16607,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The owner of the lock
+       * </pre>
+       *
        * <code>string lock_owner = 3;</code>
        * @param value The bytes for lockOwner to set.
        * @return This builder for chaining.
@@ -15865,20 +16684,32 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The status of unlock
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.UnlockResponse.Status status = 1;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
+     * <pre>
+     * The status of unlock
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.UnlockResponse.Status status = 1;</code>
      * @return The status.
      */
     spec.proto.runtime.v1.RuntimeProto.UnlockResponse.Status getStatus();
   }
   /**
+   * <pre>
+   * UnLock response message
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.UnlockResponse}
    */
-  public static final class UnlockResponse extends
+  public  static final class UnlockResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.UnlockResponse)
       UnlockResponseOrBuilder {
@@ -15960,23 +16791,43 @@ public final class RuntimeProto {
     }
 
     /**
+     * <pre>
+     * The enum of unlock status
+     * </pre>
+     *
      * Protobuf enum {@code spec.proto.runtime.v1.UnlockResponse.Status}
      */
     public enum Status
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Unlock is success
+       * </pre>
+       *
        * <code>SUCCESS = 0;</code>
        */
       SUCCESS(0),
       /**
+       * <pre>
+       * The lock is not exist
+       * </pre>
+       *
        * <code>LOCK_UNEXIST = 1;</code>
        */
       LOCK_UNEXIST(1),
       /**
+       * <pre>
+       * The lock is belong to others
+       * </pre>
+       *
        * <code>LOCK_BELONG_TO_OTHERS = 2;</code>
        */
       LOCK_BELONG_TO_OTHERS(2),
       /**
+       * <pre>
+       * Internal error
+       * </pre>
+       *
        * <code>INTERNAL_ERROR = 3;</code>
        */
       INTERNAL_ERROR(3),
@@ -15984,18 +16835,34 @@ public final class RuntimeProto {
       ;
 
       /**
+       * <pre>
+       * Unlock is success
+       * </pre>
+       *
        * <code>SUCCESS = 0;</code>
        */
       public static final int SUCCESS_VALUE = 0;
       /**
+       * <pre>
+       * The lock is not exist
+       * </pre>
+       *
        * <code>LOCK_UNEXIST = 1;</code>
        */
       public static final int LOCK_UNEXIST_VALUE = 1;
       /**
+       * <pre>
+       * The lock is belong to others
+       * </pre>
+       *
        * <code>LOCK_BELONG_TO_OTHERS = 2;</code>
        */
       public static final int LOCK_BELONG_TO_OTHERS_VALUE = 2;
       /**
+       * <pre>
+       * Internal error
+       * </pre>
+       *
        * <code>INTERNAL_ERROR = 3;</code>
        */
       public static final int INTERNAL_ERROR_VALUE = 3;
@@ -16047,10 +16914,6 @@ public final class RuntimeProto {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -16088,17 +16951,25 @@ public final class RuntimeProto {
     public static final int STATUS_FIELD_NUMBER = 1;
     private int status_;
     /**
+     * <pre>
+     * The status of unlock
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.UnlockResponse.Status status = 1;</code>
      * @return The enum numeric value on the wire for status.
      */
-    @java.lang.Override public int getStatusValue() {
+    public int getStatusValue() {
       return status_;
     }
     /**
+     * <pre>
+     * The status of unlock
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.UnlockResponse.Status status = 1;</code>
      * @return The status.
      */
-    @java.lang.Override public spec.proto.runtime.v1.RuntimeProto.UnlockResponse.Status getStatus() {
+    public spec.proto.runtime.v1.RuntimeProto.UnlockResponse.Status getStatus() {
       @SuppressWarnings("deprecation")
       spec.proto.runtime.v1.RuntimeProto.UnlockResponse.Status result = spec.proto.runtime.v1.RuntimeProto.UnlockResponse.Status.valueOf(status_);
       return result == null ? spec.proto.runtime.v1.RuntimeProto.UnlockResponse.Status.UNRECOGNIZED : result;
@@ -16259,6 +17130,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * UnLock response message
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.UnlockResponse}
      */
     public static final class Builder extends
@@ -16407,34 +17282,48 @@ public final class RuntimeProto {
 
       private int status_ = 0;
       /**
+       * <pre>
+       * The status of unlock
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.UnlockResponse.Status status = 1;</code>
        * @return The enum numeric value on the wire for status.
        */
-      @java.lang.Override public int getStatusValue() {
+      public int getStatusValue() {
         return status_;
       }
       /**
+       * <pre>
+       * The status of unlock
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.UnlockResponse.Status status = 1;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
-        
         status_ = value;
         onChanged();
         return this;
       }
       /**
+       * <pre>
+       * The status of unlock
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.UnlockResponse.Status status = 1;</code>
        * @return The status.
        */
-      @java.lang.Override
       public spec.proto.runtime.v1.RuntimeProto.UnlockResponse.Status getStatus() {
         @SuppressWarnings("deprecation")
         spec.proto.runtime.v1.RuntimeProto.UnlockResponse.Status result = spec.proto.runtime.v1.RuntimeProto.UnlockResponse.Status.valueOf(status_);
         return result == null ? spec.proto.runtime.v1.RuntimeProto.UnlockResponse.Status.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * The status of unlock
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.UnlockResponse.Status status = 1;</code>
        * @param value The status to set.
        * @return This builder for chaining.
@@ -16449,6 +17338,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The status of unlock
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.UnlockResponse.Status status = 1;</code>
        * @return This builder for chaining.
        */
@@ -16516,11 +17409,19 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The name of service
+     * </pre>
+     *
      * <code>string service_name = 1;</code>
      * @return The serviceName.
      */
     java.lang.String getServiceName();
     /**
+     * <pre>
+     * The name of service
+     * </pre>
+     *
      * <code>string service_name = 1;</code>
      * @return The bytes for serviceName.
      */
@@ -16528,11 +17429,19 @@ public final class RuntimeProto {
         getServiceNameBytes();
 
     /**
+     * <pre>
+     * Reuqest name
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Reuqest name
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -16567,9 +17476,13 @@ public final class RuntimeProto {
     com.google.protobuf.AnyOrBuilder getDataOrBuilder();
   }
   /**
+   * <pre>
+   * Hello request message
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.SayHelloRequest}
    */
-  public static final class SayHelloRequest extends
+  public  static final class SayHelloRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.SayHelloRequest)
       SayHelloRequestOrBuilder {
@@ -16673,10 +17586,13 @@ public final class RuntimeProto {
     public static final int SERVICE_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object serviceName_;
     /**
+     * <pre>
+     * The name of service
+     * </pre>
+     *
      * <code>string service_name = 1;</code>
      * @return The serviceName.
      */
-    @java.lang.Override
     public java.lang.String getServiceName() {
       java.lang.Object ref = serviceName_;
       if (ref instanceof java.lang.String) {
@@ -16690,10 +17606,13 @@ public final class RuntimeProto {
       }
     }
     /**
+     * <pre>
+     * The name of service
+     * </pre>
+     *
      * <code>string service_name = 1;</code>
      * @return The bytes for serviceName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceNameBytes() {
       java.lang.Object ref = serviceName_;
@@ -16711,10 +17630,13 @@ public final class RuntimeProto {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Reuqest name
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
-    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -16728,10 +17650,13 @@ public final class RuntimeProto {
       }
     }
     /**
+     * <pre>
+     * Reuqest name
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -16756,7 +17681,6 @@ public final class RuntimeProto {
      * <code>.google.protobuf.Any data = 3;</code>
      * @return Whether the data field is set.
      */
-    @java.lang.Override
     public boolean hasData() {
       return data_ != null;
     }
@@ -16768,7 +17692,6 @@ public final class RuntimeProto {
      * <code>.google.protobuf.Any data = 3;</code>
      * @return The data.
      */
-    @java.lang.Override
     public com.google.protobuf.Any getData() {
       return data_ == null ? com.google.protobuf.Any.getDefaultInstance() : data_;
     }
@@ -16779,7 +17702,6 @@ public final class RuntimeProto {
      *
      * <code>.google.protobuf.Any data = 3;</code>
      */
-    @java.lang.Override
     public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
       return getData();
     }
@@ -16965,6 +17887,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * Hello request message
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.SayHelloRequest}
      */
     public static final class Builder extends
@@ -17135,6 +18061,10 @@ public final class RuntimeProto {
 
       private java.lang.Object serviceName_ = "";
       /**
+       * <pre>
+       * The name of service
+       * </pre>
+       *
        * <code>string service_name = 1;</code>
        * @return The serviceName.
        */
@@ -17151,6 +18081,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The name of service
+       * </pre>
+       *
        * <code>string service_name = 1;</code>
        * @return The bytes for serviceName.
        */
@@ -17168,6 +18102,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The name of service
+       * </pre>
+       *
        * <code>string service_name = 1;</code>
        * @param value The serviceName to set.
        * @return This builder for chaining.
@@ -17183,6 +18121,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The name of service
+       * </pre>
+       *
        * <code>string service_name = 1;</code>
        * @return This builder for chaining.
        */
@@ -17193,6 +18135,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The name of service
+       * </pre>
+       *
        * <code>string service_name = 1;</code>
        * @param value The bytes for serviceName to set.
        * @return This builder for chaining.
@@ -17211,6 +18157,10 @@ public final class RuntimeProto {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Reuqest name
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The name.
        */
@@ -17227,6 +18177,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * Reuqest name
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The bytes for name.
        */
@@ -17244,6 +18198,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * Reuqest name
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -17259,6 +18217,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * Reuqest name
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return This builder for chaining.
        */
@@ -17269,6 +18231,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * Reuqest name
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -17497,11 +18463,19 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Hello
+     * </pre>
+     *
      * <code>string hello = 1;</code>
      * @return The hello.
      */
     java.lang.String getHello();
     /**
+     * <pre>
+     * Hello
+     * </pre>
+     *
      * <code>string hello = 1;</code>
      * @return The bytes for hello.
      */
@@ -17509,24 +18483,40 @@ public final class RuntimeProto {
         getHelloBytes();
 
     /**
+     * <pre>
+     * Hello message of data
+     * </pre>
+     *
      * <code>.google.protobuf.Any data = 2;</code>
      * @return Whether the data field is set.
      */
     boolean hasData();
     /**
+     * <pre>
+     * Hello message of data
+     * </pre>
+     *
      * <code>.google.protobuf.Any data = 2;</code>
      * @return The data.
      */
     com.google.protobuf.Any getData();
     /**
+     * <pre>
+     * Hello message of data
+     * </pre>
+     *
      * <code>.google.protobuf.Any data = 2;</code>
      */
     com.google.protobuf.AnyOrBuilder getDataOrBuilder();
   }
   /**
+   * <pre>
+   * Hello response message
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.SayHelloResponse}
    */
-  public static final class SayHelloResponse extends
+  public  static final class SayHelloResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.SayHelloResponse)
       SayHelloResponseOrBuilder {
@@ -17623,10 +18613,13 @@ public final class RuntimeProto {
     public static final int HELLO_FIELD_NUMBER = 1;
     private volatile java.lang.Object hello_;
     /**
+     * <pre>
+     * Hello
+     * </pre>
+     *
      * <code>string hello = 1;</code>
      * @return The hello.
      */
-    @java.lang.Override
     public java.lang.String getHello() {
       java.lang.Object ref = hello_;
       if (ref instanceof java.lang.String) {
@@ -17640,10 +18633,13 @@ public final class RuntimeProto {
       }
     }
     /**
+     * <pre>
+     * Hello
+     * </pre>
+     *
      * <code>string hello = 1;</code>
      * @return The bytes for hello.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getHelloBytes() {
       java.lang.Object ref = hello_;
@@ -17661,25 +18657,34 @@ public final class RuntimeProto {
     public static final int DATA_FIELD_NUMBER = 2;
     private com.google.protobuf.Any data_;
     /**
+     * <pre>
+     * Hello message of data
+     * </pre>
+     *
      * <code>.google.protobuf.Any data = 2;</code>
      * @return Whether the data field is set.
      */
-    @java.lang.Override
     public boolean hasData() {
       return data_ != null;
     }
     /**
+     * <pre>
+     * Hello message of data
+     * </pre>
+     *
      * <code>.google.protobuf.Any data = 2;</code>
      * @return The data.
      */
-    @java.lang.Override
     public com.google.protobuf.Any getData() {
       return data_ == null ? com.google.protobuf.Any.getDefaultInstance() : data_;
     }
     /**
+     * <pre>
+     * Hello message of data
+     * </pre>
+     *
      * <code>.google.protobuf.Any data = 2;</code>
      */
-    @java.lang.Override
     public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
       return getData();
     }
@@ -17855,6 +18860,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * Hello response message
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.SayHelloResponse}
      */
     public static final class Builder extends
@@ -18018,6 +19027,10 @@ public final class RuntimeProto {
 
       private java.lang.Object hello_ = "";
       /**
+       * <pre>
+       * Hello
+       * </pre>
+       *
        * <code>string hello = 1;</code>
        * @return The hello.
        */
@@ -18034,6 +19047,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * Hello
+       * </pre>
+       *
        * <code>string hello = 1;</code>
        * @return The bytes for hello.
        */
@@ -18051,6 +19068,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * Hello
+       * </pre>
+       *
        * <code>string hello = 1;</code>
        * @param value The hello to set.
        * @return This builder for chaining.
@@ -18066,6 +19087,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * Hello
+       * </pre>
+       *
        * <code>string hello = 1;</code>
        * @return This builder for chaining.
        */
@@ -18076,6 +19101,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * Hello
+       * </pre>
+       *
        * <code>string hello = 1;</code>
        * @param value The bytes for hello to set.
        * @return This builder for chaining.
@@ -18096,6 +19125,10 @@ public final class RuntimeProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> dataBuilder_;
       /**
+       * <pre>
+       * Hello message of data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 2;</code>
        * @return Whether the data field is set.
        */
@@ -18103,6 +19136,10 @@ public final class RuntimeProto {
         return dataBuilder_ != null || data_ != null;
       }
       /**
+       * <pre>
+       * Hello message of data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 2;</code>
        * @return The data.
        */
@@ -18114,6 +19151,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * Hello message of data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 2;</code>
        */
       public Builder setData(com.google.protobuf.Any value) {
@@ -18130,6 +19171,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * Hello message of data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 2;</code>
        */
       public Builder setData(
@@ -18144,6 +19189,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * Hello message of data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 2;</code>
        */
       public Builder mergeData(com.google.protobuf.Any value) {
@@ -18162,6 +19211,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * Hello message of data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 2;</code>
        */
       public Builder clearData() {
@@ -18176,6 +19229,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * Hello message of data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 2;</code>
        */
       public com.google.protobuf.Any.Builder getDataBuilder() {
@@ -18184,6 +19241,10 @@ public final class RuntimeProto {
         return getDataFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Hello message of data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 2;</code>
        */
       public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
@@ -18195,6 +19256,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * Hello message of data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -18268,11 +19333,19 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The identify of InvokeServiceRequest
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * The identify of InvokeServiceRequest
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -18280,24 +19353,40 @@ public final class RuntimeProto {
         getIdBytes();
 
     /**
+     * <pre>
+     * InvokeServiceRequest message
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.CommonInvokeRequest message = 3;</code>
      * @return Whether the message field is set.
      */
     boolean hasMessage();
     /**
+     * <pre>
+     * InvokeServiceRequest message
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.CommonInvokeRequest message = 3;</code>
      * @return The message.
      */
     spec.proto.runtime.v1.RuntimeProto.CommonInvokeRequest getMessage();
     /**
+     * <pre>
+     * InvokeServiceRequest message
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.CommonInvokeRequest message = 3;</code>
      */
     spec.proto.runtime.v1.RuntimeProto.CommonInvokeRequestOrBuilder getMessageOrBuilder();
   }
   /**
+   * <pre>
+   * Invoke service request message
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.InvokeServiceRequest}
    */
-  public static final class InvokeServiceRequest extends
+  public  static final class InvokeServiceRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.InvokeServiceRequest)
       InvokeServiceRequestOrBuilder {
@@ -18394,10 +19483,13 @@ public final class RuntimeProto {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * The identify of InvokeServiceRequest
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
-    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -18411,10 +19503,13 @@ public final class RuntimeProto {
       }
     }
     /**
+     * <pre>
+     * The identify of InvokeServiceRequest
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -18432,25 +19527,34 @@ public final class RuntimeProto {
     public static final int MESSAGE_FIELD_NUMBER = 3;
     private spec.proto.runtime.v1.RuntimeProto.CommonInvokeRequest message_;
     /**
+     * <pre>
+     * InvokeServiceRequest message
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.CommonInvokeRequest message = 3;</code>
      * @return Whether the message field is set.
      */
-    @java.lang.Override
     public boolean hasMessage() {
       return message_ != null;
     }
     /**
+     * <pre>
+     * InvokeServiceRequest message
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.CommonInvokeRequest message = 3;</code>
      * @return The message.
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.CommonInvokeRequest getMessage() {
       return message_ == null ? spec.proto.runtime.v1.RuntimeProto.CommonInvokeRequest.getDefaultInstance() : message_;
     }
     /**
+     * <pre>
+     * InvokeServiceRequest message
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.CommonInvokeRequest message = 3;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.CommonInvokeRequestOrBuilder getMessageOrBuilder() {
       return getMessage();
     }
@@ -18626,6 +19730,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * Invoke service request message
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.InvokeServiceRequest}
      */
     public static final class Builder extends
@@ -18789,6 +19897,10 @@ public final class RuntimeProto {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * The identify of InvokeServiceRequest
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -18805,6 +19917,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The identify of InvokeServiceRequest
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -18822,6 +19938,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The identify of InvokeServiceRequest
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -18837,6 +19957,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The identify of InvokeServiceRequest
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -18847,6 +19971,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The identify of InvokeServiceRequest
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -18867,6 +19995,10 @@ public final class RuntimeProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           spec.proto.runtime.v1.RuntimeProto.CommonInvokeRequest, spec.proto.runtime.v1.RuntimeProto.CommonInvokeRequest.Builder, spec.proto.runtime.v1.RuntimeProto.CommonInvokeRequestOrBuilder> messageBuilder_;
       /**
+       * <pre>
+       * InvokeServiceRequest message
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.CommonInvokeRequest message = 3;</code>
        * @return Whether the message field is set.
        */
@@ -18874,6 +20006,10 @@ public final class RuntimeProto {
         return messageBuilder_ != null || message_ != null;
       }
       /**
+       * <pre>
+       * InvokeServiceRequest message
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.CommonInvokeRequest message = 3;</code>
        * @return The message.
        */
@@ -18885,6 +20021,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * InvokeServiceRequest message
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.CommonInvokeRequest message = 3;</code>
        */
       public Builder setMessage(spec.proto.runtime.v1.RuntimeProto.CommonInvokeRequest value) {
@@ -18901,6 +20041,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * InvokeServiceRequest message
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.CommonInvokeRequest message = 3;</code>
        */
       public Builder setMessage(
@@ -18915,6 +20059,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * InvokeServiceRequest message
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.CommonInvokeRequest message = 3;</code>
        */
       public Builder mergeMessage(spec.proto.runtime.v1.RuntimeProto.CommonInvokeRequest value) {
@@ -18933,6 +20081,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * InvokeServiceRequest message
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.CommonInvokeRequest message = 3;</code>
        */
       public Builder clearMessage() {
@@ -18947,6 +20099,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * InvokeServiceRequest message
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.CommonInvokeRequest message = 3;</code>
        */
       public spec.proto.runtime.v1.RuntimeProto.CommonInvokeRequest.Builder getMessageBuilder() {
@@ -18955,6 +20111,10 @@ public final class RuntimeProto {
         return getMessageFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * InvokeServiceRequest message
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.CommonInvokeRequest message = 3;</code>
        */
       public spec.proto.runtime.v1.RuntimeProto.CommonInvokeRequestOrBuilder getMessageOrBuilder() {
@@ -18966,6 +20126,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * InvokeServiceRequest message
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.CommonInvokeRequest message = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -19039,11 +20203,19 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The method of requset
+     * </pre>
+     *
      * <code>string method = 1;</code>
      * @return The method.
      */
     java.lang.String getMethod();
     /**
+     * <pre>
+     * The method of requset
+     * </pre>
+     *
      * <code>string method = 1;</code>
      * @return The bytes for method.
      */
@@ -19051,26 +20223,46 @@ public final class RuntimeProto {
         getMethodBytes();
 
     /**
+     * <pre>
+     * The request data
+     * </pre>
+     *
      * <code>.google.protobuf.Any data = 2;</code>
      * @return Whether the data field is set.
      */
     boolean hasData();
     /**
+     * <pre>
+     * The request data
+     * </pre>
+     *
      * <code>.google.protobuf.Any data = 2;</code>
      * @return The data.
      */
     com.google.protobuf.Any getData();
     /**
+     * <pre>
+     * The request data
+     * </pre>
+     *
      * <code>.google.protobuf.Any data = 2;</code>
      */
     com.google.protobuf.AnyOrBuilder getDataOrBuilder();
 
     /**
+     * <pre>
+     * The content type of request data
+     * </pre>
+     *
      * <code>string content_type = 3;</code>
      * @return The contentType.
      */
     java.lang.String getContentType();
     /**
+     * <pre>
+     * The content type of request data
+     * </pre>
+     *
      * <code>string content_type = 3;</code>
      * @return The bytes for contentType.
      */
@@ -19078,24 +20270,40 @@ public final class RuntimeProto {
         getContentTypeBytes();
 
     /**
+     * <pre>
+     * The extra information of http
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.HTTPExtension http_extension = 4;</code>
      * @return Whether the httpExtension field is set.
      */
     boolean hasHttpExtension();
     /**
+     * <pre>
+     * The extra information of http
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.HTTPExtension http_extension = 4;</code>
      * @return The httpExtension.
      */
     spec.proto.runtime.v1.RuntimeProto.HTTPExtension getHttpExtension();
     /**
+     * <pre>
+     * The extra information of http
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.HTTPExtension http_extension = 4;</code>
      */
     spec.proto.runtime.v1.RuntimeProto.HTTPExtensionOrBuilder getHttpExtensionOrBuilder();
   }
   /**
+   * <pre>
+   * Common invoke request message which includes invoke method and data
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.CommonInvokeRequest}
    */
-  public static final class CommonInvokeRequest extends
+  public  static final class CommonInvokeRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.CommonInvokeRequest)
       CommonInvokeRequestOrBuilder {
@@ -19212,10 +20420,13 @@ public final class RuntimeProto {
     public static final int METHOD_FIELD_NUMBER = 1;
     private volatile java.lang.Object method_;
     /**
+     * <pre>
+     * The method of requset
+     * </pre>
+     *
      * <code>string method = 1;</code>
      * @return The method.
      */
-    @java.lang.Override
     public java.lang.String getMethod() {
       java.lang.Object ref = method_;
       if (ref instanceof java.lang.String) {
@@ -19229,10 +20440,13 @@ public final class RuntimeProto {
       }
     }
     /**
+     * <pre>
+     * The method of requset
+     * </pre>
+     *
      * <code>string method = 1;</code>
      * @return The bytes for method.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getMethodBytes() {
       java.lang.Object ref = method_;
@@ -19250,25 +20464,34 @@ public final class RuntimeProto {
     public static final int DATA_FIELD_NUMBER = 2;
     private com.google.protobuf.Any data_;
     /**
+     * <pre>
+     * The request data
+     * </pre>
+     *
      * <code>.google.protobuf.Any data = 2;</code>
      * @return Whether the data field is set.
      */
-    @java.lang.Override
     public boolean hasData() {
       return data_ != null;
     }
     /**
+     * <pre>
+     * The request data
+     * </pre>
+     *
      * <code>.google.protobuf.Any data = 2;</code>
      * @return The data.
      */
-    @java.lang.Override
     public com.google.protobuf.Any getData() {
       return data_ == null ? com.google.protobuf.Any.getDefaultInstance() : data_;
     }
     /**
+     * <pre>
+     * The request data
+     * </pre>
+     *
      * <code>.google.protobuf.Any data = 2;</code>
      */
-    @java.lang.Override
     public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
       return getData();
     }
@@ -19276,10 +20499,13 @@ public final class RuntimeProto {
     public static final int CONTENT_TYPE_FIELD_NUMBER = 3;
     private volatile java.lang.Object contentType_;
     /**
+     * <pre>
+     * The content type of request data
+     * </pre>
+     *
      * <code>string content_type = 3;</code>
      * @return The contentType.
      */
-    @java.lang.Override
     public java.lang.String getContentType() {
       java.lang.Object ref = contentType_;
       if (ref instanceof java.lang.String) {
@@ -19293,10 +20519,13 @@ public final class RuntimeProto {
       }
     }
     /**
+     * <pre>
+     * The content type of request data
+     * </pre>
+     *
      * <code>string content_type = 3;</code>
      * @return The bytes for contentType.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getContentTypeBytes() {
       java.lang.Object ref = contentType_;
@@ -19314,25 +20543,34 @@ public final class RuntimeProto {
     public static final int HTTP_EXTENSION_FIELD_NUMBER = 4;
     private spec.proto.runtime.v1.RuntimeProto.HTTPExtension httpExtension_;
     /**
+     * <pre>
+     * The extra information of http
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.HTTPExtension http_extension = 4;</code>
      * @return Whether the httpExtension field is set.
      */
-    @java.lang.Override
     public boolean hasHttpExtension() {
       return httpExtension_ != null;
     }
     /**
+     * <pre>
+     * The extra information of http
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.HTTPExtension http_extension = 4;</code>
      * @return The httpExtension.
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.HTTPExtension getHttpExtension() {
       return httpExtension_ == null ? spec.proto.runtime.v1.RuntimeProto.HTTPExtension.getDefaultInstance() : httpExtension_;
     }
     /**
+     * <pre>
+     * The extra information of http
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.HTTPExtension http_extension = 4;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.HTTPExtensionOrBuilder getHttpExtensionOrBuilder() {
       return getHttpExtension();
     }
@@ -19534,6 +20772,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * Common invoke request message which includes invoke method and data
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.CommonInvokeRequest}
      */
     public static final class Builder extends
@@ -19718,6 +20960,10 @@ public final class RuntimeProto {
 
       private java.lang.Object method_ = "";
       /**
+       * <pre>
+       * The method of requset
+       * </pre>
+       *
        * <code>string method = 1;</code>
        * @return The method.
        */
@@ -19734,6 +20980,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The method of requset
+       * </pre>
+       *
        * <code>string method = 1;</code>
        * @return The bytes for method.
        */
@@ -19751,6 +21001,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The method of requset
+       * </pre>
+       *
        * <code>string method = 1;</code>
        * @param value The method to set.
        * @return This builder for chaining.
@@ -19766,6 +21020,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The method of requset
+       * </pre>
+       *
        * <code>string method = 1;</code>
        * @return This builder for chaining.
        */
@@ -19776,6 +21034,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The method of requset
+       * </pre>
+       *
        * <code>string method = 1;</code>
        * @param value The bytes for method to set.
        * @return This builder for chaining.
@@ -19796,6 +21058,10 @@ public final class RuntimeProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> dataBuilder_;
       /**
+       * <pre>
+       * The request data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 2;</code>
        * @return Whether the data field is set.
        */
@@ -19803,6 +21069,10 @@ public final class RuntimeProto {
         return dataBuilder_ != null || data_ != null;
       }
       /**
+       * <pre>
+       * The request data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 2;</code>
        * @return The data.
        */
@@ -19814,6 +21084,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The request data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 2;</code>
        */
       public Builder setData(com.google.protobuf.Any value) {
@@ -19830,6 +21104,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The request data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 2;</code>
        */
       public Builder setData(
@@ -19844,6 +21122,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The request data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 2;</code>
        */
       public Builder mergeData(com.google.protobuf.Any value) {
@@ -19862,6 +21144,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The request data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 2;</code>
        */
       public Builder clearData() {
@@ -19876,6 +21162,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The request data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 2;</code>
        */
       public com.google.protobuf.Any.Builder getDataBuilder() {
@@ -19884,6 +21174,10 @@ public final class RuntimeProto {
         return getDataFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The request data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 2;</code>
        */
       public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
@@ -19895,6 +21189,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The request data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -19913,6 +21211,10 @@ public final class RuntimeProto {
 
       private java.lang.Object contentType_ = "";
       /**
+       * <pre>
+       * The content type of request data
+       * </pre>
+       *
        * <code>string content_type = 3;</code>
        * @return The contentType.
        */
@@ -19929,6 +21231,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The content type of request data
+       * </pre>
+       *
        * <code>string content_type = 3;</code>
        * @return The bytes for contentType.
        */
@@ -19946,6 +21252,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The content type of request data
+       * </pre>
+       *
        * <code>string content_type = 3;</code>
        * @param value The contentType to set.
        * @return This builder for chaining.
@@ -19961,6 +21271,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The content type of request data
+       * </pre>
+       *
        * <code>string content_type = 3;</code>
        * @return This builder for chaining.
        */
@@ -19971,6 +21285,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The content type of request data
+       * </pre>
+       *
        * <code>string content_type = 3;</code>
        * @param value The bytes for contentType to set.
        * @return This builder for chaining.
@@ -19991,6 +21309,10 @@ public final class RuntimeProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           spec.proto.runtime.v1.RuntimeProto.HTTPExtension, spec.proto.runtime.v1.RuntimeProto.HTTPExtension.Builder, spec.proto.runtime.v1.RuntimeProto.HTTPExtensionOrBuilder> httpExtensionBuilder_;
       /**
+       * <pre>
+       * The extra information of http
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.HTTPExtension http_extension = 4;</code>
        * @return Whether the httpExtension field is set.
        */
@@ -19998,6 +21320,10 @@ public final class RuntimeProto {
         return httpExtensionBuilder_ != null || httpExtension_ != null;
       }
       /**
+       * <pre>
+       * The extra information of http
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.HTTPExtension http_extension = 4;</code>
        * @return The httpExtension.
        */
@@ -20009,6 +21335,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The extra information of http
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.HTTPExtension http_extension = 4;</code>
        */
       public Builder setHttpExtension(spec.proto.runtime.v1.RuntimeProto.HTTPExtension value) {
@@ -20025,6 +21355,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The extra information of http
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.HTTPExtension http_extension = 4;</code>
        */
       public Builder setHttpExtension(
@@ -20039,6 +21373,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The extra information of http
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.HTTPExtension http_extension = 4;</code>
        */
       public Builder mergeHttpExtension(spec.proto.runtime.v1.RuntimeProto.HTTPExtension value) {
@@ -20057,6 +21395,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The extra information of http
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.HTTPExtension http_extension = 4;</code>
        */
       public Builder clearHttpExtension() {
@@ -20071,6 +21413,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The extra information of http
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.HTTPExtension http_extension = 4;</code>
        */
       public spec.proto.runtime.v1.RuntimeProto.HTTPExtension.Builder getHttpExtensionBuilder() {
@@ -20079,6 +21425,10 @@ public final class RuntimeProto {
         return getHttpExtensionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The extra information of http
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.HTTPExtension http_extension = 4;</code>
        */
       public spec.proto.runtime.v1.RuntimeProto.HTTPExtensionOrBuilder getHttpExtensionOrBuilder() {
@@ -20090,6 +21440,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The extra information of http
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.HTTPExtension http_extension = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -20163,22 +21517,38 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The method of http reuest
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.HTTPExtension.Verb verb = 1;</code>
      * @return The enum numeric value on the wire for verb.
      */
     int getVerbValue();
     /**
+     * <pre>
+     * The method of http reuest
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.HTTPExtension.Verb verb = 1;</code>
      * @return The verb.
      */
     spec.proto.runtime.v1.RuntimeProto.HTTPExtension.Verb getVerb();
 
     /**
+     * <pre>
+     * The query information of http
+     * </pre>
+     *
      * <code>string querystring = 2;</code>
      * @return The querystring.
      */
     java.lang.String getQuerystring();
     /**
+     * <pre>
+     * The query information of http
+     * </pre>
+     *
      * <code>string querystring = 2;</code>
      * @return The bytes for querystring.
      */
@@ -20186,9 +21556,13 @@ public final class RuntimeProto {
         getQuerystringBytes();
   }
   /**
+   * <pre>
+   * Http extension message is about invoke http information
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.HTTPExtension}
    */
-  public static final class HTTPExtension extends
+  public  static final class HTTPExtension extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.HTTPExtension)
       HTTPExtensionOrBuilder {
@@ -20277,85 +21651,177 @@ public final class RuntimeProto {
     }
 
     /**
+     * <pre>
+     * The enum of http reuest method
+     * </pre>
+     *
      * Protobuf enum {@code spec.proto.runtime.v1.HTTPExtension.Verb}
      */
     public enum Verb
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * NONE
+       * </pre>
+       *
        * <code>NONE = 0;</code>
        */
       NONE(0),
       /**
+       * <pre>
+       * GET method
+       * </pre>
+       *
        * <code>GET = 1;</code>
        */
       GET(1),
       /**
+       * <pre>
+       * HEAD method
+       * </pre>
+       *
        * <code>HEAD = 2;</code>
        */
       HEAD(2),
       /**
+       * <pre>
+       * POST method
+       * </pre>
+       *
        * <code>POST = 3;</code>
        */
       POST(3),
       /**
+       * <pre>
+       * PUT method
+       * </pre>
+       *
        * <code>PUT = 4;</code>
        */
       PUT(4),
       /**
+       * <pre>
+       * DELETE method
+       * </pre>
+       *
        * <code>DELETE = 5;</code>
        */
       DELETE(5),
       /**
+       * <pre>
+       * CONNECT method
+       * </pre>
+       *
        * <code>CONNECT = 6;</code>
        */
       CONNECT(6),
       /**
+       * <pre>
+       * CONNECT method
+       * </pre>
+       *
        * <code>OPTIONS = 7;</code>
        */
       OPTIONS(7),
       /**
+       * <pre>
+       * CONNECT method
+       * </pre>
+       *
        * <code>TRACE = 8;</code>
        */
       TRACE(8),
+      /**
+       * <pre>
+       * PATCH method
+       * </pre>
+       *
+       * <code>PATCH = 9;</code>
+       */
+      PATCH(9),
       UNRECOGNIZED(-1),
       ;
 
       /**
+       * <pre>
+       * NONE
+       * </pre>
+       *
        * <code>NONE = 0;</code>
        */
       public static final int NONE_VALUE = 0;
       /**
+       * <pre>
+       * GET method
+       * </pre>
+       *
        * <code>GET = 1;</code>
        */
       public static final int GET_VALUE = 1;
       /**
+       * <pre>
+       * HEAD method
+       * </pre>
+       *
        * <code>HEAD = 2;</code>
        */
       public static final int HEAD_VALUE = 2;
       /**
+       * <pre>
+       * POST method
+       * </pre>
+       *
        * <code>POST = 3;</code>
        */
       public static final int POST_VALUE = 3;
       /**
+       * <pre>
+       * PUT method
+       * </pre>
+       *
        * <code>PUT = 4;</code>
        */
       public static final int PUT_VALUE = 4;
       /**
+       * <pre>
+       * DELETE method
+       * </pre>
+       *
        * <code>DELETE = 5;</code>
        */
       public static final int DELETE_VALUE = 5;
       /**
+       * <pre>
+       * CONNECT method
+       * </pre>
+       *
        * <code>CONNECT = 6;</code>
        */
       public static final int CONNECT_VALUE = 6;
       /**
+       * <pre>
+       * CONNECT method
+       * </pre>
+       *
        * <code>OPTIONS = 7;</code>
        */
       public static final int OPTIONS_VALUE = 7;
       /**
+       * <pre>
+       * CONNECT method
+       * </pre>
+       *
        * <code>TRACE = 8;</code>
        */
       public static final int TRACE_VALUE = 8;
+      /**
+       * <pre>
+       * PATCH method
+       * </pre>
+       *
+       * <code>PATCH = 9;</code>
+       */
+      public static final int PATCH_VALUE = 9;
 
 
       public final int getNumber() {
@@ -20391,6 +21857,7 @@ public final class RuntimeProto {
           case 6: return CONNECT;
           case 7: return OPTIONS;
           case 8: return TRACE;
+          case 9: return PATCH;
           default: return null;
         }
       }
@@ -20409,10 +21876,6 @@ public final class RuntimeProto {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -20450,17 +21913,25 @@ public final class RuntimeProto {
     public static final int VERB_FIELD_NUMBER = 1;
     private int verb_;
     /**
+     * <pre>
+     * The method of http reuest
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.HTTPExtension.Verb verb = 1;</code>
      * @return The enum numeric value on the wire for verb.
      */
-    @java.lang.Override public int getVerbValue() {
+    public int getVerbValue() {
       return verb_;
     }
     /**
+     * <pre>
+     * The method of http reuest
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.HTTPExtension.Verb verb = 1;</code>
      * @return The verb.
      */
-    @java.lang.Override public spec.proto.runtime.v1.RuntimeProto.HTTPExtension.Verb getVerb() {
+    public spec.proto.runtime.v1.RuntimeProto.HTTPExtension.Verb getVerb() {
       @SuppressWarnings("deprecation")
       spec.proto.runtime.v1.RuntimeProto.HTTPExtension.Verb result = spec.proto.runtime.v1.RuntimeProto.HTTPExtension.Verb.valueOf(verb_);
       return result == null ? spec.proto.runtime.v1.RuntimeProto.HTTPExtension.Verb.UNRECOGNIZED : result;
@@ -20469,10 +21940,13 @@ public final class RuntimeProto {
     public static final int QUERYSTRING_FIELD_NUMBER = 2;
     private volatile java.lang.Object querystring_;
     /**
+     * <pre>
+     * The query information of http
+     * </pre>
+     *
      * <code>string querystring = 2;</code>
      * @return The querystring.
      */
-    @java.lang.Override
     public java.lang.String getQuerystring() {
       java.lang.Object ref = querystring_;
       if (ref instanceof java.lang.String) {
@@ -20486,10 +21960,13 @@ public final class RuntimeProto {
       }
     }
     /**
+     * <pre>
+     * The query information of http
+     * </pre>
+     *
      * <code>string querystring = 2;</code>
      * @return The bytes for querystring.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getQuerystringBytes() {
       java.lang.Object ref = querystring_;
@@ -20669,6 +22146,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * Http extension message is about invoke http information
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.HTTPExtension}
      */
     public static final class Builder extends
@@ -20824,34 +22305,48 @@ public final class RuntimeProto {
 
       private int verb_ = 0;
       /**
+       * <pre>
+       * The method of http reuest
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.HTTPExtension.Verb verb = 1;</code>
        * @return The enum numeric value on the wire for verb.
        */
-      @java.lang.Override public int getVerbValue() {
+      public int getVerbValue() {
         return verb_;
       }
       /**
+       * <pre>
+       * The method of http reuest
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.HTTPExtension.Verb verb = 1;</code>
        * @param value The enum numeric value on the wire for verb to set.
        * @return This builder for chaining.
        */
       public Builder setVerbValue(int value) {
-        
         verb_ = value;
         onChanged();
         return this;
       }
       /**
+       * <pre>
+       * The method of http reuest
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.HTTPExtension.Verb verb = 1;</code>
        * @return The verb.
        */
-      @java.lang.Override
       public spec.proto.runtime.v1.RuntimeProto.HTTPExtension.Verb getVerb() {
         @SuppressWarnings("deprecation")
         spec.proto.runtime.v1.RuntimeProto.HTTPExtension.Verb result = spec.proto.runtime.v1.RuntimeProto.HTTPExtension.Verb.valueOf(verb_);
         return result == null ? spec.proto.runtime.v1.RuntimeProto.HTTPExtension.Verb.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * The method of http reuest
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.HTTPExtension.Verb verb = 1;</code>
        * @param value The verb to set.
        * @return This builder for chaining.
@@ -20866,6 +22361,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The method of http reuest
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.HTTPExtension.Verb verb = 1;</code>
        * @return This builder for chaining.
        */
@@ -20878,6 +22377,10 @@ public final class RuntimeProto {
 
       private java.lang.Object querystring_ = "";
       /**
+       * <pre>
+       * The query information of http
+       * </pre>
+       *
        * <code>string querystring = 2;</code>
        * @return The querystring.
        */
@@ -20894,6 +22397,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The query information of http
+       * </pre>
+       *
        * <code>string querystring = 2;</code>
        * @return The bytes for querystring.
        */
@@ -20911,6 +22418,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The query information of http
+       * </pre>
+       *
        * <code>string querystring = 2;</code>
        * @param value The querystring to set.
        * @return This builder for chaining.
@@ -20926,6 +22437,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The query information of http
+       * </pre>
+       *
        * <code>string querystring = 2;</code>
        * @return This builder for chaining.
        */
@@ -20936,6 +22451,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The query information of http
+       * </pre>
+       *
        * <code>string querystring = 2;</code>
        * @param value The bytes for querystring to set.
        * @return This builder for chaining.
@@ -21009,26 +22528,46 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The response data
+     * </pre>
+     *
      * <code>.google.protobuf.Any data = 1;</code>
      * @return Whether the data field is set.
      */
     boolean hasData();
     /**
+     * <pre>
+     * The response data
+     * </pre>
+     *
      * <code>.google.protobuf.Any data = 1;</code>
      * @return The data.
      */
     com.google.protobuf.Any getData();
     /**
+     * <pre>
+     * The response data
+     * </pre>
+     *
      * <code>.google.protobuf.Any data = 1;</code>
      */
     com.google.protobuf.AnyOrBuilder getDataOrBuilder();
 
     /**
+     * <pre>
+     * The content type of response data
+     * </pre>
+     *
      * <code>string content_type = 2;</code>
      * @return The contentType.
      */
     java.lang.String getContentType();
     /**
+     * <pre>
+     * The content type of response data
+     * </pre>
+     *
      * <code>string content_type = 2;</code>
      * @return The bytes for contentType.
      */
@@ -21036,9 +22575,13 @@ public final class RuntimeProto {
         getContentTypeBytes();
   }
   /**
+   * <pre>
+   * Invoke service response message is result of invoke service queset
+   * </pre>
+   *
    * Protobuf type {@code spec.proto.runtime.v1.InvokeResponse}
    */
-  public static final class InvokeResponse extends
+  public  static final class InvokeResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.InvokeResponse)
       InvokeResponseOrBuilder {
@@ -21135,25 +22678,34 @@ public final class RuntimeProto {
     public static final int DATA_FIELD_NUMBER = 1;
     private com.google.protobuf.Any data_;
     /**
+     * <pre>
+     * The response data
+     * </pre>
+     *
      * <code>.google.protobuf.Any data = 1;</code>
      * @return Whether the data field is set.
      */
-    @java.lang.Override
     public boolean hasData() {
       return data_ != null;
     }
     /**
+     * <pre>
+     * The response data
+     * </pre>
+     *
      * <code>.google.protobuf.Any data = 1;</code>
      * @return The data.
      */
-    @java.lang.Override
     public com.google.protobuf.Any getData() {
       return data_ == null ? com.google.protobuf.Any.getDefaultInstance() : data_;
     }
     /**
+     * <pre>
+     * The response data
+     * </pre>
+     *
      * <code>.google.protobuf.Any data = 1;</code>
      */
-    @java.lang.Override
     public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
       return getData();
     }
@@ -21161,10 +22713,13 @@ public final class RuntimeProto {
     public static final int CONTENT_TYPE_FIELD_NUMBER = 2;
     private volatile java.lang.Object contentType_;
     /**
+     * <pre>
+     * The content type of response data
+     * </pre>
+     *
      * <code>string content_type = 2;</code>
      * @return The contentType.
      */
-    @java.lang.Override
     public java.lang.String getContentType() {
       java.lang.Object ref = contentType_;
       if (ref instanceof java.lang.String) {
@@ -21178,10 +22733,13 @@ public final class RuntimeProto {
       }
     }
     /**
+     * <pre>
+     * The content type of response data
+     * </pre>
+     *
      * <code>string content_type = 2;</code>
      * @return The bytes for contentType.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getContentTypeBytes() {
       java.lang.Object ref = contentType_;
@@ -21367,6 +22925,10 @@ public final class RuntimeProto {
       return builder;
     }
     /**
+     * <pre>
+     * Invoke service response message is result of invoke service queset
+     * </pre>
+     *
      * Protobuf type {@code spec.proto.runtime.v1.InvokeResponse}
      */
     public static final class Builder extends
@@ -21532,6 +23094,10 @@ public final class RuntimeProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> dataBuilder_;
       /**
+       * <pre>
+       * The response data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 1;</code>
        * @return Whether the data field is set.
        */
@@ -21539,6 +23105,10 @@ public final class RuntimeProto {
         return dataBuilder_ != null || data_ != null;
       }
       /**
+       * <pre>
+       * The response data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 1;</code>
        * @return The data.
        */
@@ -21550,6 +23120,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The response data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 1;</code>
        */
       public Builder setData(com.google.protobuf.Any value) {
@@ -21566,6 +23140,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The response data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 1;</code>
        */
       public Builder setData(
@@ -21580,6 +23158,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The response data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 1;</code>
        */
       public Builder mergeData(com.google.protobuf.Any value) {
@@ -21598,6 +23180,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The response data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 1;</code>
        */
       public Builder clearData() {
@@ -21612,6 +23198,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The response data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 1;</code>
        */
       public com.google.protobuf.Any.Builder getDataBuilder() {
@@ -21620,6 +23210,10 @@ public final class RuntimeProto {
         return getDataFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The response data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 1;</code>
        */
       public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
@@ -21631,6 +23225,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The response data
+       * </pre>
+       *
        * <code>.google.protobuf.Any data = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -21649,6 +23247,10 @@ public final class RuntimeProto {
 
       private java.lang.Object contentType_ = "";
       /**
+       * <pre>
+       * The content type of response data
+       * </pre>
+       *
        * <code>string content_type = 2;</code>
        * @return The contentType.
        */
@@ -21665,6 +23267,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The content type of response data
+       * </pre>
+       *
        * <code>string content_type = 2;</code>
        * @return The bytes for contentType.
        */
@@ -21682,6 +23288,10 @@ public final class RuntimeProto {
         }
       }
       /**
+       * <pre>
+       * The content type of response data
+       * </pre>
+       *
        * <code>string content_type = 2;</code>
        * @param value The contentType to set.
        * @return This builder for chaining.
@@ -21697,6 +23307,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The content type of response data
+       * </pre>
+       *
        * <code>string content_type = 2;</code>
        * @return This builder for chaining.
        */
@@ -21707,6 +23321,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The content type of response data
+       * </pre>
+       *
        * <code>string content_type = 2;</code>
        * @param value The bytes for contentType to set.
        * @return This builder for chaining.
@@ -21976,7 +23594,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.ConfigurationItem}
    */
-  public static final class ConfigurationItem extends
+  public  static final class ConfigurationItem extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.ConfigurationItem)
       ConfigurationItemOrBuilder {
@@ -22129,7 +23747,6 @@ public final class RuntimeProto {
      * <code>string key = 1;</code>
      * @return The key.
      */
-    @java.lang.Override
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
@@ -22150,7 +23767,6 @@ public final class RuntimeProto {
      * <code>string key = 1;</code>
      * @return The bytes for key.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
@@ -22176,7 +23792,6 @@ public final class RuntimeProto {
      * <code>string content = 2;</code>
      * @return The content.
      */
-    @java.lang.Override
     public java.lang.String getContent() {
       java.lang.Object ref = content_;
       if (ref instanceof java.lang.String) {
@@ -22198,7 +23813,6 @@ public final class RuntimeProto {
      * <code>string content = 2;</code>
      * @return The bytes for content.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getContentBytes() {
       java.lang.Object ref = content_;
@@ -22223,7 +23837,6 @@ public final class RuntimeProto {
      * <code>string group = 3;</code>
      * @return The group.
      */
-    @java.lang.Override
     public java.lang.String getGroup() {
       java.lang.Object ref = group_;
       if (ref instanceof java.lang.String) {
@@ -22244,7 +23857,6 @@ public final class RuntimeProto {
      * <code>string group = 3;</code>
      * @return The bytes for group.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getGroupBytes() {
       java.lang.Object ref = group_;
@@ -22269,7 +23881,6 @@ public final class RuntimeProto {
      * <code>string label = 4;</code>
      * @return The label.
      */
-    @java.lang.Override
     public java.lang.String getLabel() {
       java.lang.Object ref = label_;
       if (ref instanceof java.lang.String) {
@@ -22290,7 +23901,6 @@ public final class RuntimeProto {
      * <code>string label = 4;</code>
      * @return The bytes for label.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getLabelBytes() {
       java.lang.Object ref = label_;
@@ -22339,7 +23949,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; tags = 5;</code>
      */
 
-    @java.lang.Override
     public boolean containsTags(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -22348,7 +23957,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getTagsMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getTags() {
       return getTagsMap();
@@ -22360,7 +23968,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; tags = 5;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getTagsMap() {
       return internalGetTags().getMap();
@@ -22372,7 +23979,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; tags = 5;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getTagsOrDefault(
         java.lang.String key,
@@ -22389,7 +23995,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; tags = 5;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getTagsOrThrow(
         java.lang.String key) {
@@ -22436,7 +24041,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 6;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -22445,7 +24049,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -22457,7 +24060,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 6;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -22469,7 +24071,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 6;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -22486,7 +24087,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 6;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -23361,7 +24961,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; tags = 5;</code>
        */
 
-      @java.lang.Override
       public boolean containsTags(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -23370,7 +24969,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getTagsMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getTags() {
         return getTagsMap();
@@ -23382,7 +24980,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; tags = 5;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getTagsMap() {
         return internalGetTags().getMap();
@@ -23394,7 +24991,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; tags = 5;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getTagsOrDefault(
           java.lang.String key,
@@ -23411,7 +25007,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; tags = 5;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getTagsOrThrow(
           java.lang.String key) {
@@ -23517,7 +25112,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 6;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -23526,7 +25120,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -23538,7 +25131,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 6;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -23550,7 +25142,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 6;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -23567,7 +25158,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 6;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -23890,7 +25480,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.GetConfigurationRequest}
    */
-  public static final class GetConfigurationRequest extends
+  public  static final class GetConfigurationRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.GetConfigurationRequest)
       GetConfigurationRequestOrBuilder {
@@ -24046,7 +25636,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The storeName.
      */
-    @java.lang.Override
     public java.lang.String getStoreName() {
       java.lang.Object ref = storeName_;
       if (ref instanceof java.lang.String) {
@@ -24067,7 +25656,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The bytes for storeName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStoreNameBytes() {
       java.lang.Object ref = storeName_;
@@ -24093,7 +25681,6 @@ public final class RuntimeProto {
      * <code>string app_id = 2;</code>
      * @return The appId.
      */
-    @java.lang.Override
     public java.lang.String getAppId() {
       java.lang.Object ref = appId_;
       if (ref instanceof java.lang.String) {
@@ -24115,7 +25702,6 @@ public final class RuntimeProto {
      * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getAppIdBytes() {
       java.lang.Object ref = appId_;
@@ -24140,7 +25726,6 @@ public final class RuntimeProto {
      * <code>string group = 3;</code>
      * @return The group.
      */
-    @java.lang.Override
     public java.lang.String getGroup() {
       java.lang.Object ref = group_;
       if (ref instanceof java.lang.String) {
@@ -24161,7 +25746,6 @@ public final class RuntimeProto {
      * <code>string group = 3;</code>
      * @return The bytes for group.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getGroupBytes() {
       java.lang.Object ref = group_;
@@ -24186,7 +25770,6 @@ public final class RuntimeProto {
      * <code>string label = 4;</code>
      * @return The label.
      */
-    @java.lang.Override
     public java.lang.String getLabel() {
       java.lang.Object ref = label_;
       if (ref instanceof java.lang.String) {
@@ -24207,7 +25790,6 @@ public final class RuntimeProto {
      * <code>string label = 4;</code>
      * @return The bytes for label.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getLabelBytes() {
       java.lang.Object ref = label_;
@@ -24307,7 +25889,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 6;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -24316,7 +25897,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -24328,7 +25908,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 6;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -24340,7 +25919,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 6;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -24357,7 +25935,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 6;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -24381,7 +25958,6 @@ public final class RuntimeProto {
      * <code>bool subscribe_update = 7;</code>
      * @return The subscribeUpdate.
      */
-    @java.lang.Override
     public boolean getSubscribeUpdate() {
       return subscribeUpdate_;
     }
@@ -25415,7 +26991,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 6;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -25424,7 +26999,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -25436,7 +27010,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 6;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -25448,7 +27021,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 6;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -25465,7 +27037,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 6;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -25547,7 +27118,6 @@ public final class RuntimeProto {
        * <code>bool subscribe_update = 7;</code>
        * @return The subscribeUpdate.
        */
-      @java.lang.Override
       public boolean getSubscribeUpdate() {
         return subscribeUpdate_;
       }
@@ -25690,7 +27260,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.GetConfigurationResponse}
    */
-  public static final class GetConfigurationResponse extends
+  public  static final class GetConfigurationResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.GetConfigurationResponse)
       GetConfigurationResponseOrBuilder {
@@ -25787,7 +27357,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.ConfigurationItem items = 1;</code>
      */
-    @java.lang.Override
     public java.util.List<spec.proto.runtime.v1.RuntimeProto.ConfigurationItem> getItemsList() {
       return items_;
     }
@@ -25798,7 +27367,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.ConfigurationItem items = 1;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends spec.proto.runtime.v1.RuntimeProto.ConfigurationItemOrBuilder> 
         getItemsOrBuilderList() {
       return items_;
@@ -25810,7 +27378,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.ConfigurationItem items = 1;</code>
      */
-    @java.lang.Override
     public int getItemsCount() {
       return items_.size();
     }
@@ -25821,7 +27388,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.ConfigurationItem items = 1;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.ConfigurationItem getItems(int index) {
       return items_.get(index);
     }
@@ -25832,7 +27398,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.ConfigurationItem items = 1;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.ConfigurationItemOrBuilder getItemsOrBuilder(
         int index) {
       return items_.get(index);
@@ -26736,7 +28301,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.SubscribeConfigurationRequest}
    */
-  public static final class SubscribeConfigurationRequest extends
+  public  static final class SubscribeConfigurationRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.SubscribeConfigurationRequest)
       SubscribeConfigurationRequestOrBuilder {
@@ -26887,7 +28452,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The storeName.
      */
-    @java.lang.Override
     public java.lang.String getStoreName() {
       java.lang.Object ref = storeName_;
       if (ref instanceof java.lang.String) {
@@ -26908,7 +28472,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The bytes for storeName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStoreNameBytes() {
       java.lang.Object ref = storeName_;
@@ -26934,7 +28497,6 @@ public final class RuntimeProto {
      * <code>string app_id = 2;</code>
      * @return The appId.
      */
-    @java.lang.Override
     public java.lang.String getAppId() {
       java.lang.Object ref = appId_;
       if (ref instanceof java.lang.String) {
@@ -26956,7 +28518,6 @@ public final class RuntimeProto {
      * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getAppIdBytes() {
       java.lang.Object ref = appId_;
@@ -26981,7 +28542,6 @@ public final class RuntimeProto {
      * <code>string group = 3;</code>
      * @return The group.
      */
-    @java.lang.Override
     public java.lang.String getGroup() {
       java.lang.Object ref = group_;
       if (ref instanceof java.lang.String) {
@@ -27002,7 +28562,6 @@ public final class RuntimeProto {
      * <code>string group = 3;</code>
      * @return The bytes for group.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getGroupBytes() {
       java.lang.Object ref = group_;
@@ -27027,7 +28586,6 @@ public final class RuntimeProto {
      * <code>string label = 4;</code>
      * @return The label.
      */
-    @java.lang.Override
     public java.lang.String getLabel() {
       java.lang.Object ref = label_;
       if (ref instanceof java.lang.String) {
@@ -27048,7 +28606,6 @@ public final class RuntimeProto {
      * <code>string label = 4;</code>
      * @return The bytes for label.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getLabelBytes() {
       java.lang.Object ref = label_;
@@ -27148,7 +28705,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 6;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -27157,7 +28713,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -27169,7 +28724,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 6;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -27181,7 +28735,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 6;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -27198,7 +28751,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 6;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -28222,7 +29774,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 6;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -28231,7 +29782,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -28243,7 +29793,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 6;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -28255,7 +29804,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 6;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -28272,7 +29820,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 6;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -28493,7 +30040,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.SubscribeConfigurationResponse}
    */
-  public static final class SubscribeConfigurationResponse extends
+  public  static final class SubscribeConfigurationResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.SubscribeConfigurationResponse)
       SubscribeConfigurationResponseOrBuilder {
@@ -28605,7 +30152,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The storeName.
      */
-    @java.lang.Override
     public java.lang.String getStoreName() {
       java.lang.Object ref = storeName_;
       if (ref instanceof java.lang.String) {
@@ -28626,7 +30172,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The bytes for storeName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStoreNameBytes() {
       java.lang.Object ref = storeName_;
@@ -28652,7 +30197,6 @@ public final class RuntimeProto {
      * <code>string app_id = 2;</code>
      * @return The appId.
      */
-    @java.lang.Override
     public java.lang.String getAppId() {
       java.lang.Object ref = appId_;
       if (ref instanceof java.lang.String) {
@@ -28674,7 +30218,6 @@ public final class RuntimeProto {
      * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getAppIdBytes() {
       java.lang.Object ref = appId_;
@@ -28698,7 +30241,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.ConfigurationItem items = 3;</code>
      */
-    @java.lang.Override
     public java.util.List<spec.proto.runtime.v1.RuntimeProto.ConfigurationItem> getItemsList() {
       return items_;
     }
@@ -28709,7 +30251,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.ConfigurationItem items = 3;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends spec.proto.runtime.v1.RuntimeProto.ConfigurationItemOrBuilder> 
         getItemsOrBuilderList() {
       return items_;
@@ -28721,7 +30262,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.ConfigurationItem items = 3;</code>
      */
-    @java.lang.Override
     public int getItemsCount() {
       return items_.size();
     }
@@ -28732,7 +30272,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.ConfigurationItem items = 3;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.ConfigurationItem getItems(int index) {
       return items_.get(index);
     }
@@ -28743,7 +30282,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.ConfigurationItem items = 3;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.ConfigurationItemOrBuilder getItemsOrBuilder(
         int index) {
       return items_.get(index);
@@ -29846,7 +31384,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.SaveConfigurationRequest}
    */
-  public static final class SaveConfigurationRequest extends
+  public  static final class SaveConfigurationRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.SaveConfigurationRequest)
       SaveConfigurationRequestOrBuilder {
@@ -29983,7 +31521,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The storeName.
      */
-    @java.lang.Override
     public java.lang.String getStoreName() {
       java.lang.Object ref = storeName_;
       if (ref instanceof java.lang.String) {
@@ -30004,7 +31541,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The bytes for storeName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStoreNameBytes() {
       java.lang.Object ref = storeName_;
@@ -30030,7 +31566,6 @@ public final class RuntimeProto {
      * <code>string app_id = 2;</code>
      * @return The appId.
      */
-    @java.lang.Override
     public java.lang.String getAppId() {
       java.lang.Object ref = appId_;
       if (ref instanceof java.lang.String) {
@@ -30052,7 +31587,6 @@ public final class RuntimeProto {
      * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getAppIdBytes() {
       java.lang.Object ref = appId_;
@@ -30077,7 +31611,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.ConfigurationItem items = 3;</code>
      */
-    @java.lang.Override
     public java.util.List<spec.proto.runtime.v1.RuntimeProto.ConfigurationItem> getItemsList() {
       return items_;
     }
@@ -30089,7 +31622,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.ConfigurationItem items = 3;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends spec.proto.runtime.v1.RuntimeProto.ConfigurationItemOrBuilder> 
         getItemsOrBuilderList() {
       return items_;
@@ -30102,7 +31634,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.ConfigurationItem items = 3;</code>
      */
-    @java.lang.Override
     public int getItemsCount() {
       return items_.size();
     }
@@ -30114,7 +31645,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.ConfigurationItem items = 3;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.ConfigurationItem getItems(int index) {
       return items_.get(index);
     }
@@ -30126,7 +31656,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.ConfigurationItem items = 3;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.ConfigurationItemOrBuilder getItemsOrBuilder(
         int index) {
       return items_.get(index);
@@ -30166,7 +31695,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -30175,7 +31703,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -30187,7 +31714,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -30199,7 +31725,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -30216,7 +31741,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -31219,7 +32743,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -31228,7 +32751,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -31240,7 +32762,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -31252,7 +32773,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -31269,7 +32789,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -31581,7 +33100,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.DeleteConfigurationRequest}
    */
-  public static final class DeleteConfigurationRequest extends
+  public  static final class DeleteConfigurationRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.DeleteConfigurationRequest)
       DeleteConfigurationRequestOrBuilder {
@@ -31732,7 +33251,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The storeName.
      */
-    @java.lang.Override
     public java.lang.String getStoreName() {
       java.lang.Object ref = storeName_;
       if (ref instanceof java.lang.String) {
@@ -31753,7 +33271,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The bytes for storeName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStoreNameBytes() {
       java.lang.Object ref = storeName_;
@@ -31779,7 +33296,6 @@ public final class RuntimeProto {
      * <code>string app_id = 2;</code>
      * @return The appId.
      */
-    @java.lang.Override
     public java.lang.String getAppId() {
       java.lang.Object ref = appId_;
       if (ref instanceof java.lang.String) {
@@ -31801,7 +33317,6 @@ public final class RuntimeProto {
      * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getAppIdBytes() {
       java.lang.Object ref = appId_;
@@ -31826,7 +33341,6 @@ public final class RuntimeProto {
      * <code>string group = 3;</code>
      * @return The group.
      */
-    @java.lang.Override
     public java.lang.String getGroup() {
       java.lang.Object ref = group_;
       if (ref instanceof java.lang.String) {
@@ -31847,7 +33361,6 @@ public final class RuntimeProto {
      * <code>string group = 3;</code>
      * @return The bytes for group.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getGroupBytes() {
       java.lang.Object ref = group_;
@@ -31872,7 +33385,6 @@ public final class RuntimeProto {
      * <code>string label = 4;</code>
      * @return The label.
      */
-    @java.lang.Override
     public java.lang.String getLabel() {
       java.lang.Object ref = label_;
       if (ref instanceof java.lang.String) {
@@ -31893,7 +33405,6 @@ public final class RuntimeProto {
      * <code>string label = 4;</code>
      * @return The bytes for label.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getLabelBytes() {
       java.lang.Object ref = label_;
@@ -31993,7 +33504,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 6;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -32002,7 +33512,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -32014,7 +33523,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 6;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -32026,7 +33534,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 6;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -32043,7 +33550,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 6;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -33067,7 +34573,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 6;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -33076,7 +34581,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -33088,7 +34592,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 6;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -33100,7 +34603,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 6;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -33117,7 +34619,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 6;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -33365,7 +34866,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.GetStateRequest}
    */
-  public static final class GetStateRequest extends
+  public  static final class GetStateRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.GetStateRequest)
       GetStateRequestOrBuilder {
@@ -33496,7 +34997,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The storeName.
      */
-    @java.lang.Override
     public java.lang.String getStoreName() {
       java.lang.Object ref = storeName_;
       if (ref instanceof java.lang.String) {
@@ -33517,7 +35017,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The bytes for storeName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStoreNameBytes() {
       java.lang.Object ref = storeName_;
@@ -33542,7 +35041,6 @@ public final class RuntimeProto {
      * <code>string key = 2;</code>
      * @return The key.
      */
-    @java.lang.Override
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
@@ -33563,7 +35061,6 @@ public final class RuntimeProto {
      * <code>string key = 2;</code>
      * @return The bytes for key.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
@@ -33588,7 +35085,7 @@ public final class RuntimeProto {
      * <code>.spec.proto.runtime.v1.StateOptions.StateConsistency consistency = 3;</code>
      * @return The enum numeric value on the wire for consistency.
      */
-    @java.lang.Override public int getConsistencyValue() {
+    public int getConsistencyValue() {
       return consistency_;
     }
     /**
@@ -33599,7 +35096,7 @@ public final class RuntimeProto {
      * <code>.spec.proto.runtime.v1.StateOptions.StateConsistency consistency = 3;</code>
      * @return The consistency.
      */
-    @java.lang.Override public spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConsistency getConsistency() {
+    public spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConsistency getConsistency() {
       @SuppressWarnings("deprecation")
       spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConsistency result = spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConsistency.valueOf(consistency_);
       return result == null ? spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConsistency.UNRECOGNIZED : result;
@@ -33639,7 +35136,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -33648,7 +35144,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -33660,7 +35155,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -33672,7 +35166,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -33689,7 +35182,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -34293,7 +35785,7 @@ public final class RuntimeProto {
        * <code>.spec.proto.runtime.v1.StateOptions.StateConsistency consistency = 3;</code>
        * @return The enum numeric value on the wire for consistency.
        */
-      @java.lang.Override public int getConsistencyValue() {
+      public int getConsistencyValue() {
         return consistency_;
       }
       /**
@@ -34306,7 +35798,6 @@ public final class RuntimeProto {
        * @return This builder for chaining.
        */
       public Builder setConsistencyValue(int value) {
-        
         consistency_ = value;
         onChanged();
         return this;
@@ -34319,7 +35810,6 @@ public final class RuntimeProto {
        * <code>.spec.proto.runtime.v1.StateOptions.StateConsistency consistency = 3;</code>
        * @return The consistency.
        */
-      @java.lang.Override
       public spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConsistency getConsistency() {
         @SuppressWarnings("deprecation")
         spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConsistency result = spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConsistency.valueOf(consistency_);
@@ -34392,7 +35882,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -34401,7 +35890,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -34413,7 +35901,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -34425,7 +35912,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -34442,7 +35928,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -34702,7 +36187,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.GetBulkStateRequest}
    */
-  public static final class GetBulkStateRequest extends
+  public  static final class GetBulkStateRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.GetBulkStateRequest)
       GetBulkStateRequestOrBuilder {
@@ -34837,7 +36322,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The storeName.
      */
-    @java.lang.Override
     public java.lang.String getStoreName() {
       java.lang.Object ref = storeName_;
       if (ref instanceof java.lang.String) {
@@ -34858,7 +36342,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The bytes for storeName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStoreNameBytes() {
       java.lang.Object ref = storeName_;
@@ -34934,7 +36417,6 @@ public final class RuntimeProto {
      * <code>int32 parallelism = 3;</code>
      * @return The parallelism.
      */
-    @java.lang.Override
     public int getParallelism() {
       return parallelism_;
     }
@@ -34973,7 +36455,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -34982,7 +36463,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -34994,7 +36474,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -35006,7 +36485,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -35023,7 +36501,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -35695,7 +37172,6 @@ public final class RuntimeProto {
        * <code>int32 parallelism = 3;</code>
        * @return The parallelism.
        */
-      @java.lang.Override
       public int getParallelism() {
         return parallelism_;
       }
@@ -35763,7 +37239,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -35772,7 +37247,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -35784,7 +37258,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -35796,7 +37269,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -35813,7 +37285,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -35992,7 +37463,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.GetBulkStateResponse}
    */
-  public static final class GetBulkStateResponse extends
+  public  static final class GetBulkStateResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.GetBulkStateResponse)
       GetBulkStateResponseOrBuilder {
@@ -36089,7 +37560,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.BulkStateItem items = 1;</code>
      */
-    @java.lang.Override
     public java.util.List<spec.proto.runtime.v1.RuntimeProto.BulkStateItem> getItemsList() {
       return items_;
     }
@@ -36100,7 +37570,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.BulkStateItem items = 1;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends spec.proto.runtime.v1.RuntimeProto.BulkStateItemOrBuilder> 
         getItemsOrBuilderList() {
       return items_;
@@ -36112,7 +37581,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.BulkStateItem items = 1;</code>
      */
-    @java.lang.Override
     public int getItemsCount() {
       return items_.size();
     }
@@ -36123,7 +37591,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.BulkStateItem items = 1;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.BulkStateItem getItems(int index) {
       return items_.get(index);
     }
@@ -36134,7 +37601,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.BulkStateItem items = 1;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.BulkStateItemOrBuilder getItemsOrBuilder(
         int index) {
       return items_.get(index);
@@ -36988,7 +38454,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.BulkStateItem}
    */
-  public static final class BulkStateItem extends
+  public  static final class BulkStateItem extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.BulkStateItem)
       BulkStateItemOrBuilder {
@@ -37125,7 +38591,6 @@ public final class RuntimeProto {
      * <code>string key = 1;</code>
      * @return The key.
      */
-    @java.lang.Override
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
@@ -37146,7 +38611,6 @@ public final class RuntimeProto {
      * <code>string key = 1;</code>
      * @return The bytes for key.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
@@ -37171,7 +38635,6 @@ public final class RuntimeProto {
      * <code>bytes data = 2;</code>
      * @return The data.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
@@ -37187,7 +38650,6 @@ public final class RuntimeProto {
      * <code>string etag = 3;</code>
      * @return The etag.
      */
-    @java.lang.Override
     public java.lang.String getEtag() {
       java.lang.Object ref = etag_;
       if (ref instanceof java.lang.String) {
@@ -37209,7 +38671,6 @@ public final class RuntimeProto {
      * <code>string etag = 3;</code>
      * @return The bytes for etag.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getEtagBytes() {
       java.lang.Object ref = etag_;
@@ -37234,7 +38695,6 @@ public final class RuntimeProto {
      * <code>string error = 4;</code>
      * @return The error.
      */
-    @java.lang.Override
     public java.lang.String getError() {
       java.lang.Object ref = error_;
       if (ref instanceof java.lang.String) {
@@ -37255,7 +38715,6 @@ public final class RuntimeProto {
      * <code>string error = 4;</code>
      * @return The bytes for error.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getErrorBytes() {
       java.lang.Object ref = error_;
@@ -37304,7 +38763,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 5;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -37313,7 +38771,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -37325,7 +38782,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 5;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -37337,7 +38793,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 5;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -37354,7 +38809,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 5;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -37881,7 +39335,6 @@ public final class RuntimeProto {
        * <code>bytes data = 2;</code>
        * @return The data.
        */
-      @java.lang.Override
       public com.google.protobuf.ByteString getData() {
         return data_;
       }
@@ -38149,7 +39602,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 5;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -38158,7 +39610,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -38170,7 +39621,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 5;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -38182,7 +39632,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 5;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -38199,7 +39648,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 5;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -38420,7 +39868,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.GetStateResponse}
    */
-  public static final class GetStateResponse extends
+  public  static final class GetStateResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.GetStateResponse)
       GetStateResponseOrBuilder {
@@ -38543,7 +39991,6 @@ public final class RuntimeProto {
      * <code>bytes data = 1;</code>
      * @return The data.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
@@ -38559,7 +40006,6 @@ public final class RuntimeProto {
      * <code>string etag = 2;</code>
      * @return The etag.
      */
-    @java.lang.Override
     public java.lang.String getEtag() {
       java.lang.Object ref = etag_;
       if (ref instanceof java.lang.String) {
@@ -38581,7 +40027,6 @@ public final class RuntimeProto {
      * <code>string etag = 2;</code>
      * @return The bytes for etag.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getEtagBytes() {
       java.lang.Object ref = etag_;
@@ -38630,7 +40075,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -38639,7 +40083,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -38651,7 +40094,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -38663,7 +40105,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -38680,7 +40121,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -39076,7 +40516,6 @@ public final class RuntimeProto {
        * <code>bytes data = 1;</code>
        * @return The data.
        */
-      @java.lang.Override
       public com.google.protobuf.ByteString getData() {
         return data_;
       }
@@ -39248,7 +40687,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -39257,7 +40695,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -39269,7 +40706,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -39281,7 +40717,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -39298,7 +40733,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -39587,7 +41021,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.DeleteStateRequest}
    */
-  public static final class DeleteStateRequest extends
+  public  static final class DeleteStateRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.DeleteStateRequest)
       DeleteStateRequestOrBuilder {
@@ -39737,7 +41171,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The storeName.
      */
-    @java.lang.Override
     public java.lang.String getStoreName() {
       java.lang.Object ref = storeName_;
       if (ref instanceof java.lang.String) {
@@ -39758,7 +41191,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The bytes for storeName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStoreNameBytes() {
       java.lang.Object ref = storeName_;
@@ -39783,7 +41215,6 @@ public final class RuntimeProto {
      * <code>string key = 2;</code>
      * @return The key.
      */
-    @java.lang.Override
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
@@ -39804,7 +41235,6 @@ public final class RuntimeProto {
      * <code>string key = 2;</code>
      * @return The bytes for key.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
@@ -39830,7 +41260,6 @@ public final class RuntimeProto {
      * <code>.spec.proto.runtime.v1.Etag etag = 3;</code>
      * @return Whether the etag field is set.
      */
-    @java.lang.Override
     public boolean hasEtag() {
       return etag_ != null;
     }
@@ -39843,7 +41272,6 @@ public final class RuntimeProto {
      * <code>.spec.proto.runtime.v1.Etag etag = 3;</code>
      * @return The etag.
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.Etag getEtag() {
       return etag_ == null ? spec.proto.runtime.v1.RuntimeProto.Etag.getDefaultInstance() : etag_;
     }
@@ -39855,7 +41283,6 @@ public final class RuntimeProto {
      *
      * <code>.spec.proto.runtime.v1.Etag etag = 3;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.EtagOrBuilder getEtagOrBuilder() {
       return getEtag();
     }
@@ -39871,7 +41298,6 @@ public final class RuntimeProto {
      * <code>.spec.proto.runtime.v1.StateOptions options = 4;</code>
      * @return Whether the options field is set.
      */
-    @java.lang.Override
     public boolean hasOptions() {
       return options_ != null;
     }
@@ -39884,7 +41310,6 @@ public final class RuntimeProto {
      * <code>.spec.proto.runtime.v1.StateOptions options = 4;</code>
      * @return The options.
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.StateOptions getOptions() {
       return options_ == null ? spec.proto.runtime.v1.RuntimeProto.StateOptions.getDefaultInstance() : options_;
     }
@@ -39896,7 +41321,6 @@ public final class RuntimeProto {
      *
      * <code>.spec.proto.runtime.v1.StateOptions options = 4;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.StateOptionsOrBuilder getOptionsOrBuilder() {
       return getOptions();
     }
@@ -39935,7 +41359,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 5;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -39944,7 +41367,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -39956,7 +41378,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 5;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -39968,7 +41389,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 5;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -39985,7 +41405,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 5;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -40986,7 +42405,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 5;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -40995,7 +42413,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -41007,7 +42424,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 5;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -41019,7 +42435,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 5;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -41036,7 +42451,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 5;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -41235,7 +42649,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.DeleteBulkStateRequest}
    */
-  public static final class DeleteBulkStateRequest extends
+  public  static final class DeleteBulkStateRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.DeleteBulkStateRequest)
       DeleteBulkStateRequestOrBuilder {
@@ -41340,7 +42754,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The storeName.
      */
-    @java.lang.Override
     public java.lang.String getStoreName() {
       java.lang.Object ref = storeName_;
       if (ref instanceof java.lang.String) {
@@ -41361,7 +42774,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The bytes for storeName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStoreNameBytes() {
       java.lang.Object ref = storeName_;
@@ -41385,7 +42797,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.StateItem states = 2;</code>
      */
-    @java.lang.Override
     public java.util.List<spec.proto.runtime.v1.RuntimeProto.StateItem> getStatesList() {
       return states_;
     }
@@ -41396,7 +42807,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.StateItem states = 2;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends spec.proto.runtime.v1.RuntimeProto.StateItemOrBuilder> 
         getStatesOrBuilderList() {
       return states_;
@@ -41408,7 +42818,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.StateItem states = 2;</code>
      */
-    @java.lang.Override
     public int getStatesCount() {
       return states_.size();
     }
@@ -41419,7 +42828,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.StateItem states = 2;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.StateItem getStates(int index) {
       return states_.get(index);
     }
@@ -41430,7 +42838,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.StateItem states = 2;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.StateItemOrBuilder getStatesOrBuilder(
         int index) {
       return states_.get(index);
@@ -42334,7 +43741,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.SaveStateRequest}
    */
-  public static final class SaveStateRequest extends
+  public  static final class SaveStateRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.SaveStateRequest)
       SaveStateRequestOrBuilder {
@@ -42439,7 +43846,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The storeName.
      */
-    @java.lang.Override
     public java.lang.String getStoreName() {
       java.lang.Object ref = storeName_;
       if (ref instanceof java.lang.String) {
@@ -42460,7 +43866,6 @@ public final class RuntimeProto {
      * <code>string store_name = 1;</code>
      * @return The bytes for storeName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStoreNameBytes() {
       java.lang.Object ref = storeName_;
@@ -42484,7 +43889,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.StateItem states = 2;</code>
      */
-    @java.lang.Override
     public java.util.List<spec.proto.runtime.v1.RuntimeProto.StateItem> getStatesList() {
       return states_;
     }
@@ -42495,7 +43899,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.StateItem states = 2;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends spec.proto.runtime.v1.RuntimeProto.StateItemOrBuilder> 
         getStatesOrBuilderList() {
       return states_;
@@ -42507,7 +43910,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.StateItem states = 2;</code>
      */
-    @java.lang.Override
     public int getStatesCount() {
       return states_.size();
     }
@@ -42518,7 +43920,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.StateItem states = 2;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.StateItem getStates(int index) {
       return states_.get(index);
     }
@@ -42529,7 +43930,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.StateItem states = 2;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.StateItemOrBuilder getStatesOrBuilder(
         int index) {
       return states_.get(index);
@@ -43510,7 +44910,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.StateItem}
    */
-  public static final class StateItem extends
+  public  static final class StateItem extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.StateItem)
       StateItemOrBuilder {
@@ -43659,7 +45059,6 @@ public final class RuntimeProto {
      * <code>string key = 1;</code>
      * @return The key.
      */
-    @java.lang.Override
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
@@ -43680,7 +45079,6 @@ public final class RuntimeProto {
      * <code>string key = 1;</code>
      * @return The bytes for key.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
@@ -43705,7 +45103,6 @@ public final class RuntimeProto {
      * <code>bytes value = 2;</code>
      * @return The value.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString getValue() {
       return value_;
     }
@@ -43721,7 +45118,6 @@ public final class RuntimeProto {
      * <code>.spec.proto.runtime.v1.Etag etag = 3;</code>
      * @return Whether the etag field is set.
      */
-    @java.lang.Override
     public boolean hasEtag() {
       return etag_ != null;
     }
@@ -43734,7 +45130,6 @@ public final class RuntimeProto {
      * <code>.spec.proto.runtime.v1.Etag etag = 3;</code>
      * @return The etag.
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.Etag getEtag() {
       return etag_ == null ? spec.proto.runtime.v1.RuntimeProto.Etag.getDefaultInstance() : etag_;
     }
@@ -43746,7 +45141,6 @@ public final class RuntimeProto {
      *
      * <code>.spec.proto.runtime.v1.Etag etag = 3;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.EtagOrBuilder getEtagOrBuilder() {
       return getEtag();
     }
@@ -43785,7 +45179,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -43794,7 +45187,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -43806,7 +45198,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -43818,7 +45209,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -43835,7 +45225,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 4;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -43858,7 +45247,6 @@ public final class RuntimeProto {
      * <code>.spec.proto.runtime.v1.StateOptions options = 5;</code>
      * @return Whether the options field is set.
      */
-    @java.lang.Override
     public boolean hasOptions() {
       return options_ != null;
     }
@@ -43870,7 +45258,6 @@ public final class RuntimeProto {
      * <code>.spec.proto.runtime.v1.StateOptions options = 5;</code>
      * @return The options.
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.StateOptions getOptions() {
       return options_ == null ? spec.proto.runtime.v1.RuntimeProto.StateOptions.getDefaultInstance() : options_;
     }
@@ -43881,7 +45268,6 @@ public final class RuntimeProto {
      *
      * <code>.spec.proto.runtime.v1.StateOptions options = 5;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.StateOptionsOrBuilder getOptionsOrBuilder() {
       return getOptions();
     }
@@ -44425,7 +45811,6 @@ public final class RuntimeProto {
        * <code>bytes value = 2;</code>
        * @return The value.
        */
-      @java.lang.Override
       public com.google.protobuf.ByteString getValue() {
         return value_;
       }
@@ -44660,7 +46045,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -44669,7 +46053,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -44681,7 +46064,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -44693,7 +46075,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -44710,7 +46091,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -45020,7 +46400,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.Etag}
    */
-  public static final class Etag extends
+  public  static final class Etag extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.Etag)
       EtagOrBuilder {
@@ -45111,7 +46491,6 @@ public final class RuntimeProto {
      * <code>string value = 1;</code>
      * @return The value.
      */
-    @java.lang.Override
     public java.lang.String getValue() {
       java.lang.Object ref = value_;
       if (ref instanceof java.lang.String) {
@@ -45132,7 +46511,6 @@ public final class RuntimeProto {
      * <code>string value = 1;</code>
      * @return The bytes for value.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getValueBytes() {
       java.lang.Object ref = value_;
@@ -45606,22 +46984,38 @@ public final class RuntimeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The state operation of concurrency
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.StateOptions.StateConcurrency concurrency = 1;</code>
      * @return The enum numeric value on the wire for concurrency.
      */
     int getConcurrencyValue();
     /**
+     * <pre>
+     * The state operation of concurrency
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.StateOptions.StateConcurrency concurrency = 1;</code>
      * @return The concurrency.
      */
     spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConcurrency getConcurrency();
 
     /**
+     * <pre>
+     * The state operation of consistency
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.StateOptions.StateConsistency consistency = 2;</code>
      * @return The enum numeric value on the wire for consistency.
      */
     int getConsistencyValue();
     /**
+     * <pre>
+     * The state operation of consistency
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.StateOptions.StateConsistency consistency = 2;</code>
      * @return The consistency.
      */
@@ -45634,7 +47028,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.StateOptions}
    */
-  public static final class StateOptions extends
+  public  static final class StateOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.StateOptions)
       StateOptionsOrBuilder {
@@ -45735,6 +47129,10 @@ public final class RuntimeProto {
     public enum StateConcurrency
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Concurrency state is unspecified
+       * </pre>
+       *
        * <code>CONCURRENCY_UNSPECIFIED = 0;</code>
        */
       CONCURRENCY_UNSPECIFIED(0),
@@ -45758,6 +47156,10 @@ public final class RuntimeProto {
       ;
 
       /**
+       * <pre>
+       * Concurrency state is unspecified
+       * </pre>
+       *
        * <code>CONCURRENCY_UNSPECIFIED = 0;</code>
        */
       public static final int CONCURRENCY_UNSPECIFIED_VALUE = 0;
@@ -45824,10 +47226,6 @@ public final class RuntimeProto {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -45872,6 +47270,10 @@ public final class RuntimeProto {
     public enum StateConsistency
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Consistency state is unspecified
+       * </pre>
+       *
        * <code>CONSISTENCY_UNSPECIFIED = 0;</code>
        */
       CONSISTENCY_UNSPECIFIED(0),
@@ -45899,6 +47301,10 @@ public final class RuntimeProto {
       ;
 
       /**
+       * <pre>
+       * Consistency state is unspecified
+       * </pre>
+       *
        * <code>CONSISTENCY_UNSPECIFIED = 0;</code>
        */
       public static final int CONSISTENCY_UNSPECIFIED_VALUE = 0;
@@ -45969,10 +47375,6 @@ public final class RuntimeProto {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -46010,17 +47412,25 @@ public final class RuntimeProto {
     public static final int CONCURRENCY_FIELD_NUMBER = 1;
     private int concurrency_;
     /**
+     * <pre>
+     * The state operation of concurrency
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.StateOptions.StateConcurrency concurrency = 1;</code>
      * @return The enum numeric value on the wire for concurrency.
      */
-    @java.lang.Override public int getConcurrencyValue() {
+    public int getConcurrencyValue() {
       return concurrency_;
     }
     /**
+     * <pre>
+     * The state operation of concurrency
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.StateOptions.StateConcurrency concurrency = 1;</code>
      * @return The concurrency.
      */
-    @java.lang.Override public spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConcurrency getConcurrency() {
+    public spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConcurrency getConcurrency() {
       @SuppressWarnings("deprecation")
       spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConcurrency result = spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConcurrency.valueOf(concurrency_);
       return result == null ? spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConcurrency.UNRECOGNIZED : result;
@@ -46029,17 +47439,25 @@ public final class RuntimeProto {
     public static final int CONSISTENCY_FIELD_NUMBER = 2;
     private int consistency_;
     /**
+     * <pre>
+     * The state operation of consistency
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.StateOptions.StateConsistency consistency = 2;</code>
      * @return The enum numeric value on the wire for consistency.
      */
-    @java.lang.Override public int getConsistencyValue() {
+    public int getConsistencyValue() {
       return consistency_;
     }
     /**
+     * <pre>
+     * The state operation of consistency
+     * </pre>
+     *
      * <code>.spec.proto.runtime.v1.StateOptions.StateConsistency consistency = 2;</code>
      * @return The consistency.
      */
-    @java.lang.Override public spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConsistency getConsistency() {
+    public spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConsistency getConsistency() {
       @SuppressWarnings("deprecation")
       spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConsistency result = spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConsistency.valueOf(consistency_);
       return result == null ? spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConsistency.UNRECOGNIZED : result;
@@ -46368,34 +47786,48 @@ public final class RuntimeProto {
 
       private int concurrency_ = 0;
       /**
+       * <pre>
+       * The state operation of concurrency
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.StateOptions.StateConcurrency concurrency = 1;</code>
        * @return The enum numeric value on the wire for concurrency.
        */
-      @java.lang.Override public int getConcurrencyValue() {
+      public int getConcurrencyValue() {
         return concurrency_;
       }
       /**
+       * <pre>
+       * The state operation of concurrency
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.StateOptions.StateConcurrency concurrency = 1;</code>
        * @param value The enum numeric value on the wire for concurrency to set.
        * @return This builder for chaining.
        */
       public Builder setConcurrencyValue(int value) {
-        
         concurrency_ = value;
         onChanged();
         return this;
       }
       /**
+       * <pre>
+       * The state operation of concurrency
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.StateOptions.StateConcurrency concurrency = 1;</code>
        * @return The concurrency.
        */
-      @java.lang.Override
       public spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConcurrency getConcurrency() {
         @SuppressWarnings("deprecation")
         spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConcurrency result = spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConcurrency.valueOf(concurrency_);
         return result == null ? spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConcurrency.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * The state operation of concurrency
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.StateOptions.StateConcurrency concurrency = 1;</code>
        * @param value The concurrency to set.
        * @return This builder for chaining.
@@ -46410,6 +47842,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The state operation of concurrency
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.StateOptions.StateConcurrency concurrency = 1;</code>
        * @return This builder for chaining.
        */
@@ -46422,34 +47858,48 @@ public final class RuntimeProto {
 
       private int consistency_ = 0;
       /**
+       * <pre>
+       * The state operation of consistency
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.StateOptions.StateConsistency consistency = 2;</code>
        * @return The enum numeric value on the wire for consistency.
        */
-      @java.lang.Override public int getConsistencyValue() {
+      public int getConsistencyValue() {
         return consistency_;
       }
       /**
+       * <pre>
+       * The state operation of consistency
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.StateOptions.StateConsistency consistency = 2;</code>
        * @param value The enum numeric value on the wire for consistency to set.
        * @return This builder for chaining.
        */
       public Builder setConsistencyValue(int value) {
-        
         consistency_ = value;
         onChanged();
         return this;
       }
       /**
+       * <pre>
+       * The state operation of consistency
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.StateOptions.StateConsistency consistency = 2;</code>
        * @return The consistency.
        */
-      @java.lang.Override
       public spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConsistency getConsistency() {
         @SuppressWarnings("deprecation")
         spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConsistency result = spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConsistency.valueOf(consistency_);
         return result == null ? spec.proto.runtime.v1.RuntimeProto.StateOptions.StateConsistency.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * The state operation of consistency
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.StateOptions.StateConsistency consistency = 2;</code>
        * @param value The consistency to set.
        * @return This builder for chaining.
@@ -46464,6 +47914,10 @@ public final class RuntimeProto {
         return this;
       }
       /**
+       * <pre>
+       * The state operation of consistency
+       * </pre>
+       *
        * <code>.spec.proto.runtime.v1.StateOptions.StateConsistency consistency = 2;</code>
        * @return This builder for chaining.
        */
@@ -46590,7 +48044,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.TransactionalStateOperation}
    */
-  public static final class TransactionalStateOperation extends
+  public  static final class TransactionalStateOperation extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.TransactionalStateOperation)
       TransactionalStateOperationOrBuilder {
@@ -46697,7 +48151,6 @@ public final class RuntimeProto {
      * <code>string operationType = 1;</code>
      * @return The operationType.
      */
-    @java.lang.Override
     public java.lang.String getOperationType() {
       java.lang.Object ref = operationType_;
       if (ref instanceof java.lang.String) {
@@ -46721,7 +48174,6 @@ public final class RuntimeProto {
      * <code>string operationType = 1;</code>
      * @return The bytes for operationType.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getOperationTypeBytes() {
       java.lang.Object ref = operationType_;
@@ -46746,7 +48198,6 @@ public final class RuntimeProto {
      * <code>.spec.proto.runtime.v1.StateItem request = 2;</code>
      * @return Whether the request field is set.
      */
-    @java.lang.Override
     public boolean hasRequest() {
       return request_ != null;
     }
@@ -46758,7 +48209,6 @@ public final class RuntimeProto {
      * <code>.spec.proto.runtime.v1.StateItem request = 2;</code>
      * @return The request.
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.StateItem getRequest() {
       return request_ == null ? spec.proto.runtime.v1.RuntimeProto.StateItem.getDefaultInstance() : request_;
     }
@@ -46769,7 +48219,6 @@ public final class RuntimeProto {
      *
      * <code>.spec.proto.runtime.v1.StateItem request = 2;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.StateItemOrBuilder getRequestOrBuilder() {
       return getRequest();
     }
@@ -47557,7 +49006,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.ExecuteStateTransactionRequest}
    */
-  public static final class ExecuteStateTransactionRequest extends
+  public  static final class ExecuteStateTransactionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.ExecuteStateTransactionRequest)
       ExecuteStateTransactionRequestOrBuilder {
@@ -47687,7 +49136,6 @@ public final class RuntimeProto {
      * <code>string storeName = 1;</code>
      * @return The storeName.
      */
-    @java.lang.Override
     public java.lang.String getStoreName() {
       java.lang.Object ref = storeName_;
       if (ref instanceof java.lang.String) {
@@ -47708,7 +49156,6 @@ public final class RuntimeProto {
      * <code>string storeName = 1;</code>
      * @return The bytes for storeName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStoreNameBytes() {
       java.lang.Object ref = storeName_;
@@ -47732,7 +49179,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.TransactionalStateOperation operations = 2;</code>
      */
-    @java.lang.Override
     public java.util.List<spec.proto.runtime.v1.RuntimeProto.TransactionalStateOperation> getOperationsList() {
       return operations_;
     }
@@ -47743,7 +49189,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.TransactionalStateOperation operations = 2;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends spec.proto.runtime.v1.RuntimeProto.TransactionalStateOperationOrBuilder> 
         getOperationsOrBuilderList() {
       return operations_;
@@ -47755,7 +49200,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.TransactionalStateOperation operations = 2;</code>
      */
-    @java.lang.Override
     public int getOperationsCount() {
       return operations_.size();
     }
@@ -47766,7 +49210,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.TransactionalStateOperation operations = 2;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.TransactionalStateOperation getOperations(int index) {
       return operations_.get(index);
     }
@@ -47777,7 +49220,6 @@ public final class RuntimeProto {
      *
      * <code>repeated .spec.proto.runtime.v1.TransactionalStateOperation operations = 2;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.TransactionalStateOperationOrBuilder getOperationsOrBuilder(
         int index) {
       return operations_.get(index);
@@ -47817,7 +49259,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -47826,7 +49267,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -47838,7 +49278,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -47850,7 +49289,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -47867,7 +49305,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -48734,7 +50171,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -48743,7 +50179,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -48755,7 +50190,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -48767,7 +50201,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -48784,7 +50217,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -49053,7 +50485,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.PublishEventRequest}
    */
-  public static final class PublishEventRequest extends
+  public  static final class PublishEventRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.PublishEventRequest)
       PublishEventRequestOrBuilder {
@@ -49190,7 +50622,6 @@ public final class RuntimeProto {
      * <code>string pubsub_name = 1;</code>
      * @return The pubsubName.
      */
-    @java.lang.Override
     public java.lang.String getPubsubName() {
       java.lang.Object ref = pubsubName_;
       if (ref instanceof java.lang.String) {
@@ -49211,7 +50642,6 @@ public final class RuntimeProto {
      * <code>string pubsub_name = 1;</code>
      * @return The bytes for pubsubName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getPubsubNameBytes() {
       java.lang.Object ref = pubsubName_;
@@ -49236,7 +50666,6 @@ public final class RuntimeProto {
      * <code>string topic = 2;</code>
      * @return The topic.
      */
-    @java.lang.Override
     public java.lang.String getTopic() {
       java.lang.Object ref = topic_;
       if (ref instanceof java.lang.String) {
@@ -49257,7 +50686,6 @@ public final class RuntimeProto {
      * <code>string topic = 2;</code>
      * @return The bytes for topic.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getTopicBytes() {
       java.lang.Object ref = topic_;
@@ -49282,7 +50710,6 @@ public final class RuntimeProto {
      * <code>bytes data = 3;</code>
      * @return The data.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
@@ -49297,7 +50724,6 @@ public final class RuntimeProto {
      * <code>string data_content_type = 4;</code>
      * @return The dataContentType.
      */
-    @java.lang.Override
     public java.lang.String getDataContentType() {
       java.lang.Object ref = dataContentType_;
       if (ref instanceof java.lang.String) {
@@ -49318,7 +50744,6 @@ public final class RuntimeProto {
      * <code>string data_content_type = 4;</code>
      * @return The bytes for dataContentType.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getDataContentTypeBytes() {
       java.lang.Object ref = dataContentType_;
@@ -49369,7 +50794,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 5;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -49378,7 +50802,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -49392,7 +50815,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 5;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -49406,7 +50828,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 5;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -49425,7 +50846,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 5;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -50047,7 +51467,6 @@ public final class RuntimeProto {
        * <code>bytes data = 3;</code>
        * @return The data.
        */
-      @java.lang.Override
       public com.google.protobuf.ByteString getData() {
         return data_;
       }
@@ -50216,7 +51635,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 5;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -50225,7 +51643,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -50239,7 +51656,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 5;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -50253,7 +51669,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 5;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -50272,7 +51687,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 5;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -50542,7 +51956,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.InvokeBindingRequest}
    */
-  public static final class InvokeBindingRequest extends
+  public  static final class InvokeBindingRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.InvokeBindingRequest)
       InvokeBindingRequestOrBuilder {
@@ -50672,7 +52086,6 @@ public final class RuntimeProto {
      * <code>string name = 1;</code>
      * @return The name.
      */
-    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -50693,7 +52106,6 @@ public final class RuntimeProto {
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -50718,7 +52130,6 @@ public final class RuntimeProto {
      * <code>bytes data = 2;</code>
      * @return The data.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
@@ -50762,7 +52173,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -50771,7 +52181,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -50788,7 +52197,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -50805,7 +52213,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -50827,7 +52234,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -50850,7 +52256,6 @@ public final class RuntimeProto {
      * <code>string operation = 4;</code>
      * @return The operation.
      */
-    @java.lang.Override
     public java.lang.String getOperation() {
       java.lang.Object ref = operation_;
       if (ref instanceof java.lang.String) {
@@ -50871,7 +52276,6 @@ public final class RuntimeProto {
      * <code>string operation = 4;</code>
      * @return The bytes for operation.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getOperationBytes() {
       java.lang.Object ref = operation_;
@@ -51382,7 +52786,6 @@ public final class RuntimeProto {
        * <code>bytes data = 2;</code>
        * @return The data.
        */
-      @java.lang.Override
       public com.google.protobuf.ByteString getData() {
         return data_;
       }
@@ -51458,7 +52861,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -51467,7 +52869,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -51484,7 +52885,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -51501,7 +52901,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -51523,7 +52922,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -51833,7 +53231,7 @@ public final class RuntimeProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.InvokeBindingResponse}
    */
-  public static final class InvokeBindingResponse extends
+  public  static final class InvokeBindingResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.InvokeBindingResponse)
       InvokeBindingResponseOrBuilder {
@@ -51949,7 +53347,6 @@ public final class RuntimeProto {
      * <code>bytes data = 1;</code>
      * @return The data.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
@@ -51988,7 +53385,6 @@ public final class RuntimeProto {
      * <code>map&lt;string, string&gt; metadata = 2;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -51997,7 +53393,6 @@ public final class RuntimeProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -52009,7 +53404,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 2;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -52021,7 +53415,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 2;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -52038,7 +53431,6 @@ public final class RuntimeProto {
      *
      * <code>map&lt;string, string&gt; metadata = 2;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -52417,7 +53809,6 @@ public final class RuntimeProto {
        * <code>bytes data = 1;</code>
        * @return The data.
        */
-      @java.lang.Override
       public com.google.protobuf.ByteString getData() {
         return data_;
       }
@@ -52488,7 +53879,6 @@ public final class RuntimeProto {
        * <code>map&lt;string, string&gt; metadata = 2;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -52497,7 +53887,6 @@ public final class RuntimeProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -52509,7 +53898,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 2;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -52521,7 +53909,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 2;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -52538,7 +53925,6 @@ public final class RuntimeProto {
        *
        * <code>map&lt;string, string&gt; metadata = 2;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -52657,6 +54043,4606 @@ public final class RuntimeProto {
 
     @java.lang.Override
     public spec.proto.runtime.v1.RuntimeProto.InvokeBindingResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetSecretRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:spec.proto.runtime.v1.GetSecretRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The name of secret store.
+     * </pre>
+     *
+     * <code>string store_name = 1;</code>
+     * @return The storeName.
+     */
+    java.lang.String getStoreName();
+    /**
+     * <pre>
+     * The name of secret store.
+     * </pre>
+     *
+     * <code>string store_name = 1;</code>
+     * @return The bytes for storeName.
+     */
+    com.google.protobuf.ByteString
+        getStoreNameBytes();
+
+    /**
+     * <pre>
+     * The name of secret key.
+     * </pre>
+     *
+     * <code>string key = 2;</code>
+     * @return The key.
+     */
+    java.lang.String getKey();
+    /**
+     * <pre>
+     * The name of secret key.
+     * </pre>
+     *
+     * <code>string key = 2;</code>
+     * @return The bytes for key.
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <pre>
+     * The metadata which will be sent to secret store components.
+     * Contains version, status, and so on...
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 3;</code>
+     */
+    int getMetadataCount();
+    /**
+     * <pre>
+     * The metadata which will be sent to secret store components.
+     * Contains version, status, and so on...
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 3;</code>
+     */
+    boolean containsMetadata(
+        java.lang.String key);
+    /**
+     * Use {@link #getMetadataMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getMetadata();
+    /**
+     * <pre>
+     * The metadata which will be sent to secret store components.
+     * Contains version, status, and so on...
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 3;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getMetadataMap();
+    /**
+     * <pre>
+     * The metadata which will be sent to secret store components.
+     * Contains version, status, and so on...
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 3;</code>
+     */
+
+    java.lang.String getMetadataOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * The metadata which will be sent to secret store components.
+     * Contains version, status, and so on...
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 3;</code>
+     */
+
+    java.lang.String getMetadataOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * <pre>
+   * GetSecretRequest is the message to get secret from secret store.   
+   * </pre>
+   *
+   * Protobuf type {@code spec.proto.runtime.v1.GetSecretRequest}
+   */
+  public  static final class GetSecretRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.GetSecretRequest)
+      GetSecretRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetSecretRequest.newBuilder() to construct.
+    private GetSecretRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetSecretRequest() {
+      storeName_ = "";
+      key_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetSecretRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetSecretRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              storeName_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              key_ = s;
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                metadata_ = com.google.protobuf.MapField.newMapField(
+                    MetadataDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              metadata__ = input.readMessage(
+                  MetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              metadata_.getMutableMap().put(
+                  metadata__.getKey(), metadata__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetSecretRequest_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 3:
+          return internalGetMetadata();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetSecretRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              spec.proto.runtime.v1.RuntimeProto.GetSecretRequest.class, spec.proto.runtime.v1.RuntimeProto.GetSecretRequest.Builder.class);
+    }
+
+    public static final int STORE_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object storeName_;
+    /**
+     * <pre>
+     * The name of secret store.
+     * </pre>
+     *
+     * <code>string store_name = 1;</code>
+     * @return The storeName.
+     */
+    public java.lang.String getStoreName() {
+      java.lang.Object ref = storeName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        storeName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The name of secret store.
+     * </pre>
+     *
+     * <code>string store_name = 1;</code>
+     * @return The bytes for storeName.
+     */
+    public com.google.protobuf.ByteString
+        getStoreNameBytes() {
+      java.lang.Object ref = storeName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        storeName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KEY_FIELD_NUMBER = 2;
+    private volatile java.lang.Object key_;
+    /**
+     * <pre>
+     * The name of secret key.
+     * </pre>
+     *
+     * <code>string key = 2;</code>
+     * @return The key.
+     */
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The name of secret key.
+     * </pre>
+     *
+     * <code>string key = 2;</code>
+     * @return The bytes for key.
+     */
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 3;
+    private static final class MetadataDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetSecretRequest_MetadataEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> metadata_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetMetadata() {
+      if (metadata_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MetadataDefaultEntryHolder.defaultEntry);
+      }
+      return metadata_;
+    }
+
+    public int getMetadataCount() {
+      return internalGetMetadata().getMap().size();
+    }
+    /**
+     * <pre>
+     * The metadata which will be sent to secret store components.
+     * Contains version, status, and so on...
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 3;</code>
+     */
+
+    public boolean containsMetadata(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetMetadata().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMetadataMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+      return getMetadataMap();
+    }
+    /**
+     * <pre>
+     * The metadata which will be sent to secret store components.
+     * Contains version, status, and so on...
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 3;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+      return internalGetMetadata().getMap();
+    }
+    /**
+     * <pre>
+     * The metadata which will be sent to secret store components.
+     * Contains version, status, and so on...
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 3;</code>
+     */
+
+    public java.lang.String getMetadataOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetMetadata().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * The metadata which will be sent to secret store components.
+     * Contains version, status, and so on...
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 3;</code>
+     */
+
+    public java.lang.String getMetadataOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetMetadata().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getStoreNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, storeName_);
+      }
+      if (!getKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetMetadata(),
+          MetadataDefaultEntryHolder.defaultEntry,
+          3);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getStoreNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, storeName_);
+      }
+      if (!getKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetMetadata().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        metadata__ = MetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, metadata__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof spec.proto.runtime.v1.RuntimeProto.GetSecretRequest)) {
+        return super.equals(obj);
+      }
+      spec.proto.runtime.v1.RuntimeProto.GetSecretRequest other = (spec.proto.runtime.v1.RuntimeProto.GetSecretRequest) obj;
+
+      if (!getStoreName()
+          .equals(other.getStoreName())) return false;
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (!internalGetMetadata().equals(
+          other.internalGetMetadata())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STORE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getStoreName().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      if (!internalGetMetadata().getMap().isEmpty()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMetadata().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(spec.proto.runtime.v1.RuntimeProto.GetSecretRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GetSecretRequest is the message to get secret from secret store.   
+     * </pre>
+     *
+     * Protobuf type {@code spec.proto.runtime.v1.GetSecretRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:spec.proto.runtime.v1.GetSecretRequest)
+        spec.proto.runtime.v1.RuntimeProto.GetSecretRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetSecretRequest_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetMetadata();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetMutableMetadata();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetSecretRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                spec.proto.runtime.v1.RuntimeProto.GetSecretRequest.class, spec.proto.runtime.v1.RuntimeProto.GetSecretRequest.Builder.class);
+      }
+
+      // Construct using spec.proto.runtime.v1.RuntimeProto.GetSecretRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        storeName_ = "";
+
+        key_ = "";
+
+        internalGetMutableMetadata().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetSecretRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public spec.proto.runtime.v1.RuntimeProto.GetSecretRequest getDefaultInstanceForType() {
+        return spec.proto.runtime.v1.RuntimeProto.GetSecretRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public spec.proto.runtime.v1.RuntimeProto.GetSecretRequest build() {
+        spec.proto.runtime.v1.RuntimeProto.GetSecretRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public spec.proto.runtime.v1.RuntimeProto.GetSecretRequest buildPartial() {
+        spec.proto.runtime.v1.RuntimeProto.GetSecretRequest result = new spec.proto.runtime.v1.RuntimeProto.GetSecretRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.storeName_ = storeName_;
+        result.key_ = key_;
+        result.metadata_ = internalGetMetadata();
+        result.metadata_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof spec.proto.runtime.v1.RuntimeProto.GetSecretRequest) {
+          return mergeFrom((spec.proto.runtime.v1.RuntimeProto.GetSecretRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(spec.proto.runtime.v1.RuntimeProto.GetSecretRequest other) {
+        if (other == spec.proto.runtime.v1.RuntimeProto.GetSecretRequest.getDefaultInstance()) return this;
+        if (!other.getStoreName().isEmpty()) {
+          storeName_ = other.storeName_;
+          onChanged();
+        }
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          onChanged();
+        }
+        internalGetMutableMetadata().mergeFrom(
+            other.internalGetMetadata());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        spec.proto.runtime.v1.RuntimeProto.GetSecretRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (spec.proto.runtime.v1.RuntimeProto.GetSecretRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object storeName_ = "";
+      /**
+       * <pre>
+       * The name of secret store.
+       * </pre>
+       *
+       * <code>string store_name = 1;</code>
+       * @return The storeName.
+       */
+      public java.lang.String getStoreName() {
+        java.lang.Object ref = storeName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          storeName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of secret store.
+       * </pre>
+       *
+       * <code>string store_name = 1;</code>
+       * @return The bytes for storeName.
+       */
+      public com.google.protobuf.ByteString
+          getStoreNameBytes() {
+        java.lang.Object ref = storeName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          storeName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of secret store.
+       * </pre>
+       *
+       * <code>string store_name = 1;</code>
+       * @param value The storeName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStoreName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        storeName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of secret store.
+       * </pre>
+       *
+       * <code>string store_name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStoreName() {
+        
+        storeName_ = getDefaultInstance().getStoreName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of secret store.
+       * </pre>
+       *
+       * <code>string store_name = 1;</code>
+       * @param value The bytes for storeName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStoreNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        storeName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object key_ = "";
+      /**
+       * <pre>
+       * The name of secret key.
+       * </pre>
+       *
+       * <code>string key = 2;</code>
+       * @return The key.
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of secret key.
+       * </pre>
+       *
+       * <code>string key = 2;</code>
+       * @return The bytes for key.
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of secret key.
+       * </pre>
+       *
+       * <code>string key = 2;</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        key_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of secret key.
+       * </pre>
+       *
+       * <code>string key = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        
+        key_ = getDefaultInstance().getKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of secret key.
+       * </pre>
+       *
+       * <code>string key = 2;</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        key_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> metadata_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMetadata() {
+        if (metadata_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MetadataDefaultEntryHolder.defaultEntry);
+        }
+        return metadata_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableMetadata() {
+        onChanged();;
+        if (metadata_ == null) {
+          metadata_ = com.google.protobuf.MapField.newMapField(
+              MetadataDefaultEntryHolder.defaultEntry);
+        }
+        if (!metadata_.isMutable()) {
+          metadata_ = metadata_.copy();
+        }
+        return metadata_;
+      }
+
+      public int getMetadataCount() {
+        return internalGetMetadata().getMap().size();
+      }
+      /**
+       * <pre>
+       * The metadata which will be sent to secret store components.
+       * Contains version, status, and so on...
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       */
+
+      public boolean containsMetadata(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetMetadata().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMetadataMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+        return getMetadataMap();
+      }
+      /**
+       * <pre>
+       * The metadata which will be sent to secret store components.
+       * Contains version, status, and so on...
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+        return internalGetMetadata().getMap();
+      }
+      /**
+       * <pre>
+       * The metadata which will be sent to secret store components.
+       * Contains version, status, and so on...
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       */
+
+      public java.lang.String getMetadataOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * The metadata which will be sent to secret store components.
+       * Contains version, status, and so on...
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       */
+
+      public java.lang.String getMetadataOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearMetadata() {
+        internalGetMutableMetadata().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * The metadata which will be sent to secret store components.
+       * Contains version, status, and so on...
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       */
+
+      public Builder removeMetadata(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableMetadata().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableMetadata() {
+        return internalGetMutableMetadata().getMutableMap();
+      }
+      /**
+       * <pre>
+       * The metadata which will be sent to secret store components.
+       * Contains version, status, and so on...
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       */
+      public Builder putMetadata(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableMetadata().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The metadata which will be sent to secret store components.
+       * Contains version, status, and so on...
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       */
+
+      public Builder putAllMetadata(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableMetadata().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:spec.proto.runtime.v1.GetSecretRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:spec.proto.runtime.v1.GetSecretRequest)
+    private static final spec.proto.runtime.v1.RuntimeProto.GetSecretRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new spec.proto.runtime.v1.RuntimeProto.GetSecretRequest();
+    }
+
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetSecretRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetSecretRequest>() {
+      @java.lang.Override
+      public GetSecretRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetSecretRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetSecretRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetSecretRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public spec.proto.runtime.v1.RuntimeProto.GetSecretRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetSecretResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:spec.proto.runtime.v1.GetSecretResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * data is the secret value. Some secret store, such as kubernetes secret
+     * store, can save multiple secrets for single secret key.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; data = 1;</code>
+     */
+    int getDataCount();
+    /**
+     * <pre>
+     * data is the secret value. Some secret store, such as kubernetes secret
+     * store, can save multiple secrets for single secret key.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; data = 1;</code>
+     */
+    boolean containsData(
+        java.lang.String key);
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getData();
+    /**
+     * <pre>
+     * data is the secret value. Some secret store, such as kubernetes secret
+     * store, can save multiple secrets for single secret key.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; data = 1;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getDataMap();
+    /**
+     * <pre>
+     * data is the secret value. Some secret store, such as kubernetes secret
+     * store, can save multiple secrets for single secret key.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; data = 1;</code>
+     */
+
+    java.lang.String getDataOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * data is the secret value. Some secret store, such as kubernetes secret
+     * store, can save multiple secrets for single secret key.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; data = 1;</code>
+     */
+
+    java.lang.String getDataOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * <pre>
+   * GetSecretResponse is the response message to convey the requested secret.
+   * </pre>
+   *
+   * Protobuf type {@code spec.proto.runtime.v1.GetSecretResponse}
+   */
+  public  static final class GetSecretResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.GetSecretResponse)
+      GetSecretResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetSecretResponse.newBuilder() to construct.
+    private GetSecretResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetSecretResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetSecretResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetSecretResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                data_ = com.google.protobuf.MapField.newMapField(
+                    DataDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              data__ = input.readMessage(
+                  DataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              data_.getMutableMap().put(
+                  data__.getKey(), data__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetSecretResponse_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetData();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetSecretResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              spec.proto.runtime.v1.RuntimeProto.GetSecretResponse.class, spec.proto.runtime.v1.RuntimeProto.GetSecretResponse.Builder.class);
+    }
+
+    public static final int DATA_FIELD_NUMBER = 1;
+    private static final class DataDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetSecretResponse_DataEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> data_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetData() {
+      if (data_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            DataDefaultEntryHolder.defaultEntry);
+      }
+      return data_;
+    }
+
+    public int getDataCount() {
+      return internalGetData().getMap().size();
+    }
+    /**
+     * <pre>
+     * data is the secret value. Some secret store, such as kubernetes secret
+     * store, can save multiple secrets for single secret key.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; data = 1;</code>
+     */
+
+    public boolean containsData(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetData().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getData() {
+      return getDataMap();
+    }
+    /**
+     * <pre>
+     * data is the secret value. Some secret store, such as kubernetes secret
+     * store, can save multiple secrets for single secret key.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; data = 1;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getDataMap() {
+      return internalGetData().getMap();
+    }
+    /**
+     * <pre>
+     * data is the secret value. Some secret store, such as kubernetes secret
+     * store, can save multiple secrets for single secret key.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; data = 1;</code>
+     */
+
+    public java.lang.String getDataOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetData().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * data is the secret value. Some secret store, such as kubernetes secret
+     * store, can save multiple secrets for single secret key.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; data = 1;</code>
+     */
+
+    public java.lang.String getDataOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetData().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetData(),
+          DataDefaultEntryHolder.defaultEntry,
+          1);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetData().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        data__ = DataDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, data__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof spec.proto.runtime.v1.RuntimeProto.GetSecretResponse)) {
+        return super.equals(obj);
+      }
+      spec.proto.runtime.v1.RuntimeProto.GetSecretResponse other = (spec.proto.runtime.v1.RuntimeProto.GetSecretResponse) obj;
+
+      if (!internalGetData().equals(
+          other.internalGetData())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (!internalGetData().getMap().isEmpty()) {
+        hash = (37 * hash) + DATA_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetData().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(spec.proto.runtime.v1.RuntimeProto.GetSecretResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GetSecretResponse is the response message to convey the requested secret.
+     * </pre>
+     *
+     * Protobuf type {@code spec.proto.runtime.v1.GetSecretResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:spec.proto.runtime.v1.GetSecretResponse)
+        spec.proto.runtime.v1.RuntimeProto.GetSecretResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetSecretResponse_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetData();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMutableData();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetSecretResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                spec.proto.runtime.v1.RuntimeProto.GetSecretResponse.class, spec.proto.runtime.v1.RuntimeProto.GetSecretResponse.Builder.class);
+      }
+
+      // Construct using spec.proto.runtime.v1.RuntimeProto.GetSecretResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        internalGetMutableData().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetSecretResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public spec.proto.runtime.v1.RuntimeProto.GetSecretResponse getDefaultInstanceForType() {
+        return spec.proto.runtime.v1.RuntimeProto.GetSecretResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public spec.proto.runtime.v1.RuntimeProto.GetSecretResponse build() {
+        spec.proto.runtime.v1.RuntimeProto.GetSecretResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public spec.proto.runtime.v1.RuntimeProto.GetSecretResponse buildPartial() {
+        spec.proto.runtime.v1.RuntimeProto.GetSecretResponse result = new spec.proto.runtime.v1.RuntimeProto.GetSecretResponse(this);
+        int from_bitField0_ = bitField0_;
+        result.data_ = internalGetData();
+        result.data_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof spec.proto.runtime.v1.RuntimeProto.GetSecretResponse) {
+          return mergeFrom((spec.proto.runtime.v1.RuntimeProto.GetSecretResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(spec.proto.runtime.v1.RuntimeProto.GetSecretResponse other) {
+        if (other == spec.proto.runtime.v1.RuntimeProto.GetSecretResponse.getDefaultInstance()) return this;
+        internalGetMutableData().mergeFrom(
+            other.internalGetData());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        spec.proto.runtime.v1.RuntimeProto.GetSecretResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (spec.proto.runtime.v1.RuntimeProto.GetSecretResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> data_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetData() {
+        if (data_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              DataDefaultEntryHolder.defaultEntry);
+        }
+        return data_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableData() {
+        onChanged();;
+        if (data_ == null) {
+          data_ = com.google.protobuf.MapField.newMapField(
+              DataDefaultEntryHolder.defaultEntry);
+        }
+        if (!data_.isMutable()) {
+          data_ = data_.copy();
+        }
+        return data_;
+      }
+
+      public int getDataCount() {
+        return internalGetData().getMap().size();
+      }
+      /**
+       * <pre>
+       * data is the secret value. Some secret store, such as kubernetes secret
+       * store, can save multiple secrets for single secret key.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; data = 1;</code>
+       */
+
+      public boolean containsData(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetData().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getDataMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getData() {
+        return getDataMap();
+      }
+      /**
+       * <pre>
+       * data is the secret value. Some secret store, such as kubernetes secret
+       * store, can save multiple secrets for single secret key.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; data = 1;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getDataMap() {
+        return internalGetData().getMap();
+      }
+      /**
+       * <pre>
+       * data is the secret value. Some secret store, such as kubernetes secret
+       * store, can save multiple secrets for single secret key.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; data = 1;</code>
+       */
+
+      public java.lang.String getDataOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetData().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * data is the secret value. Some secret store, such as kubernetes secret
+       * store, can save multiple secrets for single secret key.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; data = 1;</code>
+       */
+
+      public java.lang.String getDataOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetData().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearData() {
+        internalGetMutableData().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * data is the secret value. Some secret store, such as kubernetes secret
+       * store, can save multiple secrets for single secret key.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; data = 1;</code>
+       */
+
+      public Builder removeData(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableData().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableData() {
+        return internalGetMutableData().getMutableMap();
+      }
+      /**
+       * <pre>
+       * data is the secret value. Some secret store, such as kubernetes secret
+       * store, can save multiple secrets for single secret key.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; data = 1;</code>
+       */
+      public Builder putData(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableData().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * data is the secret value. Some secret store, such as kubernetes secret
+       * store, can save multiple secrets for single secret key.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; data = 1;</code>
+       */
+
+      public Builder putAllData(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableData().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:spec.proto.runtime.v1.GetSecretResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:spec.proto.runtime.v1.GetSecretResponse)
+    private static final spec.proto.runtime.v1.RuntimeProto.GetSecretResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new spec.proto.runtime.v1.RuntimeProto.GetSecretResponse();
+    }
+
+    public static spec.proto.runtime.v1.RuntimeProto.GetSecretResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetSecretResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetSecretResponse>() {
+      @java.lang.Override
+      public GetSecretResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetSecretResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetSecretResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetSecretResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public spec.proto.runtime.v1.RuntimeProto.GetSecretResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetBulkSecretRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:spec.proto.runtime.v1.GetBulkSecretRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The name of secret store.
+     * </pre>
+     *
+     * <code>string store_name = 1;</code>
+     * @return The storeName.
+     */
+    java.lang.String getStoreName();
+    /**
+     * <pre>
+     * The name of secret store.
+     * </pre>
+     *
+     * <code>string store_name = 1;</code>
+     * @return The bytes for storeName.
+     */
+    com.google.protobuf.ByteString
+        getStoreNameBytes();
+
+    /**
+     * <pre>
+     * The metadata which will be sent to secret store components.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 2;</code>
+     */
+    int getMetadataCount();
+    /**
+     * <pre>
+     * The metadata which will be sent to secret store components.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 2;</code>
+     */
+    boolean containsMetadata(
+        java.lang.String key);
+    /**
+     * Use {@link #getMetadataMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getMetadata();
+    /**
+     * <pre>
+     * The metadata which will be sent to secret store components.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 2;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getMetadataMap();
+    /**
+     * <pre>
+     * The metadata which will be sent to secret store components.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 2;</code>
+     */
+
+    java.lang.String getMetadataOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * The metadata which will be sent to secret store components.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 2;</code>
+     */
+
+    java.lang.String getMetadataOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * <pre>
+   * GetBulkSecretRequest is the message to get the secrets from secret store.
+   * </pre>
+   *
+   * Protobuf type {@code spec.proto.runtime.v1.GetBulkSecretRequest}
+   */
+  public  static final class GetBulkSecretRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.GetBulkSecretRequest)
+      GetBulkSecretRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetBulkSecretRequest.newBuilder() to construct.
+    private GetBulkSecretRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetBulkSecretRequest() {
+      storeName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetBulkSecretRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetBulkSecretRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              storeName_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                metadata_ = com.google.protobuf.MapField.newMapField(
+                    MetadataDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              metadata__ = input.readMessage(
+                  MetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              metadata_.getMutableMap().put(
+                  metadata__.getKey(), metadata__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetBulkSecretRequest_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetMetadata();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetBulkSecretRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest.class, spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest.Builder.class);
+    }
+
+    public static final int STORE_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object storeName_;
+    /**
+     * <pre>
+     * The name of secret store.
+     * </pre>
+     *
+     * <code>string store_name = 1;</code>
+     * @return The storeName.
+     */
+    public java.lang.String getStoreName() {
+      java.lang.Object ref = storeName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        storeName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The name of secret store.
+     * </pre>
+     *
+     * <code>string store_name = 1;</code>
+     * @return The bytes for storeName.
+     */
+    public com.google.protobuf.ByteString
+        getStoreNameBytes() {
+      java.lang.Object ref = storeName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        storeName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 2;
+    private static final class MetadataDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetBulkSecretRequest_MetadataEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> metadata_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetMetadata() {
+      if (metadata_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MetadataDefaultEntryHolder.defaultEntry);
+      }
+      return metadata_;
+    }
+
+    public int getMetadataCount() {
+      return internalGetMetadata().getMap().size();
+    }
+    /**
+     * <pre>
+     * The metadata which will be sent to secret store components.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 2;</code>
+     */
+
+    public boolean containsMetadata(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetMetadata().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMetadataMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+      return getMetadataMap();
+    }
+    /**
+     * <pre>
+     * The metadata which will be sent to secret store components.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 2;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+      return internalGetMetadata().getMap();
+    }
+    /**
+     * <pre>
+     * The metadata which will be sent to secret store components.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 2;</code>
+     */
+
+    public java.lang.String getMetadataOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetMetadata().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * The metadata which will be sent to secret store components.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 2;</code>
+     */
+
+    public java.lang.String getMetadataOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetMetadata().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getStoreNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, storeName_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetMetadata(),
+          MetadataDefaultEntryHolder.defaultEntry,
+          2);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getStoreNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, storeName_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetMetadata().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        metadata__ = MetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, metadata__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest)) {
+        return super.equals(obj);
+      }
+      spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest other = (spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest) obj;
+
+      if (!getStoreName()
+          .equals(other.getStoreName())) return false;
+      if (!internalGetMetadata().equals(
+          other.internalGetMetadata())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STORE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getStoreName().hashCode();
+      if (!internalGetMetadata().getMap().isEmpty()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMetadata().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GetBulkSecretRequest is the message to get the secrets from secret store.
+     * </pre>
+     *
+     * Protobuf type {@code spec.proto.runtime.v1.GetBulkSecretRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:spec.proto.runtime.v1.GetBulkSecretRequest)
+        spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetBulkSecretRequest_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMetadata();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMutableMetadata();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetBulkSecretRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest.class, spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest.Builder.class);
+      }
+
+      // Construct using spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        storeName_ = "";
+
+        internalGetMutableMetadata().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetBulkSecretRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest getDefaultInstanceForType() {
+        return spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest build() {
+        spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest buildPartial() {
+        spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest result = new spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.storeName_ = storeName_;
+        result.metadata_ = internalGetMetadata();
+        result.metadata_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest) {
+          return mergeFrom((spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest other) {
+        if (other == spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest.getDefaultInstance()) return this;
+        if (!other.getStoreName().isEmpty()) {
+          storeName_ = other.storeName_;
+          onChanged();
+        }
+        internalGetMutableMetadata().mergeFrom(
+            other.internalGetMetadata());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object storeName_ = "";
+      /**
+       * <pre>
+       * The name of secret store.
+       * </pre>
+       *
+       * <code>string store_name = 1;</code>
+       * @return The storeName.
+       */
+      public java.lang.String getStoreName() {
+        java.lang.Object ref = storeName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          storeName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of secret store.
+       * </pre>
+       *
+       * <code>string store_name = 1;</code>
+       * @return The bytes for storeName.
+       */
+      public com.google.protobuf.ByteString
+          getStoreNameBytes() {
+        java.lang.Object ref = storeName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          storeName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of secret store.
+       * </pre>
+       *
+       * <code>string store_name = 1;</code>
+       * @param value The storeName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStoreName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        storeName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of secret store.
+       * </pre>
+       *
+       * <code>string store_name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStoreName() {
+        
+        storeName_ = getDefaultInstance().getStoreName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of secret store.
+       * </pre>
+       *
+       * <code>string store_name = 1;</code>
+       * @param value The bytes for storeName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStoreNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        storeName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> metadata_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMetadata() {
+        if (metadata_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MetadataDefaultEntryHolder.defaultEntry);
+        }
+        return metadata_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableMetadata() {
+        onChanged();;
+        if (metadata_ == null) {
+          metadata_ = com.google.protobuf.MapField.newMapField(
+              MetadataDefaultEntryHolder.defaultEntry);
+        }
+        if (!metadata_.isMutable()) {
+          metadata_ = metadata_.copy();
+        }
+        return metadata_;
+      }
+
+      public int getMetadataCount() {
+        return internalGetMetadata().getMap().size();
+      }
+      /**
+       * <pre>
+       * The metadata which will be sent to secret store components.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 2;</code>
+       */
+
+      public boolean containsMetadata(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetMetadata().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMetadataMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+        return getMetadataMap();
+      }
+      /**
+       * <pre>
+       * The metadata which will be sent to secret store components.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 2;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+        return internalGetMetadata().getMap();
+      }
+      /**
+       * <pre>
+       * The metadata which will be sent to secret store components.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 2;</code>
+       */
+
+      public java.lang.String getMetadataOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * The metadata which will be sent to secret store components.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 2;</code>
+       */
+
+      public java.lang.String getMetadataOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearMetadata() {
+        internalGetMutableMetadata().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * The metadata which will be sent to secret store components.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 2;</code>
+       */
+
+      public Builder removeMetadata(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableMetadata().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableMetadata() {
+        return internalGetMutableMetadata().getMutableMap();
+      }
+      /**
+       * <pre>
+       * The metadata which will be sent to secret store components.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 2;</code>
+       */
+      public Builder putMetadata(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableMetadata().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The metadata which will be sent to secret store components.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 2;</code>
+       */
+
+      public Builder putAllMetadata(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableMetadata().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:spec.proto.runtime.v1.GetBulkSecretRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:spec.proto.runtime.v1.GetBulkSecretRequest)
+    private static final spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest();
+    }
+
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetBulkSecretRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetBulkSecretRequest>() {
+      @java.lang.Override
+      public GetBulkSecretRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetBulkSecretRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetBulkSecretRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetBulkSecretRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public spec.proto.runtime.v1.RuntimeProto.GetBulkSecretRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetBulkSecretResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:spec.proto.runtime.v1.GetBulkSecretResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * data hold the secret values. Some secret store, such as kubernetes secret
+     * store, can save multiple secrets for single secret key.
+     * </pre>
+     *
+     * <code>map&lt;string, .spec.proto.runtime.v1.SecretResponse&gt; data = 1;</code>
+     */
+    int getDataCount();
+    /**
+     * <pre>
+     * data hold the secret values. Some secret store, such as kubernetes secret
+     * store, can save multiple secrets for single secret key.
+     * </pre>
+     *
+     * <code>map&lt;string, .spec.proto.runtime.v1.SecretResponse&gt; data = 1;</code>
+     */
+    boolean containsData(
+        java.lang.String key);
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse>
+    getData();
+    /**
+     * <pre>
+     * data hold the secret values. Some secret store, such as kubernetes secret
+     * store, can save multiple secrets for single secret key.
+     * </pre>
+     *
+     * <code>map&lt;string, .spec.proto.runtime.v1.SecretResponse&gt; data = 1;</code>
+     */
+    java.util.Map<java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse>
+    getDataMap();
+    /**
+     * <pre>
+     * data hold the secret values. Some secret store, such as kubernetes secret
+     * store, can save multiple secrets for single secret key.
+     * </pre>
+     *
+     * <code>map&lt;string, .spec.proto.runtime.v1.SecretResponse&gt; data = 1;</code>
+     */
+
+    spec.proto.runtime.v1.RuntimeProto.SecretResponse getDataOrDefault(
+        java.lang.String key,
+        spec.proto.runtime.v1.RuntimeProto.SecretResponse defaultValue);
+    /**
+     * <pre>
+     * data hold the secret values. Some secret store, such as kubernetes secret
+     * store, can save multiple secrets for single secret key.
+     * </pre>
+     *
+     * <code>map&lt;string, .spec.proto.runtime.v1.SecretResponse&gt; data = 1;</code>
+     */
+
+    spec.proto.runtime.v1.RuntimeProto.SecretResponse getDataOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * <pre>
+   * GetBulkSecretResponse is the response message to convey the requested secrets.
+   * </pre>
+   *
+   * Protobuf type {@code spec.proto.runtime.v1.GetBulkSecretResponse}
+   */
+  public  static final class GetBulkSecretResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.GetBulkSecretResponse)
+      GetBulkSecretResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetBulkSecretResponse.newBuilder() to construct.
+    private GetBulkSecretResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetBulkSecretResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetBulkSecretResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetBulkSecretResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                data_ = com.google.protobuf.MapField.newMapField(
+                    DataDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse>
+              data__ = input.readMessage(
+                  DataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              data_.getMutableMap().put(
+                  data__.getKey(), data__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetBulkSecretResponse_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetData();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetBulkSecretResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse.class, spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse.Builder.class);
+    }
+
+    public static final int DATA_FIELD_NUMBER = 1;
+    private static final class DataDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse>newDefaultInstance(
+                  spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetBulkSecretResponse_DataEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  spec.proto.runtime.v1.RuntimeProto.SecretResponse.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse> data_;
+    private com.google.protobuf.MapField<java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse>
+    internalGetData() {
+      if (data_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            DataDefaultEntryHolder.defaultEntry);
+      }
+      return data_;
+    }
+
+    public int getDataCount() {
+      return internalGetData().getMap().size();
+    }
+    /**
+     * <pre>
+     * data hold the secret values. Some secret store, such as kubernetes secret
+     * store, can save multiple secrets for single secret key.
+     * </pre>
+     *
+     * <code>map&lt;string, .spec.proto.runtime.v1.SecretResponse&gt; data = 1;</code>
+     */
+
+    public boolean containsData(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetData().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse> getData() {
+      return getDataMap();
+    }
+    /**
+     * <pre>
+     * data hold the secret values. Some secret store, such as kubernetes secret
+     * store, can save multiple secrets for single secret key.
+     * </pre>
+     *
+     * <code>map&lt;string, .spec.proto.runtime.v1.SecretResponse&gt; data = 1;</code>
+     */
+
+    public java.util.Map<java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse> getDataMap() {
+      return internalGetData().getMap();
+    }
+    /**
+     * <pre>
+     * data hold the secret values. Some secret store, such as kubernetes secret
+     * store, can save multiple secrets for single secret key.
+     * </pre>
+     *
+     * <code>map&lt;string, .spec.proto.runtime.v1.SecretResponse&gt; data = 1;</code>
+     */
+
+    public spec.proto.runtime.v1.RuntimeProto.SecretResponse getDataOrDefault(
+        java.lang.String key,
+        spec.proto.runtime.v1.RuntimeProto.SecretResponse defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse> map =
+          internalGetData().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * data hold the secret values. Some secret store, such as kubernetes secret
+     * store, can save multiple secrets for single secret key.
+     * </pre>
+     *
+     * <code>map&lt;string, .spec.proto.runtime.v1.SecretResponse&gt; data = 1;</code>
+     */
+
+    public spec.proto.runtime.v1.RuntimeProto.SecretResponse getDataOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse> map =
+          internalGetData().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetData(),
+          DataDefaultEntryHolder.defaultEntry,
+          1);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (java.util.Map.Entry<java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse> entry
+           : internalGetData().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse>
+        data__ = DataDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, data__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse)) {
+        return super.equals(obj);
+      }
+      spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse other = (spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse) obj;
+
+      if (!internalGetData().equals(
+          other.internalGetData())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (!internalGetData().getMap().isEmpty()) {
+        hash = (37 * hash) + DATA_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetData().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GetBulkSecretResponse is the response message to convey the requested secrets.
+     * </pre>
+     *
+     * Protobuf type {@code spec.proto.runtime.v1.GetBulkSecretResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:spec.proto.runtime.v1.GetBulkSecretResponse)
+        spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetBulkSecretResponse_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetData();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMutableData();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetBulkSecretResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse.class, spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse.Builder.class);
+      }
+
+      // Construct using spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        internalGetMutableData().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_GetBulkSecretResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse getDefaultInstanceForType() {
+        return spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse build() {
+        spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse buildPartial() {
+        spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse result = new spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse(this);
+        int from_bitField0_ = bitField0_;
+        result.data_ = internalGetData();
+        result.data_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse) {
+          return mergeFrom((spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse other) {
+        if (other == spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse.getDefaultInstance()) return this;
+        internalGetMutableData().mergeFrom(
+            other.internalGetData());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.MapField<
+          java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse> data_;
+      private com.google.protobuf.MapField<java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse>
+      internalGetData() {
+        if (data_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              DataDefaultEntryHolder.defaultEntry);
+        }
+        return data_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse>
+      internalGetMutableData() {
+        onChanged();;
+        if (data_ == null) {
+          data_ = com.google.protobuf.MapField.newMapField(
+              DataDefaultEntryHolder.defaultEntry);
+        }
+        if (!data_.isMutable()) {
+          data_ = data_.copy();
+        }
+        return data_;
+      }
+
+      public int getDataCount() {
+        return internalGetData().getMap().size();
+      }
+      /**
+       * <pre>
+       * data hold the secret values. Some secret store, such as kubernetes secret
+       * store, can save multiple secrets for single secret key.
+       * </pre>
+       *
+       * <code>map&lt;string, .spec.proto.runtime.v1.SecretResponse&gt; data = 1;</code>
+       */
+
+      public boolean containsData(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetData().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getDataMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse> getData() {
+        return getDataMap();
+      }
+      /**
+       * <pre>
+       * data hold the secret values. Some secret store, such as kubernetes secret
+       * store, can save multiple secrets for single secret key.
+       * </pre>
+       *
+       * <code>map&lt;string, .spec.proto.runtime.v1.SecretResponse&gt; data = 1;</code>
+       */
+
+      public java.util.Map<java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse> getDataMap() {
+        return internalGetData().getMap();
+      }
+      /**
+       * <pre>
+       * data hold the secret values. Some secret store, such as kubernetes secret
+       * store, can save multiple secrets for single secret key.
+       * </pre>
+       *
+       * <code>map&lt;string, .spec.proto.runtime.v1.SecretResponse&gt; data = 1;</code>
+       */
+
+      public spec.proto.runtime.v1.RuntimeProto.SecretResponse getDataOrDefault(
+          java.lang.String key,
+          spec.proto.runtime.v1.RuntimeProto.SecretResponse defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse> map =
+            internalGetData().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * data hold the secret values. Some secret store, such as kubernetes secret
+       * store, can save multiple secrets for single secret key.
+       * </pre>
+       *
+       * <code>map&lt;string, .spec.proto.runtime.v1.SecretResponse&gt; data = 1;</code>
+       */
+
+      public spec.proto.runtime.v1.RuntimeProto.SecretResponse getDataOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse> map =
+            internalGetData().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearData() {
+        internalGetMutableData().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * data hold the secret values. Some secret store, such as kubernetes secret
+       * store, can save multiple secrets for single secret key.
+       * </pre>
+       *
+       * <code>map&lt;string, .spec.proto.runtime.v1.SecretResponse&gt; data = 1;</code>
+       */
+
+      public Builder removeData(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableData().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse>
+      getMutableData() {
+        return internalGetMutableData().getMutableMap();
+      }
+      /**
+       * <pre>
+       * data hold the secret values. Some secret store, such as kubernetes secret
+       * store, can save multiple secrets for single secret key.
+       * </pre>
+       *
+       * <code>map&lt;string, .spec.proto.runtime.v1.SecretResponse&gt; data = 1;</code>
+       */
+      public Builder putData(
+          java.lang.String key,
+          spec.proto.runtime.v1.RuntimeProto.SecretResponse value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableData().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * data hold the secret values. Some secret store, such as kubernetes secret
+       * store, can save multiple secrets for single secret key.
+       * </pre>
+       *
+       * <code>map&lt;string, .spec.proto.runtime.v1.SecretResponse&gt; data = 1;</code>
+       */
+
+      public Builder putAllData(
+          java.util.Map<java.lang.String, spec.proto.runtime.v1.RuntimeProto.SecretResponse> values) {
+        internalGetMutableData().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:spec.proto.runtime.v1.GetBulkSecretResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:spec.proto.runtime.v1.GetBulkSecretResponse)
+    private static final spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse();
+    }
+
+    public static spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetBulkSecretResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetBulkSecretResponse>() {
+      @java.lang.Override
+      public GetBulkSecretResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetBulkSecretResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetBulkSecretResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetBulkSecretResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public spec.proto.runtime.v1.RuntimeProto.GetBulkSecretResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SecretResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:spec.proto.runtime.v1.SecretResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The data struct of secrets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; secrets = 1;</code>
+     */
+    int getSecretsCount();
+    /**
+     * <pre>
+     * The data struct of secrets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; secrets = 1;</code>
+     */
+    boolean containsSecrets(
+        java.lang.String key);
+    /**
+     * Use {@link #getSecretsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getSecrets();
+    /**
+     * <pre>
+     * The data struct of secrets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; secrets = 1;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getSecretsMap();
+    /**
+     * <pre>
+     * The data struct of secrets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; secrets = 1;</code>
+     */
+
+    java.lang.String getSecretsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * The data struct of secrets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; secrets = 1;</code>
+     */
+
+    java.lang.String getSecretsOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * <pre>
+   * SecretResponse is a map of decrypted string/string values
+   * </pre>
+   *
+   * Protobuf type {@code spec.proto.runtime.v1.SecretResponse}
+   */
+  public  static final class SecretResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.SecretResponse)
+      SecretResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SecretResponse.newBuilder() to construct.
+    private SecretResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SecretResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SecretResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SecretResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                secrets_ = com.google.protobuf.MapField.newMapField(
+                    SecretsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              secrets__ = input.readMessage(
+                  SecretsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              secrets_.getMutableMap().put(
+                  secrets__.getKey(), secrets__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_SecretResponse_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetSecrets();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_SecretResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              spec.proto.runtime.v1.RuntimeProto.SecretResponse.class, spec.proto.runtime.v1.RuntimeProto.SecretResponse.Builder.class);
+    }
+
+    public static final int SECRETS_FIELD_NUMBER = 1;
+    private static final class SecretsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_SecretResponse_SecretsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> secrets_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetSecrets() {
+      if (secrets_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            SecretsDefaultEntryHolder.defaultEntry);
+      }
+      return secrets_;
+    }
+
+    public int getSecretsCount() {
+      return internalGetSecrets().getMap().size();
+    }
+    /**
+     * <pre>
+     * The data struct of secrets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; secrets = 1;</code>
+     */
+
+    public boolean containsSecrets(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetSecrets().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getSecretsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getSecrets() {
+      return getSecretsMap();
+    }
+    /**
+     * <pre>
+     * The data struct of secrets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; secrets = 1;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getSecretsMap() {
+      return internalGetSecrets().getMap();
+    }
+    /**
+     * <pre>
+     * The data struct of secrets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; secrets = 1;</code>
+     */
+
+    public java.lang.String getSecretsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetSecrets().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * The data struct of secrets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; secrets = 1;</code>
+     */
+
+    public java.lang.String getSecretsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetSecrets().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetSecrets(),
+          SecretsDefaultEntryHolder.defaultEntry,
+          1);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetSecrets().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        secrets__ = SecretsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, secrets__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof spec.proto.runtime.v1.RuntimeProto.SecretResponse)) {
+        return super.equals(obj);
+      }
+      spec.proto.runtime.v1.RuntimeProto.SecretResponse other = (spec.proto.runtime.v1.RuntimeProto.SecretResponse) obj;
+
+      if (!internalGetSecrets().equals(
+          other.internalGetSecrets())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (!internalGetSecrets().getMap().isEmpty()) {
+        hash = (37 * hash) + SECRETS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetSecrets().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static spec.proto.runtime.v1.RuntimeProto.SecretResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.SecretResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.SecretResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.SecretResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.SecretResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.SecretResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.SecretResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.SecretResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.SecretResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.SecretResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.SecretResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static spec.proto.runtime.v1.RuntimeProto.SecretResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(spec.proto.runtime.v1.RuntimeProto.SecretResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * SecretResponse is a map of decrypted string/string values
+     * </pre>
+     *
+     * Protobuf type {@code spec.proto.runtime.v1.SecretResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:spec.proto.runtime.v1.SecretResponse)
+        spec.proto.runtime.v1.RuntimeProto.SecretResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_SecretResponse_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetSecrets();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMutableSecrets();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_SecretResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                spec.proto.runtime.v1.RuntimeProto.SecretResponse.class, spec.proto.runtime.v1.RuntimeProto.SecretResponse.Builder.class);
+      }
+
+      // Construct using spec.proto.runtime.v1.RuntimeProto.SecretResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        internalGetMutableSecrets().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return spec.proto.runtime.v1.RuntimeProto.internal_static_spec_proto_runtime_v1_SecretResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public spec.proto.runtime.v1.RuntimeProto.SecretResponse getDefaultInstanceForType() {
+        return spec.proto.runtime.v1.RuntimeProto.SecretResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public spec.proto.runtime.v1.RuntimeProto.SecretResponse build() {
+        spec.proto.runtime.v1.RuntimeProto.SecretResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public spec.proto.runtime.v1.RuntimeProto.SecretResponse buildPartial() {
+        spec.proto.runtime.v1.RuntimeProto.SecretResponse result = new spec.proto.runtime.v1.RuntimeProto.SecretResponse(this);
+        int from_bitField0_ = bitField0_;
+        result.secrets_ = internalGetSecrets();
+        result.secrets_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof spec.proto.runtime.v1.RuntimeProto.SecretResponse) {
+          return mergeFrom((spec.proto.runtime.v1.RuntimeProto.SecretResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(spec.proto.runtime.v1.RuntimeProto.SecretResponse other) {
+        if (other == spec.proto.runtime.v1.RuntimeProto.SecretResponse.getDefaultInstance()) return this;
+        internalGetMutableSecrets().mergeFrom(
+            other.internalGetSecrets());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        spec.proto.runtime.v1.RuntimeProto.SecretResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (spec.proto.runtime.v1.RuntimeProto.SecretResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> secrets_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetSecrets() {
+        if (secrets_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              SecretsDefaultEntryHolder.defaultEntry);
+        }
+        return secrets_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableSecrets() {
+        onChanged();;
+        if (secrets_ == null) {
+          secrets_ = com.google.protobuf.MapField.newMapField(
+              SecretsDefaultEntryHolder.defaultEntry);
+        }
+        if (!secrets_.isMutable()) {
+          secrets_ = secrets_.copy();
+        }
+        return secrets_;
+      }
+
+      public int getSecretsCount() {
+        return internalGetSecrets().getMap().size();
+      }
+      /**
+       * <pre>
+       * The data struct of secrets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; secrets = 1;</code>
+       */
+
+      public boolean containsSecrets(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetSecrets().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getSecretsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getSecrets() {
+        return getSecretsMap();
+      }
+      /**
+       * <pre>
+       * The data struct of secrets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; secrets = 1;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getSecretsMap() {
+        return internalGetSecrets().getMap();
+      }
+      /**
+       * <pre>
+       * The data struct of secrets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; secrets = 1;</code>
+       */
+
+      public java.lang.String getSecretsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetSecrets().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * The data struct of secrets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; secrets = 1;</code>
+       */
+
+      public java.lang.String getSecretsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetSecrets().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearSecrets() {
+        internalGetMutableSecrets().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * The data struct of secrets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; secrets = 1;</code>
+       */
+
+      public Builder removeSecrets(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableSecrets().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableSecrets() {
+        return internalGetMutableSecrets().getMutableMap();
+      }
+      /**
+       * <pre>
+       * The data struct of secrets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; secrets = 1;</code>
+       */
+      public Builder putSecrets(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableSecrets().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The data struct of secrets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; secrets = 1;</code>
+       */
+
+      public Builder putAllSecrets(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableSecrets().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:spec.proto.runtime.v1.SecretResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:spec.proto.runtime.v1.SecretResponse)
+    private static final spec.proto.runtime.v1.RuntimeProto.SecretResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new spec.proto.runtime.v1.RuntimeProto.SecretResponse();
+    }
+
+    public static spec.proto.runtime.v1.RuntimeProto.SecretResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SecretResponse>
+        PARSER = new com.google.protobuf.AbstractParser<SecretResponse>() {
+      @java.lang.Override
+      public SecretResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SecretResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SecretResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SecretResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public spec.proto.runtime.v1.RuntimeProto.SecretResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -53012,6 +58998,56 @@ public final class RuntimeProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_spec_proto_runtime_v1_InvokeBindingResponse_MetadataEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_spec_proto_runtime_v1_GetSecretRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_spec_proto_runtime_v1_GetSecretRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_spec_proto_runtime_v1_GetSecretRequest_MetadataEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_spec_proto_runtime_v1_GetSecretRequest_MetadataEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_spec_proto_runtime_v1_GetSecretResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_spec_proto_runtime_v1_GetSecretResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_spec_proto_runtime_v1_GetSecretResponse_DataEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_spec_proto_runtime_v1_GetSecretResponse_DataEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_spec_proto_runtime_v1_GetBulkSecretRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_spec_proto_runtime_v1_GetBulkSecretRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_spec_proto_runtime_v1_GetBulkSecretRequest_MetadataEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_spec_proto_runtime_v1_GetBulkSecretRequest_MetadataEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_spec_proto_runtime_v1_GetBulkSecretResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_spec_proto_runtime_v1_GetBulkSecretResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_spec_proto_runtime_v1_GetBulkSecretResponse_DataEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_spec_proto_runtime_v1_GetBulkSecretResponse_DataEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_spec_proto_runtime_v1_SecretResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_spec_proto_runtime_v1_SecretResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_spec_proto_runtime_v1_SecretResponse_SecretsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_spec_proto_runtime_v1_SecretResponse_SecretsEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -53089,182 +59125,207 @@ public final class RuntimeProto {
       " \001(\t\022\"\n\004data\030\002 \001(\0132\024.google.protobuf.Any" +
       "\022\024\n\014content_type\030\003 \001(\t\022<\n\016http_extension" +
       "\030\004 \001(\0132$.spec.proto.runtime.v1.HTTPExten" +
-      "sion\"\306\001\n\rHTTPExtension\0227\n\004verb\030\001 \001(\0162).s" +
+      "sion\"\321\001\n\rHTTPExtension\0227\n\004verb\030\001 \001(\0162).s" +
       "pec.proto.runtime.v1.HTTPExtension.Verb\022" +
-      "\023\n\013querystring\030\002 \001(\t\"g\n\004Verb\022\010\n\004NONE\020\000\022\007" +
+      "\023\n\013querystring\030\002 \001(\t\"r\n\004Verb\022\010\n\004NONE\020\000\022\007" +
       "\n\003GET\020\001\022\010\n\004HEAD\020\002\022\010\n\004POST\020\003\022\007\n\003PUT\020\004\022\n\n\006" +
       "DELETE\020\005\022\013\n\007CONNECT\020\006\022\013\n\007OPTIONS\020\007\022\t\n\005TR" +
-      "ACE\020\010\"J\n\016InvokeResponse\022\"\n\004data\030\001 \001(\0132\024." +
-      "google.protobuf.Any\022\024\n\014content_type\030\002 \001(" +
-      "\t\"\271\002\n\021ConfigurationItem\022\013\n\003key\030\001 \001(\t\022\017\n\007" +
-      "content\030\002 \001(\t\022\r\n\005group\030\003 \001(\t\022\r\n\005label\030\004 " +
-      "\001(\t\022@\n\004tags\030\005 \003(\01322.spec.proto.runtime.v" +
-      "1.ConfigurationItem.TagsEntry\022H\n\010metadat" +
-      "a\030\006 \003(\01326.spec.proto.runtime.v1.Configur" +
-      "ationItem.MetadataEntry\032+\n\tTagsEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMetadata" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\204\002" +
-      "\n\027GetConfigurationRequest\022\022\n\nstore_name\030" +
-      "\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\r\n\005group\030\003 \001(\t\022\r\n\005" +
-      "label\030\004 \001(\t\022\014\n\004keys\030\005 \003(\t\022N\n\010metadata\030\006 " +
-      "\003(\0132<.spec.proto.runtime.v1.GetConfigura" +
-      "tionRequest.MetadataEntry\022\030\n\020subscribe_u" +
-      "pdate\030\007 \001(\010\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"S\n\030GetConfiguration" +
-      "Response\0227\n\005items\030\001 \003(\0132(.spec.proto.run" +
-      "time.v1.ConfigurationItem\"\366\001\n\035SubscribeC" +
-      "onfigurationRequest\022\022\n\nstore_name\030\001 \001(\t\022" +
-      "\016\n\006app_id\030\002 \001(\t\022\r\n\005group\030\003 \001(\t\022\r\n\005label\030" +
-      "\004 \001(\t\022\014\n\004keys\030\005 \003(\t\022T\n\010metadata\030\006 \003(\0132B." +
-      "spec.proto.runtime.v1.SubscribeConfigura" +
-      "tionRequest.MetadataEntry\032/\n\rMetadataEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"}\n\036Su" +
-      "bscribeConfigurationResponse\022\022\n\nstore_na" +
-      "me\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\0227\n\005items\030\003 \003(\0132" +
-      "(.spec.proto.runtime.v1.ConfigurationIte" +
-      "m\"\371\001\n\030SaveConfigurationRequest\022\022\n\nstore_" +
-      "name\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\0227\n\005items\030\003 \003(" +
-      "\0132(.spec.proto.runtime.v1.ConfigurationI" +
-      "tem\022O\n\010metadata\030\004 \003(\0132=.spec.proto.runti" +
-      "me.v1.SaveConfigurationRequest.MetadataE" +
-      "ntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001\"\360\001\n\032DeleteConfigurationReq" +
-      "uest\022\022\n\nstore_name\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t" +
-      "\022\r\n\005group\030\003 \001(\t\022\r\n\005label\030\004 \001(\t\022\014\n\004keys\030\005" +
-      " \003(\t\022Q\n\010metadata\030\006 \003(\0132?.spec.proto.runt" +
-      "ime.v1.DeleteConfigurationRequest.Metada" +
-      "taEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001\"\366\001\n\017GetStateRequest\022\022\n\n" +
-      "store_name\030\001 \001(\t\022\013\n\003key\030\002 \001(\t\022I\n\013consist" +
-      "ency\030\003 \001(\01624.spec.proto.runtime.v1.State" +
-      "Options.StateConsistency\022F\n\010metadata\030\004 \003" +
-      "(\01324.spec.proto.runtime.v1.GetStateReque" +
-      "st.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\311\001\n\023GetBulkSta" +
-      "teRequest\022\022\n\nstore_name\030\001 \001(\t\022\014\n\004keys\030\002 " +
-      "\003(\t\022\023\n\013parallelism\030\003 \001(\005\022J\n\010metadata\030\004 \003" +
-      "(\01328.spec.proto.runtime.v1.GetBulkStateR" +
-      "equest.MetadataEntry\032/\n\rMetadataEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"K\n\024GetBulk" +
-      "StateResponse\0223\n\005items\030\001 \003(\0132$.spec.prot" +
-      "o.runtime.v1.BulkStateItem\"\276\001\n\rBulkState" +
-      "Item\022\013\n\003key\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\022\014\n\004etag\030" +
-      "\003 \001(\t\022\r\n\005error\030\004 \001(\t\022D\n\010metadata\030\005 \003(\01322" +
-      ".spec.proto.runtime.v1.BulkStateItem.Met" +
-      "adataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\"\250\001\n\020GetStateResponse" +
-      "\022\014\n\004data\030\001 \001(\014\022\014\n\004etag\030\002 \001(\t\022G\n\010metadata" +
-      "\030\003 \003(\01325.spec.proto.runtime.v1.GetStateR" +
-      "esponse.MetadataEntry\032/\n\rMetadataEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\222\002\n\022Delet" +
-      "eStateRequest\022\022\n\nstore_name\030\001 \001(\t\022\013\n\003key" +
-      "\030\002 \001(\t\022)\n\004etag\030\003 \001(\0132\033.spec.proto.runtim" +
-      "e.v1.Etag\0224\n\007options\030\004 \001(\0132#.spec.proto." +
-      "runtime.v1.StateOptions\022I\n\010metadata\030\005 \003(" +
-      "\01327.spec.proto.runtime.v1.DeleteStateReq" +
+      "ACE\020\010\022\t\n\005PATCH\020\t\"J\n\016InvokeResponse\022\"\n\004da" +
+      "ta\030\001 \001(\0132\024.google.protobuf.Any\022\024\n\014conten" +
+      "t_type\030\002 \001(\t\"\271\002\n\021ConfigurationItem\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\017\n\007content\030\002 \001(\t\022\r\n\005group\030\003 \001(\t\022" +
+      "\r\n\005label\030\004 \001(\t\022@\n\004tags\030\005 \003(\01322.spec.prot" +
+      "o.runtime.v1.ConfigurationItem.TagsEntry" +
+      "\022H\n\010metadata\030\006 \003(\01326.spec.proto.runtime." +
+      "v1.ConfigurationItem.MetadataEntry\032+\n\tTa" +
+      "gsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032" +
+      "/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\"\204\002\n\027GetConfigurationRequest\022\022\n\n" +
+      "store_name\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\r\n\005grou" +
+      "p\030\003 \001(\t\022\r\n\005label\030\004 \001(\t\022\014\n\004keys\030\005 \003(\t\022N\n\010" +
+      "metadata\030\006 \003(\0132<.spec.proto.runtime.v1.G" +
+      "etConfigurationRequest.MetadataEntry\022\030\n\020" +
+      "subscribe_update\030\007 \001(\010\032/\n\rMetadataEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"S\n\030GetCo" +
+      "nfigurationResponse\0227\n\005items\030\001 \003(\0132(.spe" +
+      "c.proto.runtime.v1.ConfigurationItem\"\366\001\n" +
+      "\035SubscribeConfigurationRequest\022\022\n\nstore_" +
+      "name\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\r\n\005group\030\003 \001(" +
+      "\t\022\r\n\005label\030\004 \001(\t\022\014\n\004keys\030\005 \003(\t\022T\n\010metada" +
+      "ta\030\006 \003(\0132B.spec.proto.runtime.v1.Subscri" +
+      "beConfigurationRequest.MetadataEntry\032/\n\r" +
+      "MetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001\"}\n\036SubscribeConfigurationResponse\022" +
+      "\022\n\nstore_name\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\0227\n\005i" +
+      "tems\030\003 \003(\0132(.spec.proto.runtime.v1.Confi" +
+      "gurationItem\"\371\001\n\030SaveConfigurationReques" +
+      "t\022\022\n\nstore_name\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\0227\n" +
+      "\005items\030\003 \003(\0132(.spec.proto.runtime.v1.Con" +
+      "figurationItem\022O\n\010metadata\030\004 \003(\0132=.spec." +
+      "proto.runtime.v1.SaveConfigurationReques" +
+      "t.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\360\001\n\032DeleteConfi" +
+      "gurationRequest\022\022\n\nstore_name\030\001 \001(\t\022\016\n\006a" +
+      "pp_id\030\002 \001(\t\022\r\n\005group\030\003 \001(\t\022\r\n\005label\030\004 \001(" +
+      "\t\022\014\n\004keys\030\005 \003(\t\022Q\n\010metadata\030\006 \003(\0132?.spec" +
+      ".proto.runtime.v1.DeleteConfigurationReq" +
       "uest.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"^\n\026DeleteBul" +
-      "kStateRequest\022\022\n\nstore_name\030\001 \001(\t\0220\n\006sta" +
-      "tes\030\002 \003(\0132 .spec.proto.runtime.v1.StateI" +
-      "tem\"X\n\020SaveStateRequest\022\022\n\nstore_name\030\001 " +
-      "\001(\t\0220\n\006states\030\002 \003(\0132 .spec.proto.runtime" +
-      ".v1.StateItem\"\373\001\n\tStateItem\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\014\022)\n\004etag\030\003 \001(\0132\033.spec.pro" +
-      "to.runtime.v1.Etag\022@\n\010metadata\030\004 \003(\0132..s" +
-      "pec.proto.runtime.v1.StateItem.MetadataE" +
-      "ntry\0224\n\007options\030\005 \001(\0132#.spec.proto.runti" +
-      "me.v1.StateOptions\032/\n\rMetadataEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\025\n\004Etag\022\r\n\005v" +
-      "alue\030\001 \001(\t\"\361\002\n\014StateOptions\022I\n\013concurren" +
-      "cy\030\001 \001(\01624.spec.proto.runtime.v1.StateOp" +
-      "tions.StateConcurrency\022I\n\013consistency\030\002 " +
-      "\001(\01624.spec.proto.runtime.v1.StateOptions" +
-      ".StateConsistency\"h\n\020StateConcurrency\022\033\n" +
-      "\027CONCURRENCY_UNSPECIFIED\020\000\022\033\n\027CONCURRENC" +
-      "Y_FIRST_WRITE\020\001\022\032\n\026CONCURRENCY_LAST_WRIT" +
-      "E\020\002\"a\n\020StateConsistency\022\033\n\027CONSISTENCY_U" +
-      "NSPECIFIED\020\000\022\030\n\024CONSISTENCY_EVENTUAL\020\001\022\026" +
-      "\n\022CONSISTENCY_STRONG\020\002\"g\n\033TransactionalS" +
-      "tateOperation\022\025\n\roperationType\030\001 \001(\t\0221\n\007" +
-      "request\030\002 \001(\0132 .spec.proto.runtime.v1.St" +
-      "ateItem\"\203\002\n\036ExecuteStateTransactionReque" +
-      "st\022\021\n\tstoreName\030\001 \001(\t\022F\n\noperations\030\002 \003(" +
-      "\01322.spec.proto.runtime.v1.TransactionalS" +
-      "tateOperation\022U\n\010metadata\030\003 \003(\0132C.spec.p" +
-      "roto.runtime.v1.ExecuteStateTransactionR" +
-      "equest.MetadataEntry\032/\n\rMetadataEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\337\001\n\023Publis" +
-      "hEventRequest\022\023\n\013pubsub_name\030\001 \001(\t\022\r\n\005to" +
-      "pic\030\002 \001(\t\022\014\n\004data\030\003 \001(\014\022\031\n\021data_content_" +
-      "type\030\004 \001(\t\022J\n\010metadata\030\005 \003(\01328.spec.prot" +
-      "o.runtime.v1.PublishEventRequest.Metadat" +
-      "aEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\"\303\001\n\024InvokeBindingRequest" +
-      "\022\014\n\004name\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\022K\n\010metadata" +
-      "\030\003 \003(\01329.spec.proto.runtime.v1.InvokeBin" +
-      "dingRequest.MetadataEntry\022\021\n\toperation\030\004" +
-      " \001(\t\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001\"\244\001\n\025InvokeBindingResponse\022" +
-      "\014\n\004data\030\001 \001(\014\022L\n\010metadata\030\002 \003(\0132:.spec.p" +
-      "roto.runtime.v1.InvokeBindingResponse.Me" +
-      "tadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\0012\344\020\n\007Runtime\022]\n\010SayH" +
-      "ello\022&.spec.proto.runtime.v1.SayHelloReq" +
-      "uest\032\'.spec.proto.runtime.v1.SayHelloRes" +
-      "ponse\"\000\022e\n\rInvokeService\022+.spec.proto.ru" +
-      "ntime.v1.InvokeServiceRequest\032%.spec.pro" +
-      "to.runtime.v1.InvokeResponse\"\000\022u\n\020GetCon" +
-      "figuration\022..spec.proto.runtime.v1.GetCo" +
-      "nfigurationRequest\032/.spec.proto.runtime." +
-      "v1.GetConfigurationResponse\"\000\022^\n\021SaveCon" +
-      "figuration\022/.spec.proto.runtime.v1.SaveC" +
-      "onfigurationRequest\032\026.google.protobuf.Em" +
-      "pty\"\000\022b\n\023DeleteConfiguration\0221.spec.prot" +
-      "o.runtime.v1.DeleteConfigurationRequest\032" +
-      "\026.google.protobuf.Empty\"\000\022\213\001\n\026SubscribeC" +
-      "onfiguration\0224.spec.proto.runtime.v1.Sub" +
-      "scribeConfigurationRequest\0325.spec.proto." +
-      "runtime.v1.SubscribeConfigurationRespons" +
-      "e\"\000(\0010\001\022Z\n\007TryLock\022%.spec.proto.runtime." +
-      "v1.TryLockRequest\032&.spec.proto.runtime.v" +
-      "1.TryLockResponse\"\000\022W\n\006Unlock\022$.spec.pro" +
-      "to.runtime.v1.UnlockRequest\032%.spec.proto" +
-      ".runtime.v1.UnlockResponse\"\000\022`\n\tGetNextI" +
-      "d\022\'.spec.proto.runtime.v1.GetNextIdReque" +
-      "st\032(.spec.proto.runtime.v1.GetNextIdResp" +
-      "onse\"\000\022]\n\010GetState\022&.spec.proto.runtime." +
-      "v1.GetStateRequest\032\'.spec.proto.runtime." +
-      "v1.GetStateResponse\"\000\022i\n\014GetBulkState\022*." +
-      "spec.proto.runtime.v1.GetBulkStateReques" +
-      "t\032+.spec.proto.runtime.v1.GetBulkStateRe" +
-      "sponse\"\000\022N\n\tSaveState\022\'.spec.proto.runti" +
-      "me.v1.SaveStateRequest\032\026.google.protobuf" +
-      ".Empty\"\000\022R\n\013DeleteState\022).spec.proto.run" +
-      "time.v1.DeleteStateRequest\032\026.google.prot" +
-      "obuf.Empty\"\000\022Z\n\017DeleteBulkState\022-.spec.p" +
-      "roto.runtime.v1.DeleteBulkStateRequest\032\026" +
-      ".google.protobuf.Empty\"\000\022j\n\027ExecuteState" +
-      "Transaction\0225.spec.proto.runtime.v1.Exec" +
-      "uteStateTransactionRequest\032\026.google.prot" +
-      "obuf.Empty\"\000\022T\n\014PublishEvent\022*.spec.prot" +
-      "o.runtime.v1.PublishEventRequest\032\026.googl" +
-      "e.protobuf.Empty\"\000\022\\\n\007GetFile\022%.spec.pro" +
-      "to.runtime.v1.GetFileRequest\032&.spec.prot" +
-      "o.runtime.v1.GetFileResponse\"\0000\001\022L\n\007PutF" +
-      "ile\022%.spec.proto.runtime.v1.PutFileReque" +
-      "st\032\026.google.protobuf.Empty\"\000(\001\022Y\n\010ListFi" +
-      "le\022&.spec.proto.runtime.v1.ListFileReque" +
-      "st\032#.spec.proto.runtime.v1.ListFileResp\"" +
-      "\000\022J\n\007DelFile\022%.spec.proto.runtime.v1.Del" +
-      "FileRequest\032\026.google.protobuf.Empty\"\000\022f\n" +
-      "\013GetFileMeta\022).spec.proto.runtime.v1.Get" +
-      "FileMetaRequest\032*.spec.proto.runtime.v1." +
-      "GetFileMetaResponse\"\000\022l\n\rInvokeBinding\022+" +
-      ".spec.proto.runtime.v1.InvokeBindingRequ" +
-      "est\032,.spec.proto.runtime.v1.InvokeBindin" +
-      "gResponse\"\000BT\n\025spec.proto.runtime.v1B\014Ru" +
-      "ntimeProtoZ-mosn.io/layotto/spec/proto/r" +
-      "untime/v1;runtimeb\006proto3"
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\366\001\n\017GetState" +
+      "Request\022\022\n\nstore_name\030\001 \001(\t\022\013\n\003key\030\002 \001(\t" +
+      "\022I\n\013consistency\030\003 \001(\01624.spec.proto.runti" +
+      "me.v1.StateOptions.StateConsistency\022F\n\010m" +
+      "etadata\030\004 \003(\01324.spec.proto.runtime.v1.Ge" +
+      "tStateRequest.MetadataEntry\032/\n\rMetadataE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\311\001\n" +
+      "\023GetBulkStateRequest\022\022\n\nstore_name\030\001 \001(\t" +
+      "\022\014\n\004keys\030\002 \003(\t\022\023\n\013parallelism\030\003 \001(\005\022J\n\010m" +
+      "etadata\030\004 \003(\01328.spec.proto.runtime.v1.Ge" +
+      "tBulkStateRequest.MetadataEntry\032/\n\rMetad" +
+      "ataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\"K\n\024GetBulkStateResponse\0223\n\005items\030\001 \003(\0132" +
+      "$.spec.proto.runtime.v1.BulkStateItem\"\276\001" +
+      "\n\rBulkStateItem\022\013\n\003key\030\001 \001(\t\022\014\n\004data\030\002 \001" +
+      "(\014\022\014\n\004etag\030\003 \001(\t\022\r\n\005error\030\004 \001(\t\022D\n\010metad" +
+      "ata\030\005 \003(\01322.spec.proto.runtime.v1.BulkSt" +
+      "ateItem.MetadataEntry\032/\n\rMetadataEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\250\001\n\020GetSt" +
+      "ateResponse\022\014\n\004data\030\001 \001(\014\022\014\n\004etag\030\002 \001(\t\022" +
+      "G\n\010metadata\030\003 \003(\01325.spec.proto.runtime.v" +
+      "1.GetStateResponse.MetadataEntry\032/\n\rMeta" +
+      "dataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"\222\002\n\022DeleteStateRequest\022\022\n\nstore_name\030\001" +
+      " \001(\t\022\013\n\003key\030\002 \001(\t\022)\n\004etag\030\003 \001(\0132\033.spec.p" +
+      "roto.runtime.v1.Etag\0224\n\007options\030\004 \001(\0132#." +
+      "spec.proto.runtime.v1.StateOptions\022I\n\010me" +
+      "tadata\030\005 \003(\01327.spec.proto.runtime.v1.Del" +
+      "eteStateRequest.MetadataEntry\032/\n\rMetadat" +
+      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"^" +
+      "\n\026DeleteBulkStateRequest\022\022\n\nstore_name\030\001" +
+      " \001(\t\0220\n\006states\030\002 \003(\0132 .spec.proto.runtim" +
+      "e.v1.StateItem\"X\n\020SaveStateRequest\022\022\n\nst" +
+      "ore_name\030\001 \001(\t\0220\n\006states\030\002 \003(\0132 .spec.pr" +
+      "oto.runtime.v1.StateItem\"\373\001\n\tStateItem\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\014\022)\n\004etag\030\003 \001(\013" +
+      "2\033.spec.proto.runtime.v1.Etag\022@\n\010metadat" +
+      "a\030\004 \003(\0132..spec.proto.runtime.v1.StateIte" +
+      "m.MetadataEntry\0224\n\007options\030\005 \001(\0132#.spec." +
+      "proto.runtime.v1.StateOptions\032/\n\rMetadat" +
+      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\025" +
+      "\n\004Etag\022\r\n\005value\030\001 \001(\t\"\361\002\n\014StateOptions\022I" +
+      "\n\013concurrency\030\001 \001(\01624.spec.proto.runtime" +
+      ".v1.StateOptions.StateConcurrency\022I\n\013con" +
+      "sistency\030\002 \001(\01624.spec.proto.runtime.v1.S" +
+      "tateOptions.StateConsistency\"h\n\020StateCon" +
+      "currency\022\033\n\027CONCURRENCY_UNSPECIFIED\020\000\022\033\n" +
+      "\027CONCURRENCY_FIRST_WRITE\020\001\022\032\n\026CONCURRENC" +
+      "Y_LAST_WRITE\020\002\"a\n\020StateConsistency\022\033\n\027CO" +
+      "NSISTENCY_UNSPECIFIED\020\000\022\030\n\024CONSISTENCY_E" +
+      "VENTUAL\020\001\022\026\n\022CONSISTENCY_STRONG\020\002\"g\n\033Tra" +
+      "nsactionalStateOperation\022\025\n\roperationTyp" +
+      "e\030\001 \001(\t\0221\n\007request\030\002 \001(\0132 .spec.proto.ru" +
+      "ntime.v1.StateItem\"\203\002\n\036ExecuteStateTrans" +
+      "actionRequest\022\021\n\tstoreName\030\001 \001(\t\022F\n\noper" +
+      "ations\030\002 \003(\01322.spec.proto.runtime.v1.Tra" +
+      "nsactionalStateOperation\022U\n\010metadata\030\003 \003" +
+      "(\0132C.spec.proto.runtime.v1.ExecuteStateT" +
+      "ransactionRequest.MetadataEntry\032/\n\rMetad" +
+      "ataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\"\337\001\n\023PublishEventRequest\022\023\n\013pubsub_name\030" +
+      "\001 \001(\t\022\r\n\005topic\030\002 \001(\t\022\014\n\004data\030\003 \001(\014\022\031\n\021da" +
+      "ta_content_type\030\004 \001(\t\022J\n\010metadata\030\005 \003(\0132" +
+      "8.spec.proto.runtime.v1.PublishEventRequ" +
+      "est.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\303\001\n\024InvokeBin" +
+      "dingRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\022" +
+      "K\n\010metadata\030\003 \003(\01329.spec.proto.runtime.v" +
+      "1.InvokeBindingRequest.MetadataEntry\022\021\n\t" +
+      "operation\030\004 \001(\t\032/\n\rMetadataEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\244\001\n\025InvokeBindi" +
+      "ngResponse\022\014\n\004data\030\001 \001(\014\022L\n\010metadata\030\002 \003" +
+      "(\0132:.spec.proto.runtime.v1.InvokeBinding" +
+      "Response.MetadataEntry\032/\n\rMetadataEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\255\001\n\020GetS" +
+      "ecretRequest\022\022\n\nstore_name\030\001 \001(\t\022\013\n\003key\030" +
+      "\002 \001(\t\022G\n\010metadata\030\003 \003(\01325.spec.proto.run" +
+      "time.v1.GetSecretRequest.MetadataEntry\032/" +
+      "\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001\"\202\001\n\021GetSecretResponse\022@\n\004data\030\001 " +
+      "\003(\01322.spec.proto.runtime.v1.GetSecretRes" +
+      "ponse.DataEntry\032+\n\tDataEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\250\001\n\024GetBulkSecretRe" +
+      "quest\022\022\n\nstore_name\030\001 \001(\t\022K\n\010metadata\030\002 " +
+      "\003(\01329.spec.proto.runtime.v1.GetBulkSecre" +
+      "tRequest.MetadataEntry\032/\n\rMetadataEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\261\001\n\025GetB" +
+      "ulkSecretResponse\022D\n\004data\030\001 \003(\01326.spec.p" +
+      "roto.runtime.v1.GetBulkSecretResponse.Da" +
+      "taEntry\032R\n\tDataEntry\022\013\n\003key\030\001 \001(\t\0224\n\005val" +
+      "ue\030\002 \001(\0132%.spec.proto.runtime.v1.SecretR" +
+      "esponse:\0028\001\"\205\001\n\016SecretResponse\022C\n\007secret" +
+      "s\030\001 \003(\01322.spec.proto.runtime.v1.SecretRe" +
+      "sponse.SecretsEntry\032.\n\014SecretsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\0012\264\022\n\007Runtime\022" +
+      "]\n\010SayHello\022&.spec.proto.runtime.v1.SayH" +
+      "elloRequest\032\'.spec.proto.runtime.v1.SayH" +
+      "elloResponse\"\000\022e\n\rInvokeService\022+.spec.p" +
+      "roto.runtime.v1.InvokeServiceRequest\032%.s" +
+      "pec.proto.runtime.v1.InvokeResponse\"\000\022u\n" +
+      "\020GetConfiguration\022..spec.proto.runtime.v" +
+      "1.GetConfigurationRequest\032/.spec.proto.r" +
+      "untime.v1.GetConfigurationResponse\"\000\022^\n\021" +
+      "SaveConfiguration\022/.spec.proto.runtime.v" +
+      "1.SaveConfigurationRequest\032\026.google.prot" +
+      "obuf.Empty\"\000\022b\n\023DeleteConfiguration\0221.sp" +
+      "ec.proto.runtime.v1.DeleteConfigurationR" +
+      "equest\032\026.google.protobuf.Empty\"\000\022\213\001\n\026Sub" +
+      "scribeConfiguration\0224.spec.proto.runtime" +
+      ".v1.SubscribeConfigurationRequest\0325.spec" +
+      ".proto.runtime.v1.SubscribeConfiguration" +
+      "Response\"\000(\0010\001\022Z\n\007TryLock\022%.spec.proto.r" +
+      "untime.v1.TryLockRequest\032&.spec.proto.ru" +
+      "ntime.v1.TryLockResponse\"\000\022W\n\006Unlock\022$.s" +
+      "pec.proto.runtime.v1.UnlockRequest\032%.spe" +
+      "c.proto.runtime.v1.UnlockResponse\"\000\022`\n\tG" +
+      "etNextId\022\'.spec.proto.runtime.v1.GetNext" +
+      "IdRequest\032(.spec.proto.runtime.v1.GetNex" +
+      "tIdResponse\"\000\022]\n\010GetState\022&.spec.proto.r" +
+      "untime.v1.GetStateRequest\032\'.spec.proto.r" +
+      "untime.v1.GetStateResponse\"\000\022i\n\014GetBulkS" +
+      "tate\022*.spec.proto.runtime.v1.GetBulkStat" +
+      "eRequest\032+.spec.proto.runtime.v1.GetBulk" +
+      "StateResponse\"\000\022N\n\tSaveState\022\'.spec.prot" +
+      "o.runtime.v1.SaveStateRequest\032\026.google.p" +
+      "rotobuf.Empty\"\000\022R\n\013DeleteState\022).spec.pr" +
+      "oto.runtime.v1.DeleteStateRequest\032\026.goog" +
+      "le.protobuf.Empty\"\000\022Z\n\017DeleteBulkState\022-" +
+      ".spec.proto.runtime.v1.DeleteBulkStateRe" +
+      "quest\032\026.google.protobuf.Empty\"\000\022j\n\027Execu" +
+      "teStateTransaction\0225.spec.proto.runtime." +
+      "v1.ExecuteStateTransactionRequest\032\026.goog" +
+      "le.protobuf.Empty\"\000\022T\n\014PublishEvent\022*.sp" +
+      "ec.proto.runtime.v1.PublishEventRequest\032" +
+      "\026.google.protobuf.Empty\"\000\022\\\n\007GetFile\022%.s" +
+      "pec.proto.runtime.v1.GetFileRequest\032&.sp" +
+      "ec.proto.runtime.v1.GetFileResponse\"\0000\001\022" +
+      "L\n\007PutFile\022%.spec.proto.runtime.v1.PutFi" +
+      "leRequest\032\026.google.protobuf.Empty\"\000(\001\022Y\n" +
+      "\010ListFile\022&.spec.proto.runtime.v1.ListFi" +
+      "leRequest\032#.spec.proto.runtime.v1.ListFi" +
+      "leResp\"\000\022J\n\007DelFile\022%.spec.proto.runtime" +
+      ".v1.DelFileRequest\032\026.google.protobuf.Emp" +
+      "ty\"\000\022f\n\013GetFileMeta\022).spec.proto.runtime" +
+      ".v1.GetFileMetaRequest\032*.spec.proto.runt" +
+      "ime.v1.GetFileMetaResponse\"\000\022l\n\rInvokeBi" +
+      "nding\022+.spec.proto.runtime.v1.InvokeBind" +
+      "ingRequest\032,.spec.proto.runtime.v1.Invok" +
+      "eBindingResponse\"\000\022`\n\tGetSecret\022\'.spec.p" +
+      "roto.runtime.v1.GetSecretRequest\032(.spec." +
+      "proto.runtime.v1.GetSecretResponse\"\000\022l\n\r" +
+      "GetBulkSecret\022+.spec.proto.runtime.v1.Ge" +
+      "tBulkSecretRequest\032,.spec.proto.runtime." +
+      "v1.GetBulkSecretResponse\"\000BT\n\025spec.proto" +
+      ".runtime.v1B\014RuntimeProtoZ-mosn.io/layot" +
+      "to/spec/proto/runtime/v1;runtimeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -53691,6 +59752,66 @@ public final class RuntimeProto {
     internal_static_spec_proto_runtime_v1_InvokeBindingResponse_MetadataEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_spec_proto_runtime_v1_InvokeBindingResponse_MetadataEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_spec_proto_runtime_v1_GetSecretRequest_descriptor =
+      getDescriptor().getMessageTypes().get(48);
+    internal_static_spec_proto_runtime_v1_GetSecretRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_spec_proto_runtime_v1_GetSecretRequest_descriptor,
+        new java.lang.String[] { "StoreName", "Key", "Metadata", });
+    internal_static_spec_proto_runtime_v1_GetSecretRequest_MetadataEntry_descriptor =
+      internal_static_spec_proto_runtime_v1_GetSecretRequest_descriptor.getNestedTypes().get(0);
+    internal_static_spec_proto_runtime_v1_GetSecretRequest_MetadataEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_spec_proto_runtime_v1_GetSecretRequest_MetadataEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_spec_proto_runtime_v1_GetSecretResponse_descriptor =
+      getDescriptor().getMessageTypes().get(49);
+    internal_static_spec_proto_runtime_v1_GetSecretResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_spec_proto_runtime_v1_GetSecretResponse_descriptor,
+        new java.lang.String[] { "Data", });
+    internal_static_spec_proto_runtime_v1_GetSecretResponse_DataEntry_descriptor =
+      internal_static_spec_proto_runtime_v1_GetSecretResponse_descriptor.getNestedTypes().get(0);
+    internal_static_spec_proto_runtime_v1_GetSecretResponse_DataEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_spec_proto_runtime_v1_GetSecretResponse_DataEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_spec_proto_runtime_v1_GetBulkSecretRequest_descriptor =
+      getDescriptor().getMessageTypes().get(50);
+    internal_static_spec_proto_runtime_v1_GetBulkSecretRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_spec_proto_runtime_v1_GetBulkSecretRequest_descriptor,
+        new java.lang.String[] { "StoreName", "Metadata", });
+    internal_static_spec_proto_runtime_v1_GetBulkSecretRequest_MetadataEntry_descriptor =
+      internal_static_spec_proto_runtime_v1_GetBulkSecretRequest_descriptor.getNestedTypes().get(0);
+    internal_static_spec_proto_runtime_v1_GetBulkSecretRequest_MetadataEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_spec_proto_runtime_v1_GetBulkSecretRequest_MetadataEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_spec_proto_runtime_v1_GetBulkSecretResponse_descriptor =
+      getDescriptor().getMessageTypes().get(51);
+    internal_static_spec_proto_runtime_v1_GetBulkSecretResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_spec_proto_runtime_v1_GetBulkSecretResponse_descriptor,
+        new java.lang.String[] { "Data", });
+    internal_static_spec_proto_runtime_v1_GetBulkSecretResponse_DataEntry_descriptor =
+      internal_static_spec_proto_runtime_v1_GetBulkSecretResponse_descriptor.getNestedTypes().get(0);
+    internal_static_spec_proto_runtime_v1_GetBulkSecretResponse_DataEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_spec_proto_runtime_v1_GetBulkSecretResponse_DataEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_spec_proto_runtime_v1_SecretResponse_descriptor =
+      getDescriptor().getMessageTypes().get(52);
+    internal_static_spec_proto_runtime_v1_SecretResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_spec_proto_runtime_v1_SecretResponse_descriptor,
+        new java.lang.String[] { "Secrets", });
+    internal_static_spec_proto_runtime_v1_SecretResponse_SecretsEntry_descriptor =
+      internal_static_spec_proto_runtime_v1_SecretResponse_descriptor.getNestedTypes().get(0);
+    internal_static_spec_proto_runtime_v1_SecretResponse_SecretsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_spec_proto_runtime_v1_SecretResponse_SecretsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.EmptyProto.getDescriptor();
     com.google.protobuf.AnyProto.getDescriptor();

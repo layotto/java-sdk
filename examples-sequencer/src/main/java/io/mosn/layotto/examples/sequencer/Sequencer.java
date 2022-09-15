@@ -2,7 +2,6 @@ package io.mosn.layotto.examples.sequencer;
 
 import io.mosn.layotto.v1.RuntimeClientBuilder;
 import io.mosn.layotto.v1.config.RuntimeProperties;
-import org.junit.Assert;
 import spec.sdk.runtime.v1.client.RuntimeClient;
 import spec.sdk.runtime.v1.domain.sequencer.GetNextIdRequest;
 import spec.sdk.runtime.v1.domain.sequencer.GetNextIdResponse;
@@ -37,9 +36,15 @@ public class Sequencer {
             // assert
             long nextId = nextIdResponse.getNextId();
             System.out.println("Next id: " + nextId);
-            Assert.assertTrue(nextId > prev);
+            assertTrue(nextId > prev);
 
             prev = nextId;
+        }
+    }
+
+    private static void assertTrue(boolean b) {
+        if (!b) {
+            throw new RuntimeException("Assertion fail");
         }
     }
 

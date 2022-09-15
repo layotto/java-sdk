@@ -40,6 +40,7 @@ Try the following examples to learn more about this SDK:
 * [Pubsub API](./examples/src/main/java/io/mosn/layotto/examples/pubsub)
 * [Sequencer API](./examples-sequencer/src/main/java/io/mosn/layotto/examples/sequencer)
 * [File API](./examples-file/src/main/java/io/mosn/layotto/examples/file)
+* [Oss API](./examples-oss/src/main/java/io/mosn/layotto/examples/oss)
 
 ## java sdk developer guide 
 
@@ -54,15 +55,18 @@ mvn clean compile
 It will format your code automatically.
 
 ### How to generate a Java PROTO file
+#### Solution A
 
-#### 1. Download proto compiler [protoc](https://github.com/protocolbuffers/protobuf/releases)
-my protoc version:
 ```shell
-$ protoc --version
-libprotoc 3.11.2
+make proto
 ```
 
-#### 2. Check `option` fields in these proto files
+The script will download the layotto proto files and compile them automatically.
+
+#### Solution B
+##### 1. Copy the proto files to spec/src/main/spec
+
+##### 2. Check `option` fields in these proto files
 Make sure these `option` fields have been configurated.
 
 spec/proto/runtime/v1/appcallback.proto : 
@@ -77,12 +81,11 @@ option java_outer_classname = "RuntimeProto";
 option java_package = "spec.proto.runtime.v1";
 ```
 
-#### 3. Compile them into corresponding `JAVA` files
+##### 3. Compile them into corresponding `JAVA` files
 ```shell
 # make sure you replace this `${your PROJECT path}` with your own project path.
-cd ${your PROJECT path}/spec/proto/runtime/v1
-protoc -I=. --java_out=../../../../sdk/java-sdk/sdk/src/main/java/  runtime.proto
-protoc -I=. --java_out=../../../../sdk/java-sdk/sdk/src/main/java/  appcallback.proto
+cd ${your PROJECT path}
+mvn compile
 ```
 
 [comment]: <> (PS: We recommend that you use the maven plugin `protoc-gen-grpc-java` to generate these protobuf and grpc related java code.)

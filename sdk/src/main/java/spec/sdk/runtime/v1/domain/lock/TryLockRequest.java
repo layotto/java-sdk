@@ -15,8 +15,57 @@
 package spec.sdk.runtime.v1.domain.lock;
 
 public class TryLockRequest {
-    public String storeName;
-    public String resourceId;
-    public String lockOwner;
-    public int    expire;
+    private String storeName;
+    private String resourceId;
+    private String lockOwner;
+    private int    expire;
+
+    public TryLockRequest(String storeName, String resourceId, String lockOwner, int expire) {
+        this.storeName = storeName;
+        this.resourceId = resourceId;
+        this.lockOwner = lockOwner;
+        this.expire = expire;
+    }
+
+    public String getStoreName() {
+        return storeName;
+    }
+
+    public void setStoreName(String storeName) {
+        this.storeName = storeName;
+    }
+
+    public String getResourceId() {
+        return resourceId;
+    }
+
+    public void setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+    }
+
+    public String getLockOwner() {
+        return lockOwner;
+    }
+
+    public void setLockOwner(String lockOwner) {
+        this.lockOwner = lockOwner;
+    }
+
+    public int getExpire() {
+        return expire;
+    }
+
+    public void setExpire(int expire) {
+        this.expire = expire;
+    }
+
+    @Override
+    public String toString() {
+        return "TryLockRequest{" +
+            "storeName='" + storeName + '\'' +
+            ", resourceId='" + resourceId + '\'' +
+            ", lockOwner='" + lockOwner + '\'' +
+            ", expire=" + expire +
+            '}';
+    }
 }

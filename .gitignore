@@ -18,7 +18,18 @@ bin
 # log
 logs/
 *.log
+examples-preview-service/*.out
+examples-preview-service/*.pid
 
 #protobuf
 example/build/*
 test/test-integration/build/*
+
+# layotto
+layotto/**/*
+layotto/**
+layotto
+
+*.proto
+spec/src/main/spec/*.proto
+spec/**/*.proto

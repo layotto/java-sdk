@@ -30,6 +30,7 @@ import io.mosn.layotto.v1.serializer.ObjectSerializer;
 import org.slf4j.Logger;
 import spec.proto.runtime.v1.RuntimeGrpc;
 import spec.proto.runtime.v1.RuntimeProto;
+import spec.proto.extension.v1.s3.ObjectStorageServiceGrpc;
 import spec.sdk.runtime.v1.domain.file.DelFileRequest;
 import spec.sdk.runtime.v1.domain.file.DelFileResponse;
 import spec.sdk.runtime.v1.domain.file.FileInfo;
@@ -42,6 +43,10 @@ import spec.sdk.runtime.v1.domain.file.ListFileResponse;
 import spec.sdk.runtime.v1.domain.file.PutFileRequest;
 import spec.sdk.runtime.v1.domain.file.PutFileResponse;
 import spec.sdk.runtime.v1.domain.invocation.InvokeResponse;
+import spec.sdk.runtime.v1.domain.lock.TryLockRequest;
+import spec.sdk.runtime.v1.domain.lock.TryLockResponse;
+import spec.sdk.runtime.v1.domain.lock.UnlockRequest;
+import spec.sdk.runtime.v1.domain.lock.UnlockResponse;
 import spec.sdk.runtime.v1.domain.sequencer.GetNextIdRequest;
 import spec.sdk.runtime.v1.domain.sequencer.GetNextIdResponse;
 import spec.sdk.runtime.v1.domain.state.DeleteStateRequest;
@@ -66,15 +71,18 @@ import java.util.concurrent.TimeUnit;
 
 public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRuntimeClient {
 
-    private static final String                                                         TIMEOUT_KEY = "timeout";
-    private final StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> stubManager;
+    private static final String                                                                                                             TIMEOUT_KEY = "timeout";
+    private final StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub>                                                     runtimeStubManager;
+    private final StubManager<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> ossStubManager;
 
     RuntimeClientGrpc(Logger logger,
                       int timeoutMs,
                       ObjectSerializer stateSerializer,
-                      StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> stubManager) {
+                      StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> runtimeStubManager,
+                      StubManager<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> ossStubManager) {
         super(logger, timeoutMs, stateSerializer);
-        this.stubManager = stubManager;
+        this.runtimeStubManager = runtimeStubManager;
+        this.ossStubManager = ossStubManager;
     }
 
     @Override
@@ -87,7 +95,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
                 .build();
 
             // 2. invoke
-            RuntimeProto.SayHelloResponse response = stubManager.getBlockingStub()
+            RuntimeProto.SayHelloResponse response = runtimeStubManager.getBlockingStub()
                 .withDeadlineAfter(timeoutMillisecond,
                     TimeUnit.MILLISECONDS)
                 .sayHello(req);
@@ -128,7 +136,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             metadata.put(key, Integer.toString(timeoutMs));
 
             // 2. invoke
-            RuntimeProto.InvokeResponse resp = this.stubManager.getBlockingStub()
+            RuntimeProto.InvokeResponse resp = this.runtimeStubManager.getBlockingStub()
                     .withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS)
                     .withInterceptors(MetadataUtils.newAttachHeadersInterceptor(metadata))
                     .invokeService(invokeReq);
@@ -136,7 +144,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             // 3. parse result
             InvokeResponse<byte[]> result = new InvokeResponse<>();
             result.setContentType(resp.getContentType());
-            byte[] bytes = new byte[]{};
+            byte[] bytes = new byte[] {};
             result.setData(bytes);
             if (resp.getData() == null) {
                 return result;
@@ -183,7 +191,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             RuntimeProto.PublishEventRequest req = envelopeBuilder.build();
 
             // 3. invoke
-            this.stubManager.getBlockingStub().publishEvent(req);
+            this.runtimeStubManager.getBlockingStub().publishEvent(req);
         } catch (Exception e) {
             logger.error("publishEvent error ", e);
             throw new RuntimeClientException(e);
@@ -210,7 +218,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             }
             RuntimeProto.SaveStateRequest req = builder.build();
             // 3. invoke
-            this.stubManager.getBlockingStub()
+            this.runtimeStubManager.getBlockingStub()
                 .withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS)
                 .saveState(req);
         } catch (Exception e) {
@@ -314,7 +322,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             RuntimeProto.DeleteStateRequest req = builder.build();
 
             // 3. invoke
-            this.stubManager.getBlockingStub()
+            this.runtimeStubManager.getBlockingStub()
                 .withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS)
                 .deleteState(req);
         } catch (Exception e) {
@@ -392,7 +400,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             RuntimeProto.ExecuteStateTransactionRequest req = builder.build();
 
             // 3. invoke grpc api
-            this.stubManager.getBlockingStub().executeStateTransaction(req);
+            this.runtimeStubManager.getBlockingStub().executeStateTransaction(req);
         } catch (IllegalArgumentException e) {
             logger.error("executeStateTransaction error ", e);
             throw e;
@@ -430,7 +438,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             RuntimeProto.GetStateRequest envelope = builder.build();
 
             // 3. invoke grpc api
-            RuntimeGrpc.RuntimeBlockingStub stub = this.stubManager.getBlockingStub();
+            RuntimeGrpc.RuntimeBlockingStub stub = this.runtimeStubManager.getBlockingStub();
             if (timeoutMs > 0) {
                 stub = stub.withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS);
             }
@@ -472,7 +480,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             RuntimeProto.GetBulkStateRequest envelope = builder.build();
 
             // 3. invoke grpc API
-            RuntimeGrpc.RuntimeBlockingStub stub = this.stubManager.getBlockingStub();
+            RuntimeGrpc.RuntimeBlockingStub stub = this.runtimeStubManager.getBlockingStub();
             if (timeoutMs > 0) {
                 stub = stub.withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS);
             }
@@ -512,22 +520,22 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
     /**
      * Getter method for property <tt>stubManager</tt>.
-     *
-     * Do not use it !
-     * This method is deprecated and might be refactored in the future.
-     * We want this client to expose grpc Channels instead of grpc stubs.
+     * <p>
+     * Do not use it ! This method is deprecated and might be refactored in the future. We want this client to expose grpc Channels instead
+     * of grpc stubs.
      *
      * @return property value of stubManager
      */
     @Deprecated
     @Override
     public StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> getStubManager() {
-        return stubManager;
+        return runtimeStubManager;
     }
 
     @Override
     public void shutdown() {
-        stubManager.destroy();
+        runtimeStubManager.destroy();
+        ossStubManager.destroy();
     }
 
     @Override
@@ -560,7 +568,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
         GetFilePipe pipe = new GetFilePipe(request.getFileName());
 
-        stubManager.
+        runtimeStubManager.
             getAsyncStub().
             getFile(
                 buildGetFileRequest(
@@ -577,7 +585,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
         checkParamOfListFile(request);
 
-        RuntimeProto.ListFileResp response = stubManager.
+        RuntimeProto.ListFileResp response = runtimeStubManager.
             getBlockingStub().
             withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS).
             listFile(
@@ -596,7 +604,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
         checkParamOfDeleteFile(request);
 
-        stubManager.
+        runtimeStubManager.
             getBlockingStub().
             withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS).
             delFile(
@@ -610,7 +618,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
 
         checkParamOfGetFileMeta(request);
 
-        RuntimeProto.GetFileMetaResponse resp = stubManager.
+        RuntimeProto.GetFileMetaResponse resp = runtimeStubManager.
             getBlockingStub().
             withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS).
             getFileMeta(
@@ -707,6 +715,16 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
         if (request.getFileName() == null) {
             throw new IllegalArgumentException("miss file name");
         }
+    }
+
+    @Override
+    public ObjectStorageServiceGrpc.ObjectStorageServiceStub getOssAsyncStub() {
+        return ossStubManager.getAsyncStub();
+    }
+
+    @Override
+    public ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub getOssBlockingStub() {
+        return ossStubManager.getBlockingStub();
     }
 
     private class PutFileFuture implements StreamObserver<Empty> {
@@ -866,7 +884,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
                                                                               StreamObserver<Empty> callBackObserver,
                                                                               int timeoutMs) {
 
-        return stubManager.
+        return runtimeStubManager.
             getAsyncStub().
             withDeadlineAfter(timeoutMs, TimeUnit.MILLISECONDS).
             putFile(callBackObserver);
@@ -996,21 +1014,23 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
     @Override
     public GetNextIdResponse getNextId(GetNextIdRequest req) {
         try {
-            RuntimeProto.SequencerOptions.AutoIncrement autoIncrement = RuntimeProto.SequencerOptions.AutoIncrement.forNumber(req.getOptionsValue());
+            RuntimeProto.SequencerOptions.AutoIncrement autoIncrement = RuntimeProto.SequencerOptions.AutoIncrement
+                .forNumber(
+                req.getOptionsValue());
 
             RuntimeProto.SequencerOptions options = RuntimeProto.SequencerOptions.newBuilder()
-                    .setIncrement(autoIncrement)
-                    .build();
+                .setIncrement(autoIncrement)
+                .build();
 
             RuntimeProto.GetNextIdRequest request = RuntimeProto.GetNextIdRequest.newBuilder()
-                    .setKey(req.getKey())
-                    .setOptions(options)
-                    .setStoreName(req.getStoreName())
-                    .putAllMetadata(req.getMetaData())
-                    .build();
+                .setKey(req.getKey())
+                .setOptions(options)
+                .setStoreName(req.getStoreName())
+                .putAllMetadata(req.getMetaData())
+                .build();
 
-            RuntimeProto.GetNextIdResponse response = stubManager.getBlockingStub()
-                    .getNextId(request);
+            RuntimeProto.GetNextIdResponse response = runtimeStubManager.getBlockingStub()
+                .getNextId(request);
 
             GetNextIdResponse getNextIdResponse = new GetNextIdResponse();
             getNextIdResponse.setNextId(response.getNextId());
@@ -1020,5 +1040,65 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             logger.error("getNextId error ", e);
             throw new RuntimeClientException(e);
         }
+    }
+
+    @Override
+    public TryLockResponse tryLock(TryLockRequest request) {
+
+        if (request == null) {
+            throw new IllegalArgumentException("request is null");
+        }
+
+        try {
+            RuntimeProto.TryLockRequest req = RuntimeProto.TryLockRequest
+                .newBuilder()
+                .setLockOwner(request.getLockOwner())
+                .setExpire(request.getExpire())
+                .setStoreName(request.getStoreName())
+                .setResourceId(request.getResourceId())
+                .build();
+
+            if (logger.isDebugEnabled()) {
+                logger.debug("try lock request params {}", req);
+            }
+
+            RuntimeProto.TryLockResponse tryLockResponse = runtimeStubManager
+                .getBlockingStub()
+                .tryLock(req);
+
+            return new TryLockResponse(tryLockResponse.getSuccess());
+        } catch (Exception e) {
+            throw new RuntimeClientException(e);
+        }
+
+    }
+
+    @Override
+    public UnlockResponse unlock(UnlockRequest request) {
+        if (request == null) {
+            throw new IllegalArgumentException("request is null");
+        }
+
+        try {
+            RuntimeProto.UnlockRequest req = RuntimeProto.UnlockRequest
+                .newBuilder()
+                .setLockOwner(request.getLockOwner())
+                .setStoreName(request.getStoreName())
+                .setResourceId(request.getResourceId())
+                .build();
+
+            if (logger.isDebugEnabled()) {
+                logger.debug("unlock request params {}", req);
+            }
+
+            RuntimeProto.UnlockResponse.Status status = runtimeStubManager
+                .getBlockingStub()
+                .unlock(req)
+                .getStatus();
+            return new UnlockResponse(status.getNumber());
+        } catch (Exception e) {
+            throw new RuntimeClientException(e);
+        }
+
     }
 }

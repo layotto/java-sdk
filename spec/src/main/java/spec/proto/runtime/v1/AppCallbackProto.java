@@ -242,7 +242,7 @@ public final class AppCallbackProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.TopicEventRequest}
    */
-  public static final class TopicEventRequest extends
+  public  static final class TopicEventRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.TopicEventRequest)
       TopicEventRequestOrBuilder {
@@ -409,7 +409,6 @@ public final class AppCallbackProto {
      * <code>string id = 1;</code>
      * @return The id.
      */
-    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -432,7 +431,6 @@ public final class AppCallbackProto {
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -461,7 +459,6 @@ public final class AppCallbackProto {
      * <code>string source = 2;</code>
      * @return The source.
      */
-    @java.lang.Override
     public java.lang.String getSource() {
       java.lang.Object ref = source_;
       if (ref instanceof java.lang.String) {
@@ -486,7 +483,6 @@ public final class AppCallbackProto {
      * <code>string source = 2;</code>
      * @return The bytes for source.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getSourceBytes() {
       java.lang.Object ref = source_;
@@ -511,7 +507,6 @@ public final class AppCallbackProto {
      * <code>string type = 3;</code>
      * @return The type.
      */
-    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -532,7 +527,6 @@ public final class AppCallbackProto {
      * <code>string type = 3;</code>
      * @return The bytes for type.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -557,7 +551,6 @@ public final class AppCallbackProto {
      * <code>string spec_version = 4;</code>
      * @return The specVersion.
      */
-    @java.lang.Override
     public java.lang.String getSpecVersion() {
       java.lang.Object ref = specVersion_;
       if (ref instanceof java.lang.String) {
@@ -578,7 +571,6 @@ public final class AppCallbackProto {
      * <code>string spec_version = 4;</code>
      * @return The bytes for specVersion.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getSpecVersionBytes() {
       java.lang.Object ref = specVersion_;
@@ -603,7 +595,6 @@ public final class AppCallbackProto {
      * <code>string data_content_type = 5;</code>
      * @return The dataContentType.
      */
-    @java.lang.Override
     public java.lang.String getDataContentType() {
       java.lang.Object ref = dataContentType_;
       if (ref instanceof java.lang.String) {
@@ -624,7 +615,6 @@ public final class AppCallbackProto {
      * <code>string data_content_type = 5;</code>
      * @return The bytes for dataContentType.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getDataContentTypeBytes() {
       java.lang.Object ref = dataContentType_;
@@ -649,7 +639,6 @@ public final class AppCallbackProto {
      * <code>bytes data = 7;</code>
      * @return The data.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
@@ -664,7 +653,6 @@ public final class AppCallbackProto {
      * <code>string topic = 6;</code>
      * @return The topic.
      */
-    @java.lang.Override
     public java.lang.String getTopic() {
       java.lang.Object ref = topic_;
       if (ref instanceof java.lang.String) {
@@ -685,7 +673,6 @@ public final class AppCallbackProto {
      * <code>string topic = 6;</code>
      * @return The bytes for topic.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getTopicBytes() {
       java.lang.Object ref = topic_;
@@ -710,7 +697,6 @@ public final class AppCallbackProto {
      * <code>string pubsub_name = 8;</code>
      * @return The pubsubName.
      */
-    @java.lang.Override
     public java.lang.String getPubsubName() {
       java.lang.Object ref = pubsubName_;
       if (ref instanceof java.lang.String) {
@@ -731,7 +717,6 @@ public final class AppCallbackProto {
      * <code>string pubsub_name = 8;</code>
      * @return The bytes for pubsubName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getPubsubNameBytes() {
       java.lang.Object ref = pubsubName_;
@@ -780,7 +765,6 @@ public final class AppCallbackProto {
      * <code>map&lt;string, string&gt; metadata = 10;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -789,7 +773,6 @@ public final class AppCallbackProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -801,7 +784,6 @@ public final class AppCallbackProto {
      *
      * <code>map&lt;string, string&gt; metadata = 10;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -813,7 +795,6 @@ public final class AppCallbackProto {
      *
      * <code>map&lt;string, string&gt; metadata = 10;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -830,7 +811,6 @@ public final class AppCallbackProto {
      *
      * <code>map&lt;string, string&gt; metadata = 10;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -1839,7 +1819,6 @@ public final class AppCallbackProto {
        * <code>bytes data = 7;</code>
        * @return The data.
        */
-      @java.lang.Override
       public com.google.protobuf.ByteString getData() {
         return data_;
       }
@@ -2102,7 +2081,6 @@ public final class AppCallbackProto {
        * <code>map&lt;string, string&gt; metadata = 10;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -2111,7 +2089,6 @@ public final class AppCallbackProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -2123,7 +2100,6 @@ public final class AppCallbackProto {
        *
        * <code>map&lt;string, string&gt; metadata = 10;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -2135,7 +2111,6 @@ public final class AppCallbackProto {
        *
        * <code>map&lt;string, string&gt; metadata = 10;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -2152,7 +2127,6 @@ public final class AppCallbackProto {
        *
        * <code>map&lt;string, string&gt; metadata = 10;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
@@ -2306,7 +2280,7 @@ public final class AppCallbackProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.TopicEventResponse}
    */
-  public static final class TopicEventResponse extends
+  public  static final class TopicEventResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.TopicEventResponse)
       TopicEventResponseOrBuilder {
@@ -2494,10 +2468,6 @@ public final class AppCallbackProto {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -2542,7 +2512,7 @@ public final class AppCallbackProto {
      * <code>.spec.proto.runtime.v1.TopicEventResponse.TopicEventResponseStatus status = 1;</code>
      * @return The enum numeric value on the wire for status.
      */
-    @java.lang.Override public int getStatusValue() {
+    public int getStatusValue() {
       return status_;
     }
     /**
@@ -2553,7 +2523,7 @@ public final class AppCallbackProto {
      * <code>.spec.proto.runtime.v1.TopicEventResponse.TopicEventResponseStatus status = 1;</code>
      * @return The status.
      */
-    @java.lang.Override public spec.proto.runtime.v1.AppCallbackProto.TopicEventResponse.TopicEventResponseStatus getStatus() {
+    public spec.proto.runtime.v1.AppCallbackProto.TopicEventResponse.TopicEventResponseStatus getStatus() {
       @SuppressWarnings("deprecation")
       spec.proto.runtime.v1.AppCallbackProto.TopicEventResponse.TopicEventResponseStatus result = spec.proto.runtime.v1.AppCallbackProto.TopicEventResponse.TopicEventResponseStatus.valueOf(status_);
       return result == null ? spec.proto.runtime.v1.AppCallbackProto.TopicEventResponse.TopicEventResponseStatus.UNRECOGNIZED : result;
@@ -2873,7 +2843,7 @@ public final class AppCallbackProto {
        * <code>.spec.proto.runtime.v1.TopicEventResponse.TopicEventResponseStatus status = 1;</code>
        * @return The enum numeric value on the wire for status.
        */
-      @java.lang.Override public int getStatusValue() {
+      public int getStatusValue() {
         return status_;
       }
       /**
@@ -2886,7 +2856,6 @@ public final class AppCallbackProto {
        * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
-        
         status_ = value;
         onChanged();
         return this;
@@ -2899,7 +2868,6 @@ public final class AppCallbackProto {
        * <code>.spec.proto.runtime.v1.TopicEventResponse.TopicEventResponseStatus status = 1;</code>
        * @return The status.
        */
-      @java.lang.Override
       public spec.proto.runtime.v1.AppCallbackProto.TopicEventResponse.TopicEventResponseStatus getStatus() {
         @SuppressWarnings("deprecation")
         spec.proto.runtime.v1.AppCallbackProto.TopicEventResponse.TopicEventResponseStatus result = spec.proto.runtime.v1.AppCallbackProto.TopicEventResponse.TopicEventResponseStatus.valueOf(status_);
@@ -3045,7 +3013,7 @@ public final class AppCallbackProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.ListTopicSubscriptionsResponse}
    */
-  public static final class ListTopicSubscriptionsResponse extends
+  public  static final class ListTopicSubscriptionsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.ListTopicSubscriptionsResponse)
       ListTopicSubscriptionsResponseOrBuilder {
@@ -3142,7 +3110,6 @@ public final class AppCallbackProto {
      *
      * <code>repeated .spec.proto.runtime.v1.TopicSubscription subscriptions = 1;</code>
      */
-    @java.lang.Override
     public java.util.List<spec.proto.runtime.v1.AppCallbackProto.TopicSubscription> getSubscriptionsList() {
       return subscriptions_;
     }
@@ -3153,7 +3120,6 @@ public final class AppCallbackProto {
      *
      * <code>repeated .spec.proto.runtime.v1.TopicSubscription subscriptions = 1;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends spec.proto.runtime.v1.AppCallbackProto.TopicSubscriptionOrBuilder> 
         getSubscriptionsOrBuilderList() {
       return subscriptions_;
@@ -3165,7 +3131,6 @@ public final class AppCallbackProto {
      *
      * <code>repeated .spec.proto.runtime.v1.TopicSubscription subscriptions = 1;</code>
      */
-    @java.lang.Override
     public int getSubscriptionsCount() {
       return subscriptions_.size();
     }
@@ -3176,7 +3141,6 @@ public final class AppCallbackProto {
      *
      * <code>repeated .spec.proto.runtime.v1.TopicSubscription subscriptions = 1;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.AppCallbackProto.TopicSubscription getSubscriptions(int index) {
       return subscriptions_.get(index);
     }
@@ -3187,7 +3151,6 @@ public final class AppCallbackProto {
      *
      * <code>repeated .spec.proto.runtime.v1.TopicSubscription subscriptions = 1;</code>
      */
-    @java.lang.Override
     public spec.proto.runtime.v1.AppCallbackProto.TopicSubscriptionOrBuilder getSubscriptionsOrBuilder(
         int index) {
       return subscriptions_.get(index);
@@ -4008,7 +3971,7 @@ public final class AppCallbackProto {
    *
    * Protobuf type {@code spec.proto.runtime.v1.TopicSubscription}
    */
-  public static final class TopicSubscription extends
+  public  static final class TopicSubscription extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:spec.proto.runtime.v1.TopicSubscription)
       TopicSubscriptionOrBuilder {
@@ -4132,7 +4095,6 @@ public final class AppCallbackProto {
      * <code>string pubsub_name = 1;</code>
      * @return The pubsubName.
      */
-    @java.lang.Override
     public java.lang.String getPubsubName() {
       java.lang.Object ref = pubsubName_;
       if (ref instanceof java.lang.String) {
@@ -4153,7 +4115,6 @@ public final class AppCallbackProto {
      * <code>string pubsub_name = 1;</code>
      * @return The bytes for pubsubName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getPubsubNameBytes() {
       java.lang.Object ref = pubsubName_;
@@ -4178,7 +4139,6 @@ public final class AppCallbackProto {
      * <code>string topic = 2;</code>
      * @return The topic.
      */
-    @java.lang.Override
     public java.lang.String getTopic() {
       java.lang.Object ref = topic_;
       if (ref instanceof java.lang.String) {
@@ -4199,7 +4159,6 @@ public final class AppCallbackProto {
      * <code>string topic = 2;</code>
      * @return The bytes for topic.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getTopicBytes() {
       java.lang.Object ref = topic_;
@@ -4248,7 +4207,6 @@ public final class AppCallbackProto {
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
 
-    @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -4257,7 +4215,6 @@ public final class AppCallbackProto {
     /**
      * Use {@link #getMetadataMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
       return getMetadataMap();
@@ -4269,7 +4226,6 @@ public final class AppCallbackProto {
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
       return internalGetMetadata().getMap();
@@ -4281,7 +4237,6 @@ public final class AppCallbackProto {
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
@@ -4298,7 +4253,6 @@ public final class AppCallbackProto {
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
-    @java.lang.Override
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
@@ -4911,7 +4865,6 @@ public final class AppCallbackProto {
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
 
-      @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -4920,7 +4873,6 @@ public final class AppCallbackProto {
       /**
        * Use {@link #getMetadataMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
         return getMetadataMap();
@@ -4932,7 +4884,6 @@ public final class AppCallbackProto {
        *
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
         return internalGetMetadata().getMap();
@@ -4944,7 +4895,6 @@ public final class AppCallbackProto {
        *
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
@@ -4961,7 +4911,6 @@ public final class AppCallbackProto {
        *
        * <code>map&lt;string, string&gt; metadata = 3;</code>
        */
-      @java.lang.Override
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
