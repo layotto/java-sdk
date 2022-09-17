@@ -1,4 +1,9 @@
 preview_path=$(pwd)
+password=$REDIS_PASSWORD
+url_array=(
+'https://img2.doubanio.com/view/subject/l/public/s4196073.jpg'
+)
+num=${#url_array[@]}
 
 # download layotto
 # TODO use a stable version binary instead of compiling locally
@@ -24,6 +29,20 @@ nohup redis-server --port 6380 & >redis.out
 echo $! > redis.pid
 
 # TODO initialize data
+echo "======>Init redis date"
+for i in `seq $num`;
+do
+    redis-cli -h 127.0.0.1 -a "${password}" --no-auth-warning set ${i} value${i}
+    echo "key${i} value${i} done"
+done
+
+echo "======>Init preview pictrue"
+for i in `seq $num`;
+do
+  curl -o bookimg${i}.jpg ${url_array[${i}]}
+  echo "bookimg${i}.jpg done"
+done
+
 
 # compile preview service
 echo "======>Compiling preview-service"
