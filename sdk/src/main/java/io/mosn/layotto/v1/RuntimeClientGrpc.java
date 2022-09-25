@@ -47,6 +47,10 @@ import spec.sdk.runtime.v1.domain.lock.TryLockRequest;
 import spec.sdk.runtime.v1.domain.lock.TryLockResponse;
 import spec.sdk.runtime.v1.domain.lock.UnlockRequest;
 import spec.sdk.runtime.v1.domain.lock.UnlockResponse;
+import spec.sdk.runtime.v1.domain.secret.GetSecretRequest;
+import spec.sdk.runtime.v1.domain.secret.GetSecretResponse;
+import spec.sdk.runtime.v1.domain.secret.GetBulkSecretRequest;
+import spec.sdk.runtime.v1.domain.secret.GetBulkSecretResponse;
 import spec.sdk.runtime.v1.domain.sequencer.GetNextIdRequest;
 import spec.sdk.runtime.v1.domain.sequencer.GetNextIdResponse;
 import spec.sdk.runtime.v1.domain.state.DeleteStateRequest;
@@ -1101,4 +1105,54 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
         }
 
     }
+
+    @Override
+    public  GetSecretResponse getSecret(GetSecretRequest req){
+        try {
+
+            RuntimeProto.GetSecretRequest request = RuntimeProto.GetSecretRequest.newBuilder()
+                    .setStoreName(req.getStoreName())
+                    .setKey(req.getKey())
+                    .putAllMetadata(req.getMetaData())
+                    .build();
+
+            RuntimeProto.GetSecretResponse response = runtimeStubManager.getBlockingStub()
+                    .getSecret(request);
+            GetSecretResponse getSecretResponse = new GetSecretResponse();
+            getSecretResponse.setData(response.getDataMap());
+            return getSecretResponse;
+        } catch (Exception e) {
+            logger.error("getSecret error ", e);
+            throw new RuntimeClientException(e);
+        }
+
+
+
+    }
+    @Override
+    public  GetBulkSecretResponse getBulkSecret(GetBulkSecretRequest req){
+        try {
+
+            RuntimeProto.GetBulkSecretRequest request = RuntimeProto.GetBulkSecretRequest.newBuilder()
+                    .setStoreName(req.getStoreName())
+                    .putAllMetadata(req.getMetaData())
+                    .build();
+
+            RuntimeProto.GetBulkSecretResponse response = runtimeStubManager.getBlockingStub()
+                    .getBulkSecret(request);
+            GetBulkSecretResponse getBulkSecretResponse = new GetBulkSecretResponse();
+
+            getBulkSecretResponse.setData(response.getDataMap());
+            return getBulkSecretResponse;
+        } catch (Exception e) {
+            logger.error("getSecret error ", e);
+            throw new RuntimeClientException(e);
+        }
+
+
+
+    }
+
+
 }
+
