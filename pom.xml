@@ -26,6 +26,7 @@
         <module>examples-pubsub-publisher</module>
         <module>examples-preview-service</module>
         <module>examples-oss</module>
+        <module>examples-lock</module>
     </modules>
 
     <properties>
