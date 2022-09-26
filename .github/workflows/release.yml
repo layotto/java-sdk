@@ -4,9 +4,15 @@
 name: Release
 
 on:
-  release:
-    types: [created,released]
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - 'Makefile'
+      - '**/*.md'
+  # publish the package manually
   workflow_dispatch:
+#  release:
+#    types: [ released ]
 
 jobs:
   release:
