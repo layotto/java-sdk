@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.mosn.layotto.examples.pubsub;
+package io.mosn.layotto.examples.lock;
 
 import io.mosn.layotto.v1.RuntimeClientBuilder;
 import io.mosn.layotto.v1.config.RuntimeProperties;
@@ -41,32 +41,38 @@ public class Lock {
             .withPort(RuntimeProperties.DEFAULT_PORT)
             .build();
 
-        TryLockRequest tryLockRequest = new TryLockRequest(storeName, key1, owner1, 10);
+        // lock key1 successfully
+        TryLockRequest tryLockRequest = new TryLockRequest(storeName, key1, owner1, 5);
         TryLockResponse tryLockResponse = client.tryLock(tryLockRequest);
         assertTrue(tryLockResponse.isSuccess());
         logger.info(tryLockResponse.toString());
 
-        TryLockRequest tryLockRequest1 = new TryLockRequest(storeName, key2, owner2, 10);
+        // lock key2 successfully
+        TryLockRequest tryLockRequest1 = new TryLockRequest(storeName, key2, owner2, 5);
         TryLockResponse tryLockResponse1 = client.tryLock(tryLockRequest1);
         assertTrue(tryLockResponse1.isSuccess());
         logger.info(tryLockResponse1.toString());
 
-        TryLockRequest tryLockRequest2 = new TryLockRequest(storeName, key3, owner3, 10);
+        // lock key3 successfully
+        TryLockRequest tryLockRequest2 = new TryLockRequest(storeName, key3, owner3, 3);
         TryLockResponse tryLockResponse2 = client.tryLock(tryLockRequest2);
         assertTrue(tryLockResponse2.isSuccess());
         logger.info(tryLockResponse2.toString());
 
+        // unlock key1 successfully
         UnlockRequest unlockRequest = new UnlockRequest(storeName, key1, owner1);
         UnlockResponse unlockResponse = client.unlock(unlockRequest);
         assertEquals(unlockResponse.getStatus(), UnlockResponseStatus.SUCCESS);
         logger.info(unlockResponse.toString());
 
+        // unlock key2 successfully
         UnlockRequest unlockRequest1 = new UnlockRequest(storeName, key2, owner2);
         UnlockResponse unlockResponse1 = client.unlock(unlockRequest1);
         assertEquals(unlockResponse1.getStatus(), UnlockResponseStatus.SUCCESS);
         logger.info(tryLockResponse1.toString());
 
-        TimeUnit.SECONDS.sleep(10);
+        TimeUnit.SECONDS.sleep(3);
+        // unlock key3 failed
         UnlockRequest unlockRequest3 = new UnlockRequest(storeName, key3, owner3);
         UnlockResponse unlockResponse3 = client.unlock(unlockRequest3);
         assertEquals(unlockResponse3.getStatus(), UnlockResponseStatus.LOCK_UNEXIST);
