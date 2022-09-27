@@ -2,7 +2,6 @@ package io.mosn.layotto.springboot;
 
 import io.mosn.layotto.v1.RuntimeClientBuilder;
 import io.mosn.layotto.v1.Sequencer;
-import io.mosn.layotto.v1.callback.component.pubsub.DefaultSubscriber;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,8 +14,8 @@ import spec.sdk.runtime.v1.client.RuntimeClient;
 import spec.sdk.runtime.v1.domain.sequencer.GetNextIdRequest;
 import spec.sdk.runtime.v1.domain.sequencer.SequencerOptions;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.Map;
 
 
 public class LayottoBeanPostProcessorSequencer implements BeanPostProcessor {
@@ -24,7 +23,7 @@ public class LayottoBeanPostProcessorSequencer implements BeanPostProcessor {
 
     private final EmbeddedValueResolver embeddedValueResolver;
     @Autowired
-    private static LayottoProperties           layottoConfig;
+    private static LayottoProperties layottoConfig;
 
 
     LayottoBeanPostProcessorSequencer(ConfigurableBeanFactory beanFactory) {
@@ -37,7 +36,13 @@ public class LayottoBeanPostProcessorSequencer implements BeanPostProcessor {
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
 
-        sequencer(bean.getClass(), bean, embeddedValueResolver);
+        try {
+            sequencer(bean.getClass(), bean, embeddedValueResolver);
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
 
         return bean;
     }
@@ -52,11 +57,10 @@ public class LayottoBeanPostProcessorSequencer implements BeanPostProcessor {
         return bean;
     }
 
-    private static void sequencer(Class clazz, Object bean, EmbeddedValueResolver embeddedValueResolver) {
+    private static void sequencer(Class clazz, Object bean, EmbeddedValueResolver embeddedValueResolver) throws InvocationTargetException, IllegalAccessException {
         if (clazz == null) {
             return;
         }
-
         sequencer(clazz.getSuperclass(), bean, embeddedValueResolver);
         for (Method method : clazz.getDeclaredMethods()) {
             Sequencer getsequencer = method.getAnnotation(Sequencer.class);
@@ -82,8 +86,14 @@ public class LayottoBeanPostProcessorSequencer implements BeanPostProcessor {
                     anoptions.setOption(SequencerOptions.AutoIncrement.WEAK);
                 getNextIdRequest.setOptions(anoptions);
 
-                long nextID = layottoRuntime.getNextId(getNextIdRequest).getNextId();
-                LOGGER.info("NextID:{},options:{}", nextID,options);
+                long nextId = layottoRuntime.getNextId(getNextIdRequest).getNextId();
+                try {
+                    method.invoke(bean, nextId);
+                } catch (Exception e) {
+                    LOGGER.error("layotto sequencer method [{}] err:{ }", method.getName(), e.getMessage());
+                    throw e;
+                }
+                LOGGER.info("NextID:{},options:{}", nextId,options);
             }
         }
     }
