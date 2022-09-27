@@ -67,7 +67,7 @@ public class LayottoBeanPostProcessorSequencer implements BeanPostProcessor {
             if (getsequencer == null) {
                 continue;
             }
-            String storeName = embeddedValueResolver.resolveStringValue(getsequencer.store_name());
+            String storeName = embeddedValueResolver.resolveStringValue(getsequencer.storeName());
             String key = embeddedValueResolver.resolveStringValue(getsequencer.key());
             String options = embeddedValueResolver.resolveStringValue(getsequencer.options());
             if (StringUtils.isNotEmpty(storeName) && StringUtils.isNotEmpty(key)&& StringUtils.isNotEmpty(options)) {

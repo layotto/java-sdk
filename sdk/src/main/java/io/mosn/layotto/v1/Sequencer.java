@@ -7,8 +7,9 @@ import java.lang.annotation.*;
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Sequencer {
+    String storeName();
 
-    String store_name();
     String key();
+
     String options();
 }
