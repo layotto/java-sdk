@@ -12,12 +12,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Secret {
-
-
-
-
-
-
         static String               storeName = "secret_demo";
         public static void main(String args[]){
             RuntimeClient client = new RuntimeClientBuilder()
@@ -40,7 +34,5 @@ public class Secret {
             bulksecretreq.setMetaData(meta2);
             System.out.println(client.getBulkSecret(bulksecretreq).getData());
 
-
-
-
-        }}
+        }
+}

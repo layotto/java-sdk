@@ -1109,7 +1109,6 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
     @Override
     public  GetSecretResponse getSecret(GetSecretRequest req){
         try {
-
             RuntimeProto.GetSecretRequest request = RuntimeProto.GetSecretRequest.newBuilder()
                     .setStoreName(req.getStoreName())
                     .setKey(req.getKey())
@@ -1126,13 +1125,10 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             throw new RuntimeClientException(e);
         }
 
-
-
     }
     @Override
     public  GetBulkSecretResponse getBulkSecret(GetBulkSecretRequest req){
         try {
-
             RuntimeProto.GetBulkSecretRequest request = RuntimeProto.GetBulkSecretRequest.newBuilder()
                     .setStoreName(req.getStoreName())
                     .putAllMetadata(req.getMetaData())
@@ -1155,11 +1151,7 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             logger.error("getSecret error ", e);
             throw new RuntimeClientException(e);
         }
-
-
-
     }
-
 
 }
 
