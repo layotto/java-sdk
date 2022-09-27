@@ -1141,8 +1141,15 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             RuntimeProto.GetBulkSecretResponse response = runtimeStubManager.getBlockingStub()
                     .getBulkSecret(request);
             GetBulkSecretResponse getBulkSecretResponse = new GetBulkSecretResponse();
+            Map<String, Map<String, String>> tempMap = new HashMap<String,Map<String,String>>();
+            for(Map.Entry<String,RuntimeProto.SecretResponse> entry : response.getDataMap().entrySet()){
+                String key = entry.getKey();
+                RuntimeProto.SecretResponse value = entry.getValue();
+                Map<String, String> secretMap = value.getSecretsMap();
+                tempMap.put(key, secretMap);
 
-            getBulkSecretResponse.setData(response.getDataMap());
+            }
+            getBulkSecretResponse.setData(tempMap);
             return getBulkSecretResponse;
         } catch (Exception e) {
             logger.error("getSecret error ", e);
