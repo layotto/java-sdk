@@ -14,6 +14,4 @@ public class GetSecretResponse {
         this.data = data;
     }
 
-
-
 }

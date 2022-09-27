@@ -12,11 +12,9 @@ public class GetBulkSecretRequest {
         return storeName;
     }
 
-
     public void setStoreName(String storeName) {
         this.storeName = storeName;
     }
-
 
     public Map<String, String> getMetaData() {
         if (metaData == null) {

@@ -16,9 +16,4 @@ public class GetBulkSecretResponse {
         this.data = data;
     }
 
-
-
-
-
-
 }
