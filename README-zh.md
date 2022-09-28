@@ -169,3 +169,17 @@ mvn compile
 [comment]: <> (如果您在使用 [IntelliJ IDEA]&#40;https://www.jetbrains.com/help/idea/discover-intellij-idea.html&#41; ,双击 Maven插件中的 `compile` ， IDE 会自动帮你编译 proto 文件:)
 
 [comment]: <> (![img.png]&#40;img.png&#41;)
+
+### How to publish jar to maven central repo
+
+Our CI will do it automatically.
+
+1. The CI will build and publish the jars to the maven central repo after a new PR get merged.
+
+If it's a snapshot version, e.g. `1.2.0-SNAPSHOT`, it will be published to the central `snapshot` repo;
+
+If it's not a snapshot version, e.g. `1.2.0`, it will be published to the central `staging` repo.
+
+Check [the `Release` pipeline](https://github.com/layotto/java-sdk/actions/workflows/release.yml) for more details.
+
+2. After maintainers [release a new version in github](https://github.com/layotto/java-sdk/releases/), [our `Release without staging` pipeline](https://github.com/layotto/java-sdk/actions/workflows/release_no_staging.yml) will publish the jars to the central `release` repo instead of the `staging` repo.

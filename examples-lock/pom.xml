@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <artifactId>runtime-sdk-parent</artifactId>
         <groupId>io.mosn.layotto</groupId>
         <version>1.3.0-SNAPSHOT</version>
     </parent>
+    <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.mosn.layotto</groupId>
-    <artifactId>examples-pubsub-subscriber</artifactId>
+    <artifactId>examples-lock</artifactId>
     <version>1.3.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-
     <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>io.mosn.layotto</groupId>
             <artifactId>runtime-sdk</artifactId>
@@ -43,7 +47,7 @@
 
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
-        <finalName>examples-pubsub-subscriber</finalName>
+        <finalName>examples-lock</finalName>        
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -52,7 +56,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>io.mosn.layotto.examples.pubsub.subscriber.Subscriber</mainClass>
+                            <mainClass>io.mosn.layotto.examples.lock.Lock</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
@@ -71,5 +75,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

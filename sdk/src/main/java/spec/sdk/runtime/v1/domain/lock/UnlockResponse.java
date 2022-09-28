@@ -24,4 +24,11 @@ public class UnlockResponse {
     public UnlockResponseStatus getStatus() {
         return status;
     }
+
+    @Override
+    public String toString() {
+        return "UnlockResponse{" +
+            "status=" + status +
+            '}';
+    }
 }
