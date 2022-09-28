@@ -1,4 +1,4 @@
-preview_path=$(pwd)
+#preview_path=$(pwd)
 password=$REDIS_PASSWORD
 url_array=(
 'https://img2.doubanio.com/view/subject/l/public/s4196073.jpg'
@@ -29,10 +29,22 @@ nohup redis-server --port 6380 & >redis.out
 echo $! > redis.pid
 
 # TODO initialize data
+echo "======>read redis value massage"
+massage_array=()
+while IFS= read -r line
+do
+    massage_array+=("$line")
+done < $1
+
+if (($num != ${#massage_array[@]})); then
+    echo "The number of keys in redis is not equal to the number of values"
+    exit
+fi
+
 echo "======>Init redis date"
 for i in `seq $num`;
 do
-    redis-cli -h 127.0.0.1 -a "${password}" --no-auth-warning set ${i} value${i}
+    redis-cli -h 127.0.0.1 -a "${password}" --no-auth-warning set ${i} massage_array[i]
     echo "key${i} value${i} done"
 done
 
