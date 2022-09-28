@@ -19,9 +19,7 @@ public class GetSecretRequest {
     }
 
     public void setMetaData(Map<String, String> metaData) {
-        if (metaData == null) {
-            metaData = new HashMap<>();
-        }
+
         this.metaData = metaData;
     }
 

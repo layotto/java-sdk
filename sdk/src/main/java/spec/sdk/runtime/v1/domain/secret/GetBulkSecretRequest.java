@@ -17,9 +17,7 @@ public class GetBulkSecretRequest {
     }
 
     public Map<String, String> getMetaData() {
-        if (metaData == null) {
-            metaData = new HashMap<>();
-        }
+
         return metaData;
     }
 
