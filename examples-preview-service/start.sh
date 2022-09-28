@@ -44,7 +44,7 @@ fi
 echo "======>Init redis date"
 for i in `seq $num`;
 do
-    redis-cli -h 127.0.0.1 -a "${password}" --no-auth-warning set ${i} massage_array[i]
+    redis-cli -h 127.0.0.1 -a "${password}" --no-auth-warning set ${i} ${massage_array[i]}
     echo "key${i} value${i} done"
 done
 
@@ -54,7 +54,6 @@ do
   curl -o bookimg${i}.jpg ${url_array[${i}]}
   echo "bookimg${i}.jpg done"
 done
-
 
 # compile preview service
 echo "======>Compiling preview-service"
