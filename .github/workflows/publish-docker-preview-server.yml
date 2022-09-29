@@ -1,4 +1,4 @@
-name: Layotto Java SDK Dev Pipeline 🌊
+name: Publish preview_server docker image
 
 on:
   push:
@@ -32,7 +32,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Push Image
+      - name: Push Image to DockerHub
         run: |
           docker push layotto/preview_server:latest
 

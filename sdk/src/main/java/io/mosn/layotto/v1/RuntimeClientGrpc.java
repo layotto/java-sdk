@@ -1165,5 +1165,4 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
             throw new RuntimeClientException(e);
         }
     }
-
 }
