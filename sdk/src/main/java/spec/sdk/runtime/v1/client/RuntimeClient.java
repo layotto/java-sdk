@@ -24,7 +24,7 @@ public interface RuntimeClient extends
                               StateRuntime,
                               LockRuntime,
                               SequencerRuntime,
-                              FileRuntime, OssRuntime {
+                              FileRuntime, OssRuntime, SecretRuntime {
 
     void shutdown();
 }

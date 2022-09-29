@@ -28,9 +28,9 @@ import io.mosn.layotto.v1.grpc.GrpcRuntimeClient;
 import io.mosn.layotto.v1.grpc.stub.StubManager;
 import io.mosn.layotto.v1.serializer.ObjectSerializer;
 import org.slf4j.Logger;
+import spec.proto.extension.v1.s3.ObjectStorageServiceGrpc;
 import spec.proto.runtime.v1.RuntimeGrpc;
 import spec.proto.runtime.v1.RuntimeProto;
-import spec.proto.extension.v1.s3.ObjectStorageServiceGrpc;
 import spec.sdk.runtime.v1.domain.file.DelFileRequest;
 import spec.sdk.runtime.v1.domain.file.DelFileResponse;
 import spec.sdk.runtime.v1.domain.file.FileInfo;
@@ -47,6 +47,10 @@ import spec.sdk.runtime.v1.domain.lock.TryLockRequest;
 import spec.sdk.runtime.v1.domain.lock.TryLockResponse;
 import spec.sdk.runtime.v1.domain.lock.UnlockRequest;
 import spec.sdk.runtime.v1.domain.lock.UnlockResponse;
+import spec.sdk.runtime.v1.domain.secret.GetBulkSecretRequest;
+import spec.sdk.runtime.v1.domain.secret.GetBulkSecretResponse;
+import spec.sdk.runtime.v1.domain.secret.GetSecretRequest;
+import spec.sdk.runtime.v1.domain.secret.GetSecretResponse;
 import spec.sdk.runtime.v1.domain.sequencer.GetNextIdRequest;
 import spec.sdk.runtime.v1.domain.sequencer.GetNextIdResponse;
 import spec.sdk.runtime.v1.domain.state.DeleteStateRequest;
@@ -79,7 +83,8 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
                       int timeoutMs,
                       ObjectSerializer stateSerializer,
                       StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> runtimeStubManager,
-                      StubManager<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> ossStubManager) {
+                      StubManager<ObjectStorageServiceGrpc.ObjectStorageServiceStub,
+                      ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> ossStubManager) {
         super(logger, timeoutMs, stateSerializer);
         this.runtimeStubManager = runtimeStubManager;
         this.ossStubManager = ossStubManager;
@@ -1101,4 +1106,64 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
         }
 
     }
+
+    @Override
+    public GetSecretResponse getSecret(GetSecretRequest req) {
+        try {
+            // 1. prepare request
+            RuntimeProto.GetSecretRequest.Builder builder = RuntimeProto.GetSecretRequest.newBuilder()
+                .setStoreName(req.getStoreName())
+                .setKey(req.getKey());
+            if (req.getMetaData() != null) {
+                builder.putAllMetadata(req.getMetaData());
+            }
+            RuntimeProto.GetSecretRequest request = builder.build();
+
+            // 2. invoke
+            RuntimeProto.GetSecretResponse response = runtimeStubManager.getBlockingStub()
+                .getSecret(request);
+            // 3. parse result
+            GetSecretResponse getSecretResponse = new GetSecretResponse();
+            getSecretResponse.setData(response.getDataMap());
+            return getSecretResponse;
+        } catch (Exception e) {
+            logger.error("getSecret error ", e);
+            throw new RuntimeClientException(e);
+        }
+
+    }
+
+    @Override
+    public GetBulkSecretResponse getBulkSecret(GetBulkSecretRequest req) {
+        try {
+            // 1. prepare request
+            RuntimeProto.GetBulkSecretRequest.Builder builder = RuntimeProto.GetBulkSecretRequest.newBuilder()
+                .setStoreName(req.getStoreName());
+            if (req.getMetaData() != null) {
+                builder.putAllMetadata(req.getMetaData());
+            }
+            RuntimeProto.GetBulkSecretRequest request = builder.build();
+            // 2. invoke
+            RuntimeProto.GetBulkSecretResponse response = runtimeStubManager.getBlockingStub()
+                .getBulkSecret(request);
+            // 3. parse result
+            GetBulkSecretResponse getBulkSecretResponse = new GetBulkSecretResponse();
+            Map<String, Map<String, String>> tempMap = new HashMap<>();
+            if (!(response.getDataMap().isEmpty())) {
+                for (Map.Entry<String, RuntimeProto.SecretResponse> entry : response.getDataMap().entrySet()) {
+                    String key = entry.getKey();
+                    RuntimeProto.SecretResponse value = entry.getValue();
+                    Map<String, String> secretMap = value.getSecretsMap();
+                    tempMap.put(key, secretMap);
+
+                }
+            }
+            getBulkSecretResponse.setData(tempMap);
+            return getBulkSecretResponse;
+        } catch (Exception e) {
+            logger.error("getSecret error ", e);
+            throw new RuntimeClientException(e);
+        }
+    }
+
 }
