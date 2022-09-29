@@ -1,4 +1,4 @@
-name: build
+name: Layotto CI
 on:
   push:
     branches: [ main ]
@@ -19,6 +19,6 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Test with Maven
-        run: ./mvnw test
+        run: mvn test
       - name: Codecov
         uses: codecov/codecov-action@v1
