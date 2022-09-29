@@ -23,8 +23,8 @@ public class Publisher {
 
     public static void main(String[] args) {
         RuntimeClient client = new RuntimeClientBuilder()
-                .withPort(RuntimeProperties.DEFAULT_PORT)
-                .build();
+            .withPort(RuntimeProperties.DEFAULT_PORT)
+            .build();
 
         client.publishEvent(storeName, "hello", "world".getBytes());
         System.out.println("Published a new event.Topic: hello ,Data: world");
