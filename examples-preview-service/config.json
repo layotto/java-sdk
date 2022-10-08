@@ -81,6 +81,21 @@
                       "app": {
                         "app_id": "app1",
                         "grpc_callback_port": 9999
+                      },
+                      "lock": {
+                        "lock_demo": {
+                          "type": "redis",
+                          "metadata": {
+                            "redisHost": "localhost:6380",
+                            "redisPassword": ""
+                          }
+                        },
+                        "file": {
+                          "file_demo": {
+                            "type": "local",
+                            "metadata": []
+                          }
+                        }
                       }
                     }
                   }
