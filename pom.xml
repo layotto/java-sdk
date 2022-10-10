@@ -28,6 +28,7 @@
         <module>examples-oss</module>
         <module>examples-lock</module>
         <module>examples-secret</module>
+        <module>examples-configuration</module>
     </modules>
 
     <properties>
