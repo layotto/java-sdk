@@ -1,4 +1,4 @@
-#preview_path=$(pwd)
+preview_path=$(pwd)
 password=$REDIS_PASSWORD
 url_array=(
 'https://img2.doubanio.com/view/subject/l/public/s4196073.jpg'
