@@ -41,7 +41,7 @@ if (($num != ${#massage_array[@]})); then
     exit
 fi
 
-echo "======>Init redis date"
+echo "======>Init redis data"
 for i in `seq $num`;
 do
     redis-cli -h 127.0.0.1 -a "${password}" --no-auth-warning set ${i} ${massage_array[i]}
