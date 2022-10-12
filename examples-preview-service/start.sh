@@ -28,7 +28,7 @@ nohup ./layotto start -c config.json &
 nohup redis-server --port 6380 & >redis.out
 echo $! > redis.pid
 
-# TODO initialize data
+# initialize data
 echo "======>read redis value massage"
 massage_array=()
 while IFS= read -r line
