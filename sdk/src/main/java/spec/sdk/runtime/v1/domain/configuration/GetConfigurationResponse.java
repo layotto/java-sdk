@@ -12,17 +12,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package spec.sdk.runtime.v1.domain;
+package spec.sdk.runtime.v1.domain.configuration;
 
-import spec.sdk.runtime.v1.domain.configuration.*;
+import java.util.List;
 
-public interface ConfigurationRuntime {
-    GetConfigurationResponse getConfiguration(GetConfigurationRequest request) throws Exception;
+public class GetConfigurationResponse {
+    private List<ConfigurationItem> items;
 
-    void saveConfiguration(SaveConfigurationRequest request) throws Exception;
+    public List<ConfigurationItem> getItems() {
+        return items;
+    }
 
-    void deleteConfiguration(DeleteConfigurationRequest request) throws Exception;
-
-    void subscribeConfiguration(SubscribeConfigurationRequest request, ConfigurationSubscriber subscriber)
-        throws Exception;
+    public void setItems(List<ConfigurationItem> items) {
+        this.items = items;
+    }
 }

@@ -31,17 +31,8 @@ import org.slf4j.Logger;
 import spec.proto.extension.v1.s3.ObjectStorageServiceGrpc;
 import spec.proto.runtime.v1.RuntimeGrpc;
 import spec.proto.runtime.v1.RuntimeProto;
-import spec.sdk.runtime.v1.domain.file.DelFileRequest;
-import spec.sdk.runtime.v1.domain.file.DelFileResponse;
-import spec.sdk.runtime.v1.domain.file.FileInfo;
-import spec.sdk.runtime.v1.domain.file.GetFileRequest;
-import spec.sdk.runtime.v1.domain.file.GetFileResponse;
-import spec.sdk.runtime.v1.domain.file.GetMetaRequest;
-import spec.sdk.runtime.v1.domain.file.GetMeteResponse;
-import spec.sdk.runtime.v1.domain.file.ListFileRequest;
-import spec.sdk.runtime.v1.domain.file.ListFileResponse;
-import spec.sdk.runtime.v1.domain.file.PutFileRequest;
-import spec.sdk.runtime.v1.domain.file.PutFileResponse;
+import spec.sdk.runtime.v1.domain.configuration.*;
+import spec.sdk.runtime.v1.domain.file.*;
 import spec.sdk.runtime.v1.domain.invocation.InvokeResponse;
 import spec.sdk.runtime.v1.domain.lock.TryLockRequest;
 import spec.sdk.runtime.v1.domain.lock.TryLockResponse;
@@ -53,25 +44,16 @@ import spec.sdk.runtime.v1.domain.secret.GetSecretRequest;
 import spec.sdk.runtime.v1.domain.secret.GetSecretResponse;
 import spec.sdk.runtime.v1.domain.sequencer.GetNextIdRequest;
 import spec.sdk.runtime.v1.domain.sequencer.GetNextIdResponse;
-import spec.sdk.runtime.v1.domain.state.DeleteStateRequest;
-import spec.sdk.runtime.v1.domain.state.ExecuteStateTransactionRequest;
-import spec.sdk.runtime.v1.domain.state.GetBulkStateRequest;
-import spec.sdk.runtime.v1.domain.state.GetStateRequest;
-import spec.sdk.runtime.v1.domain.state.SaveStateRequest;
-import spec.sdk.runtime.v1.domain.state.State;
-import spec.sdk.runtime.v1.domain.state.StateOptions;
-import spec.sdk.runtime.v1.domain.state.TransactionalStateOperation;
+import spec.sdk.runtime.v1.domain.state.*;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PipedInputStream;
 import java.io.PipedOutputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRuntimeClient {
 
@@ -1163,6 +1145,193 @@ public class RuntimeClientGrpc extends AbstractRuntimeClient implements GrpcRunt
         } catch (Exception e) {
             logger.error("getSecret error ", e);
             throw new RuntimeClientException(e);
+        }
+    }
+
+    @Override
+    public GetConfigurationResponse getConfiguration(GetConfigurationRequest req) throws Exception {
+        try {
+            RuntimeProto.GetConfigurationRequest request = parseGetConfigurationRequest(req);
+
+            RuntimeProto.GetConfigurationResponse response = runtimeStubManager.getBlockingStub()
+                .getConfiguration(request);
+
+            return parseGetConfigurationResponse(response);
+        } catch (Exception e) {
+            logger.error("getConfiguration error ", e);
+            throw new RuntimeClientException(e);
+        }
+    }
+
+    @Override
+    public void saveConfiguration(SaveConfigurationRequest req) throws Exception {
+        try {
+            RuntimeProto.SaveConfigurationRequest request = parseSaveConfigurationRequest(req);
+            runtimeStubManager.getBlockingStub().saveConfiguration(request);
+        } catch (Exception e) {
+            logger.error("saveConfiguration error ", e);
+            throw new RuntimeClientException(e);
+        }
+    }
+
+    @Override
+    public void deleteConfiguration(DeleteConfigurationRequest req) throws Exception {
+        try {
+            RuntimeProto.DeleteConfigurationRequest request = parseDeleteConfigurationRequest(req);
+            runtimeStubManager.getBlockingStub().deleteConfiguration(request);
+        } catch (Exception e) {
+            logger.error("deleteConfiguration error ", e);
+            throw new RuntimeClientException(e);
+        }
+    }
+
+    @Override
+    public void subscribeConfiguration(SubscribeConfigurationRequest req, ConfigurationSubscriber subscriber)
+        throws Exception {
+        try {
+            SubscribeConfigurationObserver responseObserver = new SubscribeConfigurationObserver(subscriber);
+            StreamObserver<RuntimeProto.SubscribeConfigurationRequest> requestObserver = runtimeStubManager
+                .getAsyncStub()
+                .subscribeConfiguration(responseObserver);
+
+            requestObserver.onNext(parseSubscribeConfigurationRequest(req));
+        } catch (Exception e) {
+            logger.error("subscribeConfiguration error ", e);
+            throw new RuntimeClientException(e);
+        }
+    }
+
+    private RuntimeProto.GetConfigurationRequest parseGetConfigurationRequest(GetConfigurationRequest req) {
+        RuntimeProto.GetConfigurationRequest.Builder builder = RuntimeProto.GetConfigurationRequest.newBuilder()
+            .setStoreName(req.getStoreName())
+            .setAppId(req.getAppId())
+            .setGroup(req.getGroup())
+            .setLabel(req.getLabel())
+            .addAllKeys(Arrays.asList(req.getKeys()))
+            .setSubscribeUpdate(req.isSubscribeUpdate());
+        if (req.getMetadata() != null) {
+            builder.putAllMetadata(req.getMetadata());
+        }
+        return builder.build();
+    }
+
+    private GetConfigurationResponse parseGetConfigurationResponse(RuntimeProto.GetConfigurationResponse response) {
+        List<RuntimeProto.ConfigurationItem> itemsList = response.getItemsList();
+        List<ConfigurationItem> configurationItems = itemsList.stream().map(item -> {
+            ConfigurationItem configurationItem = new ConfigurationItem();
+            configurationItem.setKey(item.getKey());
+            configurationItem.setContent(item.getContent());
+            configurationItem.setGroup(item.getGroup());
+            configurationItem.setLabel(item.getLabel());
+            configurationItem.setTags(item.getTagsMap());
+            configurationItem.setMetadata(item.getMetadataMap());
+            return configurationItem;
+        }).collect(Collectors.toList());
+
+        GetConfigurationResponse resp = new GetConfigurationResponse();
+        resp.setItems(configurationItems);
+        return resp;
+    }
+
+    private RuntimeProto.SaveConfigurationRequest parseSaveConfigurationRequest(SaveConfigurationRequest req) {
+        RuntimeProto.SaveConfigurationRequest.Builder builder = RuntimeProto.SaveConfigurationRequest.newBuilder()
+                .setStoreName(req.getStoreName())
+                .setAppId(req.getAppId());
+        List<ConfigurationItem> configurationItems = req.getItems();
+        if (configurationItems != null) {
+            List<RuntimeProto.ConfigurationItem> items = configurationItems.stream()
+                    .map(configurationItem -> {
+                        RuntimeProto.ConfigurationItem.Builder itemBuilder = RuntimeProto.ConfigurationItem.newBuilder()
+                                .setKey(configurationItem.getKey())
+                                .setContent(configurationItem.getContent())
+                                .setGroup(configurationItem.getGroup())
+                                .setLabel(configurationItem.getLabel());
+                        if (configurationItem.getTags() != null) {
+                            itemBuilder.putAllTags(configurationItem.getTags());
+                        }
+                        if (configurationItem.getMetadata() != null) {
+                            itemBuilder.putAllMetadata(configurationItem.getMetadata());
+                        }
+                        return itemBuilder.build();
+                    }).collect(Collectors.toList());
+            builder.addAllItems(items);
+        }
+        if (req.getMetadata() != null) {
+            builder.putAllMetadata(req.getMetadata());
+        }
+        return builder.build();
+    }
+
+    private RuntimeProto.DeleteConfigurationRequest parseDeleteConfigurationRequest(DeleteConfigurationRequest req) {
+        RuntimeProto.DeleteConfigurationRequest.Builder builder = RuntimeProto.DeleteConfigurationRequest.newBuilder()
+            .setStoreName(req.getStoreName())
+            .setAppId(req.getAppId())
+            .setGroup(req.getGroup())
+            .setLabel(req.getLabel())
+            .addAllKeys(Arrays.asList(req.getKeys()));
+        if (req.getMetadata() != null) {
+            builder.putAllMetadata(req.getMetadata());
+        }
+        return builder.build();
+    }
+
+    private RuntimeProto.SubscribeConfigurationRequest parseSubscribeConfigurationRequest(SubscribeConfigurationRequest req) {
+        RuntimeProto.SubscribeConfigurationRequest.Builder builder = RuntimeProto.SubscribeConfigurationRequest
+            .newBuilder()
+            .setStoreName(req.getStoreName())
+            .setAppId(req.getAppId())
+            .setGroup(req.getGroup())
+            .setLabel(req.getLabel())
+            .addAllKeys(Arrays.asList(req.getKeys()));
+        if (req.getMetadata() != null) {
+            builder.putAllMetadata(req.getMetadata());
+        }
+        return builder.build();
+    }
+
+    private SubscribeConfigurationResponse parseSubscribeConfigurationResponse(RuntimeProto.SubscribeConfigurationResponse resp) {
+        SubscribeConfigurationResponse response = new SubscribeConfigurationResponse();
+        response.setStoreName(resp.getStoreName());
+        response.setAppId(resp.getAppId());
+        List<ConfigurationItem> configurationItems = resp.getItemsList().stream()
+                .map(RuntimeClientGrpc::parseConfigurationItem)
+                .collect(Collectors.toList());
+        response.setItems(configurationItems);
+        return response;
+    }
+
+    private static ConfigurationItem parseConfigurationItem(RuntimeProto.ConfigurationItem item) {
+        ConfigurationItem configurationItem = new ConfigurationItem();
+        configurationItem.setKey(item.getKey());
+        configurationItem.setContent(item.getContent());
+        configurationItem.setGroup(item.getGroup());
+        configurationItem.setLabel(item.getLabel());
+        configurationItem.setTags(item.getTagsMap());
+        configurationItem.setMetadata(item.getMetadataMap());
+        return configurationItem;
+    }
+
+    private class SubscribeConfigurationObserver implements StreamObserver<RuntimeProto.SubscribeConfigurationResponse> {
+
+        private final ConfigurationSubscriber subscriber;
+
+        SubscribeConfigurationObserver(ConfigurationSubscriber subscriber) {
+            this.subscriber = subscriber;
+        }
+
+        @Override
+        public void onNext(RuntimeProto.SubscribeConfigurationResponse value) {
+            subscriber.onChange(parseSubscribeConfigurationResponse(value));
+        }
+
+        @Override
+        public void onError(Throwable t) {
+            subscriber.onError(t);
+        }
+
+        @Override
+        public void onCompleted() {
+            subscriber.onCompleted();
         }
     }
 }

@@ -12,17 +12,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package spec.sdk.runtime.v1.domain;
+package spec.sdk.runtime.v1.domain.configuration;
 
-import spec.sdk.runtime.v1.domain.configuration.*;
+public interface ConfigurationSubscriber {
 
-public interface ConfigurationRuntime {
-    GetConfigurationResponse getConfiguration(GetConfigurationRequest request) throws Exception;
+    void onChange(SubscribeConfigurationResponse response);
 
-    void saveConfiguration(SaveConfigurationRequest request) throws Exception;
+    void onError(Throwable t);
 
-    void deleteConfiguration(DeleteConfigurationRequest request) throws Exception;
-
-    void subscribeConfiguration(SubscribeConfigurationRequest request, ConfigurationSubscriber subscriber)
-        throws Exception;
+    void onCompleted();
 }
