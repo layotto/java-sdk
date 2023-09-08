@@ -29,6 +29,7 @@
         <module>examples-lock</module>
         <module>examples-secret</module>
         <module>examples-configuration</module>
+        <module>examples-uds</module>
     </modules>
 
     <properties>
