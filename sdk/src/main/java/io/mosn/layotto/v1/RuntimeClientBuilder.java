@@ -17,6 +17,10 @@ package io.mosn.layotto.v1;
 import com.google.errorprone.annotations.DoNotCall;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
+import io.grpc.netty.shaded.io.grpc.netty.NettyChannelBuilder;
+import io.grpc.netty.shaded.io.netty.channel.epoll.EpollDomainSocketChannel;
+import io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoopGroup;
+import io.grpc.netty.shaded.io.netty.channel.unix.DomainSocketAddress;
 import io.mosn.layotto.v1.config.RuntimeProperties;
 import io.mosn.layotto.v1.domain.ApiProtocol;
 import io.mosn.layotto.v1.grpc.GrpcRuntimeClient;
@@ -52,6 +56,8 @@ public class RuntimeClientBuilder {
     private ObjectSerializer    stateSerializer = new JSONSerializer();
 
     private int                 poolSize;
+
+    private ManagedChannel      channel         = null;
 
     // TODO add rpc serializer
 
@@ -126,6 +132,46 @@ public class RuntimeClientBuilder {
     }
 
     /**
+     * Sets the channel for objects to be persisted.
+     *
+     * @param channel grpc ManagedChannel
+     * @return builder
+     */
+    public RuntimeClientBuilder withChannel(ManagedChannel channel) {
+        if (channel == null) {
+            throw new IllegalArgumentException("managed channel is required");
+        }
+
+        this.channel = channel;
+        return this;
+    }
+
+    /**
+     * Sets the unix domain socket channel for objects to be persisted.
+     *
+     * @param udsAddress unix domain socket address
+     * @return builder
+     */
+    public RuntimeClientBuilder withUdsSocket(DomainSocketAddress udsAddress) {
+        ManagedChannel udsChannel;
+        try {
+            udsChannel = NettyChannelBuilder
+                    .forAddress(udsAddress)
+                    .eventLoopGroup(new EpollEventLoopGroup())
+                    .channelType(EpollDomainSocketChannel.class)
+                    .usePlaintext()
+                    .build();
+        } catch (UnsatisfiedLinkError error) {
+            throw new IllegalArgumentException("Unix domain socket only supports the Linux platform");
+        } catch (Throwable e) {
+            throw new IllegalArgumentException("Invalid unix domain socket address");
+        }
+
+        this.channel = udsChannel;
+        return this;
+    }
+
+    /**
      * Build an instance of the Client based on the provided setup.
      *
      * @return an instance of the setup Client
@@ -156,11 +202,16 @@ public class RuntimeClientBuilder {
             runtimeStubManager = new PooledStubManager<>(ip, port, poolSize, new RuntimeStubCreatorImpl());
             ossStubManager = new PooledStubManager<>(runtimeStubManager.getChannels(), new OssStubCreatorImpl());
         } else {
-            ManagedChannel channel = ManagedChannelBuilder.forAddress(ip, port)
-                    .usePlaintext()
-                    .build();
-            runtimeStubManager = new SingleStubManager(channel, new RuntimeStubCreatorImpl());
-            ossStubManager = new SingleStubManager(channel, new OssStubCreatorImpl());
+            if (this.channel != null) {
+                runtimeStubManager = new SingleStubManager<>(this.channel, new RuntimeStubCreatorImpl());
+                ossStubManager = new SingleStubManager<>(this.channel, new OssStubCreatorImpl());
+            } else {
+                ManagedChannel channel = ManagedChannelBuilder.forAddress(ip, port)
+                        .usePlaintext()
+                        .build();
+                runtimeStubManager = new SingleStubManager<>(channel, new RuntimeStubCreatorImpl());
+                ossStubManager = new SingleStubManager<>(channel, new OssStubCreatorImpl());
+            }
         }
         // 3. construct client
         return new RuntimeClientGrpc(
@@ -168,7 +219,8 @@ public class RuntimeClientBuilder {
                 timeoutMs,
                 stateSerializer,
                 runtimeStubManager,
-                ossStubManager);
+                ossStubManager
+        );
     }
 
     public GrpcRuntimeClient buildGrpcWithExistingChannel(ManagedChannel channel) {
@@ -178,19 +230,20 @@ public class RuntimeClientBuilder {
         }
         // 2. construct stubManager
         StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> stubManager = new SingleStubManager(
-            channel, new RuntimeStubCreatorImpl());
+                channel, new RuntimeStubCreatorImpl());
         StubManager<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> ossStubManager = new SingleStubManager(
-            channel, new OssStubCreatorImpl());
+                channel, new OssStubCreatorImpl());
         // 3. construct client
         return new RuntimeClientGrpc(
-            logger,
-            timeoutMs,
-            stateSerializer,
-            stubManager, ossStubManager);
+                logger,
+                timeoutMs,
+                stateSerializer,
+                stubManager,
+                ossStubManager);
     }
 
     public static class RuntimeStubCreatorImpl implements
-                                              StubCreator<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> {
+            StubCreator<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> {
 
         @Override
         public RuntimeGrpc.RuntimeStub createAsyncStub(ManagedChannel channel) {
@@ -205,8 +258,8 @@ public class RuntimeClientBuilder {
     }
 
     public static class OssStubCreatorImpl
-                                          implements
-                                          StubCreator<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> {
+            implements
+            StubCreator<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> {
 
         @Override
         public ObjectStorageServiceGrpc.ObjectStorageServiceStub createAsyncStub(ManagedChannel channel) {
