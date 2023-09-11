@@ -54,6 +54,7 @@
                 <artifactId>runtime-spec-pb</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
             <!-- json -->
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -89,6 +90,7 @@
                 <artifactId>grpc-stub</artifactId>
                 <version>${grpc.version}</version>
             </dependency>
+
             <!-- unit test -->
             <dependency>
                 <groupId>org.mockito</groupId>
