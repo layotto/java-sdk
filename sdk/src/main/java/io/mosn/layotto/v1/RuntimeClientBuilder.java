@@ -57,7 +57,7 @@ public class RuntimeClientBuilder {
 
     private int                 poolSize;
 
-    private ManagedChannel      channel         = null;
+    private DomainSocketAddress domainSocketAddress = null;
 
     // TODO add rpc serializer
 
@@ -132,27 +132,21 @@ public class RuntimeClientBuilder {
     }
 
     /**
-     * Sets the channel for objects to be persisted.
-     *
-     * @param channel grpc ManagedChannel
-     * @return builder
-     */
-    public RuntimeClientBuilder withChannel(ManagedChannel channel) {
-        if (channel == null) {
-            throw new IllegalArgumentException("managed channel is required");
-        }
-
-        this.channel = channel;
-        return this;
-    }
-
-    /**
      * Sets the unix domain socket channel for objects to be persisted.
      *
      * @param udsAddress unix domain socket address
      * @return builder
      */
     public RuntimeClientBuilder withUdsSocket(DomainSocketAddress udsAddress) {
+        if (udsAddress == null) {
+            throw new IllegalArgumentException("Invalid unix domain socket address");
+        }
+
+        this.domainSocketAddress = udsAddress;
+        return this;
+    }
+
+    private ManagedChannel buildUdsChannel(DomainSocketAddress udsAddress) {
         ManagedChannel udsChannel;
         try {
             udsChannel = NettyChannelBuilder
@@ -167,8 +161,16 @@ public class RuntimeClientBuilder {
             throw new IllegalArgumentException("Invalid unix domain socket address");
         }
 
-        this.channel = udsChannel;
-        return this;
+        return udsChannel;
+    }
+
+    private ManagedChannel[] buildUdsChannels(DomainSocketAddress udsAddress, int poolSize) {
+        ManagedChannel[] channels = new ManagedChannel[poolSize];
+        for (int i = 0; i < poolSize; i++) {
+            channels[i] = buildUdsChannel(udsAddress);
+        }
+
+        return channels;
     }
 
     /**
@@ -199,19 +201,27 @@ public class RuntimeClientBuilder {
         StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> runtimeStubManager;
         StubManager<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> ossStubManager;
         if (poolSize > 1) {
-            runtimeStubManager = new PooledStubManager<>(ip, port, poolSize, new RuntimeStubCreatorImpl());
-            ossStubManager = new PooledStubManager<>(runtimeStubManager.getChannels(), new OssStubCreatorImpl());
-        } else {
-            if (this.channel != null) {
-                runtimeStubManager = new SingleStubManager<>(this.channel, new RuntimeStubCreatorImpl());
-                ossStubManager = new SingleStubManager<>(this.channel, new OssStubCreatorImpl());
+            if (this.domainSocketAddress != null) {
+                ManagedChannel[] channels = buildUdsChannels(this.domainSocketAddress, poolSize);
+
+                runtimeStubManager = new PooledStubManager<>(channels, new RuntimeStubCreatorImpl());
+                ossStubManager = new PooledStubManager<>(runtimeStubManager.getChannels(), new OssStubCreatorImpl());
             } else {
-                ManagedChannel channel = ManagedChannelBuilder.forAddress(ip, port)
+                runtimeStubManager = new PooledStubManager<>(ip, port, poolSize, new RuntimeStubCreatorImpl());
+                ossStubManager = new PooledStubManager<>(runtimeStubManager.getChannels(), new OssStubCreatorImpl());
+            }
+        } else {
+            ManagedChannel channel;
+            if (this.domainSocketAddress != null) {
+                channel = buildUdsChannel(this.domainSocketAddress);
+            } else {
+                channel = ManagedChannelBuilder.forAddress(ip, port)
                         .usePlaintext()
                         .build();
-                runtimeStubManager = new SingleStubManager<>(channel, new RuntimeStubCreatorImpl());
-                ossStubManager = new SingleStubManager<>(channel, new OssStubCreatorImpl());
             }
+
+            runtimeStubManager = new SingleStubManager<>(channel, new RuntimeStubCreatorImpl());
+            ossStubManager = new SingleStubManager<>(channel, new OssStubCreatorImpl());
         }
         // 3. construct client
         return new RuntimeClientGrpc(
