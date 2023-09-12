@@ -146,6 +146,24 @@ public class RuntimeClientBuilder {
         return this;
     }
 
+    private ManagedChannel buildTcpChannel(String ip, int port) {
+        ManagedChannel tcpChannel = ManagedChannelBuilder
+                .forAddress(ip, port)
+                .usePlaintext()
+                .build();
+
+        return tcpChannel;
+    }
+
+    private ManagedChannel[] buildTcpChannels(String ip, int port, int poolSize) {
+        ManagedChannel[] channels = new ManagedChannel[poolSize];
+        for (int i = 0; i < poolSize; i++) {
+            channels[i] = buildTcpChannel(ip, port);
+        }
+
+        return channels;
+    }
+
     private ManagedChannel buildUdsChannel(DomainSocketAddress udsAddress) {
         ManagedChannel udsChannel;
         try {
@@ -201,23 +219,21 @@ public class RuntimeClientBuilder {
         StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> runtimeStubManager;
         StubManager<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> ossStubManager;
         if (poolSize > 1) {
+            ManagedChannel[] channels;
             if (this.domainSocketAddress != null) {
-                ManagedChannel[] channels = buildUdsChannels(this.domainSocketAddress, poolSize);
-
-                runtimeStubManager = new PooledStubManager<>(channels, new RuntimeStubCreatorImpl());
-                ossStubManager = new PooledStubManager<>(runtimeStubManager.getChannels(), new OssStubCreatorImpl());
+                channels = buildUdsChannels(this.domainSocketAddress, this.poolSize);
             } else {
-                runtimeStubManager = new PooledStubManager<>(ip, port, poolSize, new RuntimeStubCreatorImpl());
-                ossStubManager = new PooledStubManager<>(runtimeStubManager.getChannels(), new OssStubCreatorImpl());
+                channels = buildTcpChannels(this.ip, this.port, this.poolSize);
             }
+
+            runtimeStubManager = new PooledStubManager<>(channels, new RuntimeStubCreatorImpl());
+            ossStubManager = new PooledStubManager<>(runtimeStubManager.getChannels(), new OssStubCreatorImpl());
         } else {
             ManagedChannel channel;
             if (this.domainSocketAddress != null) {
                 channel = buildUdsChannel(this.domainSocketAddress);
             } else {
-                channel = ManagedChannelBuilder.forAddress(ip, port)
-                        .usePlaintext()
-                        .build();
+                channel = buildTcpChannel(this.ip, this.port);
             }
 
             runtimeStubManager = new SingleStubManager<>(channel, new RuntimeStubCreatorImpl());
