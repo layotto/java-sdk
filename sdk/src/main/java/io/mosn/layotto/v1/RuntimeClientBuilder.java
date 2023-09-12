@@ -41,19 +41,19 @@ import spec.sdk.runtime.v1.client.RuntimeClient;
  */
 public class RuntimeClientBuilder {
 
-    private static final Logger DEFAULT_LOGGER  = LoggerFactory.getLogger(RuntimeClient.class.getName());
+    private static final Logger DEFAULT_LOGGER      = LoggerFactory.getLogger(RuntimeClient.class.getName());
 
-    private int                 timeoutMs       = RuntimeProperties.DEFAULT_TIMEOUT_MS;
+    private int                 timeoutMs           = RuntimeProperties.DEFAULT_TIMEOUT_MS;
 
-    private String              ip              = RuntimeProperties.DEFAULT_IP;
+    private String              ip                  = RuntimeProperties.DEFAULT_IP;
 
-    private int                 port            = RuntimeProperties.DEFAULT_PORT;
+    private int                 port                = RuntimeProperties.DEFAULT_PORT;
 
-    private ApiProtocol         protocol        = RuntimeProperties.DEFAULT_API_PROTOCOL;
+    private ApiProtocol         protocol            = RuntimeProperties.DEFAULT_API_PROTOCOL;
 
-    private Logger              logger          = DEFAULT_LOGGER;
+    private Logger              logger              = DEFAULT_LOGGER;
 
-    private ObjectSerializer    stateSerializer = new JSONSerializer();
+    private ObjectSerializer    stateSerializer     = new JSONSerializer();
 
     private int                 poolSize;
 
@@ -148,9 +148,9 @@ public class RuntimeClientBuilder {
 
     private ManagedChannel buildTcpChannel(String ip, int port) {
         ManagedChannel tcpChannel = ManagedChannelBuilder
-                .forAddress(ip, port)
-                .usePlaintext()
-                .build();
+            .forAddress(ip, port)
+            .usePlaintext()
+            .build();
 
         return tcpChannel;
     }
@@ -168,11 +168,11 @@ public class RuntimeClientBuilder {
         ManagedChannel udsChannel;
         try {
             udsChannel = NettyChannelBuilder
-                    .forAddress(udsAddress)
-                    .eventLoopGroup(new EpollEventLoopGroup())
-                    .channelType(EpollDomainSocketChannel.class)
-                    .usePlaintext()
-                    .build();
+                .forAddress(udsAddress)
+                .eventLoopGroup(new EpollEventLoopGroup())
+                .channelType(EpollDomainSocketChannel.class)
+                .usePlaintext()
+                .build();
         } catch (UnsatisfiedLinkError error) {
             throw new IllegalArgumentException("Unix domain socket only supports the Linux platform");
         } catch (Throwable e) {
@@ -256,20 +256,20 @@ public class RuntimeClientBuilder {
         }
         // 2. construct stubManager
         StubManager<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> stubManager = new SingleStubManager(
-                channel, new RuntimeStubCreatorImpl());
+            channel, new RuntimeStubCreatorImpl());
         StubManager<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> ossStubManager = new SingleStubManager(
-                channel, new OssStubCreatorImpl());
+            channel, new OssStubCreatorImpl());
         // 3. construct client
         return new RuntimeClientGrpc(
-                logger,
-                timeoutMs,
-                stateSerializer,
-                stubManager,
-                ossStubManager);
+            logger,
+            timeoutMs,
+            stateSerializer,
+            stubManager,
+            ossStubManager);
     }
 
     public static class RuntimeStubCreatorImpl implements
-            StubCreator<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> {
+                                              StubCreator<RuntimeGrpc.RuntimeStub, RuntimeGrpc.RuntimeBlockingStub> {
 
         @Override
         public RuntimeGrpc.RuntimeStub createAsyncStub(ManagedChannel channel) {
@@ -284,8 +284,8 @@ public class RuntimeClientBuilder {
     }
 
     public static class OssStubCreatorImpl
-            implements
-            StubCreator<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> {
+                                          implements
+                                          StubCreator<ObjectStorageServiceGrpc.ObjectStorageServiceStub, ObjectStorageServiceGrpc.ObjectStorageServiceBlockingStub> {
 
         @Override
         public ObjectStorageServiceGrpc.ObjectStorageServiceStub createAsyncStub(ManagedChannel channel) {

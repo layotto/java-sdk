@@ -27,7 +27,7 @@ import java.util.concurrent.TimeUnit;
 public class Configuration {
 
     private static final Logger logger    = LoggerFactory.getLogger(Configuration.class.getName());
- private String dataClass;
+    private String              dataClass;
     static String               storeName = "config_demo";
     static String               appId     = "testApplication_yang";
     static String               group     = "application";

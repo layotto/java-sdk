@@ -1,11 +1,24 @@
 /*
- * Ant Group
- * Copyright (c) 2004-2023 All Rights Reserved.
+ * Copyright 2021 Layotto Authors
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 package io.mosn.layotto.v1;
 
 import io.grpc.Server;
 import io.grpc.netty.shaded.io.grpc.netty.NettyServerBuilder;
+import io.grpc.netty.shaded.io.netty.channel.EventLoopGroup;
+import io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoopGroup;
+import io.grpc.netty.shaded.io.netty.channel.epoll.EpollServerDomainSocketChannel;
 import io.grpc.netty.shaded.io.netty.channel.unix.DomainSocketAddress;
 import io.mosn.layotto.v1.grpc.ExceptionHandler;
 import io.mosn.layotto.v1.grpc.GrpcRuntimeClient;
@@ -23,10 +36,10 @@ import static org.junit.Assert.assertEquals;
  */
 public class UdsTest {
 
-    private RuntimeGrpc.RuntimeImplBase helloService = new MyHelloService();
+    private RuntimeGrpc.RuntimeImplBase helloService  = new MyHelloService();
 
-    private Server srv;
-    private GrpcRuntimeClient client;
+    private Server                      srv;
+    private GrpcRuntimeClient           client;
 
     String                              socketAddress = "/tmp/client-proxy.sock";
 
@@ -43,20 +56,26 @@ public class UdsTest {
 
         DomainSocketAddress udsAddress = new DomainSocketAddress(socketAddress);
 
-        // start grpc server
+        // start grpc server with unix domain socket
+        EventLoopGroup boss = new EpollEventLoopGroup(1);
+        EventLoopGroup elg = new EpollEventLoopGroup();
+
         srv = NettyServerBuilder
-                .forAddress(udsAddress)
-                .addService(helloService)
-                .intercept(new ExceptionHandler())
-                .build()
-                .start();
+            .forAddress(udsAddress)
+            .bossEventLoopGroup(boss)
+            .workerEventLoopGroup(elg)
+            .channelType(EpollServerDomainSocketChannel.class)
+            .addService(helloService)
+            .intercept(new ExceptionHandler())
+            .build()
+            .start();
 
         // build a client
         client = new RuntimeClientBuilder()
-                .withUdsSocket(udsAddress)
-                .withConnectionPoolSize(4)
-                .withTimeout(2000)
-                .buildGrpc();
+            .withUdsSocket(udsAddress)
+            .withConnectionPoolSize(4)
+            .withTimeout(2000)
+            .buildGrpc();
     }
 
     @After
