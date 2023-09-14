@@ -82,25 +82,6 @@ public class PooledStubManager<A extends AbstractAsyncStub, B extends AbstractBl
         return new ConstructResult<>(asyncStubs, blockingStubs, asyncPool, blockingPool);
     }
 
-    public PooledStubManager(String host, int port, int size,
-                             StubCreator<A, B> sc) {
-        channels = new ManagedChannel[size];
-        List<A> asyncStubs = new ArrayList<>();
-        List<B> blockingStubs = new ArrayList<>();
-        // construct channels and stubs
-        for (int i = 0; i < size; i++) {
-            channels[i] = ManagedChannelBuilder.forAddress(host, port).usePlaintext().build();
-            asyncStubs.add(sc.createAsyncStub(channels[i]));
-            blockingStubs.add(sc.createBlockingStub(channels[i]));
-        }
-        // construct pools
-        asyncRuntimePool = new RRPool<>(new CopyOnWriteArrayList<>(asyncStubs));
-        runtimePool = new RRPool<>(new CopyOnWriteArrayList<>(blockingStubs));
-
-        // init connections
-        init(asyncStubs, blockingStubs);
-    }
-
     protected void init(List<A> asyncStubs, List<B> blockingStubs) {
         // TODO establish connection
     }

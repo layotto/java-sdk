@@ -27,8 +27,8 @@ import java.util.Map;
 
 public class Secret {
 
-    static String              storeName = "secret_demo";
-    static String              key       = "db-user-pass:password";
+    static String storeName = "secret_demo";
+    static String key       = "db-user-pass:password";
 
     public static void main(String args[]){
             RuntimeClient client = new RuntimeClientBuilder()
