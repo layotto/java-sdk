@@ -7,12 +7,12 @@
   <parent>
     <artifactId>runtime-sdk-parent</artifactId>
     <groupId>io.mosn.layotto</groupId>
-    <version>1.3.0-SNAPSHOT</version>
+    <version>1.4.0-SNAPSHOT</version>
   </parent>
 
   <groupId>io.mosn.layotto</groupId>
   <artifactId>examples-oss</artifactId>
-  <version>1.3.0-SNAPSHOT</version>
+  <version>1.4.0-SNAPSHOT</version>
 
   <name>examples-oss</name>
   <url>https://github.com/layotto/java-sdk</url>
@@ -26,7 +26,7 @@
     <dependency>
       <groupId>io.mosn.layotto</groupId>
       <artifactId>runtime-sdk</artifactId>
-      <version>1.3.0-SNAPSHOT</version>
+      <version>1.4.0-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
