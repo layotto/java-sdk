@@ -40,4 +40,8 @@ public class LayottoAutoConfiguration {
     public LayottoSubscriberStarter LayottoSubscriberStarter() {
         return new LayottoSubscriberStarter();
     }
+
+    @Bean
+    @ConditionalOnMissingBean
+    public LayottoBeanPostProcessorSequencer LayottoBeanPostProcessorSequencer(ConfigurableBeanFactory beanFactory){return new LayottoBeanPostProcessorSequencer(beanFactory); }
 }

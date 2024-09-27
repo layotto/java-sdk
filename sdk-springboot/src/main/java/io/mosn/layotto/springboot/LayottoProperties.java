@@ -24,7 +24,26 @@ public class LayottoProperties {
 
     public static final int DEFAULT_SUBSCRIBER_PORT = 9999;
 
+    public static final int DEFAULT_PORT = 34904;
+
+    public static final String DEFAULT_IP = "127.0.0.1";
+
+
     public Integer          subscriberPort;
+
+    public Integer          Port;
+
+    public String         Ip;
+
+    public String getIp() { return Ip == null ? DEFAULT_IP : this.Ip;}
+
+    public void setIp(String ip) { Ip = ip; }
+
+
+    public Integer getPort() { return Port == null ? DEFAULT_PORT : this.Port; }
+
+    public void setPort(Integer port) { this.Port = port; }
+
 
     public void setSubscriberPort(Integer subscriberPort) {
         this.subscriberPort = subscriberPort;
